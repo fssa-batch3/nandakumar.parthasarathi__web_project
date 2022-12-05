@@ -1,0 +1,190 @@
+
+
+
+
+header{
+    margin: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+   
+
+    font-weight: bolder;
+    font-size: 30px;
+    color:white;
+    margin-left: 10px;
+    display: flex;
+    
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+
+
+body{
+
+
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    margin-left: 20px;
+    border: 1px solid rebeccapurple;
+    border-color: transparent;
+    border-radius: 20px;
+    background-color:whitesmoke ;
+    
+    
+}
+
+
+
+
+
+.topic1{
+    color:green;
+    text-decoration-line:overline ;
+    text-decoration-color: red;
+}
+
+.topic2{
+    color:green;
+    text-decoration-line:overline ;
+    text-decoration-color: red;
+}
+
+.topic3{
+    color:green;
+    text-decoration-line:overline ;
+    text-decoration-color: red;
+}
+
+.topic4{
+    color:green;
+    text-decoration-line:overline ;
+    text-decoration-color: red;
+}
+
+.best{
+   color:black  ;
+   text-decoration-line:overline ;
+    text-decoration-color: red;
+   text-align: center;
+   font-size: 30px;
+   
+   
+  
+
+}
+
+.detail{
+    color:blue;
+    text-decoration-line:underline;
+    text-decoration-color: red;
+   
+   
+}
+
+.img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border:3px double black;
+    padding:10px 10px 10px 10px;
+    box-shadow: 5px 5px 8px rgb(250, 250, 253), 10px 10px 8px rgb(18, 2, 2), 15px 15px 8px grey;
+    margin-bottom: 10px;
+    
+    
+     
+}
+
+.wood{
+    color:green;
+    text-align: center;
+    text-decoration-line:overline;
+    text-decoration-color: red;
+}
+
+.about{
+    color:black;
+    
+    border: 5px solid white;
+    padding: 10px;
+    
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2;
+}
+
+.character{
+    color:black;
+   
+    border: 5px solid white;
+    padding: 10px;
+    word-spacing: 1mm;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2;
+}
+
+.lifestyle{
+    color:black;
+   
+    border: 5px solid white;
+    padding: 10px;
+    word-spacing: 1mm;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2;
+}
+
+
+.breed{
+    color:black;
+   
+    border: 5px solid white;
+    padding: 10px;
+    word-spacing: 1mm;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 2;
+}
+
+button{
+    color:white;
+    padding:10px 25px 10px 25px;
+    
+    background-color:orange;
+    border-radius: 10px;
+
+    
+    
+    
+    font-weight:lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform:uppercase;
+    border-color: transparent;
+    border-width: 10px 50px 10px 50px;
+
+    cursor: pointer;
+    display: inline-block;
+    }
+
+    button:hover{
+        color: black;
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+.back{
+   margin-left: 20px;
+   margin-bottom: 20px;
+   
+    
+}
+
+.back button{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#footer {
+   background-color: black;
+}
