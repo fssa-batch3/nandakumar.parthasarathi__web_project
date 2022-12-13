@@ -1,0 +1,53 @@
+
+body{
+  position: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.kelvi1 {
+  color: orange;
+  font-size: 30px;
+  font-weight: lighter;
+  text-align: center;
+  position: relative;
+  top: 100px;
+  padding: 10px;
+}
+
+.bathil1 {
+  position: relative;
+  top: 100px;
+  padding: 0px;
+
+}
+
+.bathil1 input {
+  position: relative;
+  left: 330px;
+  background-color: #F8F2CB;
+  width: 550px;
+  height: 45px;
+  padding-left:360px;
+  font-size: 1rem;
+  border-bottom: 5px solid #D0CFCE;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+.next {
+  position: relative;
+  left:670px;
+  top:140px;
+ 
+  
+}
+
+.back1 {
+  position: absolute;
+  top: 90%;
+  padding: 10px;
+}

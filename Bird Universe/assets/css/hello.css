@@ -1,0 +1,44 @@
+
+
+body{
+  position: fixed;
+  margin: 0px;
+  padding: 0px;
+}
+
+.hello{
+  color: grey;
+  font-size: 70px;
+  font-weight: bold;
+  position: relative;
+  left: 600px;
+  top: 100px;
+}
+
+body{
+  background-color: #F8F2CB;
+}
+
+
+  
+.press{
+    margin-left: 20px;
+    margin-top: 345px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.press{
+
+position: relative;
+left:750px;
+bottom:330px;
+color:black;
+font-size: 25px;
+}
+    
+.get{
+  position: relative;
+  left: 600px;
+  top:50px
+}
+
