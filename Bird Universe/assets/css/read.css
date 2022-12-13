@@ -19,18 +19,55 @@
 
 .best {
     color: black;
-    text-decoration-line: overline;
-    text-decoration-color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
 }
 
-.img {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border: 3px double black;
-    padding: 10px 10px 10px 10px;
-    box-shadow: 5px 5px 8px rgb(250, 250, 253), 10px 10px 8px rgb(18, 2, 2), 15px 15px 8px grey;
-    margin-bottom: 10px;
+.heading{
+    text-align:left;
+    color:grey;
+    margin-left: 40px;
+    
+}
+
+.birdlist h3{
+    text-align: center;
+}
+
+.images{
+    
+    border-radius: 20px;
+    margin-left: 10%;
+    width:80%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.birdlist{
+    margin-bottom: 5%;
+    border-radius:40px ;
+    }
+
+.birdlist img{
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.birdlist img:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+
+img{
+    border-radius: 20px;
+}
+
+section.content{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    
 }

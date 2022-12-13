@@ -19,12 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-
-
-
-
+    }
 
 .location {
     padding: 10px;
@@ -33,29 +28,21 @@ body {
 
 }
 
-
-
-
-
 .kelvi2 {
     color: orange;
-    font-size: 30px;
+    font-size: 40px;
     font-weight: lighter;
     text-align: center;
     position: relative;
-    top: 100px;
+    top: 150px;
     padding: 10px;
 }
 
-
-
-
 .bathil1 {
     position: relative;
-    top: 100px;
+    top: 170px;
     padding: 0px;
-
-}
+    }
 
 .bathil1 input {
     position: relative;
@@ -70,18 +57,17 @@ body {
     border-left: none;
     border-right: none;
     outline: none;
-}
+   }
 
 .next {
     position: relative;
-    left: 670px;
-    top: 140px;
-
-
-}
+    left:680px;
+    top:250px;
+    }
 
 .back1 {
-    position: relative;
-    top: 390px;
-    padding: 10px;
-}
+    position:relative;
+    left: 10px;
+    top: 440px;
+    
+    }
