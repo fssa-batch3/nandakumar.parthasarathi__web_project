@@ -3,7 +3,7 @@ body {
     padding: 0px;
     background-color: #F8F2CB;
     position: fixed;
-    
+
 }
 
 .kelvi5 {
@@ -12,34 +12,34 @@ body {
     font-weight: lighter;
     position: relative;
     left: 550px;
-    top: 10px;
+    top: -10px;
     padding: 10px;
-    }
+}
 
 .options {
-    padding: 10px;
+    padding: 0px;
     color: grey;
     position: relative;
     left: 570px;
+    top: -35px;
     font-size: 30px;
     font-weight: bolder;
-    }
+}
 
 input {
     position: relative;
-    left: 250px;
-    bottom: 20px;
-    }
-
+    left: 320px;
+    bottom: 32px;
+}
 
 .id {
     position: relative;
     left: 650px;
-    top: 20px;
-    }
+    top: -20px;
+}
 
 .back1 {
-   position: relative;
-   top:80px;
-   left: 10px;
+    position: relative;
+    bottom: -30px;
+    left: 10px;
 }

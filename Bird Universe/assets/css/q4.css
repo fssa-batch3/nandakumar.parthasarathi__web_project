@@ -2,7 +2,7 @@ body {
   background-color: #F8F2CB;
   margin: 0px;
   padding: 0px;
-  position: relative;
+  position: fixed;
 }
 
 .header {
@@ -113,13 +113,13 @@ button:hover {
   font-weight: lighter;
   text-align: center;
   position: relative;
-  top: 10px;
+  top: -15px;
   padding: 10px;
 }
 
 .select {
   position: relative;
-  top: -35px;
+  top: -75px;
   left: 350px;
   color: grey;
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -186,7 +186,6 @@ button:hover {
   
 }
 
-
 .gray button {
   display: flex;
   flex-direction: row;
@@ -236,18 +235,22 @@ button:hover {
   display: flex;
   flex-direction: row;
   background-color: orange;
+}
 
+.main-colors{
+  position: relative;
+  bottom:100px;
 }
 
 .next {
   position: relative;
-  top: 40px;
+  bottom:80px;
   left: 650px;
   padding-bottom: 20px;
   }
 
-.back {
+.back1 {
   position:relative;
   left:10px;
-  bottom: 10px;
+  bottom: 120px;
   }
