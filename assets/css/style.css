@@ -145,11 +145,15 @@ caption{
   text-transform: uppercase;
   text-decoration-line: underline;
   text-decoration-color: grey;
+  text-align: center;
 }
+
+
+
 .asidehead{
   color:black;
-  margin-left: 10px;
-  text-align:center ; 
+  margin-left: 0px;
+  text-align:justify ; 
   font-size: 25px;
   width: 100%;
   display: flex;
@@ -164,7 +168,21 @@ tbody td{
   font-weight:lighter ;
 }
 
+td{
+  padding: 10px;
+  height: 100px;
+}
 .detailsone{
+  font-size: 16px;
+  font-weight:lighter ;
+}
+
+.detailstwo{
+  font-size: 16px;
+  font-weight:lighter ;
+}
+
+.detailsthree{
   font-size: 16px;
   font-weight:lighter ;
 }
@@ -173,6 +191,23 @@ tbody td{
   color:gray;
   padding-bottom: 20px;
   padding-top:30px ;
+}
+
+.detailstwo th{ 
+  color:gray;
+  padding-bottom: 20px;
+  padding-top:30px ;
+}
+
+.detailsthree th{ 
+  color:gray;
+  padding-bottom: 20px;
+  padding-top:30px ;
+ 
+}
+
+.points{
+  text-align: justify;
 }
 
 
@@ -215,50 +250,19 @@ tbody td{
   text-transform:none;
   color: black;
   font-weight: bold;
-  padding: 50px;
   font-size: 50px;
   padding-bottom: 5px;
   border: 50px solid whitesmoke;
 }
 
 .ofbirding{
-  color:rgb(227, 78, 28);
+  color:black;
+  
 }
 
-.walk{
-  display:flex ;
-  flex-direction: row;
-}
 
-.discover {
-  font-size:70px;
-  font-weight: bold;
-  color:blue;
-  margin-top: 130px;
-  position: relative;
-  right: 100px;
-  bottom: 30px;
 
-}
 
-.parrot {
-  position: relative;
-  right: 40px;
-}
-
-.features {
-  color: black;
-  font-size: 25px;
-  margin-left: 30px;
-}
-
-.explain {
-  display: flex;
-  flex-direction: row;
-  font-weight: bold;
-  color: black;
-  font-size: 25px;
-}
 
 /* ****************************************** */
 /* CSS for HOME page END  */
