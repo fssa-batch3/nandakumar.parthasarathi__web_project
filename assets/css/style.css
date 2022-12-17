@@ -12,14 +12,12 @@
   font-family: Arial, Helvetica, sans-serif;
   background-color:#f4f4f4;
   padding: 10px;
+  font-family: 'Poppins', sans-serif;
   
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
-  
- 
 }
 
 .birds {
@@ -338,13 +336,13 @@ td{
 }
 
 .explorebody{
-background-color:grey ;
+background-color:white ;
 }
 
 .explorediv {
   color:green;
   text-decoration: underline;
-  text-decoration-color: grey;
+  text-decoration-color: white;
   margin: right;
   padding: 10px;
   font-size: 16px;
@@ -410,13 +408,40 @@ background-color:grey ;
 }
 
 .contentright {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 28px;
   width: 50%;
   margin-right: 200px;
   color: black;
-  font-weight: lighter;
+  font-weight:lighter;
   word-spacing: 4px;
   line-height: 1.6;
+}
+
+span{
+  font-weight:bold;
+  color:black;
+}
+
+
+.habit{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  align-content:center;
+  position: relative;
+  right:10px ;
+}
+
+.habit img{
+  border: 2px solid transparent;
+  padding: 5px;
+}
+
+.habit img:hover{
+  background-color:lightgrey;
+  border-radius: 20px;
+  border:solid 2px black ;
 }
 
 .click {
@@ -424,14 +449,7 @@ background-color:grey ;
 
 }
 
-.footer {
-  background-color: grey;
-  border-radius: 20px;
-}
 
-.back button {
-  margin-top: 200px;
-}
 
 /* ****************************************** */
 /* CSS for explore page END  */

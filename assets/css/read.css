@@ -13,6 +13,8 @@ body {
 }
 
 
+
+
 .description {
     color: black;
     text-transform: capitalize;
@@ -70,10 +72,11 @@ img {
 }
 
 section.content {
-    width: 80%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
+    padding: 50px;
 }
 
 .fullbird img {
@@ -102,6 +105,8 @@ section.content {
     margin-left: 10%;
     margin-right: 10%;
 }
+
+
 
  h1{
     text-align: center;
