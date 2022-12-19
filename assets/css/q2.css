@@ -4,7 +4,7 @@ body {
     background-size: cover;
     background-color: #F8F2CB;
     position: fixed;
-    
+
 }
 
 .head {
@@ -16,8 +16,7 @@ body {
     font-size: 30px;
     color: black;
     margin-left: 10px;
-    justify-content: space-between;
-    }
+}
 
 .location {
     padding: 10px;
@@ -39,7 +38,7 @@ body {
 .bathil1 {
     position: relative;
     top: 110px;
-    }
+}
 
 .bathil1 input {
     position: relative;
@@ -54,17 +53,17 @@ body {
     border-left: none;
     border-right: none;
     outline: none;
-   }
+}
 
 .next {
     position: relative;
-    left:680px;
-    top:200px;
-    }
+    left: 680px;
+    top: 200px;
+}
 
 .back1 {
-    position:relative;
+    position: relative;
     left: 10px;
     top: 380px;
-    
-    }
+
+}
