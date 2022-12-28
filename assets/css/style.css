@@ -1,25 +1,42 @@
 /* ****************************************** */
 /* COMMON START  */
 /* ****************************************** */
+
 .header {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   font-weight: lighter;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
-  background-color:white;
-  padding: 10px;
-  
-  
+  padding-top: 30px;
+  padding-bottom: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
-.logo{
+footer{
+  background-color: black;
+  color: white;
+  padding: 40px;
+  padding-bottom: 50px;
+}
+
+
+.header:hover{
+  background-color:black;
+}
+
+
+div .headerendline {
+  border: 1px solid whitesmoke;
+}
+
+.logo {
   display: flex;
-  flex-direction: row;
-  align-content: flex-start;
   align-items: center;
 
 }
@@ -27,12 +44,14 @@
 body {
   width: 100%;
   overflow-x: hidden;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  
 }
 
 .birds {
   font-size: 20px;
-  color: white;
+  margin-left: 10px;
+  color:white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
@@ -51,9 +70,10 @@ body {
 
 .loginbtn span {
   cursor: pointer;
-  display: inline-block;
+  display: inline;
   position: relative;
   transition: 0.2s;
+  margin-right: 20px;
 }
 
 .loginbtn span:after {
@@ -66,7 +86,7 @@ body {
 }
 
 .loginbtn:hover span {
-  padding-right: 25px;
+  padding-right: 35px;
 }
 
 .loginbtn:hover span:after {
@@ -79,77 +99,81 @@ li {
 }
 
 li a {
-  position: relative;
-  left: 250px;
-  color: black;
+  color:white;
   text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-color:orange;
   text-align: center;
-  padding: 20px 20px;
+  padding: 30px 30px;
+
 }
 
 
 
 button {
   color: white;
-  padding: 10px 25px 10px 25px;
+  width: 150px;
+  height: 50px;
+  border: none;
   background-color: orange;
-  border-radius: 10px;
-  font-weight: lighter;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-transform: uppercase;
-  border-color: transparent;
-  cursor: pointer;
-  display: inline-block;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 0 black;
+  transition: ease-out 0.5s;
+  outline: none;
+
+
 }
 
 button:hover {
-  color: black;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-  transform: scale(1.1);
+  box-shadow: inset 300px 0 0 0 black;
+  font-size: 16px;
+  font-weight: bold;
+
 }
+
 
 
 /* ****************************************** */
 /* COMMON END  */
 /* ****************************************** */
-section.overall{
+section.overall {
   display: flex;
 }
 
-main{
-  background-color:black;
+main {
+  background-color: black;
   flex-grow: 7.5;
 }
 
 
 
 /* Aside start */
-aside{
+aside {
   width: 25%;
   height: 100vh;
-  background-color:whitesmoke;
-  position:sticky;
+  background-color: whitesmoke;
+  position: sticky;
   top: 0;
   overflow-y: scroll;
 }
-.asidecontent{
+
+.asidecontent {
   width: 100%;
 }
 
-caption{
+caption {
   color: green;
-  font-size:25px;
-  font-weight:bold;
+  font-size: 25px;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  
+
 }
 
 
 
-.asidehead{
-  color:grey;
+.asidehead {
+  color: grey;
   margin-left: 0px;
   font-size: 35px;
   width: 100%;
@@ -160,54 +184,55 @@ caption{
   align-items: center;
 }
 
-.details{
+.details {
   text-align: center;
 }
 
-tbody td{
-  color:black;
-  font-weight:lighter ;
+tbody td {
+  color: black;
+  font-weight: lighter;
 }
 
-td{
+td {
   padding: 10px;
   height: 50px;
 }
-.detailsone{
+
+.detailsone {
   font-size: 16px;
-  font-weight:lighter ;
+  font-weight: lighter;
 }
 
-.detailstwo{
+.detailstwo {
   font-size: 16px;
-  font-weight:lighter ;
+  font-weight: lighter;
 }
 
-.detailsthree{
+.detailsthree {
   font-size: 16px;
-  font-weight:lighter ;
+  font-weight: lighter;
 }
 
-.detailsone th{ 
-  color:gray;
+.detailsone th {
+  color: gray;
   padding-bottom: 20px;
-  padding-top:30px ;
+  padding-top: 30px;
 }
 
-.detailstwo th{ 
-  color:gray;
+.detailstwo th {
+  color: gray;
   padding-bottom: 20px;
-  padding-top:30px ;
+  padding-top: 30px;
 }
 
-.detailsthree th{ 
-  color:gray;
+.detailsthree th {
+  color: gray;
   padding-bottom: 20px;
-  padding-top:30px ;
- 
+  padding-top: 30px;
+
 }
 
-.points{
+.points {
   text-align: justify;
 }
 
@@ -220,45 +245,78 @@ td{
 .project {
   background-image: url(https://images.news18.com/ibnlive/uploads/2022/08/birds-2-16596764624x3.png);
   background-size: cover;
-  height: 1000px;
+  height:810px;
   width: 100%;
+  opacity: 1.5;
 }
 
-.birdsfont {
-  font-size: 40px;
+.guidance {
+
+  border: 1px solid black;
+  padding: 20px 30px;
+  border-radius: 5px;
+  background-color: gray;
+  border: none;
+  box-shadow: inset 0 0 0 0 black;
+  transition: ease-out 0.5s;
+  outline: none;
+}
+
+.guidance:hover {
+  box-shadow: inset 200px 0 0 0 orange;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+div .websitename {
+  color:white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: lighter;
   position: relative;
-  left: 180px;
+  left: 900px;
+  top: 50px;
   
 }
 
-.slogan {
-  position: sticy;
-  color: whitesmoke;
-  background-color: balck;
-  margin: 200px;
-  margin-left: 40px;
-  font-size: 70px;
+div .websitename:hover{
+  color: grey;
+  font-size:lighter;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-decoration-color: orange;
+  
 }
 
-.birding {
-  padding-bottom: 100px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color:white;
-  text-transform:none;
-  color: black;
-  font-weight: bold;
+
+
+.slogan {
+  color:Orange;
+  text-transform: uppercase;
+  line-height:1cm;
+  position:relative;
+  left: 790px;
+  top:80px;
   font-size: 50px;
-  border: 50px solid whitesmoke;
+  font-weight: bolder; 
+  text-shadow: white black;
 }
 
-.ofbirding{
-  color:black; 
+div .learnmore{
+  display: flex;
+  flex-direction: column; 
+  position: relative;
+   bottom: 50px;
 }
+
+div .btn{
+  position: relative;
+  left: 800px;
+  top: 60px;
+}
+
+
+
 
 /* ****************************************** */
 /* CSS for HOME page END  */
@@ -273,6 +331,8 @@ td{
   height: 800px;
   width: 100%;
 }
+
+
 
 .box {
   height: 200px;
@@ -302,18 +362,18 @@ td{
 
 .save {
   color: black;
- font-size: 80px;
+  font-size: 80px;
   font-weight: lighter;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
- position: relative;
- left: 550px;
+  position: relative;
+  left: 550px;
 
 }
 
 .back {
- position: relative;
- top: 200px;
-  
+  position: relative;
+  top: 200px;
+
 
 }
 
@@ -332,12 +392,18 @@ td{
   justify-content: center;
 }
 
-.explorebody{
-background-color:white ;
+.explorebody {
+  background-color: grey;
+}
+
+
+
+section .searchhead {
+  background-color: #D0CFCE;
 }
 
 .explorediv {
-  color:green;
+  color: green;
   text-decoration: underline;
   text-decoration-color: white;
   margin: right;
@@ -364,7 +430,7 @@ background-color:white ;
 
 
 .birdstructure {
-  background-color:lightgrey;
+  background-color: lightgrey;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -374,7 +440,7 @@ background-color:white ;
   font-size: 60px;
   width: 100%;
   height: 450px;
-  border-bottom:1px solid white ;
+  border-bottom: 1px solid white;
 }
 
 .contentleft {
@@ -388,65 +454,62 @@ background-color:white ;
   flex-wrap: nowrap;
   justify-content: start;
   align-items: center;
-  
+
 }
 
 .contentleft img {
   width: 70%;
   height: 55%;
   border-radius: 0px;
-  border:5px solid whitesmoke;
+  border: 5px solid whitesmoke;
   padding: 10px;
 }
 
-.contentleft img:hover{
+.contentleft img:hover {
   transform: scale(1.1);
   transition: 1s;
 }
 
 .contentright {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 28px;
   width: 50%;
   margin-right: 200px;
   color: black;
-  font-weight:lighter;
+  font-weight: lighter;
   word-spacing: 4px;
   line-height: 1.6;
 }
 
-span{
-  font-weight:bold;
-  color:black;
+span {
+  font-weight: bold;
+  color: black;
 }
 
-
-.habit{
-  display:flex;
+.habit {
+  display: flex;
   flex-direction: row;
   align-items: center;
-  align-content:center;
+  align-content: center;
   position: relative;
-  right:10px ;
+  right: 10px;
 }
 
-.habit img{
+.habit img {
   border: 2px solid transparent;
   padding: 5px;
 }
 
-.habit img:hover{
-  background-color:white;
+.habit img:hover {
+  background-color: white;
   border-radius: 20px;
-  border:solid 2px black ;
+  border: solid 2px black;
 }
 
 .click {
   margin-top: 10px;
 
 }
-
-
 
 /* ****************************************** */
 /* CSS for explore page END  */
@@ -459,8 +522,6 @@ span{
   background-color: #F8F2CB;
   height: 100%;
 }
-
-
 
 /* ****************************************** */
 /* CSS for Q1 page END  */
