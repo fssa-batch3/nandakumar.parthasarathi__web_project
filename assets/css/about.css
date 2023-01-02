@@ -248,3 +248,54 @@ h3 {
   
 }
 
+@media only screen and (max-width: 912px) {
+  .ourmission {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .needq1{
+    display: flex;
+    flex-direction: row;
+  
+  }
+
+  .about-sparrow{
+    width: 100%;
+    height: 500px;
+  }
+
+  .mission-discription{
+    padding-top: 40px;
+    margin-right: 100px;
+    text-align:inherit;
+}
+
+.oddtitle{
+ position: relative;
+ right: 300px;
+}
+
+.eventitle{
+  text-align: center;
+}
+
+.double{
+  display: flex;
+  flex-direction:column;
+ flex-wrap: nowrap;
+}
+
+.double-2{
+  display: flex;
+  flex-direction:column;
+ 
+}
+
+.benifitimg{
+
+
+}
+}
+
