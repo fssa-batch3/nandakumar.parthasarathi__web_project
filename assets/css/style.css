@@ -5,29 +5,98 @@
 .header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   font-weight: lighter;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
-footer{
+footer {
   background-color: black;
   color: white;
   padding: 40px;
   padding-bottom: 50px;
 }
 
+/* dropdown */
+.toggle-button {
+  display: none;
+  position: absolute;
+  right: 20px;
+}
 
-.header:hover{
-  background-color:black;
+.navbar2 a {
+  float: left;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  color: rgb(226, 237, 240);
+  font-weight: 600;
+  font-size: 3vw;
+  border-bottom: 2px solid rgb(255, 98, 0);
+  transition: all 0.5s;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 27px;
+  border: none;
+  outline: none;
+  color: rgb(6, 7, 7);
+  margin-top: 9px;
+}
+
+.navbar2 a:hover,
+.dropdown:hover .dropbtn {
+  color: rgb(255, 98, 0);
+  border-bottom: 3px solid rgb(4, 4, 4);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8p x 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(247, 240, 240);
+  padding: 12px 16px;
+  display: grid;
+  text-decoration: none;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  background-color: transparent;
+  width: auto;
+}
+
+/* dropdown */
+
+.header:hover {
+  background-color: black;
 }
 
 
@@ -42,16 +111,17 @@ div .headerendline {
 }
 
 body {
+  margin: 0;
+  padding: 0;
   width: 100%;
   overflow-x: hidden;
   font-family: 'Source Sans Pro', sans-serif;
-  
+
 }
 
 .birds {
   font-size: 20px;
-  margin-left: 10px;
-  color:white;
+  color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
@@ -114,19 +184,44 @@ li {
 }
 
 li a {
-  color:white;
+  color: white;
   text-decoration: none;
   text-decoration-line: underline;
-  text-decoration-color:orange;
+  text-decoration-color: orange;
   text-align: center;
   padding: 30px 30px;
-
 }
 
 
 
 button {
-  color: white;
+  display: inline-block;
+  position: relative;
+  color: orange;
+  background: #ffffff;
+  padding: 16px 24px;
+  margin: 20px;
+  border: 2px solid orange;
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  background:orange ;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
+
+
+  /* color: white;
   width: 150px;
   height: 50px;
   border: none;
@@ -134,16 +229,39 @@ button {
   border-radius: 5px;
   box-shadow: inset 0 0 0 0 black;
   transition: ease-out 0.5s;
-  outline: none;
+  outline: none; */
 
 
-}
+
 
 button:hover {
-  box-shadow: inset 300px 0 0 0 black;
-  font-size: 16px;
-  font-weight: bold;
 
+  color: #ffffff;
+  /* box-shadow: inset 200px 0 0 0 gray;
+  font-size: 16px;
+  font-weight: bold; */
+}
+
+button:before{
+  top: 100%;
+  left: 100%;
+  transition: 0.7s;
+}
+
+button:hover:before {
+  top: -30px;
+  left: -30px;
+
+
+ 
+  /* box-shadow: inset 200px 0 0 0 gray;
+  font-size: 16px;
+  font-weight: bold; */
+}
+
+button:active:before{
+  background:lightgray;
+  transition: 0s;
 }
 
 
@@ -159,8 +277,6 @@ main {
   background-color: black;
   flex-grow: 7.5;
 }
-
-
 
 /* Aside start */
 aside {
@@ -182,10 +298,7 @@ caption {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-
 }
-
-
 
 .asidehead {
   color: grey;
@@ -244,7 +357,6 @@ td {
   color: gray;
   padding-bottom: 20px;
   padding-top: 30px;
-
 }
 
 .points {
@@ -260,13 +372,12 @@ td {
 .project {
   background-image: url(https://images.news18.com/ibnlive/uploads/2022/08/birds-2-16596764624x3.png);
   background-size: cover;
-  height:810px;
+  height: 810px;
   width: 100%;
   opacity: 1.5;
 }
 
 .guidance {
-
   border: 1px solid black;
   padding: 20px 30px;
   border-radius: 5px;
@@ -282,57 +393,64 @@ td {
   color: black;
   font-weight: bold;
   font-size: 20px;
-
 }
 
 div .websitename {
-  color:white;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: lighter;
+  color: white;
   position: relative;
-  left: 900px;
-  top: 50px;
-  
+  left: 50px;
+  top: 100px;
 }
 
-div .websitename:hover{
+
+div .websitename:hover {
   color: grey;
-  font-size:lighter;
+  font-size: lighter;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  
 }
 
 .slogan {
-  color:Orange;
+  color: Orange;
   text-transform: uppercase;
-  line-height:1cm;
-  position:relative;
-  left: 790px;
-  top:80px;
-  font-size: 50px;
-  font-weight: bolder; 
+  line-height: 1cm;
+  font-size: 4rem;
+  font-weight: bolder;
   text-shadow: white black;
 }
 
-div .learnmore{
+div .learnmore {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   position: relative;
-   bottom: 50px;
-}
+  bottom: 50px;
 
-div .btn{
-  position: relative;
-  left: 800px;
-  top: 60px;
 }
 
 
+@media only screen and (max-width:400px) {
+  ul {
+    display: none;
+  }
 
+  .toggle-button {
+    display: flex;
+  }
+
+  .slogan {
+    color: Orange;
+    font-size: 2rem
+  }
+
+  div .websitename {
+    color: white;
+    position: relative;
+    left: 50px;
+    top: 220px;
+  }
+}
 
 /* ****************************************** */
-/* CSS for HOME page END  */
+/* CSS for INDEX page END  */
 /* ****************************************** */
 
 /* ****************************************** */
@@ -380,14 +498,11 @@ div .btn{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   position: relative;
   left: 550px;
-
 }
 
 .back {
   position: relative;
   top: 200px;
-
-
 }
 
 /* ****************************************** */
@@ -397,172 +512,7 @@ div .btn{
 /* ****************************************** */
 /* CSS for explore page START  */
 /* ****************************************** */
-.searchhead {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  justify-content: center;
-}
 
-.explorebody {
-  background-color: grey;
-}
-
-
-
-section .searchhead {
-  background-color: #D0CFCE;
-}
-
-.explorediv {
-  color: green;
-  text-decoration: underline;
-  text-decoration-color: white;
-  margin: right;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.searchbar {
-  padding: 10px;
-  width: 50%;
-  display: flex;
-}
-
-.searchbar input {
-  margin: 0 auto;
-  width: 100%;
-  height: 45px;
-  padding: 0 20px;
-  font-size: 1rem;
-  border: 1px solid #D0CFCE;
-  border-radius: 20px;
-  outline: none;
-}
-
-
-.birdstructure {
-  background-color: lightgrey;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-  border: 1px solid lightgray;
-  font-size: 60px;
-  width: 100%;
-  height: 450px;
-  border-bottom: 1px solid white;
-}
-
-.contentleft {
-  padding: 10px;
-  padding-left: 50px;
-  position: relative;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: start;
-  align-items: center;
-
-}
-
-.contentleft img {
-  width: 70%;
-  height: 55%;
-  border-radius: 0px;
-  border: 5px solid whitesmoke;
-  padding: 10px;
-}
-
-.contentleft img:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
-
-.contentright {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 28px;
-  width: 50%;
-  margin-right: 200px;
-  color: black;
-  font-weight: lighter;
-  word-spacing: 4px;
-  line-height: 1.6;
-}
-
-span {
-  font-weight: bold;
-  color: black;
-}
-
-/*.habit {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  position: relative;
-  right: 10px;
-}*/
-
-
-.click {
-  margin-top: 10px;
-
-}
-
-#tooltip{
-  position: relative;
-  cursor: pointer; 
-}
-
-#tooltiptext{
-  position: absolute;
-  left: 50%;
-  top: 0;
-  font-size: 16px;
-  font-weight: lighter;
-  transform: translateX(-50%);
-  background-color:transparent;
-  border: 1px solid black;
-  color: black;
-  white-space: nowrap;
-  padding: 5px 10px;
-  border-radius: 7px;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-#tooltiptext::before{
-  content: "";
-  position: absolute;
-  left: 10%;
-  top: 100%;
-  transform: translateX(18px);
-  border:7px solid;
-  border-color: #000 #0000 #0000 #0000;
-
-}
-
-#tooltip:hover #tooltiptext{
-  top: -40%;
-  visibility: visible;
-  opacity: 1;
-}
-
-.tooltipsss{
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-  
-
-}
 
 /* ****************************************** */
 /* CSS for explore page END  */
@@ -571,10 +521,10 @@ span {
 /* ****************************************** */
 /* CSS for Q1 page START  */
 /* ****************************************** */
-.question1body {
-  background-color: #F8F2CB;
-  height: 100%;
-}
+/* .question1body {
+    background-color: #F8F2CB;
+    height: 100%;
+  } */
 
 /* ****************************************** */
 /* CSS for Q1 page END  */

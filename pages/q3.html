@@ -2,6 +2,10 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Question number 1</title>
 
     <link rel="stylesheet" href="..//assets/css/q3.css">
@@ -11,7 +15,7 @@
 <body>
 
     <div class="header">
-        <h1 class="birds"><b>BIRDS UNIVERSE</b></h1>
+        <h1 class="birds"><b>BIRDS BUDDY</b></h1>
         <ul>
             <li>
                 <a class="navlist" href="../index.html">Home</a>
@@ -20,66 +24,58 @@
                 <a class="navlist" href="../pages/about.html">About</a>
             </li>
             <li>
-                <a class="navlist" href="../pages/search.html">Search</a>
+                <a class="navlist" href="../pages/q1.html">Search</a>
             </li>
             <li>
                 <a class="navlist" href="../pages/explore.html">Explore</a>
             </li>
             <li>
-                <a class="guidance" href="../pages/birdguidance">Guidance</a>
+                <a class="guidance" href="../pages/guidance.html">Guidance</a>
             </li>
         </ul>
 
-        <a class="navlist" href="./pages/login.html">
-            <button class="loginbtn" style="vertical-align:middle"><span>login</span></button></a>
+        
     </div>
     <div class="headerendline"></div>
 
-
-
-    <div class="location2">
+    <!-- <div class="location2">
         <small class="place"> chennai, Tamil nadu, IN</small>
-    </div>
+    </div> -->
 
-
-    <section class="summa3">
-
-        <div class="kelvi3">
+    <section class="question-section">
+        <div class="container">
+        <div class="kelvi">
             <h3>What size was the bird?</h3>
         </div>
-
-        <section>
-
             <div class="bimg">
-                <img src="../assets/Images/sparrow.png" alt="sparrow" height="50px">
-                <img src="../assets/Images/crow2nd.png" alt="crow" height="80px" width="100px">
-                <img src="../assets/Images/crow-removebg-preview.png" alt="crow" height="90px">
-                <img src="../assets/Images/eagelsizejpg-removebg-preview.png" alt="eagel" height="180px">
+                <img class="size-of-bird" src="../assets/Images/sparrow.png" alt="sparrow" height="50px">
+                <img class="size-of-bird" src="../assets/Images/crow2nd.png" alt="crow" height="80px" width="100px">
+                <img class="size-of-bird" src="../assets/Images/crow-removebg-preview.png" alt="crow" height="90px">
+                <img class="size-of-bird" src="../assets/Images/eagelsizejpg-removebg-preview.png" alt="eagel" height="180px">
             </div>
-
             <div>
-                <div class="range">
-                    <lable></lable>
-                </div>
-                <input height="20px" width="100px" type="range" />
+                <input  id="range" height="20px" width="100px" type="range"/>
             </div>
-
-        </section>
-
-        <div class="next">
-            <a
-                href="..//pages/q4.html"><button>Next</button></a>
+            <div>
+                <button type="button" class="next" onclick="submit()">Next</button> 
+            </div>
+            <div class="back">
+                <a href="../pages/q2.html"><button type="button" onclick="history.back()">Back</button></a>
+            </div>
         </div>
-
-        <div class="back1">
-            <a
-                href="..//pages/q2.html"><button>Back</button></a>
-        </div>
-
     </section>
 
-    </section>
+<script>
+                function submit(){
+               const range = document.getElementById("range").value
+
+               console.log(range)
+
+               window.location.href="../pages/q4.html"
+                }
+ </script>
+
 
 </body>
-
 </html>
+

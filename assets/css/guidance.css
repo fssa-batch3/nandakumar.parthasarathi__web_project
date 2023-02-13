@@ -99,7 +99,7 @@ h3 {
   color: black;
   font-size: 20px;
   font-family: 'Heebo', sans-serif;
-  text-transform: uppercase;
+  text-transform:none;
   position: relative;
   bottom: 70px;
 }
@@ -137,4 +137,27 @@ h3 {
   border-radius: 5px;
   position: relative;
   left: 40px;
+}
+
+@media(max-width:400px){
+ 
+  .goal {
+    font-size: 30px; 
+}
+
+.advice1, .advice2 {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  left: 10%;
+  padding-bottom: 50px;
+}
+
+.waterbird {
+  width: 380px;
+  height: 250px;
+  position: relative;
+  left: -15px; 
+}
+  
 }

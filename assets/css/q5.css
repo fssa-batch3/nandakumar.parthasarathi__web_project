@@ -1,45 +1,83 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    background-color: #F8F2CB;
-    position: fixed;
 
-}
+.header{
+    background-color: black;
+  }
 
-.kelvi5 {
+.kelvi {
     color: orange;
-    font-size: 40px;
-    font-weight: lighter;
-    position: relative;
-    left: 550px;
-    top: -10px;
-    padding: 10px;
+    font-size: 2rem;
 }
 
 .options {
-    padding: 0px;
+    padding: 0px; 
     color: grey;
-    position: relative;
-    left: 570px;
-    top: -35px;
-    font-size: 30px;
-    font-weight: bolder;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
-
+   
 input {
     position: relative;
-    left: 320px;
-    bottom: 32px;
+    left: 150px;
+    bottom: 22px;
 }
 
-.id {
-    position: relative;
-    left: 650px;
-    top: -20px;
+.question-section {
+    text-align: center;
+    margin-top: 5%;
+    
 }
 
-.back1 {
-    position: relative;
-    bottom: -30px;
-    left: 10px;
+.next {
+    width: 100px;
+    height: 40px;
+    margin-top: 55px;
+}
+
+.back {
+  width: 60px;
+  height: 40px;
+  margin-top: -130px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width:400px) {
+    .kelvi {
+        color: orange;
+        font-size: 20px;
+      }
+
+      input {
+        position: relative;
+        left: 150px;
+        bottom: 22px;
+       
+    }
+
+    .options {
+        padding: 0px; 
+        color: grey;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+      .next {
+        font-size: 13px;
+        width: 70px;
+        height: 30px;
+        margin-top: 20px;
+       }
+    
+       .back {
+        margin-top: -100px;
+        margin-left: 20px;
+      }
+
+      .question-section{
+        position: relative;
+        right: 20px;
+
+      }
+
+      
+      
 }

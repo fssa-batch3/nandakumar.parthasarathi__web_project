@@ -9,14 +9,11 @@
 
     <link rel="stylesheet" href="..//assets/css/style.css">
     <link rel="stylesheet" href="..//assets/css/q1.css">
-    
 </head>
 
-<body class="question1body">
-
-
+<body>
     <div class="header">
-        <h1 class="birds"><b>BIRDS UNIVERSE</b></h1>
+        <h1 class="birds"><b>BIRDS BUDDY</b></h1>
         <ul>
             <li>
                 <a class="navlist" href="../index.html">Home</a>
@@ -25,7 +22,7 @@
                 <a class="navlist" href="../pages/about.html">About</a>
             </li>
             <li>
-                <a class="navlist" href="../pages/search.html">Search</a>
+                <a class="navlist" href="../pages/q1.html">Search</a>
             </li>
             <li>
                 <a class="navlist" href="../pages/explore.html">Explore</a>
@@ -34,27 +31,32 @@
                 <a class="guidance" href="../pages/birdguidance">Guidance</a>
             </li>
         </ul>
-
-        <a class="navlist" href="./pages/login.html">
-            <button class="loginbtn" style="vertical-align:middle"><span>login</span></button></a>
     </div>
     <div class="headerendline"></div>
-
-    <body class="question1body">
-            <div class="kelvi1 ">
+    <section class="question-section">
+        <div class="container">
+            <div class="kelvi">
                 <h3>Where did you see the bird?</h3>
             </div>
-
-            <div class="bathil1">
-                <input type="text" placeholder="Type here" />
+            <div class="bathil">
+                <input type="text" id="bird" placeholder="Type here"/>
             </div>
-
-            <div class="next">
-                <a href="..//pages/q2.html"><button>Next</button></a>
+            <div>
+                <button type="button" class="next" onclick="submit()">Next</button></a> 
             </div>
-
-            <div class="back1">
-                <a href="..//pages/hello.html"><button>Back</button></a>
+            <div class="back">
+                <a href="..//pages/hello.html"><button type="button" onclick="history.back()">Back</button></a>
             </div>
-    </body>
+        </div>  
+    </section>
+    <script>
+        function submit(){
+        const bird = document.getElementById("bird").value
+
+        console.log(bird)
+
+        window.location.href="../pages/q2.html"
+    }  
+    </script>
+</body>
 </html>

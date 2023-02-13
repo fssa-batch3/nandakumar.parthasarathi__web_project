@@ -1,0 +1,37 @@
+{
+    "name":"string",
+    "scientific_Name": "string",
+    "size" : "string",
+    "image":{
+        "source":"string",
+        "alt":"string"
+    },
+    "habitat":[
+        {
+            "source": "string",
+            "alt": "string",
+            "tooltip":"string"
+            
+        },
+        {
+            "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+            "alt": "Insects",
+            "tooltip":"Insects"
+        },
+        {
+            "source": "../assets/Images/cherryss-removebg-preview.png",
+            "alt": "Fruits",
+            "tooltip":"Fruits"
+        },
+        {
+            "source": "../assets/Images/plant-removebg-preview.png",
+            "alt": "Plants",
+            "tooltip":"Plants"
+        },
+        {
+            "source": "../assets/Images/seesd-removebg-preview.png",
+            "alt": "Seeds",
+            "tooltip":"seeds"
+        }
+        ]
+    },

@@ -2,7 +2,13 @@
 <html>
 
 <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Question number 1</title>
+
     <link rel="stylesheet" href="..//assets/css/q4.css">
     <link rel="stylesheet" href="..//assets/css/style.css">
 </head>
@@ -10,7 +16,7 @@
 <body>
 
     <div class="header">
-        <h1 class="birds"><b>BIRDS UNIVERSE</b></h1>
+        <h1 class="birds"><b>BIRDS BUDDY</b></h1>
         <ul>
             <li>
                 <a class="navlist" href="../index.html">Home</a>
@@ -19,97 +25,79 @@
                 <a class="navlist" href="../pages/about.html">About</a>
             </li>
             <li>
-                <a class="navlist" href="../pages/search.html">Search</a>
+                <a class="navlist" href="../pages/q1.html">Search</a>
             </li>
             <li>
                 <a class="navlist" href="../pages/explore.html">Explore</a>
             </li>
             <li>
-                <a class="guidance" href="../pages/birdguidance">Guidance</a>
+                <a class="guidance" href="../pages/guidance.html">Guidance</a>
             </li>
         </ul>
 
-        <a class="navlist" href="./pages/login.html">
-            <button class="loginbtn" style="vertical-align:middle"><span>login</span></button></a>
+
     </div>
-    <div class="headerendline"></div>   
-
-    
-    <div class="kelvi4">
-        <h3>What were the main colors?</h3>
-    </div>
-
-    <div class="select">
-        <h4>Select from 1 to 3</h4>
-    </div>
-
-    <div class="main-colors">
-    <section class="frow">
-
-        <div class="black">
-            <button class="color-btn">Black</button>
+    <div class="headerendline"></div>
+    <section class="question-section">
+        <div class="container">
+            <div class="kelvi">
+                <h3>What were the main colors?</h3>
+            </div>
+            <div class="select">
+                <h4>Select from 1 to 3</h4>
+            </div>
+            <div class="main-colors">
+                <section class="frow">
+                    <div class="black">
+                        <button type="button" class="color-btn">Black</button>
+                    </div>
+                    <div class="gray">
+                        <button class="color-btn">Gray</button>
+                    </div>
+                    <div class="white">
+                        <button class="color-btn">White</button>
+                    </div>
+                </section>
+                <section class="srow">
+                    <div class="brown">
+                        <button class="color-btn">Brown</button>
+                    </div>
+                    <div class="red">
+                        <button class="color-btn">Red</button>
+                    </div>
+                    <div class="yellow">
+                        <button class="color-btn">Yellow</button>
+                    </div>
+                </section>
+                <section class="trow">
+                    <div class="green">
+                        <button class="color-btn">Green</button>
+                    </div>
+                    <div class="blue">
+                        <button class="color-btn"> Blue</button>
+                    </div>
+                    <div class="orange">
+                        <button class="color-btn">Orange</button>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <button type="button" id="colour" class="next" onclick="submit()">Next</button></a>
+            </div>
+            <div class="back">
+                <a href="..//pages/q3.html"><button>Back</button></a>
+            </div>
         </div>
-
-        <div class="gray">
-            <button class="color-btn">Gray</button>
-        </div>
-
-        <div class="white">
-            <button class="color-btn">White</button>
-        </div>
-
     </section>
 
+    <script>
+        function submit() {
+            let colour = document.getElementById("colour").value
 
-    <section class="srow">
+            console.log(colour)
 
-        <div class="brown">
-            <button class="color-btn">Brown</button>
-        </div>
-
-        <div class="red">
-            <button class="color-btn">Red</button>
-        </div>
-
-        <div class="yellow">
-            <button class="color-btn">Yellow</button>
-        </div>
-
-    </section>
-
-    <section class="trow">
-
-        <div class="green">
-
-            <button class="color-btn">Green</button>
-
-        </div>
-
-        <div class="blue">
-
-            <button class="color-btn"> Blue</button>
-
-        </div>
-
-        <div class="orange">
-
-            <button class="color-btn">Orange</button>
-
-        </div>
-
-    </section>
-    </div>
-
-
-    <div class="next">
-        <a href="..//pages/q5.html"><button>Next</button></a>
-    </div>
-
-    <div class="back1">
-        <a href="..//pages/q3.html"><button>Back</button></a>
-    </div>
-
-
+            window.location.href = "../pages/q5.html"
+        }
+    </script>
 </body>
-
 </html>

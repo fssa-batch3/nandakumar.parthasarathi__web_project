@@ -1,82 +1,245 @@
 body {
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  .guidance {
-    border: 1px solid black;
-    padding: 20px 30px;
-    border-radius: 5px;
-    background-color: gray;
-    border: none;
-    box-shadow: inset 0 0 0 0 black;
-    transition: ease-out 0.5s;
-    outline: none;
-  }
-  
-  .guidance:hover {
-    box-shadow: inset 200px 0 0 0 orange;
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  
-  .headerendline {
-    border: 1px solid white;
-  }
-  
-  .aboutimage {
-    background-image: url(https://www.allaboutbirds.org/guide/assets/photo/302049471-1280px.jpg);
-    background-size: cover;
-    height: 600px;
-    width: 100%;
-    opacity: 1;
-  }
-  
-  h1,
-  h3 {
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 100px;
-    font-weight: bolder;
-    font-family: 'Source Sans Pro', sans-serif;
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 3px;
-    position: relative;
-    top: 30px;
-  }
-  
-  .sub {
-    font-family: 'Heebo', sans-serif;
-    font-weight: bolder;
-    text-transform: uppercase;
-    color: white;
-    position: relative;
-    bottom: 30px;
-    letter-spacing: 4px;
-  }
-  
-  .spanabout {
-    color: orange;
-  }
-  
-  .spanhome {
-    color: white;
-  }
-  
-  .spanhome:hover {
-    color: orange;
-  }
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
 
-  .goal {
-    color: black;
-    text-align: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 40px;
-    text-transform: uppercase;
-    font-weight: bolder;
-  }
+.guidance {
+  border: 1px solid black;
+  padding: 20px 30px;
+  border-radius: 5px;
+  background-color: gray;
+  border: none;
+  box-shadow: inset 0 0 0 0 black;
+  transition: ease-out 0.5s;
+  outline: none;
+}
+
+.guidance:hover {
+  box-shadow: inset 200px 0 0 0 orange;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.headerendline {
+  border: 1px solid white;
+}
+
+.aboutimage {
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/680/751/662/sunset-birds-lake-pack-wallpaper-preview.jpg);
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  opacity: 1;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+.title {
+  font-size: 100px;
+  font-weight: bolder;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 3px;
+  position: relative;
+  top: 30px;
+}
+
+.sub-title {
+  font-family: 'Heebo', sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  bottom: 30px;
+  letter-spacing: 4px;
+}
+
+.spanabout {
+  color: orange;
+}
+
+.spanhome {
+  color: white;
+}
+
+.spanhome:hover {
+  color: orange;
+}
+
+.goal {
+  color: black;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.birdpara {
+  font-size: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.searchhead {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.explorebody {
+  background-color: white;
+}
+
+section .searchhead {
+  background-color: white;
+}
+
+.explorediv {
+  color: orange;
+  text-decoration: underline;
+  text-decoration-color: white;
+  margin: right;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.searchbar {
+  padding: 10px;
+  width: 50%;
+  display: flex;
+}
+
+.searchbar input {
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 5px solid grey;
+  border-radius: 20px;
+  outline: none;
+}
+
+.birdstructure {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  width: 100%;
+  height: 450px;
+}
+
+.contentleft {
+  padding: 10px;
+  padding-left: 50px;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: center;
+}
+
+.contentleft img {
+  width: 70%;
+  height: 55%;
+  border-radius: 0px;
+  border: 5px solid whitesmoke;
+  padding: 10px;
+}
+
+.contentleft img:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.contentright {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 28px;
+  width: 50%;
+  margin-right: 200px;
+  color: black;
+  font-weight: lighter;
+  word-spacing: 4px;
+  line-height: 1.6;
+}
+
+span {
+  font-weight: bold;
+  color: black;
+}
+
+/*.habit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    right: 10px;
+  }*/
+
+
+.click {
+  margin-top: 10px;
+}
+
+#tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+#tooltiptext {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  font-size: 16px;
+  font-weight: lighter;
+  transform: translateX(-50%);
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 7px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#tooltiptext::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: 100%;
+  transform: translateX(18px);
+  border: 7px solid;
+  border-color: #000 #0000 #0000 #0000;
+
+}
+
+#tooltip:hover #tooltiptext {
+  top: -40%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltipsss {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start
+}

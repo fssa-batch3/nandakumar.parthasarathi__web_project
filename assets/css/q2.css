@@ -1,69 +1,71 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    background-size: cover;
-    background-color: #F8F2CB;
-    position: fixed;
 
+.header{
+  background-color: black;
 }
 
-.head {
-    margin: 10px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    font-weight: bolder;
-    font-size: 30px;
-    color: black;
-    margin-left: 10px;
-}
-
-.location {
+/* .location {
     padding: 10px;
     margin-left: 20px;
-    background-color: #F8F2CB;
+} */
 
-}
-
-.kelvi2 {
+.kelvi {
     color: orange;
-    font-size: 40px;
-    font-weight: lighter;
-    text-align: center;
-    position: relative;
-    top: 110px;
-    padding: 10px;
-}
-
-.bathil1 {
-    position: relative;
-    top: 110px;
-}
-
-.bathil1 input {
-    position: relative;
-    left: 330px;
-    background-color: #F8F2CB;
-    width: 550px;
+    font-size: 2rem;
+  }
+  
+  .bathil {
     height: 45px;
-    padding-left: 300px;
-    font-size: 20px;
-    border-bottom: 5px solid #D0CFCE;
+    margin-top: 0px;
+  }
+  
+  .bathil input {
+    width: 20%;
+    text-align: center;
     border-top: none;
     border-left: none;
     border-right: none;
-    outline: none;
-}
+    outline: none; 
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  }
+  
+  .question-section{
+   text-align: center;
+   margin-top:12%; 
+  }
+  
+   .next {
+    width: 100px;
+    height: 40px;
+    margin-top: 30px;
+   }
+  
+  .back {
+    width: 100px;
+    height: 40px;
+    margin-top: 90px;
+    margin-left: 20px;
+  }
 
-.next {
-    position: relative;
-    left: 680px;
-    top: 200px;
-}
+  @media only screen and (max-width:400px) {
 
-.back1 {
-    position: relative;
-    left: 10px;
-    top: 380px;
+    .kelvi {
+      color: orange;
+      font-size: 16px;
+    }
+  
+    .bathil input {
+      width: 40%;
+    }
+  
+    .next {
+      font-size: 13px;
+      width: 70px;
+      height: 30px;
+      margin-top: 20px;
+     }
 
-}
+     .back {
+      margin-top: -100px;
+      margin-left: 20px;
+    }
+  }

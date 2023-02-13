@@ -3,6 +3,10 @@
 
 <head>
 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>read</title>
 
     <link rel="stylesheet" href="../assets/css/read.css">
@@ -21,7 +25,7 @@
                 <a class="navlist" href="../pages/about.html">About</a>
             </li>
             <li>
-                <a class="navlist" href="../pages/search.html">Search</a>
+                <a class="navlist" href="../pages/q1.html">Search</a>
             </li>
             <li>
                 <a class="navlist" href="../pages/explore.html">Explore</a>
@@ -30,9 +34,6 @@
                 <a class="guidance" href="../pages/guidance.html">Guidance</a>
             </li>
         </ul>
-
-        <a class="navlist" href="./pages/login.html">
-            <button class="loginbtn" style="vertical-align:middle"><span>login</span></button></a>
     </div>
     <div class="headerendline"></div>
 
@@ -43,15 +44,12 @@
     <div class="images">
         <div class="birdlist">
             <img src="../assets/Images/Baby woodpeacker 1.jpg" alt="bird1" height="300px" width="500px">
-
         </div>
         <div class="birdlist">
             <img src="../assets/Images/second stage woodpeacker2.jfif" alt="bird2" height="300px" width="500px">
-
         </div>
         <div class="birdlist">
             <img src="../assets/Images/thirdstage.jpg" alt="bird3" height="300px" width="500px">
-
         </div>
 
         <div class="birdlist">
@@ -196,7 +194,7 @@
                 <a class="navlist" href="../pages/about.html">About</a>
             </li>
             <li>
-                <a class="navlist" href="../pages/search.html">Search</a>
+                <a class="navlist" href="./pages/q1.html">Search</a>
             </li>
             <li>
                 <a class="navlist" href="../pages/explore.html">Explore</a>
@@ -208,6 +206,64 @@
         
     </footer>
 
+    <script>
+        const birds = [
+  {
+    species: "Peacock",
+    habitat: "forest",
+    date: "07-02-2023",
+    size: "large",
+    color: "Blue",
+    action: "on the ground",
+    image: "https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU="
+  },
+  {
+    species: "Cattle Egret",
+    habitat: "Water bodies",
+    date: "07-02-2023",
+    size: "large",
+    color: "white",
+    action: "on the water",
+    image: "../assets/Images/cattle egret main img.jpg"
+  },
+  // Add more bird objects here
+];
+// Function to find a bird species based on user answers
+function findBird(habitat , date , size, color, action ) {
+  let matches = [];
+  for (let i = 0; i < birds.length; i++) {
+    if ( birds[i].habitat === habitat && birds[i].date === date && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
+      matches.push(birds[i]);
+    }
+  }
+  return matches;
+}
+// Example usage
+ const habitat = DayPilot.Modal.prompt("Where did you see the bird?");
+ const date = DayPilot.Modal.prompt("when did you see the bird")
+ const size = DayPilot.Modal.prompt("What size was the bird?");
+ const color = DayPilot.Modal.prompt("What were the main colors?");
+ const action = DayPilot.Modal.prompt("Was the bird doing?");
+
+
+const birdMatches = findBird(habitat , date , size, color);
+if (birdMatches.length > 0) {
+  console.log(`We found ${birdMatches.length} bird species that match your description:`);
+  for (let i = 0; i < birdMatches.length; i++) {
+    console.log(`${birdMatches[i].species}:`);
+    console.log(`Habitat: ${birdMatches[i].habitat}`);
+    console.log(`Date: ${birdMatches[i].date}`);
+    console.log(`Size: ${birdMatches[i].size}`);
+    console.log(`color: ${birdMatches[i].color}`);
+    console.log(`action: ${birdMatches[i].action}`);
+    console.log(`Image URL: ${birdMatches[i].image}`);
+  }
+} else {
+  console.log("Sorry, we could not find a bird species matching that description.");
+}
+    </script>
+
 
 </body>
 </html>
+

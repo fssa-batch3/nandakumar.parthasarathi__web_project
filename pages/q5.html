@@ -2,6 +2,11 @@
 <html>
 
 <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Question number 1</title>
 
     <link rel="stylesheet" href="..//assets/css/q5.css">
@@ -12,7 +17,7 @@
 <body>
 
     <div class="header">
-        <h1 class="birds"><b>BIRDS UNIVERSE</b></h1>
+        <h1 class="birds"><b>BIRDS BUDDY</b></h1>
         <ul>
             <li>
                 <a class="navlist" href="../index.html">Home</a>
@@ -21,70 +26,78 @@
                 <a class="navlist" href="../pages/about.html">About</a>
             </li>
             <li>
-                <a class="navlist" href="../pages/search.html">Search</a>
+                <a class="navlist" href="../pages/q1.html">Search</a>
             </li>
             <li>
                 <a class="navlist" href="../pages/explore.html">Explore</a>
             </li>
             <li>
-                <a class="guidance" href="../pages/birdguidance">Guidance</a>
+                <a class="guidance" href="../pages/guidance.html">Guidance</a>
             </li>
         </ul>
 
-        <a class="navlist" href="./pages/login.html">
-            <button class="loginbtn" style="vertical-align:middle"><span>login</span></button></a>
+
     </div>
-    <div class="headerendline"></div>   
+    <div class="headerendline"></div>
+    <section class="question-section">
+        <div class="container">
+        <div class="kelvi">
+            <h3>Was the bird doing?</h3>
+        </div>
+    <div class="options">
+        <div>
+            <lable>Eating at a feader</lable>
+        </div>
+        <input  id="checkbox" type="checkbox" />
+        <div>
+            <lable>Swimming or wading</lable>
+        </div>
+        <input id="checkbox" type="checkbox" />
+        <div>
+            <lable>On the ground</lable>
+        </div>
+        <input id="checkbox" type="checkbox" />
+        <div>
+            <lable>In trees or bushes</lable>
+        </div>
+        <input id="checkbox" type="checkbox" />
+        <div>
+            <lable>On a fence wire</lable>
+        </div>
+        <input id="checkbox" type="checkbox" />
+        <div>
+            <lable>Soring or flying</lable>
+        </div>
+        <input id="checkbox" type="checkbox" />
+    </div>
+
+    <div>
+        <button type="button" class="next" onclick="submit()">Identify</button>
+    </div>
+    <div class="back">
+        <a href="..//pages/q4.html"><button>Back</button></a>
+    </div>
+        </div>
+        </section>
+    <script>
+        function submit(){
+        const checkbox = document.getElementById("checkbox").value
+
+        console.log("checkbox")
+
+        window.location.href="../pages/read.html"
+    }  
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     
-
-        <div class="kelvi5">
-            <h3>Was the bird?</h3>
-        </div>
-
-        <div class="options">
-
-
-            <div>
-                <lable>Eating at a feader</lable>
-            </div>
-            <input type="radio" />
-
-
-            <div>
-                <lable>Swimming or wading</lable>
-            </div>
-            <input type="radio" />
-
-            <div>
-                <lable>On the ground</lable>
-            </div>
-            <input type="radio" />
-
-            <div>
-                <lable>In trees or bushes</lable>
-            </div>
-            <input type="radio" />
-
-            <div>
-                <lable>On a fence wire</lable>
-            </div>
-            <input type="radio" />
-
-            <div>
-                <lable>Soring or flying</lable>
-            </div>
-            <input type="radio" />
-
-        </div>
-
-        <div class="id">
-            <a href="..//pages/read.html"><button>Identify</button></a>
-        </div>
-
-        <div class="back1">
-            <a href="..//pages/q4.html"><button>Back</button></a>
-        </div>
-
-
+    <title>Document</title>
+</head>
+<body>
+    
 </body>
 </html>
