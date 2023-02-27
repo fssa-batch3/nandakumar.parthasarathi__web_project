@@ -30,7 +30,7 @@ Wireframe: https://drive.google.com/drive/folders/1y-VMct-uYjPCqHcLJzO19fHXGZJnx
   Here user explore all type of birds.
   Each bird card have
   
-  4. Guidance 
+  4. Guidance CRUD:
 
    1) How can we help birds
        
