@@ -3,9 +3,8 @@
 **Website Name: Birds Buddy**
 
 Problem Statement:https://docs.google.com/document/d/1AlPHx8wY8-4oJwP4_JifG2v5_UpRPQRa/edit
-Market research:
-Userflow:https://drive.google.com/drive/folders/1y-VMct-uYjPCqHcLJzO19fHXGZJnxVTU
-Wireframe:
+Userflow: https://drive.google.com/drive/folders/1y-VMct-uYjPCqHcLJzO19fHXGZJnxVTU
+Wireframe: https://drive.google.com/drive/folders/1y-VMct-uYjPCqHcLJzO19fHXGZJnxVTU
 
 1. User CRUD:
    
