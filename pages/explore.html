@@ -29,7 +29,7 @@
 <body>
 
     <div class="aboutimage">
-        <div class="header">
+        <div class="header" id="navbar">
             <h1 class="birds"><b>BIRDS BUDDY</b></h1>
             <ul>
                 <li>
@@ -48,11 +48,13 @@
                     <a class="guidance" href="../pages/guidance.html">Guidance</a>
                 </li>
             </ul>
-
-            
+        </div>
+        <div class="headerindicator">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
         </div>
         <div class="headerendline"></div>
-
         <div>
             <h1 class="title">Explore</h1>
         </div>
@@ -70,12 +72,22 @@
                     <h2> Explore Birds</h2>
                 </div>
                 <div class="searchbar">
-                    <input class="searchterm" type="text" placeholder="Enter bird name ...">
+                    <form action="/action_page.php" method="get">
+                        <input list="birdsname" name="birdsname" id="birdsname" class="textbox" type="text"
+                            placeholder="Enter bird name ...">
+                        <datalist id="birdsname">
+                            <option value="Peacock"></option>
+                            <option value="Cattle Egret"></option>
+                            <option value="Eagle"></option>
+                            <option value="White-breasted Waterhen"></option>
+                            <option value="Rufous Treepie"></option>
+                        </datalist>
+                    </form>
                 </div>
             </section>
 
-        <section class="detail_about_bird">
-            <div class="birdstructure"> -->
+            <section class="detail_about_bird">
+                <!-- <div class="birdstructure"> 
                  <div class="contentleft">
                      <a href="../pages/peacock.html">
                         <img src="https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU=" alt="peacoak">
@@ -114,11 +126,11 @@
 
                         <div>
                             <a href="..//pages/peacock.html">
-                                <button type="button" id="" class="click">Read more ...</button>
+                                <button type="button" id="readmore" class="click" onclick="submit()">Read more ...</button>
                             </a>
                         </div>
                     </div>
-                </div> 
+                </div>  -->
 
                 <!-- <div class="birdstructure">
                     <div class="contentleft">
@@ -618,7 +630,7 @@
                         </p>
                         <div>
                             <a href="..//pages/read.html">
-                                <button class="click">Read more ...</button>
+                                <button  type="button" class="click">Read more ...</button>
                             </a>
                         </div>
                     </div>
@@ -762,7 +774,7 @@
             </section>
         </aside>
     </section>
-    
+
 
     <footer>
         <div>
@@ -789,8 +801,28 @@
 
     <!-- <script src="../assets/js/explore_birds_list.js"></script> -->
 
-    
+
     <script>
+        function submit() {
+            const readmore = document.getElementById("readmore").value
+            console.log(readmore)
+
+            location.href = "../pages/read.html"
+        }
+
+
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+
 
         let div_birdstructure;
         let div_contentleft;
@@ -804,380 +836,366 @@
         let read_button;
         let div_readmore
 
-        const indian_birds_list = [
-            {
-            "name":"Peacock",
-            "scientific_Name": "Pavo cristatus",
-            "size" : "85cm - 110cm",
-            "image":{
-                "source":"https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU=",
-                "alt":"peacoak",
-            },
-            "habitat":[
-                {
-                    "source": "../assets/Images/big forest.png",
-                    "alt": "Forest",
-                    "tooltip":"Forest"
-                    
+        const indian_birds_list = [{
+                "name": "Peacock",
+                "scientific_Name": "Pavo cristatus",
+                "size": "85cm - 110cm",
+                "image": {
+                    "source": "https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU=",
+                    "alt": "peacoak",
                 },
-                {
-                    "source": "../assets/Images/beetlepng-removebg-preview (1).png",
-                    "alt": "Insects",
-                    "tooltip":"Insects"
-                },
-                {
-                    "source": "../assets/Images/cherryss-removebg-preview.png",
-                    "alt": "Fruits",
-                    "tooltip":"Fruits"
-                },
-                {
-                    "source": "../assets/Images/plant-removebg-preview.png",
-                    "alt": "Plants",
-                    "tooltip":"Plants"
-                },
-                {
-                    "source": "../assets/Images/seesd-removebg-preview.png",
-                    "alt": "Seeds",
-                    "tooltip":"seeds"
-                }
+                "habitat": [{
+                        "source": "../assets/Images/big forest.png",
+                        "alt": "Forest",
+                        "tooltip": "Forest"
+
+                    },
+                    {
+                        "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+                        "alt": "Insects",
+                        "tooltip": "Insects"
+                    },
+                    {
+                        "source": "../assets/Images/cherryss-removebg-preview.png",
+                        "alt": "Fruits",
+                        "tooltip": "Fruits"
+                    },
+                    {
+                        "source": "../assets/Images/plant-removebg-preview.png",
+                        "alt": "Plants",
+                        "tooltip": "Plants"
+                    },
+                    {
+                        "source": "../assets/Images/seesd-removebg-preview.png",
+                        "alt": "Seeds",
+                        "tooltip": "seeds"
+                    }
                 ]
             },
             {
-            "name":"Cattle Egret",
-            "scientific_Name": "Bubulcus ibis",
-            "size" : "50cm",
-            "image":{
-                "source":"../assets/Images/cattle egret main img.jpg",
-                "alt":"cattle_egret",
-            },
-            "habitat":[
-                {
-                    "source": "../assets/Images/river-removebg-preview.png",
-                    "alt": "Water bodies",
-                    "tooltip":"Water"  
+                "name": "Cattle Egret",
+                "scientific_Name": "Bubulcus ibis",
+                "size": "50cm",
+                "image": {
+                    "source": "../assets/Images/cattle egret main img.jpg",
+                    "alt": "cattle_egret",
                 },
-                {
-                    "source": "../assets/Images/beetlepng-removebg-preview (1).png",
-                    "alt": "Insects",
-                    "tooltip":"Insects"
-                }
-                
+                "habitat": [{
+                        "source": "../assets/Images/river-removebg-preview.png",
+                        "alt": "Water bodies",
+                        "tooltip": "Water"
+                    },
+                    {
+                        "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+                        "alt": "Insects",
+                        "tooltip": "Insects"
+                    }
+
                 ]
             },
             {
-            "name":"Eagle",
-            "scientific_Name": "Aquila",
-            "size" : "85cm - 90cm",
-            "image":{
-                "source":"https://c4.wallpaperflare.com/wallpaper/252/767/677/eagle-images-wallpaper-preview.jpg",
-                "alt":"eagle",
-            },
-            "habitat":[
-                {
-                    "source": "../assets/Images/urban.png",
-                    "alt": "Urban area",
-                    "tooltip":"Urban area"
-                    
+                "name": "Eagle",
+                "scientific_Name": "Aquila",
+                "size": "85cm - 90cm",
+                "image": {
+                    "source": "https://c4.wallpaperflare.com/wallpaper/252/767/677/eagle-images-wallpaper-preview.jpg",
+                    "alt": "eagle",
                 },
-                {
-                    "source": "../assets/Images/mouse-animal-vector-rat-removebg-preview (1).png",
-                    "alt": "Animals",
-                    "tooltip":"Animals"
-                }
-                
-                ]
-            },
-             {
-            "name":"White-breasted Waterhen",
-            "scientific_Name": "Amaurornis Phoenicurs",
-            "size" : "32cm",
-            "image":{
-                "source":"../assets/Images/main watrehen jfif.jfif",
-                "alt":"White-breasted",
-            },
-            "habitat":[
-                {
-                    "source": "../assets/Images/river-removebg-preview.png",
-                    "alt": "River",
-                    "tooltip":"River"
-                    
-                },
-                {
-                    "source": "../assets/Images/plant-removebg-preview.png",
-                    "alt": "plant",
-                    "tooltip":"Plant"
-                }
-                
+                "habitat": [{
+                        "source": "../assets/Images/urban.png",
+                        "alt": "Urban area",
+                        "tooltip": "Urban area"
+
+                    },
+                    {
+                        "source": "../assets/Images/mouse-animal-vector-rat-removebg-preview (1).png",
+                        "alt": "Animals",
+                        "tooltip": "Animals"
+                    }
+
                 ]
             },
             {
-            "name":"Rufous Treepie",
-            "scientific_Name": "Dendrocitta vagabunda",
-            "size" : "50cm",
-            "image":{
-                "source":"../assets/Images/rufous main_b.jpg",
-                "alt":"Rufous Treepie",
-            },
-            "habitat":[
-                {
-                    "source": "../assets/Images/big forest.png",
-                    "alt": "Forest",
-                    "tooltip":"Forest"
-                    
+                "name": "White-breasted Waterhen",
+                "scientific_Name": "Amaurornis Phoenicurs",
+                "size": "32cm",
+                "image": {
+                    "source": "../assets/Images/main watrehen jfif.jfif",
+                    "alt": "White-breasted",
                 },
-                {
-                    "source": "../assets/Images/beetlepng-removebg-preview (1).png",
-                    "alt": "Insects",
-                    "tooltip":"Insects"
-                },
-                {
-                    "source": "../assets/Images/cherryss-removebg-preview.png",
-                    "alt": "Fruits",
-                    "tooltip":"Fruits"
-                },
-                {
-                    "source": "../assets/Images/plant-removebg-preview.png",
-                    "alt": "Plants",
-                    "tooltip":"Plants"
-                },
-                {
-                    "source": "../assets/Images/seesd-removebg-preview.png",
-                    "alt": "Seeds",
-                    "tooltip":"seeds"
-                }
+                "habitat": [{
+                        "source": "../assets/Images/river-removebg-preview.png",
+                        "alt": "River",
+                        "tooltip": "River"
+
+                    },
+                    {
+                        "source": "../assets/Images/plant-removebg-preview.png",
+                        "alt": "plant",
+                        "tooltip": "Plant"
+                    }
+
                 ]
             },
             {
-            "name":"White-throated Kingfisher",
-            "scientific_Name": " Halcyon smyrnensis",
-            "size" : "27cm",
-            "image":{
-                "source":"../assets/Images/White throated .jfif",
-                "alt":"White-throated Kingfisher",
-            },
-            "habitat":[
-                {
-                    "source": "../assets/Images/mouse-animal-vector-rat-removebg-preview (1).png",
-                    "alt": "animals",
-                    "tooltip":"Animals"
-                    
+                "name": "Rufous Treepie",
+                "scientific_Name": "Dendrocitta vagabunda",
+                "size": "50cm",
+                "image": {
+                    "source": "../assets/Images/rufous main_b.jpg",
+                    "alt": "Rufous Treepie",
                 },
-                {
-                    "source": "../assets/Images/globe-removebg-preview.png",
-                    "alt": "Common",
-                    "tooltip":"Common"
-                }
-                
+                "habitat": [{
+                        "source": "../assets/Images/big forest.png",
+                        "alt": "Forest",
+                        "tooltip": "Forest"
+
+                    },
+                    {
+                        "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+                        "alt": "Insects",
+                        "tooltip": "Insects"
+                    },
+                    {
+                        "source": "../assets/Images/cherryss-removebg-preview.png",
+                        "alt": "Fruits",
+                        "tooltip": "Fruits"
+                    },
+                    {
+                        "source": "../assets/Images/plant-removebg-preview.png",
+                        "alt": "Plants",
+                        "tooltip": "Plants"
+                    },
+                    {
+                        "source": "../assets/Images/seesd-removebg-preview.png",
+                        "alt": "Seeds",
+                        "tooltip": "seeds"
+                    }
                 ]
             },
             {
-            "name":"Yellow-billed Babber",
-            "scientific_Name": "Turdoides",
-            "size" : "25cm",
-            "image":{
-                "source":"../assets/Images/yellow-billed babber.jfif",
-                "alt":"yellow-billed babber",
-            },
-            "habitat":[
-                {
-                    "source": "../assets/Images/big forest.png",
-                    "alt": "Forest",
-                    "tooltip":"Forest"
-                    
+                "name": "White-throated Kingfisher",
+                "scientific_Name": " Halcyon smyrnensis",
+                "size": "27cm",
+                "image": {
+                    "source": "../assets/Images/White throated .jfif",
+                    "alt": "White-throated Kingfisher",
                 },
-                {
-                    "source": "../assets/Images/beetlepng-removebg-preview (1).png",
-                    "alt": "Insects",
-                    "tooltip":"Insects"
-                },
-                {
-                    "source": "../assets/Images/cherryss-removebg-preview.png",
-                    "alt": "Fruits",
-                    "tooltip":"Fruits"
-                },
-                {
-                    "source": "../assets/Images/plant-removebg-preview.png",
-                    "alt": "Plants",
-                    "tooltip":"Plants"
-                },
-                {
-                    "source": "../assets/Images/seesd-removebg-preview.png",
-                    "alt": "Seeds",
-                    "tooltip":"seeds"
-                }
+                "habitat": [{
+                        "source": "../assets/Images/mouse-animal-vector-rat-removebg-preview (1).png",
+                        "alt": "animals",
+                        "tooltip": "Animals"
+
+                    },
+                    {
+                        "source": "../assets/Images/globe-removebg-preview.png",
+                        "alt": "Common",
+                        "tooltip": "Common"
+                    }
+
                 ]
             },
             {
-            "name":"Asian Koel",
-            "scientific_Name": "Eudynamys scolopaceus",
-            "size" : "43cm",
-            "image":{
-                "source":"../assets/Images/Asian koel .jpg",
-                "alt":"Asian Koel",
-            },
-            "habitat":[
-                {
-                    "source": "../assets/Images/urban.png",
-                    "alt": "Urban area",
-                    "tooltip":"Urban area"
-                    
+                "name": "Yellow-billed Babber",
+                "scientific_Name": "Turdoides",
+                "size": "25cm",
+                "image": {
+                    "source": "../assets/Images/yellow-billed babber.jfif",
+                    "alt": "yellow-billed babber",
                 },
-                {
-                    "source": "../assets/Images/cherryss-removebg-preview.png",
-                    "alt": "Fruits",
-                    "tooltip":"Fruits"
-                }
-                
+                "habitat": [{
+                        "source": "../assets/Images/big forest.png",
+                        "alt": "Forest",
+                        "tooltip": "Forest"
+
+                    },
+                    {
+                        "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+                        "alt": "Insects",
+                        "tooltip": "Insects"
+                    },
+                    {
+                        "source": "../assets/Images/cherryss-removebg-preview.png",
+                        "alt": "Fruits",
+                        "tooltip": "Fruits"
+                    },
+                    {
+                        "source": "../assets/Images/plant-removebg-preview.png",
+                        "alt": "Plants",
+                        "tooltip": "Plants"
+                    },
+                    {
+                        "source": "../assets/Images/seesd-removebg-preview.png",
+                        "alt": "Seeds",
+                        "tooltip": "seeds"
+                    }
                 ]
             },
             {
-            "name":"Ashy Prinia",
-            "scientific_Name": "Prinia socials",
-            "size" : "13cm",
-            "image":{
-                "source":"../assets/Images/Ashy Prinia.jfif",
-                "alt":"Asian Koel",
-            },
-            "habitat":[
-                {
-                    "source": "../assets/Images/shrublandpng.png",
-                    "alt": "Scrubland",
-                    "tooltip":"Scrubland"
-                    
+                "name": "Asian Koel",
+                "scientific_Name": "Eudynamys scolopaceus",
+                "size": "43cm",
+                "image": {
+                    "source": "../assets/Images/Asian koel .jpg",
+                    "alt": "Asian Koel",
                 },
-                {
-                    "source": "../assets/Images/beetlepng-removebg-preview (1).png",
-                    "alt": "Insects",
-                    "tooltip":"Insects"
-                }
-                
+                "habitat": [{
+                        "source": "../assets/Images/urban.png",
+                        "alt": "Urban area",
+                        "tooltip": "Urban area"
+
+                    },
+                    {
+                        "source": "../assets/Images/cherryss-removebg-preview.png",
+                        "alt": "Fruits",
+                        "tooltip": "Fruits"
+                    }
+
                 ]
             },
             {
-            "name":"Indian spot-billed Duck",
-            "scientific_Name": "Anas poecilorhyncha",
-            "size" : "60cm",
-            "image":{
-                "source":"../assets/Images/Spotbilled_Duck.jpg",
-                "alt":"Indian spot-billed duck",
-            },
-            "habitat":[
-                {
-                    "source": "../assets/Images/river-removebg-preview.png",
-                    "alt": "River",
-                    "tooltip":"River",  
+                "name": "Ashy Prinia",
+                "scientific_Name": "Prinia socials",
+                "size": "13cm",
+                "image": {
+                    "source": "../assets/Images/Ashy Prinia.jfif",
+                    "alt": "Asian Koel",
                 },
-                {
-                    "source": "../assets/Images/plant-removebg-preview.png",
-                    "alt": "Plants",
-                    "tooltip":"Plants"
-                }
-                
+                "habitat": [{
+                        "source": "../assets/Images/shrublandpng.png",
+                        "alt": "Scrubland",
+                        "tooltip": "Scrubland"
+
+                    },
+                    {
+                        "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+                        "alt": "Insects",
+                        "tooltip": "Insects"
+                    }
+
                 ]
             },
-            
-                
-                    
-            ]
-                
-            
-            
-        
-        function submit(){
-        const click_readmore= document.getElementById("click_readmore").value
+            {
+                "name": "Indian spot-billed Duck",
+                "scientific_Name": "Anas poecilorhyncha",
+                "size": "60cm",
+                "image": {
+                    "source": "../assets/Images/Spotbilled_Duck.jpg",
+                    "alt": "Indian spot-billed duck",
+                },
+                "habitat": [{
+                        "source": "../assets/Images/river-removebg-preview.png",
+                        "alt": "River",
+                        "tooltip": "River",
+                    },
+                    {
+                        "source": "../assets/Images/plant-removebg-preview.png",
+                        "alt": "Plants",
+                        "tooltip": "Plants"
+                    }
 
-        console.log(click_readmore)
-
-        window.location.href="..//pages/peacock.html"
-    }  
-
-
-        for(let i=0; i<10; i++){
-
-        //div_birdstructure
-        div_birdstructure = document.createElement("div");
-        div_birdstructure.setAttribute("class", "birdstructure");
-        console.log(div_birdstructure);
-
-        //div_contentleft
-        div_contentleft = document.createElement("div");
-        div_contentleft.setAttribute("class", "contentleft");
-        div_birdstructure.append(div_contentleft);
-
-        img_card = document.createElement("img");
-        img_card.setAttribute("src", indian_birds_list[i]["image"]["source"]);
-        img_card.setAttribute("alt", indian_birds_list[i]["image"]["alt"]);
-        div_contentleft.append(img_card);
-
-        div_contentright = document.createElement("div");
-        div_contentright.setAttribute("class", "contentright");
-        div_birdstructure.append(div_contentright);
-
-        p_birdpara = document.createElement("p");
-        p_birdpara.setAttribute("class", "birdpara");
-        p_birdpara.innerText =  "Name: "+ indian_birds_list[i]["name"];    
-        div_contentright.append(p_birdpara);
-
-        p_birdpara = document.createElement("p");
-        p_birdpara.setAttribute("class", "birdpara");
-        p_birdpara.innerText =  " Scientific Name: " + indian_birds_list[i]["scientific_Name"];    
-        div_contentright.append(p_birdpara);
-
-        p_birdpara = document.createElement("p");
-        p_birdpara.setAttribute("class", "birdpara");
-        p_birdpara.innerText =  "Size : " + indian_birds_list[i]["size"];    
-        div_contentright.append(p_birdpara);
-
-        div_tooltipsss = document.createElement("div");
-        div_tooltipsss.setAttribute("class", "tooltipsss");
-        div_contentright.append( div_tooltipsss);
-
-        div_readmore = document.createElement("div");
-        div_contentright.append(div_readmore);
-
-        read_button = document.createElement("button");
-        read_button.setAttribute("class", "click");
-        read_button.setAttribute("onclick", "click");
-        read_button.innerText = "Read more...";
-        div_readmore.append( read_button);
+                ]
+            },
 
 
-        const habitat = indian_birds_list[i]["habitat"];
-        const noOfHabitats = habitat.length;
 
-        for (let j = 0; j<noOfHabitats;j++){
-   
-        div_tooltip = document.createElement("div");
-        div_tooltip.setAttribute("id", "tooltip");
-        div_tooltipsss.append(div_tooltip);
+        ]
 
-        span_tooltiptext = document.createElement("span");
-        span_tooltiptext.setAttribute("id", "tooltiptext");
-        span_tooltiptext.innerText =  habitat[j]["tooltip"]; 
-        div_tooltip.append(span_tooltiptext);
 
-        img_card_1 = document.createElement("img");
-        img_card_1.setAttribute("src", habitat[j]["source"]);
-        img_card_1.setAttribute("alt", habitat[j]["alt"]);
-        img_card_1.setAttribute("height", "80px");
-        div_tooltip.append(img_card_1);
+
+
+        function submit() {
+            const click_readmore = document.getElementById("click_readmore").value
+
+            console.log(click_readmore)
+
+            window.location.href = "..//pages/peacock.html"
         }
 
-    document.querySelector("section.detail_about_bird").append(div_birdstructure);
-    }
-    
+
+        for (let i = 0; i < 10; i++) {
+
+            //div_birdstructure
+            div_birdstructure = document.createElement("div");
+            div_birdstructure.setAttribute("class", "birdstructure");
+            console.log(div_birdstructure);
+
+            //div_contentleft
+            div_contentleft = document.createElement("div");
+            div_contentleft.setAttribute("class", "contentleft");
+            div_birdstructure.append(div_contentleft);
+
+            //img_card
+            img_card = document.createElement("img");
+            img_card.setAttribute("src", indian_birds_list[i]["image"]["source"]);
+            img_card.setAttribute("alt", indian_birds_list[i]["image"]["alt"]);
+            div_contentleft.append(img_card);
+
+            //div_contentright
+            div_contentright = document.createElement("div");
+            div_contentright.setAttribute("class", "contentright");
+            div_birdstructure.append(div_contentright);
+
+            //p_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "Name: " + indian_birds_list[i]["name"];
+            div_contentright.append(p_birdpara);
+
+            //p_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = " Scientific Name: " + indian_birds_list[i]["scientific_Name"];
+            div_contentright.append(p_birdpara);
+
+            //p_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "Size : " + indian_birds_list[i]["size"];
+            div_contentright.append(p_birdpara);
+
+            //div_tooltipsss
+            div_tooltipsss = document.createElement("div");
+            div_tooltipsss.setAttribute("class", "tooltipsss");
+            div_contentright.append(div_tooltipsss);
+
+            // div_readmore
+            div_readmore = document.createElement("div");
+            div_contentright.append(div_readmore);
+
+            //read_button
+            read_button = document.createElement("button");
+            read_button.setAttribute("class", "click");
+            read_button.setAttribute("type", "button");
+          
+            read_button.innerText = "Read more...";
+            div_readmore.append(read_button);
 
 
-       
-        
+            const habitat = indian_birds_list[i]["habitat"];
+            const noOfHabitats = habitat.length;
 
+            for (let j = 0; j < noOfHabitats; j++) {
 
-       
-       
+                div_tooltip = document.createElement("div");
+                div_tooltip.setAttribute("id", "tooltip");
+                div_tooltipsss.append(div_tooltip);
+
+                span_tooltiptext = document.createElement("span");
+                span_tooltiptext.setAttribute("id", "tooltiptext");
+                span_tooltiptext.innerText = habitat[j]["tooltip"];
+                div_tooltip.append(span_tooltiptext);
+
+                img_card_1 = document.createElement("img");
+                img_card_1.setAttribute("src", habitat[j]["source"]);
+                img_card_1.setAttribute("alt", habitat[j]["alt"]);
+                img_card_1.setAttribute("height", "80px");
+                div_tooltip.append(img_card_1);
+            }
+
+            document.querySelector("section.detail_about_bird").append(div_birdstructure);
+        }
     </script>
-
-
-
 
 </body>
 

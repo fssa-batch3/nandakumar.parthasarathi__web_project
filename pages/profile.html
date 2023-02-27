@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question number 1</title>
+
+  <link rel="stylesheet" href="..//assets/css/style.css">
+  <link rel="stylesheet" href="..//assets/css/profile.css">
+</head>
+
+<!-- <body>
+  <div class="header">
+    <h1 class="birds"><b>BIRDS BUDDY</b></h1>
+    <ul>
+      <li>
+        <a class="navlist" href="../index.html">Home</a>
+      </li>
+      <li>
+        <a class="navlist" href="../pages/about.html">About</a>
+      </li>
+      <li>
+        <a class="navlist" href="../pages/q1.html">Search</a>
+      </li>
+      <li>
+        <a class="navlist" href="../pages/explore.html">Explore</a>
+      </li>
+      <li>
+        <a class="guidance" href="../pages/guidance.html">Guidance</a>
+      </li>
+    </ul>
+  </div>
+  <div class="headerendline"></div> -->
+
+  <body class="align">
+    <h1>profile Page</h1>
+      <div class="grid">
+
+  <form action="https://httpbin.org/post" method="POST" class="form login">
+
+    <div class="form__field">
+      <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Username</span></label>
+      <input id="login__username" type="text" name="username" class="form__input" placeholder="Username" required>
+    </div>
+
+    <div class="form__field">
+      <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">Password</span></label>
+      <input id="login__password" type="password" name="password" class="form__input" placeholder="Password" required>
+    </div>
+     
+    <!-- <div class="u-form-group">
+      <a href="#" class="forgot-password">Forgot password?</a>
+    </div> -->
+
+  </label>
+  <div class="form__field">
+    <input type="submit" value="Sign Up">
+  </div>
+
+   </form>
+
+  <script>
+    function submit() {
+      const bird = document.getElementById("bird").value
+
+      console.log(bird)
+
+      window.location.href = "../pages/q2.html"
+    }
+
+   
+           
+        
+           document.getElementsByTagName("h1")[0].style.fontSize = "30px";
+   
+       
+   
+          
+  </script>
+</body>
+
+</html>

@@ -9,6 +9,11 @@ body {
   padding: 0px;
 }
 
+#navbar{
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+
 .guidance {
   border: 1px solid black;
   padding: 20px 30px;
@@ -39,6 +44,44 @@ body {
 div .headerendline {
   border: 1px solid whitesmoke;
 }
+
+.cursor{
+  z-index: 999;
+  position: fixed;
+  background: #2696E8;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 20px orange,
+   0 0 60px lightgrey,
+   0 0 100px whitesmoke;
+   animation: colors 5s infinite;
+   transform: translate(-50%, -50%);
+}
+
+@keyframes colors {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+.cursor:before{
+  content: '';
+  position: absolute;
+  background: #2696E8;
+  width:50px;
+  height:50px;
+  opacity: 0.2;
+  transform: translate(-30%, -30%);
+  border-radius: 50%;
+}
+
+
 
 h1,
 h3 {
@@ -267,13 +310,22 @@ span.number {
 .benifitimg {
   width: 500px;
   height: 300px;
+  overflow: hidden;
   border-radius: 5px;
-
+  border: 6px solid #fff;
+ 
 }
 
-.benifitimg:hover {
-  transform: scale(0.9);
-  transition: 3s;
+.benifitimg img {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(1);
+  transition: .4s;
+}
+
+.benifitimg:hover img {
+  filter: none;
+  scale: 1.3;
 }
 
 .double {
@@ -312,8 +364,6 @@ span.number {
 
 }
 
-
-
 .headerindicator {
   position: fixed;
   top: 0;
@@ -343,7 +393,7 @@ span.number {
 
 
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:400px) {
 
   
   .ourmission {

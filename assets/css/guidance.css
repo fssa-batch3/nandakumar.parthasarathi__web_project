@@ -26,6 +26,11 @@ body {
   border: 1px solid white;
 }
 
+#navbar{
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+
 .aboutimage {
   background-image: url(https://cff2.earth.com/uploads/2022/02/24062454/Birds-2-scaled.jpg);
   background-size: cover;
@@ -137,6 +142,31 @@ h3 {
   border-radius: 5px;
   position: relative;
   left: 40px;
+}
+
+.headerindicator {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: orange;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
 }
 
 @media(max-width:400px){

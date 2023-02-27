@@ -24,6 +24,46 @@ footer {
   padding-bottom: 50px;
 }
 
+.login-button {
+  display: inline-block;
+  border-radius: 12px;
+  background-color:orange;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 140px;
+  transition: all 0.1s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.login-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.login-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.login-button:hover span {
+  padding-right: 35px;
+}
+
+.login-button:hover span:after {
+  opacity: 2;
+  right: 0;
+}
+
 /* dropdown */
 .toggle-button {
   display: none;
@@ -181,6 +221,29 @@ body {
 
 li {
   display: inline;
+  position: relative;
+  transition: .5s;
+}
+
+li::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height:3px ;
+  top: 100%;
+  left: 0;
+  transition: transform .5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+li:hover{
+  color:orange;
+}
+
+li:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 li a {
@@ -370,7 +433,7 @@ td {
 /* CSS for INDEX START  */
 /* ****************************************** */
 .project {
-  background-image: url(https://images.news18.com/ibnlive/uploads/2022/08/birds-2-16596764624x3.png);
+  background-image: url(https://customsitesmedia.usc.edu/wp-content/uploads/sites/59/2019/11/16024710/Taiwan-Blue-Magpie-web.jpg);
   background-size: cover;
   height: 810px;
   width: 100%;
@@ -394,38 +457,52 @@ td {
   font-weight: bold;
   font-size: 20px;
 }
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=swap');
 
-div .websitename {
-  color: white;
-  position: relative;
-  left: 50px;
-  top: 100px;
-}
-
-
-div .websitename:hover {
-  color: grey;
-  font-size: lighter;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.slogan {
-  color: Orange;
-  text-transform: uppercase;
-  line-height: 1cm;
-  font-size: 4rem;
-  font-weight: bolder;
-  text-shadow: white black;
-}
-
-div .learnmore {
+body{
+  height: 100vh;
+  margin: 0;
+  background-color: white;
   display: flex;
-  flex-direction: column;
-  position: relative;
-  bottom: 50px;
-
+  align-items: center;
+  justify-content: center;
 }
 
+.parallax-text{
+  position: absolute;
+  top: 270px;
+  left: 10%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10vw;
+  font-style: italic;
+}
+
+.parallax-text::after{
+  content: attr(text);
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  color: transparent;
+  -webkit-text-stroke: 0.15vw black;
+}
+
+img{
+  width: 44vw;
+  position: relative;
+  bottom: 10px;
+  animation: sneakerAnimation 3s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+}
+
+@keyframes sneakerAnimation {
+  0%, 10% {
+    transform:  translate(100vw, 0) rotate(15deg);
+  }
+  90%, 100% {
+    transform:  translate(-5vw, -5vw) rotate(-30deg);
+  }
+} */
 
 @media only screen and (max-width:400px) {
   ul {

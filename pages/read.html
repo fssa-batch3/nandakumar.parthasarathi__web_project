@@ -37,26 +37,57 @@
     </div>
     <div class="headerendline"></div>
 
-    <div class="best">
+    <!-- <div class="best">
         <h3>This is Woodpecker</h3>
+    </div> -->
+    <section class="info-container">
+<div class="scrollsnap">
+    <div class="imagescontainer">
+        <div class="birditems">
+            <img src="../assets/Images/Baby woodpeacker 1.jpg" alt="bird1" height="300px" width="400px">
+        </div>
+        <div class="birditems">
+            <img src="../assets/Images/second stage woodpeacker2.jfif" alt="bird2" height="300px" width="400px">
+        </div>
+        <div class="birditems">
+            <img src="../assets/Images/thirdstage.jpg" alt="bird3" height="300px" width="400px">
+        </div>
+        <div class="birditems">
+            <img src="../assets/Images/stage 4 woodpeacker.jpg" alt="bird4" height="300px" width="400px">
+        </div>
     </div>
-
-    <div class="images">
-        <div class="birdlist">
-            <img src="../assets/Images/Baby woodpeacker 1.jpg" alt="bird1" height="300px" width="500px">
-        </div>
-        <div class="birdlist">
-            <img src="../assets/Images/second stage woodpeacker2.jfif" alt="bird2" height="300px" width="500px">
-        </div>
-        <div class="birdlist">
-            <img src="../assets/Images/thirdstage.jpg" alt="bird3" height="300px" width="500px">
-        </div>
-
-        <div class="birdlist">
-            <img src="../assets/Images/stage 4 woodpeacker.jpg" alt="bird4" height="300px" width="500px">
-
-        </div>
+    <div class="main-des-container">
+        <p class=bird-main-des>
+            Name: Woodpeacker<br>
+            Scientific Name: Picidae<br>
+            Size : 23cm
+        </p>
+        <div class="tooltipsss">
+            <div id="tooltip">
+                <span id="tooltiptext">Forest</span>
+                <span><img src="../assets/Images/big forest.png" alt="forest" height="80px"></Span>
+            </div>
+            <div id="tooltip">
+            <span id="tooltiptext">Insects</span>
+            <span>
+                <img src="../assets/Images/beetlepng-removebg-preview (1).png" alt="Insects" height="80px">
+            </span>
+            </div>
+            <div id="tooltip">
+                <span id="tooltiptext">Fruits</span> 
+                <img src="../assets/Images/cherryss-removebg-preview.png" alt="forest" height="80px"> 
+            </div>      
+            <div id="tooltip">
+                <span id="tooltiptext">Plants</span> 
+                <span><img src="../assets/Images/plant-removebg-preview.png" alt="forest" height="80px"></span>
+            </div>
+            <div id="tooltip">
+                <span id="tooltiptext">Seeds</span> 
+                <img src="../assets/Images/seesd-removebg-preview.png" alt="forest" height="80px">
+            </div>
+        </div> 
     </div>
+</div>
     <br>
     <section class="content">
         <div>
@@ -176,12 +207,13 @@
     </section>
     <br>
     <br>
-    <section class="fullbird">
+    <div class="fullbird">
         <div class="fullbird">
             <h1 class="name">Woodpecker</h1>
             <img src="../assets/Images/woodpeacker bigjpg.jpg" alt="full peacock">
         </div>
-    </section>
+    </div>
+</section>
     <footer>
         <div>
             <h1 class="birds"><b>BIRDS BUDDY</b></h1>
@@ -203,67 +235,90 @@
                 <a class="guidance" href="../pages/guidance.html">Guidance</a>
             </li>
         </ul>
-        
+
     </footer>
 
     <script>
-        const birds = [
-  {
-    species: "Peacock",
-    habitat: "forest",
-    date: "07-02-2023",
-    size: "large",
-    color: "Blue",
-    action: "on the ground",
-    image: "https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU="
-  },
-  {
-    species: "Cattle Egret",
-    habitat: "Water bodies",
-    date: "07-02-2023",
-    size: "large",
-    color: "white",
-    action: "on the water",
-    image: "../assets/Images/cattle egret main img.jpg"
-  },
-  // Add more bird objects here
-];
-// Function to find a bird species based on user answers
-function findBird(habitat , date , size, color, action ) {
-  let matches = [];
-  for (let i = 0; i < birds.length; i++) {
-    if ( birds[i].habitat === habitat && birds[i].date === date && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
-      matches.push(birds[i]);
-    }
-  }
-  return matches;
-}
-// Example usage
- const habitat = DayPilot.Modal.prompt("Where did you see the bird?");
- const date = DayPilot.Modal.prompt("when did you see the bird")
- const size = DayPilot.Modal.prompt("What size was the bird?");
- const color = DayPilot.Modal.prompt("What were the main colors?");
- const action = DayPilot.Modal.prompt("Was the bird doing?");
+        // const birds = [
+        //     {
+        //         species: "Peacock",
+        //         habitat: "forest",
+        //         date: "07-02-2023",
+        //         size: "large",
+        //         color: "Blue",
+        //         action: "on the ground",
+        //         image: "https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU="
+        //     },
+        //     {
+        //         species: "Cattle Egret",
+        //         habitat: "Water bodies",
+        //         date: "07-02-2023",
+        //         size: "large",
+        //         color: "white",
+        //         action: "on the water",
+        //         image: "../assets/Images/cattle egret main img.jpg"
+        //     },
+        //     // Add more bird objects here
+        // ];
+        // // Function to find a bird species based on user answers
+        // function findBird(habitat, date, size, color, action) {
+        //     let matches = [];
+        //     for (let i = 0; i < birds.length; i++) {
+        //         if (birds[i].habitat === habitat && birds[i].date === date && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
+        //             matches.push(birds[i]);
+        //         }
+        //     }
+        //     return matches;
+        // }
+        // // Example usage
+        // const habitat = DayPilot.Modal.prompt("Where did you see the bird?");
+        // const date = DayPilot.Modal.prompt("when did you see the bird")
+        // const size = DayPilot.Modal.prompt("What size was the bird?");
+        // const color = DayPilot.Modal.prompt("What were the main colors?");
+        // const action = DayPilot.Modal.prompt("Was the bird doing?");
 
 
-const birdMatches = findBird(habitat , date , size, color);
-if (birdMatches.length > 0) {
-  console.log(`We found ${birdMatches.length} bird species that match your description:`);
-  for (let i = 0; i < birdMatches.length; i++) {
-    console.log(`${birdMatches[i].species}:`);
-    console.log(`Habitat: ${birdMatches[i].habitat}`);
-    console.log(`Date: ${birdMatches[i].date}`);
-    console.log(`Size: ${birdMatches[i].size}`);
-    console.log(`color: ${birdMatches[i].color}`);
-    console.log(`action: ${birdMatches[i].action}`);
-    console.log(`Image URL: ${birdMatches[i].image}`);
-  }
-} else {
-  console.log("Sorry, we could not find a bird species matching that description.");
-}
+        // const birdMatches = findBird(habitat, date, size, color);
+        // if (birdMatches.length > 0) {
+        //     console.log(`We found ${birdMatches.length} bird species that match your description:`);
+        //     for (let i = 0; i < birdMatches.length; i++) {
+        //         console.log(`${birdMatches[i].species}:`);
+        //         console.log(`Habitat: ${birdMatches[i].habitat}`);
+        //         console.log(`Date: ${birdMatches[i].date}`);
+        //         console.log(`Size: ${birdMatches[i].size}`);
+        //         console.log(`color: ${birdMatches[i].color}`);
+        //         console.log(`action: ${birdMatches[i].action}`);
+        //         console.log(`Image URL: ${birdMatches[i].image}`);
+        //     }
+        // } else {
+        //     console.log("Sorry, we could not find a bird species matching that description.");
+        // }
+
+        let div_scrollsnap;
+        let div_imagescontainer;
+        let div_birditems;
+
+
+        //div_scrollsnap
+        div_scrollsnap = document.createElement("div");
+        div_scrollsnap.setAttribute("class", "scrollsnap");
+        console.log(div_scrollsnap);
+
+         //div_imagescontainer
+         div_imagescontainer = document.createElement("div");
+         div_imagescontainer.setAttribute("class", "scrollsnap");
+         div_scrollsnap.append(div_imagescontainer);
+
+         //div_birditems
+        div_birditems = document.createElement("div");
+        div_birditems.setAttribute("class", "birditems");
+        div_imagescontainer.append("div_birditems");
+        
+        
+
     </script>
 
 
 </body>
-</html>
 
+</html>
