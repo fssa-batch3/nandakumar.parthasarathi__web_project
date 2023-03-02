@@ -99,6 +99,16 @@ h3 {
   justify-content: center;
 }
 
+
+.mic{
+  position: absolute;
+  /* top: 5%; */
+  left: 56%;
+ 
+  transform: translate(-50%, -50%);
+  color: black;
+}
+
 .explorebody {
   background-color: white;
 }
@@ -128,8 +138,8 @@ section .searchhead {
   height: 45px;
   padding: 0 20px;
   font-size: 1rem;
-  border: 1px solid lightgrey transparent;
-  border-radius: 20px;
+  border: 1px solid black;
+  border-radius: 42px;
   outline: none;
 }
 
@@ -145,12 +155,12 @@ section .searchhead {
 
 .searchbar:hover .textbox { width: 400px;}
 
-datalist{
+/* datalist{
   display: none;
-}
+} */
 
 .birdstructure {
-  background-color: whitesmoke;
+  background-color: white;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

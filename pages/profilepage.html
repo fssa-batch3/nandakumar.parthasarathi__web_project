@@ -43,7 +43,7 @@
               <label for="login__username"><svg class="icon">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
                 </svg><span class="hidden">name</span></label>
-              <input id="name" type="text" name="username" class="form__input" placeholder="Name" required>
+              <input id="user_name" type="text" name="username" class="form__input" placeholder="Name" required>
             </div>
 
             <div class="form__field">
@@ -65,7 +65,7 @@
     
            
     
-          </form>
+          </form onsubmit="(event)">
           <br>
         <!-- <div class="card_count">
             <div class="count">
@@ -82,10 +82,13 @@
                     <p>Posts</p>
                 </div>
             </div> -->
-             <div class="btn">Edit</div><br>
-             <div class="btn">Save</div>
-        </div>
-    </div>
+             <div >
+             <button class="btn" type="submit" onclick="update(event)">Save</button>
+            </div>
+             <div>
+              <button class="btn" type="submit" onclick="log_out(event)">Log out</button>
+            </div>
+          </div>
 
     <svg xmlns="http://www.w3.org/2000/svg" class="icons">
         <symbol id="arrow-right" viewBox="0 0 1792 1792">
@@ -104,34 +107,66 @@
 
       <script>
 
-          let users = JSON.parse(localStorage.getItem('users'));
+          let user_list = JSON.parse(localStorage.getItem('user_list'));
   let unique_id = JSON.parse(localStorage.getItem('unique'));
   function profile_data(e){
-    return e.email == unique_id;
+    return e.user_number == unique_id;
 }
-  let user_data = users.find (profile_data);
-  document.getElementById("name").value = user_data["name"];
+  let user_data = user_list.find (profile_data);
+ 
+  document.getElementById("user_name").value = user_data["user_name"];
+  document.getElementById("user_number").value = user_data["user_number"];
   document.getElementById("role").value = user_data["role"];
+ 
+
+function update(e){
+ 
+  let user_name = document.getElementById("user_name").value;
+  let  user_number = document.getElementById("user_number").value;
+  let role = document.getElementById("role").value;
+
+
+ 
+  user_data ["user_name"]=user_name;
+  user_data ["user_number"]=user_number;
+  user_data ["role"]=role;
+
+  localStorage.setItem("user_list", JSON.stringify(user_list));
+  alert("Your Datais Successfully Stored");
+}
+
+           
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   function del(event){
     if(confirm("Are you sure you want to delete your profile")){
-      let users = JSON.parse(localStorage.getItem('users'));
-      let unique_id = JSON.parse(localStorage.getItem('unique_id'));
+      let users = JSON.parse(localStorage.getItem('user_list'));
+      let unique_id = JSON.parse(localStorage.getItem('unique'));
 []
-      function profile_data(e){
-      return e.email == unique_id;
+      function login_data(e){
+      return e.user_number == unique_id;
 }
     let user_data = users.find (profile_data);
   let indexOfUser = users.indexOf(user_data);
   console.log(indexOfUser);
   users.splice(indexOfUser,1);
-  localStorage.setItem("users", JSON.stringify(users));    }
-  function logout(e){
-    localStorage.setItem('unique_id'," ");
-    window.location.href=".index.html";
+  localStorage.setItem("user_list", JSON.stringify(user_list));    }
+
 }
+function log_out(e){
+    window.location.href="./login.html";
 }
 
       </script>
 
 </body>
+
 </html>

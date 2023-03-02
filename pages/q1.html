@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question number 1</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
     <link rel="stylesheet" href="..//assets/css/style.css">
     <link rel="stylesheet" href="..//assets/css/q1.css">
 </head>
@@ -33,20 +35,53 @@
         </ul>
     </div>
     <div class="headerendline"></div>
+    
+
     <section class="question-section">
         <div class="container">
             <div class="kelvi">
                 <h3>Where did you see the bird?</h3>
             </div>
-            <div class="bathil">
+            <div class="bathil"></div>
                 <!-- <input type="text" id="bird" placeholder="Type here"/> -->
-                <div class="card">
-                    <img src="../assets/Images/forest (1).png" alt="forest" style="width:100%">
-                    <div class="containerq">
-                      <p>Forest<p> 
-                    </div>
-                  </div>
+               <!-- <div class="option-container">
+                <i  class="fa-solid fa-tractor"></i>
+                <i  class="fa-solid fa-water"></i>
+                <i  class="fa-solid fa-mountain-sun"></i>
+                <i  class="fa-solid fa-city"></i>
+                <i  class="fa-solid fa-tree"></i>
+                </div> -->
+                
+            <div class="option-container">
+                <img class="options" src="../assets/Images/big forest.png" alt="forest" height="70px">
+                <div class="option-name"><p>forest</p></div> 
             </div>
+            
+            <!-- <div class="option-container"> -->
+                <img class="options" src="../assets/Images/shrublandpng.png" alt="shrubland" height="70px"> 
+                <div class="option-name"><p>shrubland</p></div>
+            <!-- </div> -->
+             
+            <!-- <div class="option-container"> -->
+                <img class="options" src="../assets/Images/cropgreen-removebg-preview.png" alt="Croplands" height="70px">
+                <div class="option-name"><p>Crop land</p></div>
+            <!-- </div> -->
+            
+            <!-- <div class="option-container"> -->
+                <img class="options" src="../assets/Images/river-removebg-preview.png" alt="river" height="80px">
+                <div class="option-name"><p>River</p></div>
+            <!-- </div> -->
+           
+            <!-- <div class="option-container"> -->
+                <img class="options" src="../assets/Images/urban.png" alt="forest" height="70px">
+                <div class="option-name"><p>Urban area</p></div>
+            
+            <!-- </div> -->
+            
+        
+        
+                <!-- <img src="../assets/Images/globe-removebg-preview.png" alt="forest" height="100px"> -->
+           
             <div>
                 <button type="button" class="next" onclick="submit()">Next</button></a> 
             </div>
@@ -55,6 +90,7 @@
             </div>
         </div>  
     </section>
+
     <script>
         function submit(){
         const bird = document.getElementById("bird").value

@@ -24,7 +24,7 @@
   <title>login Page</title>
 
   <link rel="stylesheet" href="..//assets/css/resister.css">
-  <link rel="stylesheet" href="..//assets/css/style.css">
+ 
   <!-- <link rel="stylesheet" href="'https://cdnjs.cloudflare.com/ajax/libs/bootsrap/5.0.2/css/bootsrap.min.css">
     <link rel="stylesheet" href="'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
 </head>
@@ -42,7 +42,7 @@
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
             </svg><span class="hidden">Username</span></label>
           <input type="text" name="username" id="user_name" class="form__input"
-            placeholder="Username" required>
+            placeholder="Username" required pattern="[a-z A-Z]*">
         </div>
 
         <div class="form__field">
@@ -75,7 +75,7 @@
 
         </label>
         <div class="form__field">
-          <button type="submit">Submit</button>
+          <button class="btn" type="submit">Submit</button>
         </div>
 
       </form>
@@ -186,7 +186,7 @@
 
 
 
-      document.getElementsByTagName("h1")[0].style.fontSize = "30px";
+      document.getElementsByTagName("h1")[0].style.fontSize = "20px";
 
   </script>
 

@@ -3,12 +3,76 @@
   background-color: black;
 }
 
+/* body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Roboto";
+  background-color: #f2f2f7;
+  transition: 0.4s;
+}
+
+body.dark {
+  /* background-color: #212121; */
+  background-color: black;
+}
+
+.switch{
+  position: relative;
+  width: 3.5rem;
+  height: 2rem;
+}
+
+.switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: none;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before{
+  position: absolute;
+  content: "";
+  height: 1.4rem;
+  width: 1.4rem;
+  border-radius: 20px;
+  left: 0.3rem;
+  top: 10%;
+  transform: translateY(-50%);
+  background: linear-gradient(40deg, rgb(234, 0, 255) , orange 70%);
+  transition: 0.4s;
+}
+
+input:checked + .slider{
+  background-color: #37393f;
+}
+
+input:checked + .slider:before{
+  background: #37393f;
+  left:calc(100% - 1.7rem);
+  box-shadow:
+              inset -3px -2px 5px -2x #8983f7,
+              inset -10px -4px 0 0 #a3dafb;
+} */
+
 .kelvi {
   color: orange;
   font-size: 2rem;
 }
 
-.bathil {
+/* .bathil {
   height: 45px;
   margin-top: 0px;
 }
@@ -21,7 +85,31 @@
   border-right: none;
   outline: none; 
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+} */
+
+.option{
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid orange;
 }
+
+
+
+.options{
+  border: solid 2px orange;
+  padding: 20px;
+}
+
+ .options:hover{
+  background-color: lightgrey;
+  border: solid 2px black;
+}
+
+
+
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);

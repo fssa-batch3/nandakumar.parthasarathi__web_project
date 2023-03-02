@@ -24,6 +24,9 @@
 
     <link rel="stylesheet" href="..//assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/explore.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
 </head>
 
 <body>
@@ -72,17 +75,23 @@
                     <h2> Explore Birds</h2>
                 </div>
                 <div class="searchbar">
-                    <form action="/action_page.php" method="get">
+                     <div class="mic">
+                        <!-- <i class="fa-solid fa-microphone"></i> -->
+                            </div>
+                    <!-- <form action="/action_page.php" method="get"> -->
                         <input list="birdsname" name="birdsname" id="birdsname" class="textbox" type="text"
-                            placeholder="Enter bird name ...">
-                        <datalist id="birdsname">
+                            placeholder="Enter bird name ..."> 
+
+                           
+
+                        <!-- <datalist id="birdsname">
                             <option value="Peacock"></option>
                             <option value="Cattle Egret"></option>
                             <option value="Eagle"></option>
                             <option value="White-breasted Waterhen"></option>
                             <option value="Rufous Treepie"></option>
-                        </datalist>
-                    </form>
+                        </datalist> -->
+                    <!-- </form> -->
                 </div>
             </section>
 
@@ -807,9 +816,10 @@
             const readmore = document.getElementById("readmore").value
             console.log(readmore)
 
-            location.href = "../pages/read.html"
+            location.href = "../pages/explore.html"
         }
 
+        
 
         // When the user scrolls the page, execute myFunction 
         window.onscroll = function () {
@@ -871,6 +881,7 @@
                         "tooltip": "seeds"
                     }
                 ]
+                
             },
             {
                 "name": "Cattle Egret",

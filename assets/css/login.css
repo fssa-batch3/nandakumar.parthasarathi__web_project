@@ -61,12 +61,13 @@ h1 {
   height: 1em;
   vertical-align: middle;
   width: 1em;
+  fill: white;
 }
 
 :root {
   --htmlFontSize: 100%;
 
-  --bodyBackgroundColor: #2c3338;
+  --bodyBackgroundColor: #000000;
   --bodyColor: var(--baseColor);
   --bodyFontFamily: 'Open Sans';
   --bodyFontFamilyFallback: sans-serif;
@@ -239,7 +240,46 @@ p {
   text-align: center;
 }
 
+input:invalid{
+  border: 2px solid red;
+  animation: shake 0.2s 2;
+}
+
+@keyframes shake {
+
+  25% {
+    translate:6px 0;
+  }
+
+  50% {
+    translate: -6px 0;
+  }
+
+  75% {
+    translate: 6px 0
+  }  
+}
+
+.btn {
+  padding: 16px;
+  width: 100%;
+   border: none; 
+  border-radius: 0;
+  background-color: #3b4148;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 0px;
+}
+
  
+ 
+
+
+
  
 
 

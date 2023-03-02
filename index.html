@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +25,7 @@
 <body>
     <div class="project">
         <div class="header">
+           
             <h1 class="birds"><b>BIRDS BUDDY</b></h1>
             <ul>
                 <li>
@@ -40,8 +44,12 @@
                     <a class="guidance" href="./pages/guidance.html">Guidance</a>
                 </li>
             </ul>
-            <a href="./pages/resister.html"><button class="login-button" style="vertical-align:middle"><span>Sign Up </span></button></a>
-            <i class="fa-solid fa-circle-user"></i>
+            <a href="./pages/resister.html"><button class="login-button" style="vertical-align:middle"><span>Sign Up
+                    </span></button></a>
+            <!-- <i class="fa-solid fa-circle-user"></i> -->
+            <!-- <i class="fa-light fa-user"></i> -->
+            <a href="./pages/profilepage.html"><i class="fa-regular fa-user"></i></div><a>
+               
             <nav class="toggle-button">
                 <div class="navbar2">
                     <div class="dropdown">
@@ -60,6 +68,7 @@
             </nav>
         </div>
         <div class="headerendline"></div>
+         
         <!-- 
         <span class="parallax-text" text="Birds Buddy">
             Birds Buddy
@@ -68,7 +77,7 @@
           <img src="https://i.pinimg.com/originals/69/3f/a0/693fa0a4313321e5a4a8cf302d7f7896.gif" alt="Nike sneaker">
           <br>
           <br> -->
-    </div>
+    
     <footer>
         <div class="footerlogo">
             <h1 class="birds"><b>BIRDS BUDDY</b></h1>
@@ -92,9 +101,18 @@
         </ul>
     </footer>
 
-    <script src="./assets/anime js/index anime.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <!-- <script src="./assets/anime js/index anime.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script> -->
+<script>
+    const input = document.querySelector("input");
+    const body = document.querySelector("body");
 
+    const toggleThemeMode = () => {
+        body.classList.toggle("dark");
+    };
+
+    input.onchange = toggleThemeMode;
+</script>
 
 
 </body>

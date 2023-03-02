@@ -17,12 +17,80 @@
   top: 0;
 }
 
-footer {
+/* footer {
   background-color: black;
   color: white;
   padding: 40px;
   padding-bottom: 50px;
+} */
+
+footer {
+ 
+  background-color:#000;
+  color:#fff;
 }
+
+
+.aboutDesp {
+  width: 30%;
+  background-color: #fff;
+  color: grey;
+  font-family:Arial, Helvetica, sans-serif ;
+  box-shadow: 0 0 8px #888;
+  position: relative;
+  top: -30px;
+  padding: 50px;
+  border-radius: 4px;
+  border-bottom: 5px solid orange;
+  border-top: 5px solid orange;
+  
+}
+
+img {
+  width:100px;
+}
+
+h2 {
+  margin:10px 0px;
+}
+ul{
+  text-decoration:none;
+  list-style-type:none;
+ 
+}
+
+ul li {
+  padding:5px 0px;
+  
+}
+
+a {
+  color:#bbb;
+}
+
+p {
+  text-align:justify;
+}
+
+a:hover{
+  text-decoration:none;
+  color:orange;
+}
+.footerdesign {
+  
+  padding:20px;
+  margin-top:80px;
+  background-color:#fff;
+  color:#000;
+  font-weight:800;
+  
+}
+
+.footerdesign:hover {
+  color:#000;
+  font-size:20px;
+}
+
 
 .login-button {
   display: inline-block;
@@ -62,6 +130,15 @@ footer {
 .login-button:hover span:after {
   opacity: 2;
   right: 0;
+}
+
+/* .fa-solid fa-circle-user{
+  width: 300%;
+  height: 500px;
+} */
+
+.fa-regular fa-user{
+  height: 400px;
 }
 
 /* dropdown */
@@ -144,6 +221,7 @@ div .headerendline {
   border: 1px solid whitesmoke;
 }
 
+
 .logo {
   display: flex;
   align-items: center;
@@ -159,13 +237,20 @@ body {
 
 }
 
+.logoimage{
+  height: 100px;
+  width: 100px;
+}
+
+
 .birds {
   font-size: 20px;
   color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  text-align: center;
+  
   animation: glow 1s ease-in-out infinite alternate;
   display: inline;
+ 
 }
 
 @keyframes glow {
@@ -220,7 +305,7 @@ body {
 }*/
 
 li {
-  display: inline;
+  display:inline;
   position: relative;
   transition: .5s;
 }
@@ -238,7 +323,7 @@ li::after{
 }
 
 li:hover{
-  color:orange;
+  color:#95a5a6;
 }
 
 li:hover::after{
@@ -249,8 +334,8 @@ li:hover::after{
 li a {
   color: white;
   text-decoration: none;
-  text-decoration-line: underline;
-  text-decoration-color: orange;
+  /* text-decoration-line: underline;
+  text-decoration-color: orange; */
   text-align: center;
   padding: 30px 30px;
 }
@@ -438,6 +523,11 @@ td {
   height: 810px;
   width: 100%;
   opacity: 1.5;
+}
+
+.weblogo{
+  height: 100px;
+  width: 200px;
 }
 
 .guidance {

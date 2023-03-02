@@ -82,7 +82,7 @@ p{
 
 
 
-.btn {
+/* .btn {
     padding: 16px;
     width: 100%;
     border: none;
@@ -96,6 +96,22 @@ p{
     font-weight: 600;
     text-transform: uppercase;
     
+} */
+
+.btn {
+  padding: 16px;
+  width: 100%;
+  border: none; 
+  outline: none; 
+  border-radius: 0;
+  background-color: #363b41;
+  color: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-left: 0px;
 }
 
 * {
@@ -248,7 +264,7 @@ p{
     background-image: none;
     border: 0;
     color: inherit;
-    font: inherit;
+    /* font: inherit; */
     margin: 0;
     outline: 0;
     padding: 0;
