@@ -51,32 +51,32 @@
         </div>
         <div class="headerindicator">
             <div class="progress-container">
-              <div class="progress-bar" id="myBar"></div>
-            </div>  
-          </div>
-            <nav class="toggle-button">
-                <div class="navbar2">
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                          <i class="fa fa-bars"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="./index.html">Home</a>
-                            <a href="./pages/about.html">About</a>
-                            <a href="./pages/search.html">Search</a>
-                            <a href="./pages/explore.html">Explore</a>
-                            <a href="./pages/guidance.html">Guidance</a>
-                        </div>
-                      </div>
-                  </div>
-            </nav>
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+        <nav class="toggle-button">
+            <div class="navbar2">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="./index.html">Home</a>
+                        <a href="./pages/about.html">About</a>
+                        <a href="./pages/search.html">Search</a>
+                        <a href="./pages/explore.html">Explore</a>
+                        <a href="./pages/guidance.html">Guidance</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-            <!-- <label class="swich">
+        <!-- <label class="swich">
                 <input type="checkbox"/>
                 <span class="slider"></span>
              </label>
          -->
-         
+
         <div class="headerendline"></div>
         <div class="cursor"></div>
         <div>
@@ -90,28 +90,30 @@
         <div class="goal">
             <h2>Our Missions</h2>
         </div>
-<div class="ourmission">
-    <div class="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                <img class="about-sparrow" src="../assets/Images/aboutsparrow.jpg" alt="aboutsparrow" height="350px" width="500px">
+        <div class="ourmission">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="about-sparrow" src="../assets/Images/aboutsparrow.jpg" alt="aboutsparrow"
+                            height="350px" width="500px">
+                    </div>
+                    <div class="flip-card-back">
+                        <img class="about-sparrow" src="../assets/Images/birds in hand .png" alt="aboutsparrow"
+                            height="300px" width="400px">
+                        <h1>save birds</h1>
+                    </div>
+                </div>
             </div>
-            <div class="flip-card-back">
-                <img class="about-sparrow" src="../assets/Images/birds in hand .png" alt="aboutsparrow" height="300px" width="400px">
-                <h1>save birds</h1>
-            </div>
-        </div>
-    </div>
             <div class="mission-discription">
                 <p>Our mission is People will know about how will we keep our environment eco-friendly. and how to
-                 connect with birds and wildlife..... </p>
+                    connect with birds and wildlife..... </p>
             </div>
         </div>
     </section>
     <div class="needbirdsimage">
         <h1 class="needbirds">Why we need birds</h1>
     </div>
-<h4 class="needq1"> Can you imagine the a world without birds?<br><br></h4>
+    <h4 class="needq1"> Can you imagine the a world without birds?<br><br></h4>
     <div class="canyouimagine">
         <p> The benifits birds bring
             us aren't just cultural.<br> Birds play an essential role in the<br> functioning of the world's
@@ -122,10 +124,10 @@
             <source src="../assets/videos/Robin - 21375.mp4" type="video/mp4">
         </video>
     </div>
-    
+
 
     <div class="pointofneeds">
-        
+
         <div class="double">
             <div>
                 <img class="benifitimg" src="../assets/Images/control pests3.jpg" alt="">
@@ -222,18 +224,9 @@
         </ul>
     </footer> -->
 
-    <footer>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 desp">
-                <div class="aboutDesp">
-                  <img  class="weblogo" src="../assets/Images/websitelogo-removebg-preview.png">
-                 <p>Our mission is People will know about how will we keep our environment eco-friendly. and how to
-                    connect with birds and wildlife.....</p>
-              </div>
-            </div>
-            
-            <!-- <div class="col-md-3">
+
+
+    <!-- <div class="col-md-3">
               <h2>Features</h2>
               <ul>
                 <li>
@@ -254,8 +247,8 @@
               </ul>
             </div>
              -->
-            
-            <!-- <div class="col-md-3">
+
+    <!-- <div class="col-md-3">
               <h2>Latest Posts</h2>
               <div class="latestpost">
                 <h5>10 Best Footer Designs</h5>
@@ -266,48 +259,60 @@
               <div class="mt-5">
                 <a  class="footerdesign" href="https://codepen.io/collection/XMvZRx/">More Footer Designs</a>
                 </div> -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 desp">
+                    <div class="aboutDesp">
+                        <img class="weblogo" src="../assets/Images/websitelogo-removebg-preview.png">
+                        <p>Our mission is People will know about how will we keep our environment eco-friendly. and how
+                            to
+                            connect with birds and wildlife.....</p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </footer>
+        </div>
+    </footer>
 
     <script>
         // When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
+        window.onscroll = function () { myFunction() };
 
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
 
-const cursor = document.querySelector(".cursor");
-var timeout;
+        const cursor = document.querySelector(".cursor");
+        var timeout;
 
-//follow coursor on mousemove
-document.addEventListener("mousemove"   , (e) => {
-    let x = e.pageX;
-    let y = e.pageY;
+        //follow coursor on mousemove
+        document.addEventListener("mousemove", (e) => {
+            let x = e.pageX;
+            let y = e.pageY;
 
-    cursor.style.top = y + "px";
-    cursor.style.left = x + "px";
-    cursor.style.display =  "block";
+            cursor.style.top = y + "px";
+            cursor.style.left = x + "px";
+            cursor.style.display = "block";
 
-    //cursor effect when mouse stopped
-    function mouseStopped() {
-        cursor.style.display = "none";
-    }
-    clearTimeout(timeout);
-    timeout = setTimeout(mouseStopped, 5000);
-});
+            //cursor effect when mouse stopped
+            function mouseStopped() {
+                cursor.style.display = "none";
+            }
+            clearTimeout(timeout);
+            timeout = setTimeout(mouseStopped, 5000);
+        });
 
-//cursor effects when mouseout
-document.addEventListener("mouseout" , () => {
-    cursor.style.display = "none";
+        //cursor effects when mouseout
+        document.addEventListener("mouseout", () => {
+            cursor.style.display = "none";
 
-});
+        });
     </script>
 
 </body>
+
 </html>

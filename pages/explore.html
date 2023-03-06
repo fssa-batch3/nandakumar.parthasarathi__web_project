@@ -135,7 +135,7 @@
 
                         <div>
                             <a href="..//pages/peacock.html">
-                                <button type="button" id="readmore" class="click" onclick="submit()">Read more ...</button>
+                                <button type="submit" id="readmore" class="click" onclick="submit()">Read more ...</button>
                             </a>
                         </div>
                     </div>
@@ -850,6 +850,7 @@
                 "name": "Peacock",
                 "scientific_Name": "Pavo cristatus",
                 "size": "85cm - 110cm",
+                
                 "image": {
                     "source": "https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU=",
                     "alt": "peacoak",
@@ -880,8 +881,8 @@
                         "alt": "Seeds",
                         "tooltip": "seeds"
                     }
+                        
                 ]
-                
             },
             {
                 "name": "Cattle Egret",
@@ -1120,8 +1121,10 @@
 
             console.log(click_readmore)
 
-            window.location.href = "..//pages/peacock.html"
+            window.location.href = "../pages/read.html"
         }
+
+       
 
 
         for (let i = 0; i < 10; i++) {
@@ -1178,6 +1181,7 @@
             read_button = document.createElement("button");
             read_button.setAttribute("class", "click");
             read_button.setAttribute("type", "button");
+            read_button.setAttribute("onclick", "click_readmore()");
           
             read_button.innerText = "Read more...";
             div_readmore.append(read_button);

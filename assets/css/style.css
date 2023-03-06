@@ -17,6 +17,7 @@
   top: 0;
 }
 
+
 /* footer {
   background-color: black;
   color: white;
@@ -518,12 +519,13 @@ td {
 /* CSS for INDEX START  */
 /* ****************************************** */
 .project {
-  background-image: url(https://customsitesmedia.usc.edu/wp-content/uploads/sites/59/2019/11/16024710/Taiwan-Blue-Magpie-web.jpg);
+  background-image: url();
   background-size: cover;
-  height: 810px;
+  height: 600px;
   width: 100%;
   opacity: 1.5;
 }
+
 
 .weblogo{
   height: 100px;
@@ -547,6 +549,18 @@ td {
   font-weight: bold;
   font-size: 20px;
 }
+
+/* * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'montserrat';
+} */
+
+
 /* 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&display=swap');
 

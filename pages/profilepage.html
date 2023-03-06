@@ -25,49 +25,48 @@
 
   <link rel="stylesheet" href="..//assets/css/profilepage.css">
   <link rel="stylesheet" href="..//assets/css/style.css">
-  
+
 </head>
+
 <body>
 
-    <div class="card">
-        <div class="card_background_img"></div>
-        <div class="card_profile_img"></div>
-        <div class="user_details">
-            <h3>Nandakumar P</h3>
-            <p>Bird Watcher</p>
-        </div>
+  <div class="card">
+    <div class="card_background_img"></div>
+    <div class="card_profile_img"></div>
+    <div class="user_details">
+      <h3>Nandakumar P</h3>
+      <p class="roles">Bird Watcher</p>
+    </div>
 
-        <form role="form" onsubmit="signIn(event);" class="form login">
+    <form role="form" onsubmit="signIn(event);" class="form login">
 
-            <div class="form__field">
-              <label for="login__username"><svg class="icon">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
-                </svg><span class="hidden">name</span></label>
-              <input id="user_name" type="text" name="username" class="form__input" placeholder="Name" required>
-            </div>
+      <div class="form__field">
+        <label for="login__username"><svg class="icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
+          </svg><span class="hidden">name</span></label>
+        <input id="user_name" type="text" name="username" class="form__input" placeholder="Name" required>
+      </div>
 
-            <div class="form__field">
-              <label><svg class="icon">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
-                </svg><span class="hidden">Phone Number</span></label>
-              <input type="text" name="username" id="user_number" class="form__input"
-                placeholder="Phone Number" required>
-            </div>
+      <div class="form__field">
+        <label><svg class="icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
+          </svg><span class="hidden">Phone Number</span></label>
+        <input type="text" name="username" id="user_number" class="form__input" placeholder="Phone Number" required>
+      </div>
 
-            <div class="form__field">
-              <label for="login__password"><svg class="icon">
-                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use>
-                </svg><span class="hidden">Role</span></label>
-              <input id="role" type="text" name="password" class="form__input" placeholder="Role"
-                required>
-            </div>
+      <div class="form__field">
+        <label for="login__password"><svg class="icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use>
+          </svg><span class="hidden">Role</span></label>
+        <input id="role" type="text" name="password" class="form__input" placeholder="Role" required>
+      </div>
 
-    
-           
-    
-          </form onsubmit="(event)">
-          <br>
-        <!-- <div class="card_count">
+
+
+
+    </form onsubmit="(event)">
+    <br>
+    <!-- <div class="card_count">
             <div class="count">
                 <div class="fans">
                     <h3>2.4M</h3>
@@ -82,91 +81,94 @@
                     <p>Posts</p>
                 </div>
             </div> -->
-             <div >
-             <button class="btn" type="submit" onclick="update(event)">Save</button>
-            </div>
-             <div>
-              <button class="btn" type="submit" onclick="log_out(event)">Log out</button>
-            </div>
-          </div>
+    <div>
+      <button class="btn" type="submit" onclick="update(event)">Save</button>
+    </div>
+    <div>
+      <button class="btn" type="submit" onclick="log_out(event)">Log out</button>
+    </div>
+    <div>
+      <button class="btn" type="submit" onclick="del()">Delete</button>
+    </div>
+  </div>
 
-    <svg xmlns="http://www.w3.org/2000/svg" class="icons">
-        <symbol id="arrow-right" viewBox="0 0 1792 1792">
-          <path
-            d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H245q-52 0-84.5-37.5T128 1024V896q0-53 32.5-90.5T245 768h704L656 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" />
-        </symbol>
-        <symbol id="lock" viewBox="0 0 1792 1792">
-          <path
-            d="M640 768h512V576q0-106-75-181t-181-75-181 75-75 181v192zm832 96v576q0 40-28 68t-68 28H416q-40 0-68-28t-28-68V864q0-40 28-68t68-28h32V576q0-184 132-316t316-132 316 132 132 316v192h32q40 0 68 28t28 68z" />
-        </symbol>
-        <symbol id="user" viewBox="0 0 1792 1792">
-          <path
-            d="M1600 1405q0 120-73 189.5t-194 69.5H459q-121 0-194-69.5T192 1405q0-53 3.5-103.5t14-109T236 1084t43-97.5 62-81 85.5-53.5T538 832q9 0 42 21.5t74.5 48 108 48T896 971t133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5T896 896 624.5 783.5 512 512t112.5-271.5T896 128t271.5 112.5T1280 512z" />
-        </symbol>
-      </svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="icons">
+    <symbol id="arrow-right" viewBox="0 0 1792 1792">
+      <path
+        d="M1600 960q0 54-37 91l-651 651q-39 37-91 37-51 0-90-37l-75-75q-38-38-38-91t38-91l293-293H245q-52 0-84.5-37.5T128 1024V896q0-53 32.5-90.5T245 768h704L656 474q-38-36-38-90t38-90l75-75q38-38 90-38 53 0 91 38l651 651q37 35 37 90z" />
+    </symbol>
+    <symbol id="lock" viewBox="0 0 1792 1792">
+      <path
+        d="M640 768h512V576q0-106-75-181t-181-75-181 75-75 181v192zm832 96v576q0 40-28 68t-68 28H416q-40 0-68-28t-28-68V864q0-40 28-68t68-28h32V576q0-184 132-316t316-132 316 132 132 316v192h32q40 0 68 28t28 68z" />
+    </symbol>
+    <symbol id="user" viewBox="0 0 1792 1792">
+      <path
+        d="M1600 1405q0 120-73 189.5t-194 69.5H459q-121 0-194-69.5T192 1405q0-53 3.5-103.5t14-109T236 1084t43-97.5 62-81 85.5-53.5T538 832q9 0 42 21.5t74.5 48 108 48T896 971t133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5T896 896 624.5 783.5 512 512t112.5-271.5T896 128t271.5 112.5T1280 512z" />
+    </symbol>
+  </svg>
 
-      <script>
+  <script>
 
-          let user_list = JSON.parse(localStorage.getItem('user_list'));
-  let unique_id = JSON.parse(localStorage.getItem('unique'));
-  function profile_data(e){
-    return e.user_number == unique_id;
-}
-  let user_data = user_list.find (profile_data);
- 
-  document.getElementById("user_name").value = user_data["user_name"];
-  document.getElementById("user_number").value = user_data["user_number"];
-  document.getElementById("role").value = user_data["role"];
- 
+    let user_list = JSON.parse(localStorage.getItem('user_list'));
+    let unique_id = JSON.parse(localStorage.getItem('unique'));
 
-function update(e){
- 
-  let user_name = document.getElementById("user_name").value;
-  let  user_number = document.getElementById("user_number").value;
-  let role = document.getElementById("role").value;
-
-
- 
-  user_data ["user_name"]=user_name;
-  user_data ["user_number"]=user_number;
-  user_data ["role"]=role;
-
-  localStorage.setItem("user_list", JSON.stringify(user_list));
-  alert("Your Datais Successfully Stored");
-}
-
-           
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  function del(event){
-    if(confirm("Are you sure you want to delete your profile")){
-      let users = JSON.parse(localStorage.getItem('user_list'));
-      let unique_id = JSON.parse(localStorage.getItem('unique'));
-[]
-      function login_data(e){
+    function profile_data(e) {
       return e.user_number == unique_id;
-}
-    let user_data = users.find (profile_data);
-  let indexOfUser = users.indexOf(user_data);
-  console.log(indexOfUser);
-  users.splice(indexOfUser,1);
-  localStorage.setItem("user_list", JSON.stringify(user_list));    }
+    }
+    let user_data = user_list.find(profile_data);
 
-}
-function log_out(e){
-    window.location.href="./login.html";
-}
+    document.getElementById("user_name").value = user_data["user_name"];
+    document.getElementById("user_number").value = user_data["user_number"];
+    document.getElementById("role").value = user_data["role"];
 
-      </script>
+    function update(e) {
+
+      let user_name = document.getElementById("user_name").value;
+      let user_number = document.getElementById("user_number").value;
+      let role = document.getElementById("role").value;
+
+      user_data["user_name"] = user_name;
+      user_data["user_number"] = user_number;
+      user_data["role"] = role;
+
+      localStorage.setItem("user_list", JSON.stringify(user_list));
+      alert("Your Datais Successfully Stored");
+    }
+
+    function del() {
+      if (confirm("Are you sure you want to delete your profile")) {
+        let users = JSON.parse(localStorage.getItem('user_list'));
+        let unique_id = JSON.parse(localStorage.getItem('unique'));
+        
+
+        function login_data(e) {
+          return e.user_number == unique_id;
+        }
+        let user_data = users.find(login_data);
+        let indexOfUser = users.indexOf(user_data);
+        console.log(indexOfUser);
+        users.splice(indexOfUser, 1);
+        localStorage.setItem("user_list", JSON.stringify(user_list));
+        alert(" Your Details Is Successfully Deleted!")
+      }
+    }
+
+    function log_out(e) {
+      window.location.href = "./login.html";
+    }
+
+
+//     // create a new img element
+// var img = document.createElement('img');
+
+// // set the src attribute to the URL of your image
+// img.src = 'https://example.com/image.jpg';
+
+// add the img element to the document (e.g. inside a div with ID "container")
+// document.getElementById('container').appendChild(img);
+
+
+  </script>
 
 </body>
-
 </html>

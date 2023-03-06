@@ -112,6 +112,7 @@ p{
   font-weight: 600;
   text-transform: uppercase;
   margin-left: 0px;
+  margin-top: 10px;
 }
 
 * {
@@ -365,3 +366,8 @@ p{
   .login input[type='submit']:hover {
     background-color: var(--loginSubmitHoverBackgroundColor);
   }
+
+  .roles{
+    text-align: center;
+  }
+  

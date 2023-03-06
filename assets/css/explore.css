@@ -26,7 +26,7 @@ body {
   border: 1px solid white;
 }
 
-#navbar{
+#navbar {
   background: transparent;
   backdrop-filter: blur(10px);
 }
@@ -100,11 +100,11 @@ h3 {
 }
 
 
-.mic{
+.mic {
   position: absolute;
   /* top: 5%; */
   left: 56%;
- 
+
   transform: translate(-50%, -50%);
   color: black;
 }
@@ -143,17 +143,19 @@ section .searchhead {
   outline: none;
 }
 
-.searchbar .textbox{
+.searchbar .textbox {
   width: 0;
   text-indent: 16px;
   transition: 0.5s;
 }
 
-.searchbar:hover{
+.searchbar:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.searchbar:hover .textbox { width: 400px;}
+.searchbar:hover .textbox {
+  width: 400px;
+}
 
 /* datalist{
   display: none;
@@ -175,9 +177,8 @@ section .searchhead {
   padding: 10px;
   padding-left: 50px;
   position: relative;
-  width: 50%;
-  height: 100%;
-  display: flex;
+  width: 400px;
+  height: 300px;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: start;
@@ -186,7 +187,7 @@ section .searchhead {
 
 .contentleft img {
   width: 70%;
-  height: 55%;
+  height: 80%;
   border-radius: 0px;
   border: 5px solid whitesmoke;
   padding: 10px;
@@ -198,15 +199,26 @@ section .searchhead {
 }
 
 .contentright {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 28px;
   width: 50%;
   margin-right: 200px;
   color: black;
   font-weight: lighter;
   word-spacing: 4px;
-  line-height: 1.6;
+  line-height: 1.6; */
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 28px;
+    width: 50%;
+    margin-right: 200px;
+    color: black;
+    font-weight: lighter;
+    word-spacing: 4px;
+      line-height: 1.5;
 }
+   
+
 
 span {
   font-weight: bold;
@@ -223,9 +235,9 @@ span {
   }*/
 
 
-.click {
+/* .click {
   margin-top: 10px;
-}
+} */
 
 #tooltip {
   position: relative;
