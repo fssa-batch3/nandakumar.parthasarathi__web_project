@@ -106,12 +106,12 @@ h3 {
   font-family: 'Heebo', sans-serif;
   text-transform:none;
   position: relative;
-  bottom: 70px;
+   bottom: -10px; 
 }
 
 .btnadvice {
   position: relative;
-  bottom: 70px;
+  /* bottom: 70px; */
 }
 
 .advice1,

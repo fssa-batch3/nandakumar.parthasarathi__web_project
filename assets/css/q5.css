@@ -13,6 +13,7 @@
     color: grey;
     font-size: 1.5rem;
     font-weight: bold;
+    margin-top: 30px;
 }
    
 input {
@@ -23,7 +24,7 @@ input {
 
 .question-section {
     text-align: center;
-    margin-top: 5%; 
+    margin-top: 10%; 
 }
 
 .next {
