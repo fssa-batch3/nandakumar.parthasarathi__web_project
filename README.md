@@ -7,8 +7,8 @@ Wireframe: https://drive.google.com/drive/folders/1y-VMct-uYjPCqHcLJzO19fHXGZJnx
 
 1. User CRUD:
 
-Register
-login
+Register,
+login,
 profile - Edit / Delete
 
 2. Search Option
@@ -23,23 +23,9 @@ user should answer the 5 questions
 
 Website identify the bird and show to the user
 
-3. Explore CRUD:
+3. Birds Crud:
 
-Here user explore all type of birds.
-
-Admin only
-
-Create
-Read
-Update
-
-4. Guidance CRUD:
-
-Admin only
-
- Create
- Read
- Update
-1) How can we help birds
-
-2) Gardening for wildlife
+creat 
+read
+update
+delete
