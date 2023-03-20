@@ -1195,8 +1195,7 @@
             read_button.setAttribute("class", "click");
             read_button.setAttribute("type", "button");
             // read_button.setAttribute("href", indian_birds_list[i]["information"]["source"] );
-            // read_button.setAttribute("onclick", "click_readmore()");
-
+            read_button.setAttribute("onclick", "click_readmore()");
             read_button.innerText = "Read more...";
             div_readmore.append(read_button);
 
@@ -1224,11 +1223,17 @@
 
             document.querySelector("section.detail_about_bird").append(div_birdstructure);
         }
+
+        function click_readmore(){
+            location.href = "../pages/read.html"
+        }
     </script>
 
 </body>
 
 </html>
+
+    
 
 <!-- // div_habit = document.createElement("div");
         // div_habit.setAttribute("class", "habit");

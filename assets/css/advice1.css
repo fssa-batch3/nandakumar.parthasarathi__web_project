@@ -99,12 +99,12 @@ h3 {
   font-family: 'Heebo', sans-serif;
   text-transform: none;
   position: relative;
-  bottom: 70px;
+  /* bottom: 70px; */
 }
 
 .btnadvice {
   position: relative;
-  bottom: 70px;
+  /* bottom: 70px; */
 }
 
 .advice1,
@@ -163,6 +163,7 @@ h3 {
   margin: 50px auto 0 auto;
   width: 80%;
 }
+
 
 @media only screen and (max-width:400px) {
   .title {
