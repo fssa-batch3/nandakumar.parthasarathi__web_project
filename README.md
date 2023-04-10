@@ -1,31 +1,47 @@
-Project—-Birds-Identificator
-Website Name: Birds Buddy
+Project—-Birds-Identificator Website Name: Birds Buddy
 
-Problem Statement:https://docs.google.com/document/d/1AlPHx8wY8-4oJwP4_JifG2v5_UpRPQRa/edit
-Userflow: https://drive.google.com/drive/folders/1y-VMct-uYjPCqHcLJzO19fHXGZJnxVTU
-Wireframe: https://drive.google.com/drive/folders/1y-VMct-uYjPCqHcLJzO19fHXGZJnxVTU
+Problem Statement:https://docs.google.com/document/d/1AlPHx8wY8-4oJwP4_JifG2v5_UpRPQRa/edit Userflow: https://drive.google.com/drive/folders/1y-VMct-uYjPCqHcLJzO19fHXGZJnxVTU Wireframe: https://drive.google.com/drive/folders/1y-VMct-uYjPCqHcLJzO19fHXGZJnxVTU
 
-1. User CRUD:
+### User
 
-Register,
-login,
-profile - Edit / Delete
+### Create an account (completed)
 
-2. Search Option
+Scenario 1 : Successfully create an account.
+   Steps:
+      1. Navigation to registration page.
+      2. Enter the required information such as User name, Password , and Phone number.
+      3. Click "Register" button.
+   Expected result:
+      The user is redirect to login page.
 
-user should answer the 5 questions
+### Login into website (completed)
 
-1) Where did you see the bird?
-2) When did you see the bird?
-3) What size was the bird?
-4) what are the main color?
-5) was the bird doing?
+Scenario 1 : Successfully login
+   Steps:
+      1. Navigation to login page.
+      2. Enter  the required information such as User name and password.
+      3. Click "Login" button.
+   Expected result:
+     The user redirect to home page.
 
-Website identify the bird and show to the user
+### profile (completed)
 
-3. Birds Crud:
+Scenario 1 : Successfully create profile.
+   Steps:
+      1. Navigation to profile page.
+      2. Enter the required information such as User name and password.
+      3. Click "Save" button.
+      4. If the user want to modify their profile user can modify.
+      5. Click "Save" button.
+   Expected result:
+         The user will redirect to homepage.
 
-creat 
-read
-update
-delete
+
+
+
+
+
+
+
+
+
