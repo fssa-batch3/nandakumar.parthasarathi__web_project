@@ -3,6 +3,7 @@
 /* ****************************************** */
 
 .header {
+  background-color: black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -512,12 +513,16 @@ td {
 /* CSS for INDEX START  */
 /* ****************************************** */
 .project {
-  background-image: url();
+  background-image: url(https://cdn.naturettl.com/wp-content/uploads/2014/08/22015103/kingfisher-600x315-cropped.jpg);
   background-size: cover;
   height: 600px;
   width: 100%;
   opacity: 1.5;
 }
+
+
+
+
 
 
 .weblogo{
@@ -549,7 +554,7 @@ td {
 	box-sizing: border-box;
 }
 
-body, html {
+/* body, html {
   height: 100%;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -587,7 +592,7 @@ body, html {
 .hero-text button:hover {
   background-color: #555;
   color: white;
-}
+} */
 
 
 

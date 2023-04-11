@@ -61,6 +61,16 @@
         <input type="text" id="food2" required><br>
         <label>Bird Video:</label><br>
         <input type="text" id="food3" required><br>
+        <label>About Bird:</label><br>
+        <textarea type="text" id="des1" required></textarea><br>
+        <label>General Characteristics:</label><br>
+        <textarea type="text" id="des2" required></textarea><br>
+        <label>Life styes:</label><br>
+        <textarea type="text" id="des3" required></textarea><br>
+        <label>Breeding patterns:</label><br>
+        <textarea type="text" id="des4" required></textarea><br>
+
+
 
         <button class="btn" type="submit" id="save_details_of_birds">Save</button>
         <button  class="btn" type="reset" id="cancel">Cancel</button>
@@ -75,6 +85,7 @@ function createBirds(e) {
 
     let birdStage1 = document.getElementById("b_stage-1").value;
     let birdStage2 = document.getElementById("b_stage-2").value;
+    console.log(birdStage2);
     let birdStage3 = document.getElementById("b_stage-3").value;
     let birdStage4 = document.getElementById("b_stage-4").value;
     let name = document.getElementById("birdname").value;
@@ -84,6 +95,10 @@ function createBirds(e) {
     let foodimage1 = document.getElementById("food1").value;
     let foodimage2 = document.getElementById("food2").value;
     let foodimage3 = document.getElementById("food3").value;
+    let des1= document.getElementById("des1").value;
+    let des2= document.getElementById("des2").value;
+    let des3= document.getElementById("des3").value;
+    let des4= document.getElementById("des4").value;
     let bird_info_details_uuid = uuidv4();
 
     let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details')) || [];
