@@ -61,6 +61,15 @@
         <input type="text" id="food2" required><br>
         <label>Bird Video:</label><br>
         <input type="text" id="food3" required><br>
+        <label>About Bird:</label><br>
+        <textarea type="text" id="des1" required></textarea><br>
+        <label>General Characteristics:</label><br>
+        <textarea type="text" id="des2" required></textarea><br>
+        <label>Life styes:</label><br>
+        <textarea type="text" id="des3" required></textarea><br>
+        <label>Breeding patterns:</label><br>
+        <textarea type="text" id="des4" required></textarea><br>
+
 
         <button class="btn" type="submit" id="save_details_of_birds">Save</button>
         <button  class="btn" type="reset" id="cancel">Cancel</button>
@@ -84,6 +93,10 @@ function createBirds(e) {
     let foodimage1 = document.getElementById("food1").value;
     let foodimage2 = document.getElementById("food2").value;
     let foodimage3 = document.getElementById("food3").value;
+    let des1= document.getElementById("des1").value;
+    let des2= document.getElementById("des2").value;
+    let des3= document.getElementById("des3").value;
+    let des4= document.getElementById("des4").value;
     let bird_info_details_uuid = uuidv4();
 
     let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details')) || [];
@@ -100,12 +113,15 @@ function createBirds(e) {
     data.foodimage1 == data.foodimage1 &&
     data.foodimage2 == data.foodimage2 &&
     data.foodimage3 == data.foodimage3 &&
+    data.des1 == data.des1 &&
+    data.des2 == data.des2 &&
+    data.des3 == data.des3 &&
     data.bird_info_details_uuid == bird_info_details_uuid
     );
 
     if(!exit){
         bird_info_details.push({
-            birdStage1,birdStage2,birdStage3,birdStage4,name,scientific_Name,size,habitat,foodimage1,foodimage2,foodimage3,bird_info_details_uuid
+            birdStage1,birdStage2,birdStage3,birdStage4,name,scientific_Name,size,habitat,foodimage1,foodimage2,foodimage3,des1,des2,des3,des4,bird_info_details_uuid
 
         });
         localStorage.setItem('bird_info_details', JSON.stringify(bird_info_details));

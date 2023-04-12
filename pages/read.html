@@ -37,7 +37,7 @@
             </li>
         </ul>
     </div>
-    <div class="headerendline"></div>  
+    <div class="headerendline"></div>
 
     <section class="info_container">
         <!-- <div class="scrollsnap">
@@ -238,8 +238,8 @@
                             sed dolorem vel iste recusandae atque quae porro nobis nemo.
                         </p>
                     </div>
-             </div> --> 
-             
+             </div> -->
+
     </section>
     <br>
     <br>
@@ -250,8 +250,8 @@
         </div>
     </div> -->
     </section>
-    
-   
+
+
 
     <script>
         // const indian_birds_list = [{
@@ -372,15 +372,15 @@
         let div_content;
         let h3_topic;
         let p_description;
-        let div_birdvedio;
-        let vedio_bird_vedio;
-        let source;
+        // let div_birdvedio;
+        // let vedio_bird_vedio;
+        // let source;
 
 
 
-let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
+        // let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
-        for (let i = 0; i < bird_info_details.length; i++) {
+        for (let i = 0; i < 1; i++) {
 
             //div_scrollsnap
             div_scrollsnap = document.createElement("div");
@@ -395,7 +395,7 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
 
             //img_scrollbird
-            for (let j = 0; j < bird_info_details.length ; j++) {
+            for (let j = 0; j < 1; j++) {
 
                 //div_birditems 1
                 div_birditems = document.createElement("div");
@@ -404,7 +404,7 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
                 img_scrollbird = document.createElement("img");
                 img_scrollbird.setAttribute("class", "scrollbird");
-                img_scrollbird.setAttribute("src", bird_info_details[j]["birdstage1"]);
+                img_scrollbird.setAttribute("src", "../assets/Images/second stage woodpeacker2.jfif");
                 img_scrollbird.setAttribute("heigth", "300px");
                 img_scrollbird.setAttribute("width", "400px");
                 div_birditems.append(img_scrollbird);
@@ -434,7 +434,7 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
                 img_scrollbird = document.createElement("img");
                 img_scrollbird.setAttribute("class", "scrollbird");
-                img_scrollbird.setAttribute("src", bird_info_details[j]["birdstage2"]);
+                img_scrollbird.setAttribute("src","../assets/Images/second stage woodpeacker2.jfif" );
                 img_scrollbird.setAttribute("heigth", "300px");
                 img_scrollbird.setAttribute("width", "400px");
                 div_birditems.append(img_scrollbird);
@@ -446,7 +446,7 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
                 img_scrollbird = document.createElement("img");
                 img_scrollbird.setAttribute("class", "scrollbird");
-                img_scrollbird.setAttribute("src", bird_info_details[j]["birdstage3"]);
+                img_scrollbird.setAttribute("src", "../assets/Images/thirdstage.jpg");
                 img_scrollbird.setAttribute("heigth", "300px");
                 img_scrollbird.setAttribute("width", "400px");
                 div_birditems.append(img_scrollbird);
@@ -459,7 +459,7 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
                 img_scrollbird = document.createElement("img");
                 img_scrollbird.setAttribute("class", "scrollbird");
-                img_scrollbird.setAttribute("src", bird_info_details[j]["birdstage4"]);
+                img_scrollbird.setAttribute("src", "../assets/Images/stage 4 woodpeacker.jpg");
                 img_scrollbird.setAttribute("heigth", "300px");
                 img_scrollbird.setAttribute("width", "400px");
                 div_birditems.append(img_scrollbird);
@@ -474,21 +474,21 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
             //p_bird_main_des
             p_bird_main_des = document.createElement("p");
             p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Name : " + bird_info_details[i]["name"];
+            p_bird_main_des.innerText = "Name :" + "Wood peacker";
             // p_bird_main_des.setAttribute(bird_info_details[i]["name"]);
-            
+
             div_main_des_container.append(p_bird_main_des);
 
             //p_bird_main_des
             p_bird_main_des = document.createElement("p");
             p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Scientific Name : " + bird_info_details[i]["scientific_Name"]
+            p_bird_main_des.innerText = "Scientific Name :" + " Picade";
             div_main_des_container.append(p_bird_main_des);
 
             //p_bird_main_des
             p_bird_main_des = document.createElement("p");
             p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Size : " + bird_info_details[i]["size"]
+            p_bird_main_des.innerText = "Size : " + " 23cm";
             div_main_des_container.append(p_bird_main_des);
 
             //div_tooltipsss
@@ -501,43 +501,43 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
             div_content.setAttribute("class", "content");
             console.log(div_content);
 
-            //div_birdvedio
-            div_birdvedio = document.createElement("div");
-            div_birdvedio.setAttribute("class", "birdvedio");
-            div_content.append(div_birdvedio);
+            // //div_birdvedio
+            // div_birdvedio = document.createElement("div");
+            // div_birdvedio.setAttribute("class", "birdvedio");
+            // div_content.append(div_birdvedio);
 
-            //h3_topic 
-            h3_topic = document.createElement("h3");
-            h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "See the beauty of Woodpeaker"
-            div_birdvedio.append(h3_topic);
+            // //h3_topic 
+            // h3_topic = document.createElement("h3");
+            // h3_topic.setAttribute("class", "topic");
+            // h3_topic.innerText = "See the beauty of Woodpeaker"
+            // div_birdvedio.append(h3_topic);
 
-            // vedio_bird_vedio
-            vedio_bird_vedio = document.createElement("video");
-            vedio_bird_vedio.setAttribute("class", "bird_vedio");
-            vedio_bird_vedio.setAttribute("controls", "true");
-            div_birdvedio.append(vedio_bird_vedio);
+            // // vedio_bird_vedio
+            // vedio_bird_vedio = document.createElement("video");
+            // vedio_bird_vedio.setAttribute("class", "bird_vedio");
+            // vedio_bird_vedio.setAttribute("controls", "true");
+            // div_birdvedio.append(vedio_bird_vedio);
 
-            //sourceElement 
-            source = document.createElement('source');
-            // source.setAttribute('src', "../assets/videos/Woodpecker.mp4");
-            source.setAttribute('type', 'video/mp4');
-            div_birdvedio.append(source);
-
-
-               button_edit = document.createElement("button");
-                button_edit.setAttribute("class", "btn");
-                button_edit.innerHTML = "Edit";
-                div_scrollsnap.append(button_edit);
-
-                a_link = document.createElement("a");
-                a_link.setAttribute("href", "./form/update.html");
-                button_edit.append(a_link);
+            // //sourceElement 
+            // source = document.createElement('source');
+            // // source.setAttribute('src', "../assets/videos/Woodpecker.mp4");
+            // source.setAttribute('type', 'video/mp4');
+            // div_birdvedio.append(source);
 
 
+            // button_edit = document.createElement("button");
+            // button_edit.setAttribute("class", "btn");
+            // button_edit.innerHTML = "Edit";
+            // div_scrollsnap.append(button_edit);
+
+            // a_link = document.createElement("a");
+            // a_link.setAttribute("href", "./form/update.html");
+            // button_edit.append(a_link);
 
 
-          
+
+
+
 
 
 
@@ -615,7 +615,7 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
             p_description.innerText = " The main features of Woodpecker include making holes in the barks and making nests inside the holes. They mostly choose rotten or dead woods to make such nests. In places where there are inadequate trees, they make nests in large cacti. Some Woodpeckers fully rely on the ground making holes under the earth and live there. Some Woodpeckers also make nests in the bamboo forests. Some occupy the nests of termites and ants. In urban areas, they choose wooden utility poles to make their nests. However, wrynecks are unable to make their own nests. They need to find a premade nest to settle. Woodpeckers usually collect wood pieces to make the nest. They make flooring with these wood pieces inside the hole. Premade holes are often occupied by other Woodpeckers and thus there remains a constant competition to make a nest. Even other birds like sparrows may start breeding the holes and in such situations, Woodpeckers need to fight violently to take over the place. Most Woodpeckers are monogamous while only a few species are polygamous. In rare cases, a group of Woodpeckers may take care of the young. Researchers say that group breeding is more successful than individual breeding. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa reprehenderit qui voluptates voluptatum cumque voluptate est doloribus velit, quod obcaecati sed dolorem vel iste recusandae atque quae porro nobis nemo."
             div_content.append(p_description);
 
-            
+
 
             document.querySelector("section.info_container").append(div_content);
 
@@ -627,7 +627,7 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
             // const habitat = indian_birds_list[i]["habitat"];
             // const noOfHabitats = habitat.length;
 
-            for (let l = 0; l <  bird_info_details.length; l++) {
+            for (let l = 0; l < 4; l++) {
 
                 div_tooltip = document.createElement("div");
                 div_tooltip.setAttribute("id", "tooltip");
@@ -643,15 +643,14 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
                 img_card_1.setAttribute("alt", "habitat");
                 img_card_1.setAttribute("height", "80px");
                 div_tooltip.append(img_card_1);
-
-               
-
             }
-
-               
-
             document.querySelector("section.info_container").prepend(div_scrollsnap);
         }
+
+
+
+
+
     </script>
 
 
@@ -661,4 +660,3 @@ let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 </body>
 
 </html>
-
