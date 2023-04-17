@@ -38,7 +38,11 @@
     </div>
     <div class="headerendline"></div>
 
-    <form role="form" onsubmit="createBirds(event)" class="form-for-admin"> 
+ 
+    <form role="form" onsubmit="createBirds(event)" class="form-for-admin">
+
+        <label>Main Image:</label><br>
+        <input type="text" id="mainimage" required> <br>
         <label>Bird Stage-1 Image:</label><br>
         <input type="text" id="b_stage-1" required> <br>
         <label>Bird Stage-2 Image:</label><br>
@@ -59,6 +63,10 @@
         <input type="text" id="food1" required><br>
         <label>Food Image-2:</label><br>
         <input type="text" id="food2" required><br>
+        <label>Food Image-3:</label><br>
+        <input type="text" id="food3" required><br>
+        <label>Food Image-4:</label><br>
+        <input type="text" id="food4" required><br>
         <label>Bird Video:</label><br>
         <input type="text" id="food3" required><br>
         <label>About Bird:</label><br>
@@ -70,6 +78,13 @@
         <label>Breeding patterns:</label><br>
         <textarea type="text" id="des4" required></textarea><br>
 
+
+
+
+        
+
+
+    </form>
 
         <button class="btn" type="submit" id="save_details_of_birds">Save</button>
         <button  class="btn" type="reset" id="cancel">Cancel</button>

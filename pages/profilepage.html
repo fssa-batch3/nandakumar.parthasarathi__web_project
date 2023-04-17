@@ -115,6 +115,7 @@
     function profile_data(e) {
       return e.user_number == unique_id;
     }
+    
     let user_data = user_list.find(profile_data);
 
     document.getElementById("user_name").value = user_data["user_name"];
@@ -132,7 +133,7 @@
       user_data["role"] = role;
 
       localStorage.setItem("user_list", JSON.stringify(user_list));
-      alert("Your Datais Successfully Stored");
+      alert("Your Data is Successfully Stored");
     }
 
     function del() {
