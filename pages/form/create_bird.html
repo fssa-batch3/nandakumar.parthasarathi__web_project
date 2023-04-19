@@ -39,9 +39,9 @@
     </div>
     <!-- <div class="headerendline"></div> -->
     <div class="headerendline"></div>
-    <a href="../form/form_birds.html"><button  class="btn" type="submit" id="save_details_of_birds">Create</button></a> 
+    <a href="../form/form_birds.html"><button class="btn" type="submit" id="save_details_of_birds">Create</button></a>
     <section class="detail_about_bird"></section>
-   
+
 
 
 
@@ -89,130 +89,144 @@
 
 
         <button class="btn" type="submit" id="save_details_of_birds">Save</button> -->
-       
-            
-        </body>
-        <script>
-             const indian_birds_list = JSON.parse(localStorage.getItem("bird_info_details"))
-        // console.log(indian_birds_list);
-
-        for (let i = 0; i < indian_birds_list.length; i++) {
-
-            //div_birdstructure
-            div_birdstructure = document.createElement("div");
-            div_birdstructure.setAttribute("class", "birdstructure");
-            // console.log(div_birdstructure);
-
-            //div_contentleft
-            div_contentleft = document.createElement("div");
-            div_contentleft.setAttribute("class", "contentleft");
-            div_birdstructure.append(div_contentleft);
-
-            //img_card
-            img_card = document.createElement("img");
-            img_card.setAttribute("src", indian_birds_list[i]["main_image"]);
-            img_card.setAttribute("alt", indian_birds_list[i]["bird_name"]);
-            div_contentleft.append(img_card);
-
-            //div_contentright
-            div_contentright = document.createElement("div");
-            div_contentright.setAttribute("class", "contentright");
-            div_birdstructure.append(div_contentright);
-
-            //p_birdpara
-            p_birdpara = document.createElement("p");
-            p_birdpara.setAttribute("class", "birdpara");
-            p_birdpara.innerText = "Name: " + indian_birds_list[i]["bird_name"];
-            div_contentright.append(p_birdpara);
-
-            //p_birdpara
-            p_birdpara = document.createElement("p");
-            p_birdpara.setAttribute("class", "birdpara");
-            p_birdpara.innerText = " Scientific Name: " + indian_birds_list[i]["scientific_name"];
-            div_contentright.append(p_birdpara);
-
-            //p_birdpara
-            p_birdpara = document.createElement("p");
-            p_birdpara.setAttribute("class", "birdpara");
-            p_birdpara.innerText = "Size : " + indian_birds_list[i]["size"];
-            div_contentright.append(p_birdpara);
-
-            //div_tooltipsss
-            div_tooltipsss = document.createElement("div");
-            div_tooltipsss.setAttribute("class", "tooltipsss");
-            div_contentright.append(div_tooltipsss);
-
-            // div_readmore
-            div_readmore = document.createElement("div");
-            div_contentright.append(div_readmore);
-
-            // div_anchor
-            div_anchor = document.createElement("a")
-            div_anchor.setAttribute("href", "../../pages/form/birds.detailpage.html?bird_info_details_uuid=" +
-                indian_birds_list[i]["bird_info_details_uuid"])
-            div_readmore.append(div_anchor);
 
 
-            //  // div_anchor2
-            //  div_anchor2 = document.createElement("a")
-            // div_anchor2.setAttribute("href", "?bird_info_details_uuid=" +
-            //     indian_birds_list[i]["bird_info_details_uuid"])
-            // div_eedit.append(div_anchor2);
+</body>
+<script>
+    const indian_birds_list = JSON.parse(localStorage.getItem("bird_info_details"))
+    // console.log(indian_birds_list);
+
+    for (let i = 0; i < indian_birds_list.length; i++) {
+
+        //div_birdstructure
+        div_birdstructure = document.createElement("div");
+        div_birdstructure.setAttribute("class", "birdstructure");
+        // console.log(div_birdstructure);
+
+        //div_contentleft
+        div_contentleft = document.createElement("div");
+        div_contentleft.setAttribute("class", "contentleft");
+        div_birdstructure.append(div_contentleft);
+
+        //img_card
+        img_card = document.createElement("img");
+        img_card.setAttribute("src", indian_birds_list[i]["main_image"]);
+        img_card.setAttribute("alt", indian_birds_list[i]["bird_name"]);
+        div_contentleft.append(img_card);
+
+        //div_contentright
+        div_contentright = document.createElement("div");
+        div_contentright.setAttribute("class", "contentright");
+        div_birdstructure.append(div_contentright);
+
+        //p_birdpara
+        p_birdpara = document.createElement("p");
+        p_birdpara.setAttribute("class", "birdpara");
+        p_birdpara.innerText = "Name: " + indian_birds_list[i]["bird_name"];
+        div_contentright.append(p_birdpara);
+
+        //p_birdpara
+        p_birdpara = document.createElement("p");
+        p_birdpara.setAttribute("class", "birdpara");
+        p_birdpara.innerText = " Scientific Name: " + indian_birds_list[i]["scientific_name"];
+        div_contentright.append(p_birdpara);
+
+        //p_birdpara
+        p_birdpara = document.createElement("p");
+        p_birdpara.setAttribute("class", "birdpara");
+        p_birdpara.innerText = "Size : " + indian_birds_list[i]["size"];
+        div_contentright.append(p_birdpara);
+
+        //div_tooltipsss
+        div_tooltipsss = document.createElement("div");
+        div_tooltipsss.setAttribute("class", "tooltipsss");
+        div_contentright.append(div_tooltipsss);
+
+        // div_readmore
+        div_readmore = document.createElement("div");
+        div_contentright.append(div_readmore);
+
+        // div_anchor
+        div_anchor = document.createElement("a")
+        div_anchor.setAttribute("href", "../../pages/form/birds.detailpage.html?bird_info_details_uuid=" +
+            indian_birds_list[i]["bird_info_details_uuid"])
+        div_readmore.append(div_anchor);
 
 
-            //read_button
-            read_button = document.createElement("button");
-            read_button.setAttribute("class", "click");
-            read_button.setAttribute("type", "button");
-            read_button.innerText = "Read more...";
-            div_anchor.append(read_button);
-
-            //edit_button
-            edit_button = document.createElement("button");
-            edit_button.setAttribute("class", "edit");
-            edit_button.setAttribute("type", "submit");
-            edit_button.setAttribute("data-id", indian_birds_list[i]["bird_info_details_uuid"])
-            edit_button.innerText = "Edit";
-            div_readmore.append(edit_button);
+        //  // div_anchor2
+        //  div_anchor2 = document.createElement("a")
+        // div_anchor2.setAttribute("href", "?bird_info_details_uuid=" +
+        //     indian_birds_list[i]["bird_info_details_uuid"])
+        // div_eedit.append(div_anchor2);
 
 
-            // const habitat = indian_birds_list[i]["habitat"];
-            // const noOfHabitats = habitat.length;
+        //read_button
+        read_button = document.createElement("button");
+        read_button.setAttribute("class", "click");
+        read_button.setAttribute("type", "button");
+        read_button.innerText = "Read more...";
+        div_anchor.append(read_button);
 
-            // for (let j = 0; j < noOfHabitats; j++) {
+        //edit_button
+        edit_button = document.createElement("a");
+        edit_button.setAttribute("class", "edit");
+        // edit_button.setAttribute("type", "submit");
+        edit_button.setAttribute("href", `../form/update.html?birds_unique_id=${ indian_birds_list[i].bird_info_details_uuid}` )
+        edit_button.innerText = "Edit";
+        div_readmore.append(edit_button);
 
-            div_tooltip = document.createElement("div");
-            div_tooltip.setAttribute("id", "tooltip");
-            div_tooltipsss.append(div_tooltip);
 
-            // span_tooltiptext = document.createElement("span");
-            // span_tooltiptext.setAttribute("id", "tooltiptext");
-            // span_tooltiptext.innerText = habitat[j]["tooltip"];
-            // div_tooltip.append(span_tooltiptext);
+        // const habitat = indian_birds_list[i]["habitat"];
+        // const noOfHabitats = habitat.length;
 
-            img_card_1 = document.createElement("img");
-            img_card_1.setAttribute("src", indian_birds_list[i]["habitat"]);
-            img_card_1.setAttribute("alt", "forest");
-            img_card_1.setAttribute("height", "80px");
-            div_tooltip.append(img_card_1);
-            // }
+        // for (let j = 0; j < noOfHabitats; j++) {
 
-            document.querySelector("section.detail_about_bird").append(div_birdstructure);
-        }
+        div_tooltip = document.createElement("div");
+        div_tooltip.setAttribute("id", "tooltip");
+        div_tooltipsss.append(div_tooltip);
 
-        function readmore() {
-            window.location.href = "../../pages/form/birds.detailpage.html"
-        }
-               
+        // span_tooltiptext = document.createElement("span");
+        // span_tooltiptext.setAttribute("id", "tooltiptext");
+        // span_tooltiptext.innerText = habitat[j]["tooltip"];
+        // div_tooltip.append(span_tooltiptext);
 
-        const edit_btn = document.querySelectorAll(".edit");
-        edit_btn.forEach(function (edit_details) {
-            edit_details.addEventListener("click", function () {
-                // const getId = this.dataset.id
-                // console.log(getId)
-                window.location.href = "../form/update.html"
-            })
-        })
-        </script>
+        img_card_1 = document.createElement("img");
+        img_card_1.setAttribute("src", indian_birds_list[i]["habitat"]);
+        img_card_1.setAttribute("alt", "forest");
+        img_card_1.setAttribute("height", "80px");
+        div_tooltip.append(img_card_1);
+        // }
 
-       
+        document.querySelector("section.detail_about_bird").append(div_birdstructure);
+    }
+
+    function readmore() {
+        window.location.href = "../../pages/form/birds.detailpage.html"
+    }
+
+
+    // const edit_btn = document.querySelectorAll(".edit");
+    // edit_btn.forEach(function (edit_details) {
+    //     edit_details.addEventListener("click", function () {
+    //         const getId = this.dataset.id
+    //         console.log(getId)
+    //         localStorage.setItem("birds_unique_id", JSON.stringify(getId))
+    //         window.location.href = `../form/update.html?birds_unique_id=${getId}`
+    //     })
+
+    // })
+
+
+    // let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
+    // let birds_unique_id = JSON.parse(localStorage.getItem('birds_unique_id'));
+
+    // function birds_details_data(e) {
+    //     return e.birds_unique_id == bird_info_details_uuid;
+    // }
+
+    // let birds_all_data = user_list.find(birds_details_data);
+
+    // document.getElementById("user_name").value = user_data["user_name"];
+    // document.getElementById("user_number").value = user_data["user_number"];
+</script>
+

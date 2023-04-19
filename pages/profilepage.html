@@ -54,12 +54,12 @@
         <input type="text" name="username" id="user_number" class="form__input" placeholder="Phone Number" required>
       </div>
 
-      <div class="form__field">
+      <!-- <div class="form__field">
         <label for="login__password"><svg class="icon">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use>
           </svg><span class="hidden">Role</span></label>
         <input id="role" type="text" name="password" class="form__input" placeholder="Role" required>
-      </div>
+      </div> -->
 
 
 
@@ -120,17 +120,17 @@
 
     document.getElementById("user_name").value = user_data["user_name"];
     document.getElementById("user_number").value = user_data["user_number"];
-    document.getElementById("role").value = user_data["role"];
+    // document.getElementById("role").value = user_data["role"];
 
     function update(e) {
 
       let user_name = document.getElementById("user_name").value;
       let user_number = document.getElementById("user_number").value;
-      let role = document.getElementById("role").value;
+      
 
       user_data["user_name"] = user_name;
       user_data["user_number"] = user_number;
-      user_data["role"] = role;
+      
 
       localStorage.setItem("user_list", JSON.stringify(user_list));
       alert("Your Data is Successfully Stored");
@@ -141,21 +141,25 @@
         let users = JSON.parse(localStorage.getItem('user_list'));
         let unique_id = JSON.parse(localStorage.getItem('unique'));
         
-
         function login_data(e) {
           return e.user_number == unique_id;
         }
+
         let user_data = users.find(login_data);
-        let indexOfUser = users.indexOf(user_data);
-        console.log(indexOfUser);
-        users.splice(indexOfUser, 1);
-        localStorage.setItem("user_list", JSON.stringify(user_list));
-        alert(" Your Details Is Successfully Deleted!")
+        console.log(login_data)
+
+        // let indexOfUser = users.indexOf(user_data);
+        // console.log(indexOfUser);
+        // users.splice(indexOfUser, 1);
+        // localStorage.setItem("user_list", JSON.stringify(user_list));
+        // alert(" Your Details Is Successfully Deleted!")
       }
     }
 
     function log_out(e) {
-      window.location.href = "./login.html";
+      alert("are you sure you want to logout")
+      localStorage.removeItem("unique");
+      window.location.href = "../index.html";
     }
 
 

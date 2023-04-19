@@ -24,7 +24,7 @@
   <title>login Page</title>
 
   <link rel="stylesheet" href="..//assets/css/resister.css">
- 
+
   <!-- <link rel="stylesheet" href="'https://cdnjs.cloudflare.com/ajax/libs/bootsrap/5.0.2/css/bootsrap.min.css">
     <link rel="stylesheet" href="'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"> -->
 </head>
@@ -41,16 +41,15 @@
           <label><svg class="icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
             </svg><span class="hidden">Username</span></label>
-          <input type="text" name="username" id="user_name" class="form__input"
-            placeholder="Username" required pattern="[a-z A-Z]*">
+          <input type="text" name="username" id="user_name" class="form__input" placeholder="Username" required
+            pattern="[a-z A-Z]*">
         </div>
 
         <div class="form__field">
           <label><svg class="icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
             </svg><span class="hidden">Phone Number</span></label>
-          <input type="text" name="username" id="user_number" class="form__input"
-            placeholder="Phone Number" required>
+          <input type="text" name="username" id="user_number" class="form__input" placeholder="Phone Number" required>
         </div>
 
         <div class="form__field">
@@ -65,8 +64,8 @@
           <label><svg class="icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use>
             </svg><span class="hidden"> Confirm Password</span></label>
-          <input type="password" name="confirm password" id="confirm_password"
-            class="form__input" placeholder="Confirm Password" required>
+          <input type="password" name="confirm password" id="confirm_password" class="form__input"
+            placeholder="Confirm Password" required>
         </div>
 
         <div class="u-form-group">
@@ -105,7 +104,8 @@
       <div class="img-container">
         <div class="img-inner">
           <div class="inner-skew">
-            <img src="https://images.unsplash.com/photo-1584791097929-aa825fe8e1e1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
+            <img
+              src="https://images.unsplash.com/photo-1584791097929-aa825fe8e1e1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
           </div>
         </div>
       </div>
@@ -113,8 +113,8 @@
         <h3>A blue bird</h3>
         <div>
           This a demo experiment to skew image container. It looks good.
+        </div>
       </div>
-    </div>
 
   </body>
 
@@ -122,86 +122,86 @@
   <script>
 
 
-      function signUp(e) {
-        e.preventDefault();
+    function signUp(e) {
+      e.preventDefault();
 
-        let user_name = document.getElementById("user_name").value,
-            user_number = document.getElementById("user_number").value,
-            user_password = document.getElementById("user_password").value,
-            confirm_password = document.getElementById("confirm_password").value;
+      let user_name = document.getElementById("user_name").value,
+        user_number = document.getElementById("user_number").value,
+        user_password = document.getElementById("user_password").value,
+        confirm_password = document.getElementById("confirm_password").value;
 
-            function checkpass(){
-              if(user_password!=confirm_password){
-                alert("Incorrect username or password")
-                document.getElementById('user_password').reset();
-              }
-            }
-            checkpass();
-
-        let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
-
-        let exist = user_list.length &&
-          JSON.parse(localStorage.getItem('user_list')).some(data =>
-            data.user_name.toLowerCase() == user_name.toLowerCase() ||
-            data.user_number == user_number
-          );
-
-        if (!exist) {
-          user_list.push({
-            user_name, 
-            user_number, 
-            user_password,
-            confirm_password
-          });
-
-          localStorage.setItem('user_list', JSON.stringify(user_list));
-          localStorage.setItem("unique",user_number);
-          console.log(localStorage.getItem('user_list'));
-
-          document.querySelector('form').reset();
-
-          document.getElementById('user_name').focus();
-          document.getElementById('user_number').focus();
-
-          alert('Account created Successfully');
-          location.href = "../pages/login.html";
-        }
-
-        else {
-          alert('Sorry the User already Exist!! \n Try with different Phone number or name');
-          document.querySelector('form').reset();
+      function checkpass() {
+        if (user_password != confirm_password) {
+          alert("Incorrect username or password")
+          document.getElementById('user_password').reset();
         }
       }
+      checkpass();
 
-//       function isStrongPassword(password) {
-//   // Check if the password meets the minimum requirements
-//   const minLength = 8;
-//   const hasUppercase = /[A-Z]/.test(password);
-//   const hasLowercase = /[a-z]/.test(password);
-//   const hasNumber = /\d/.test(password);
-//   const hasSpecialChar = /[\W_]/.test(password);
+      let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
 
-//   // Check if the password is strong enough
-//   const isStrong =
-//     password.length >= minLength &&
-//     hasUppercase &&
-//     hasLowercase &&
-//     hasNumber &&
-//     hasSpecialChar;
+      let exist = user_list.length &&
+        JSON.parse(localStorage.getItem('user_list')).some(data =>
+          data.user_name.toLowerCase() == user_name.toLowerCase() ||
+          data.user_number == user_number
+        );
 
-//   return isStrong;
-// }
+      if (!exist) {
+        user_list.push({
+          user_name,
+          user_number,
+          user_password,
+          confirm_password
+        });
 
-// const password = "MyStr0ngP@ssword";
-// if (isStrongPassword(password)) {
-//   console.log("Password is strong");
-// } else {
-//   console.log("Password is not strong");
-// }
+        localStorage.setItem('user_list', JSON.stringify(user_list));
+        
+        console.log(localStorage.getItem('user_list'));
+
+        document.querySelector('form').reset();
+
+        document.getElementById('user_name').focus();
+        document.getElementById('user_number').focus();
+
+        alert('Account created Successfully');
+        location.href = "../pages/login.html";
+      }
+
+      else {
+        alert('Sorry the User already Exist!! \n Try with different Phone number or name');
+        document.querySelector('form').reset();
+      }
+    }
+
+    //       function isStrongPassword(password) {
+    //   // Check if the password meets the minimum requirements
+    //   const minLength = 8;
+    //   const hasUppercase = /[A-Z]/.test(password);
+    //   const hasLowercase = /[a-z]/.test(password);
+    //   const hasNumber = /\d/.test(password);
+    //   const hasSpecialChar = /[\W_]/.test(password);
+
+    //   // Check if the password is strong enough
+    //   const isStrong =
+    //     password.length >= minLength &&
+    //     hasUppercase &&
+    //     hasLowercase &&
+    //     hasNumber &&
+    //     hasSpecialChar;
+
+    //   return isStrong;
+    // }
+
+    // const password = "MyStr0ngP@ssword";
+    // if (isStrongPassword(password)) {
+    //   console.log("Password is strong");
+    // } else {
+    //   console.log("Password is not strong");
+    // }
 
 
 
-      document.getElementsByTagName("h1")[0].style.fontSize = "20px";
+    document.getElementsByTagName("h1")[0].style.fontSize = "20px";
 
   </script>
 
