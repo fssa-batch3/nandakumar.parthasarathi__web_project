@@ -88,7 +88,7 @@
       <button class="btn" type="submit" onclick="log_out(event)">Log out</button>
     </div>
     <div>
-      <button class="btn" type="submit" onclick="del()">Delete</button>
+      <button class="btn" type="submit" onclick="del(event)">Delete</button>
     </div>
   </div>
 
@@ -136,7 +136,7 @@
       alert("Your Data is Successfully Stored");
     }
 
-    function del() {
+    function del(e) {
       if (confirm("Are you sure you want to delete your profile")) {
         let users = JSON.parse(localStorage.getItem('user_list'));
         let unique_id = JSON.parse(localStorage.getItem('unique'));

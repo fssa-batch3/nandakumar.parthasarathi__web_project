@@ -87,7 +87,7 @@
     </form>
 
     <button class="btn" type="submit" id="save_details_of_birds">Save</button>
-    <button class="btn" type="reset" id="cancel">Delete</button>
+    <button class="btn" type="button" id="cancel">Delete</button>
 
     </form>
 
@@ -161,6 +161,7 @@
         let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
         let all_birds_data = bird_info_details.find(e => e.bird_info_details_uuid === birdsUniqueId);
+        let all_birds_data_index = bird_info_details.indexOf(all_birds_data);
 
         document.getElementById("mainimage").value = all_birds_data["main_image"];
         document.getElementById("b_stage-1").value = all_birds_data["birds_stages"]["birdStage1"];
@@ -207,30 +208,15 @@
         document.getElementById("save_details_of_birds").addEventListener("click", update)
 
         function deleteBird() {
-            // Get the query string from the current URL
-            const queryString = window.location.search;
-            // Create a new URL object with the query string
-            const url = new URL(`https://example.com${queryString}`); // Replace 'https://example.com' with your actual domain name
-
-            // Retrieve the value of the 'birds_unique_id' query parameter
-            const birdsUniqueId = url.searchParams.get('birds_unique_id');
-
-            let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
-
-            // Find the index of the bird with matching 'bird_info_details_uuid'
-            const index = bird_info_details.findIndex(e => e.bird_info_details_uuid === birdsUniqueId);
-
-            if (index !== -1) {
-                // Remove the bird data from the array
-                bird_info_details.splice(index, 1);
-                // Update local storage with the modified data
-                localStorage.setItem("bird_info_details", JSON.stringify(bird_info_details));
-                alert("Bird Data Successfully Deleted");
-                // Redirect to a desired page or perform any other necessary actions after successful deletion
-            } else {
-                alert("Bird Data Not Found");
+            if (confirm("Are you want to delete bird details")) {
+                bird_info_details.splice(all_birds_data_index,1);
+                localStorage.setItem("bird_info_details",JSON.stringify(bird_info_details));
+                window.location.href = "../form/create_bird.html";
             }
         }
+
+        document.getElementById("cancel").addEventListener("click",deleteBird);
+
 
 
     </script>
