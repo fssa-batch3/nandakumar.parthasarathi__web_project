@@ -184,12 +184,12 @@ h3 {
   font-family: 'Heebo', sans-serif;
   text-transform:none;
   position: relative;
-   bottom: -10px; 
+   bottom: 50px; 
 }
 
 .btnadvice {
   position: relative;
-  /* bottom: 70px; */
+  bottom: 40px; 
 }
 
 .advice1,
@@ -214,13 +214,13 @@ h3 {
   justify-items: center;
 }
 
-.waterbird {
-  width: 400px;
-  height: 250px;
-  border-radius: 5px;
-  position: relative;
-  left: 40px;
-}
+  .waterbird {
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    position: relative;
+    left: 40px;
+  }
 
 .headerindicator {
   position: fixed;

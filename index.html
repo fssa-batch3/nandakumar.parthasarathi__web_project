@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -26,9 +27,10 @@
 </head>
 
 <body>
-    <div class="project">
+    
+    <div class="project" id="userlogin">
         <div class="header">
-            <h1 class="birds"><b>BIRDS BUDDY</b></h1>
+            <h1 class="birds"><a href="./index.html"><b>BIRDS BUDDY</b></h1></a>
             <ul>
                 <li>
                     <a class="navlist" href="./index.html">Home</a>
@@ -49,42 +51,39 @@
             <a href="./pages/profilepage.html"><i class="fa-regular fa-user"></i>
         </div>
         <div class="second-head">
-       <button class="login-button"> <a href="./pages/login.html"><span>Login</span></button></a>
-       <button class="signup-button"> <a href="./pages/resister.html"><span>Sign Up</span></button></a>
-       </div>
-      
-       <img class="index_image" src="https://wallpaperset.com/w/full/6/a/0/470225.jpg"/>
-       <h3 class="webslog">Welcome to my Birds buddy<br> & Explore more</h3>
-
+            <button class="login-button"> <a href="./pages/login.html"><span>Login</span></button></a>
+            <button class="signup-button"> <a href="./pages/resister.html"><span>Sign Up</span></button></a>
         </div>
-       
-   
+    
 
-      
+        <img class="index_image" src="https://wallpaperset.com/w/full/6/a/0/470225.jpg" />
+        <h3 class="webslog">Welcome to my Birds buddy<br> & Explore more</h3>
+    </div>
 
 
-        <nav class="toggle-button">
-            <div class="navbar2">
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        <i class="fa fa-bars"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="./index.html">Home</a>
-                        <a href="./pages/about.html">About</a>
-                        <a href="./pages/search.html">Search</a>
-                        <a href="./pages/explore.html">Explore</a>
-                        <a href="./pages/guidance.html">Guidance</a>
-                    </div>
+
+
+
+
+    <nav class="toggle-button">
+        <div class="navbar2">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="./index.html">Home</a>
+                    <a href="./pages/about.html">About</a>
+                    <a href="./pages/search.html">Search</a>
+                    <a href="./pages/explore.html">Explore</a>
+                    <a href="./pages/guidance.html">Guidance</a>
                 </div>
             </div>
-        </nav>
-        
-        
-<!--        
-            <div class="identify-box"><h4 class="identify">Identify the bird here</h4></div> -->
-        
-        
+        </div>
+    </nav>
+
+
+   
 
 
 
@@ -93,21 +92,18 @@
 
 
 
-        <script>
-            const input = document.querySelector("input");
-            const body = document.querySelector("body");
 
-            const toggleThemeMode = () => {
-                body.classList.toggle("dark");
-            };
+    <script>
+        const input = document.querySelector("input");
+        const body = document.querySelector("body");
 
-            input.onchange = toggleThemeMode;
+        const toggleThemeMode = () => {
+            body.classList.toggle("dark");
+        };
 
-
-        </script>
-        <script src=pages/index/header.js></script>
-
-
+        input.onchange = toggleThemeMode;
+    </script>
+    <script src=pages/index/header.js> </script>
 </body>
 
 </html>

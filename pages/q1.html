@@ -114,7 +114,7 @@
             </div>  
         
         
-             
+            <a href="../pages/q1.html"></a>
            
             <div class="next">
                 <a href="../pages/q2.html"><button type="button" class="next" onclick="submit()">Next</button></a> 
@@ -133,6 +133,63 @@
 
         window.location.href="../pages/q2.html"
     }  
+
+
+            const indian_birds_list = [{
+                species: "Wood peacker",
+                habitat: "forest",
+                date: "07-02-2023",
+                size: "small",
+                color: [ red , white , black],
+                action: "on the ground",
+                image: "https://iili.io/HvI3GX1.jpg"
+            },
+            {
+                species: "Cattle Egret",
+                habitat: "River",
+                date: "07-02-2023",
+                size: "large",
+                color: "white",
+                action: "on the water",
+                image: "../assets/Images/cattle egret main img.jpg"
+            },
+            // Add more bird objects here
+        ];
+        // Function to find a bird species based on user answers
+        function findBird(habitat, date, size, color, action) {
+            let matches = [];
+            for (let i = 0; i < birds.length; i++) {
+                if (birds[i].habitat === habitat && birds[i].date === date && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
+                    matches.push(birds[i]);
+                }
+            }
+            return matches;
+        }
+        // Example usage
+        const habitat = DayPilot.Modal.prompt("Where did you see the bird?");
+        const date = DayPilot.Modal.prompt("when did you see the bird")
+        const size = DayPilot.Modal.prompt("What size was the bird?");
+        const color = DayPilot.Modal.prompt("What were the main colors?");
+        const action = DayPilot.Modal.prompt("Was the bird doing?");
+
+
+        const birdMatches = findBird(habitat, date, size, color);
+        if (birdMatches.length > 0) {
+            console.log(`We found ${birdMatches.length} bird species that match your description:`);
+            for (let i = 0; i < birdMatches.length; i++) {
+                console.log(`${birdMatches[i].species}:`);
+                console.log(`Habitat: ${birdMatches[i].habitat}`);
+                console.log(`Date: ${birdMatches[i].date}`);
+                console.log(`Size: ${birdMatches[i].size}`);
+                console.log(`color: ${birdMatches[i].color}`);
+                console.log(`action: ${birdMatches[i].action}`);
+                console.log(`Image URL: ${birdMatches[i].image}`);
+            }
+        } else {
+            console.log("Sorry, we could not find a bird species matching that description.");
+            }
+
+
     </script>
 </body>
 </html>

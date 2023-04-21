@@ -1,78 +1,95 @@
-const root = window.location.origin;
+let origin = window.location.origin;
+let logo_path = origin + "/index.html";
+let home = origin + "/index.html";
+let about = origin + "/pages/about.html";
+let search = origin + "/pages/q1.html";
+let explore = origin + "/pages/explore.html";
+let guidance = origin + "/pages/guidance.html";
+let signup = origin + "/pages/resister.html";
+let login = origin + "/pages/login.html";
+let profile = origin + "/pages/profilepage.html";
 
-const after_login = 
-`
+
+let before_login =
+    `
+
 <div class="project">
         <div class="header">
-            <h1 class="birds"><b>BIRDS BUDDY</b></h1>
+            <h1 class="birds"> <a href="./index.html"><b>BIRDS BUDDY</b></h1></a>  
             <ul>
                 <li>
-                    <a class="navlist" href="./index.html">Home</a>
+                    <a class="navlist" href="${home}">Home</a>
                 </li>
                 <li>
-                    <a class="navlist" href="./pages/about.html">About</a>
+                    <a class="navlist" href="${about}">About</a>
                 </li>
                 <li>
-                    <a class="navlist" href="./pages/q1.html">Search</a>
+                    <a class="navlist" href="${search}">Search</a>
                 </li>
                 <li>
-                    <a class="navlist" href="./pages/explore.html">Explore</a>
+                    <a class="navlist" href="${explore}">Explore</a>
                 </li>
                 <li>
-                    <a class="guidance" href="./pages/guidance.html">Guidance</a>
+                    <a class="guidance" href="${guidance}">Guidance</a>
                 </li>
             </ul>
-            <a href="./pages/profilepage.html"><i class="fa-regular fa-user"></i>
+            <a href="${profile}"><i class="fa-regular fa-user"></i>
         </div>
         <div class="second-head">
        <button class="login-button"> <a href="./pages/login.html"><span>Login</span></button></a>
        <button class="signup-button"> <a href="./pages/resister.html"><span>Sign Up</span></button></a>
        </div>
         </div>
+        
 `
-const  before_login =
-`<div class="project">
+let after_login =
+
+    `
+    
+    <div class="project">
 <div class="header">
-    <h1 class="birds"><b>BIRDS BUDDY</b></h1>
+    <h1 class="birds"> <a href="${logo_path}"><b>BIRDS BUDDY</b></h1></a>  
     <ul>
         <li>
-            <a class="navlist" href="./index.html">Home</a>
+            <a class="navlist" href="${home}">Home</a>
         </li>
         <li>
-            <a class="navlist" href="./pages/about.html">About</a>
+            <a class="navlist" href="${about}">About</a>
         </li>
         <li>
-            <a class="navlist" href="./pages/q1.html">Search</a>
+            <a class="navlist" href="${search}">Search</a>
         </li>
         <li>
-            <a class="navlist" href="./pages/explore.html">Explore</a>
+            <a class="navlist" href="${explore}">Explore</a>
         </li>
         <li>
-            <a class="guidance" href="./pages/guidance.html">Guidance</a>
+            <a class="guidance" href="${guidance}">Guidance</a>
         </li>
+        <li> <span class="login-button" onclick = "logout()"> Log out</span></li>
     </ul>
-    <a href="./pages/profilepage.html"><i class="fa-regular fa-user"></i>
+    <a href="${profile}"><i class="fa-regular fa-user"></i>
 </div>
-<div class="second-head">
-<button class="login-button"> <a href="./pages/login.html"><span>Login</span></button></a>
-<button class="signup-button"> <a href="./pages/resister.html"><span>Sign Up</span></button></a>
-</div>
+
 </div> 
+
 `
-let unique_id1 = JSON.parse(localStorage.getItem("unique"));
-console.log(unique_id1);
-if(unique_id1 ){
-    document.body.insertAdjacentHTML("afterbegin",after_login);
-    const logout = document.querySelector("#logout");
-    logout?.addEventListener("click", () => {
-        localStorage.removeItem("unique");
-        document.body.innerHTML = before_login;
-    });
+
+function header() {
+    let userId = JSON.parse(localStorage.getItem("unique"));
+    let userlogin = document.getElementById("userlogin");
+
+    if (!userId){
+        userlogin.innerHTML = before_login;
+    }
+    else{
+        userlogin.innerHTML = after_login;
+    }
 }
-else{
-    document.body.insertAdjacentHTML("beforebegin",before_login);
-    const logout = document.querySelector("#logout");
-    logout?.removeEventListener("click", () =>
-    document.body.innerHTML = after_login);
-    localStorage.removeItem("unique");
-};
+
+
+function logout(){
+    if(confirm("Are you sure to log out?")){
+        localStorage.removeItem("unique");
+        window.location.href = "/index.html"
+    }
+}
