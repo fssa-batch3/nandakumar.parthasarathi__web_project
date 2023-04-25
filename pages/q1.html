@@ -6,11 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question number 1</title>
-
-    
-
-    <link rel="stylesheet" href="..//assets/css/style.css">
+  <link rel="stylesheet" href="..//assets/css/style.css">
     <link rel="stylesheet" href="..//assets/css/q1.css">
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 </head>
 
 <body>
@@ -35,161 +33,210 @@
         </ul>
     </div>
     <div class="headerendline"></div>
-    
 
-    <section class="question-section">
-        <div class="container">
+
+    <section class="question_section">
+        <!-- <div class="container">
             <div class="kelvi">
-                <h3>Where did you see the bird?</h3>
+                <h3 class="questions">Where did you see the bird?</h3>
             </div>
             <div class="bathil"></div>
-                <!-- <input type="text" id="bird" placeholder="Type here"/> -->
-               <!-- <div class="option-container">
-                <i  class="fa-solid fa-tractor"></i>
-                <i  class="fa-solid fa-water"></i>
-                <i  class="fa-solid fa-mountain-sun"></i>
-                <i  class="fa-solid fa-city"></i>
-                <i  class="fa-solid fa-tree"></i>
-                </div> -->
-                
-           <!-- <div class="img-card">
-                <img class="img-option" src="../assets/Images/big forest.png" alt="forest" height="70px">
-           </div> 
-            
-            
-           <div class="img-card">
-                <img class="img-option" src="../assets/Images/shrublandpng.png" alt="shrubland" height="70px"> 
-            </div>   
-            
-             
-            <div class="img-card">
-                <img class="img-option" src="../assets/Images/cropgreen-removebg-preview.png" alt="Croplands" height="70px">
-            </div>    
-          
-            
-            <div class="img-card">
-                <img class="img-option" src="../assets/Images/river-removebg-preview.png" alt="river" height="80px">
-            </div> 
-           
-            <div class="img-card">
-                <img class="img-option" src="../assets/Images/urban.png" alt="forest" height="70px">
-            </div>    
-            -->
-            
-        <div class="option-container">
-            <div class="card">
-                <img src="../assets/Images/big forest.png" class="cards" alt="Avatar" style="width:100px">
-                <div class="container">
-                  <h4><b>Forest</b></h4> 
+            <div class="option_container" id="habitats">
+                <div class="card">
+                    <img src="../assets/Images/big forest.png" id="forest" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="container">
+                        <h4><b>Forest</b></h4>
+                    </div>
                 </div>
-              </div>
 
-              <div class="card">
-                <img src="../assets/Images/shrublandpng.png"  class="cards" alt="Avatar" style="width:100px">
-                <div class="container">
-                  <h4><b>shrubland</b></h4> 
+                <div class="card">
+                    <img src="../assets/Images/shrublandpng.png" id="shrubland" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="container">
+                        <h4><b>Shrubland</b></h4>
+                    </div>
                 </div>
-              </div>
 
-              <div class="card">
-                <img src="../assets/Images/cropgreen-removebg-preview.png"  class="cards"  alt="Avatar" style="width:100px">
-                <div class="container">
-                  <h4><b>Croplands</b></h4> 
+                <div class="card">
+                    <img src="../assets/Images/cropgreen-removebg-preview.png" id="croplands" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="container">
+                        <h4><b>Croplands</b></h4>
+                    </div>
                 </div>
-              </div>
 
-              <div class="card">
-                <img src="../assets/Images/river-removebg-preview.png"   class="cards" alt="Avatar" style="width:100px">
-                <div class="container">
-                  <h4><b>river</b></h4> 
+                <div class="card">
+                    <img src="../assets/Images/river-removebg-preview.png" id="river" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="containers">
+                        <h4><b>River</b></h4>
+                    </div>
                 </div>
-              </div>
 
-              <div class="card">
-                <img src="../assets/Images/urban.png"  class="cards" alt="Avatar" style="width:100px">
-                <div class="container">
-                  <h4><b>Urban area</b></h4> 
+                <div class="card">
+                    <img src="../assets/Images/urban.png" id="urban_area" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="container">
+                        <h4><b>Urban area</b></h4>
+                    </div>
                 </div>
-              </div>
-            </div>  
-        
-        
-            <a href="../pages/q1.html"></a>
-           
-            <div class="next">
-                <a href="../pages/q2.html"><button type="button" class="next" onclick="submit()">Next</button></a> 
             </div>
-            <div class="back">
-                <a href="..//pages/hello.html"><button type="button" onclick="history.back()">Back</button></a>
-            </div>
-        </div>  
+ -->
+
+
+
+        <div class="next">
+            <a href="../pages/q2.html"><button type="button" class="next" onclick="submit()">Next</button></a>
+        </div>
+        <div class="back">
+            <a href="../index.html"><button type="button" onclick="history.back()">Back</button></a>
+        </div>
+        
     </section>
 
     <script>
-        function submit(){
-        const bird = document.getElementById("bird").value
+        // function submit() {
+        //     const bird = document.getElementById("bird").value
 
-        console.log(bird)
+        //     console.log(bird)
 
-        window.location.href="../pages/q2.html"
-    }  
-
-
-            const indian_birds_list = [{
-                species: "Wood peacker",
-                habitat: "forest",
-                date: "07-02-2023",
-                size: "small",
-                color: [ red , white , black],
-                action: "on the ground",
-                image: "https://iili.io/HvI3GX1.jpg"
-            },
-            {
-                species: "Cattle Egret",
-                habitat: "River",
-                date: "07-02-2023",
-                size: "large",
-                color: "white",
-                action: "on the water",
-                image: "../assets/Images/cattle egret main img.jpg"
-            },
-            // Add more bird objects here
-        ];
-        // Function to find a bird species based on user answers
-        function findBird(habitat, date, size, color, action) {
-            let matches = [];
-            for (let i = 0; i < birds.length; i++) {
-                if (birds[i].habitat === habitat && birds[i].date === date && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
-                    matches.push(birds[i]);
-                }
-            }
-            return matches;
-        }
-        // Example usage
-        const habitat = DayPilot.Modal.prompt("Where did you see the bird?");
-        const date = DayPilot.Modal.prompt("when did you see the bird")
-        const size = DayPilot.Modal.prompt("What size was the bird?");
-        const color = DayPilot.Modal.prompt("What were the main colors?");
-        const action = DayPilot.Modal.prompt("Was the bird doing?");
+        //     window.location.href = "../pages/q2.html"
+        // }
 
 
-        const birdMatches = findBird(habitat, date, size, color);
-        if (birdMatches.length > 0) {
-            console.log(`We found ${birdMatches.length} bird species that match your description:`);
-            for (let i = 0; i < birdMatches.length; i++) {
-                console.log(`${birdMatches[i].species}:`);
-                console.log(`Habitat: ${birdMatches[i].habitat}`);
-                console.log(`Date: ${birdMatches[i].date}`);
-                console.log(`Size: ${birdMatches[i].size}`);
-                console.log(`color: ${birdMatches[i].color}`);
-                console.log(`action: ${birdMatches[i].action}`);
-                console.log(`Image URL: ${birdMatches[i].image}`);
-            }
-        } else {
-            console.log("Sorry, we could not find a bird species matching that description.");
-            }
+        // Add event listener to the "Next" button
+        // document.querySelector('.next button').addEventListener('click', function () {
+        //     submit();
+        // });
+
+        // // Add event listener to the "Back" button
+        // document.querySelector('.back button').addEventListener('click', function () {
+        //     history.back();
+        // });
+
+
+
+        let div_container;
+        let div_kelvi;
+        let h3_questions;
+        let div_bathil;
+        let div_option_container;
+        let div_card;
+        let img_cards;
+        let div_containers;
+        let h4_noclass;
+        let div_next;
+
+        //div_container
+        div_container = document.createElement("div");
+        div_container.setAttribute("class", "container");
+        console.log(div_container);
+
+        //div_kelvi
+        div_kelvi = document.createElement("div");
+        div_kelvi.setAttribute("class", "kelvi");
+        div_container.append(div_kelvi);
+
+        //h3_questions
+        h3_questions = document.createElement("h3");
+        h3_questions.setAttribute("class", "questions");
+        h3_questions.innerText = "Where did you see the bird";
+        div_kelvi.append(h3_questions);
+
+        //div_bathil
+        div_bathil = document.createElement("div");
+        div_bathil.setAttribute("class", "bathil");
+        div_container.append(div_bathil);
+
+        //div_option_container
+        div_option_container = document.createElement("div");
+        div_option_container.setAttribute("class", "option_container");
+        div_option_container.setAttribute("id", "option_habitats");
+        div_container.append(div_option_container);
+
+        //div_card
+        div_card = document.createElement("div");
+        div_card.setAttribute("class", "card");
+        div_option_container.append(div_card);
+
+        //img_cards
+        img_cards = document.createElement("img");
+        img_cards.setAttribute("class", "cards");
+        img_cards.setAttribute("id", "forest");
+        img_cards.setAttribute("src", "../assets/Images/big forest.png");
+        img_cards.setAttribute("width", "100%px");
+        div_card.append(img_cards);
+
+        //div_containers
+        div_containers = document.createElement("div");
+        div_containers.setAttribute("class", "containers");
+        div_card.append(div_containers);
+
+        //h4_noclass
+        h4_noclass = document.createElement("h3");
+        h4_noclass.setAttribute("id","forest");
+        h4_noclass.innerText = "Forest";
+        div_containers.append(h4_noclass);
+
+        //div_next
+        div_next = document.createElement("div");
+        div_next.setAttribute("class", "next");
+        div_container.append(div_next);
+
+        // div_anchor
+        div_anchor = document.createElement("a");
+        // div_anchor.setAttribute("href", "../pages/q2.html");
+        div_anchor.innerText = "Next";
+        div_anchor.setAttribute("onclick", "Identify_bird()")
+        div_next.append(div_anchor);
+        //div_back
+        div_back = document.createElement("div");
+        div_back.setAttribute("class", "back");
+        div_container.append(div_back);
+
+        // div_anchor
+        div_anchor = document.createElement("a")
+        div_anchor.setAttribute("href", "../index.html")
+        div_anchor.innerText = "Back";
+        div_back.append(div_anchor);
+
+        document.querySelector("section.question_section").prepend(div_container);
+
+
+
+        function Identify_bird(e){
+         let forest= document.getElementById("forest").value
+         
+         let data = JSON.parse(localStorage.getItem('data')) || [];
+
+         conso.log(forest)
+
+        //  if(!exit){
+        //     data.push({
+        //         forest,
+        //     });
+        //     localStorage.setItem("data",JSON.stringify(data));
+        //     console.log(localStorage.getItem('data'));
+        //     document.querySelector('form').reset();
+            
+        //     window.href="../pages/q2.html";
+        //  }
+
+    }
+    let selectbtn = document.querySelectorAll(".button")
+    selectbtn.forEach(each => {
+                            each.addEventListener("click", (event) => {
+                                const person_data = each.dataset.id;
+                                console.log(person_data)
+                                window.location.href = `../products/Addedpg_details.html?my_uuid=${person_data}`;
+                            })
+                        })
+
 
 
     </script>
 </body>
+
 </html>
+

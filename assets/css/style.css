@@ -318,11 +318,11 @@ body {
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #030303, 0 0 20px #323232, 0 0 30px #F2ECFF, 0 0 40px #00C896, 0 0 50px #00c4e6, ;
+    text-shadow: 0 0 10px #e42712, 0 0 20px #e75714, 0 0 30px #ffb004, 0 0 40px #ed2a0d, 0 0 50px #fe9307, ;
   }
 
   to {
-    text-shadow: 0 0 20px rgb(136, 1, 255), 0 0 30px #00ffff, 0 0 40px #ff0000, 0 0 50px #000000, 0 0 60px #ff0101, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px rgb(229, 65, 15), 0 0 30px #b91a1a, 0 0 40px #ff8604, 0 0 50px #f81111, 0 0 60px #ff4a22, 0 0 70px #ff594d, 0 0 80px #ff630f;
   }
 }
 

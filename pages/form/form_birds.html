@@ -55,9 +55,9 @@
         <label>Name:</label><br>
         <input type="text" id="birdname" required ><br>
         <label>Scientific Name:</label><br>
-        <input type="text" id="scientificname" required pattern="[a-z A-Z]*"><br>
+        <input type="text" id="scientificname" required ><br>
         <label>Size:</label><br>
-        <input type="text" id="size"><br required pattern="[a-z A-Z]*"><br>
+        <input type="text" id="size" required><br>
         <label>Habitat Iamge:</label><br>
         <input type="url" id="habitat"><br>
         <label>Food Image-1:</label><br>
@@ -156,7 +156,7 @@
 
                 // document.querySelector('form').reset();
                 alert("Bird Details Created!");
-                window.location.href = "../form/create_bird.html";
+                window.location.href = "../../pages/explore.html";
             }
         }
         )

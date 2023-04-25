@@ -169,3 +169,126 @@ The young will fledge when they are 65-70 days old, and will become independent 
 
 
 + indian_birds_list[i]["bird_info_details_uuid"]
+
+
+
+
+
+
+
+// const indian_birds_list = [
+//     {
+//         species: "Wood peacker",
+//         habitat: "forest",
+//         date: "07-02-2023",
+//         size: "small",
+//         color: "red",
+//         action: "on the ground",
+//         image: "https://iili.io/HvI3GX1.jpg"
+//     },
+//     {
+//         species: "Cattle Egret",
+//         habitat: "River",
+//         date: "07-02-2023",
+//         size: "large",
+//         color: "white",
+//         action: "on the water",
+//         image: "../assets/Images/cattle egret main img.jpg"
+//     }
+//     // Add more bird objects here
+// ];
+
+// // Function to find a bird species based on user answers
+// function findBird(habitat, date, size, color, action) {
+//     let matches = [];
+//     for (let i = 0; i < indian_birds_list.length; i++) {
+//         if (indian_birds_list[i].habitat === habitat && indian_birds_list[i].date === date && indian_birds_list[i].size === size && indian_birds_list[i].color === color && indian_birds_list[i].action === action) {
+//             matches.push(indian_birds_list[i]);
+//         }
+//     }
+//     return matches;
+// }
+
+// // Example usage
+// const habitat = prompt("Where did you see the bird?");
+// const date = prompt("When did you see the bird?");
+// const size = prompt("What size was the bird?");
+// const color = prompt("What were the main colors?");
+// const action = prompt("What was the bird doing?");
+
+// const birdMatches = findBird(habitat, date, size, color, action);
+// if (birdMatches.length > 0) {
+//     console.log(`We found ${birdMatches.length} bird species that match your description:`);
+//     for (let i = 0; i < birdMatches.length; i++) {
+//         console.log(`${birdMatches[i].species}:`);
+//         console.log(`Habitat: ${birdMatches[i].habitat}`);
+//         console.log(`Date: ${birdMatches[i].date}`);
+//         console.log(`Size: ${birdMatches[i].size}`);
+//         console.log(`Color: ${birdMatches[i].color}`);
+//         console.log(`Action: ${birdMatches[i].action}`);
+//         console.log(`Image URL: ${birdMatches[i].image}`);
+//     }
+// } else {
+//     console.log("Sorry, we could not find a bird species matching that description.");
+// }
+
+let div_container;
+let div_kelvi;
+let h3_questions;
+let div_bathil;
+let div_option_container;
+let div_card;
+let img_cards;
+let div_containers;
+let h4_noclass;
+
+
+
+
+
+//div_container
+div_container = document.createElement("div");
+div_container.setAttribute("class", "container");
+console.log(div_container);
+
+//div_kelvi
+div_kelvi = document.createElement("div");
+div_kelvi.setAttribute("class", "kelvi");
+div_container.append(div_kelvi);
+
+//h3_questions
+h3_questions = document.createElement("h3");
+h3_questions.setAttribute("class", "questions");
+div_kelvi.append(div_cards);
+
+//div_bathil
+div_bathil = document.createElement("div");
+div_bathil.setAttribute("class", "bathil");
+div_container.append(div_bathil);
+
+//div_option_container
+div_option_container = document.createElement("div");
+div_option_container.setAttribute("class", "option_container");
+div_container.append(div_option_container);
+
+//div_card
+div_card = document.createElement("div");
+div_card.setAttribute("class", "card");
+div_option_container.append(div_card);
+
+//img_cards
+img_cards = document.createElement("img");
+img_cards.setAttribute("class", "scrollbird");
+img_cards.setAttribute("src", "../assets/Images/second stage woodpeacker2.jfif");
+img_cards.setAttribute("heigth", "300px");
+img_cards.setAttribute("width", "400px");
+div_card.append(img_cards);
+
+//div_containers
+div_containers = document.createElement("div");
+div_containers.setAttribute("class", "containers");
+div_card.append(div_containers);
+
+//h4_noclass
+h4_noclass = document.createElement("h3");
+div_containers.append(h4_noclass);
