@@ -39,7 +39,7 @@
                     <a class="navlist" href="./pages/about.html">About</a>
                 </li>
                 <li>
-                    <a class="navlist" href="./pages/q1.html">Search</a>
+                    <a class="navlist" href="./pages/q1.html" id = "identify_bird">Identify Bird</a>
                 </li>
                 <li>
                     <a class="navlist" href="./pages/explore.html">Explore</a>
@@ -94,16 +94,23 @@
 
 
     <script>
-        const input = document.querySelector("input");
-        const body = document.querySelector("body");
+        // const input = document.querySelector("input");
+        // const body = document.querySelector("body");
 
-        const toggleThemeMode = () => {
-            body.classList.toggle("dark");
-        };
+        // const toggleThemeMode = () => {
+        //     body.classList.toggle("dark");
+        // };
 
-        input.onchange = toggleThemeMode;
+        // input.onchange = toggleThemeMode;
+
+        let identify_bird = document.getElementById("identify_bird");
+        identify_bird.addEventListener("click",(event) => {
+            let arr = JSON.parse(localStorage.getItem("identify_bird")) || [];
+        })
+
     </script>
     <script src=pages/index/header.js> </script>
-</body>
 
+
+</body>
 </html>

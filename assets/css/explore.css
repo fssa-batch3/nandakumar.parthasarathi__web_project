@@ -113,7 +113,11 @@ h3 {
   background-color: white;
 }
 
-section .searchhead {
+ .searchhead {
+  background-color: white;
+}
+
+.detail_about_bird{
   background-color: white;
 }
 

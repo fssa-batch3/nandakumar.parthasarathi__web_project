@@ -22,7 +22,7 @@
                 <a class="navlist" href="../pages/about.html">About</a>
             </li>
             <li>
-                <a class="navlist" href="../pages/q1.html">Search</a>
+                <a class="navlist" href="../pages/q1.html">Identify Bird</a>
             </li>
             <li>
                 <a class="navlist" href="../pages/explore.html">Explore</a>
@@ -128,6 +128,9 @@
         let h4_noclass;
         let div_next;
 
+        let habitat_options = JSON.parse(localStorage.getItem("habitats")) || [];
+        
+        
         //div_container
         div_container = document.createElement("div");
         div_container.setAttribute("class", "container");
@@ -200,6 +203,7 @@
         div_anchor.setAttribute("href", "../index.html")
         div_anchor.innerText = "Back";
         div_back.append(div_anchor);
+    
 
         document.querySelector("section.question_section").prepend(div_container);
 
@@ -224,14 +228,14 @@
         //  }
 
     }
-    let selectbtn = document.querySelectorAll(".button")
-    selectbtn.forEach(each => {
-                            each.addEventListener("click", (event) => {
-                                const person_data = each.dataset.id;
-                                console.log(person_data)
-                                window.location.href = `../products/Addedpg_details.html?my_uuid=${person_data}`;
-                            })
-                        })
+    // let selectbtn = document.querySelectorAll(".button")
+    // selectbtn.forEach(each => {
+    //                         each.addEventListener("click", (event) => {
+    //                             const person_data = each.dataset.id;
+    //                             console.log(person_data)
+    //                             window.location.href = `../products/Addedpg_details.html?my_uuid=${person_data}`;
+    //                         })
+    //                     })
 
 
 
