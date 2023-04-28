@@ -1,30 +1,25 @@
-let origin = window.location.origin;
-let logo_path = origin + "/index.html";
-let home = origin + "/index.html";
-let about = origin + "/pages/about.html";
-let search = origin + "/pages/q1.html";
-let explore = origin + "/pages/explore.html";
-let guidance = origin + "/pages/guidance.html";
-let signup = origin + "/pages/resister.html";
-let login = origin + "/pages/login.html";
-let profile = origin + "/pages/profilepage.html";
-
-
-let before_login =
-    `
-
-<div class="project">
+const origin = window.location.origin;
+const logo_path = "/index.html";
+const about = "/pages/about.html";
+const identify = "/pages/q1.html";
+const explore = "/pages/explore.html";
+const guidance = "/pages/guidance.html";
+const signup = "/pages/resister.html";
+const login = "/pages/login.html";
+const profile = "/pages/profilepage.html";
+console.log("raj")
+const before_login = `
         <div class="header">
             <h1 class="birds"> <a href="./index.html"><b>BIRDS BUDDY</b></h1></a>  
             <ul>
                 <li>
-                    <a class="navlist" href="${home}">Home</a>
+                    <a class="navlist" href="${logo_path}">Home</a>
                 </li>
                 <li>
                     <a class="navlist" href="${about}">About</a>
                 </li>
                 <li>
-                    <a class="navlist" href="${search}">Search</a>
+                    <a class="navlist" href="${identify}">Search</a>
                 </li>
                 <li>
                     <a class="navlist" href="${explore}">Explore</a>
@@ -36,28 +31,26 @@ let before_login =
             <a href="${profile}"><i class="fa-regular fa-user"></i>
         </div>
         <div class="second-head">
-       <button class="login-button"> <a href="./pages/login.html"><span>Login</span></button></a>
-       <button class="signup-button"> <a href="./pages/resister.html"><span>Sign Up</span></button></a>
+       <button class="login-button"> <a href="${signup}"><span>Login</span></button></a>
+       <button class="signup-button"> <a href="${login}"><span>Sign Up</span></button></a>
        </div>
-        </div>
-        
-`
-let after_login =
+          
+`;
 
-    `
+
+const after_login = `  
     
-    <div class="project">
 <div class="header">
     <h1 class="birds"> <a href="${logo_path}"><b>BIRDS BUDDY</b></h1></a>  
     <ul>
         <li>
-            <a class="navlist" href="${home}">Home</a>
+            <a class="navlist" href="${logo_path}">Home</a>
         </li>
         <li>
             <a class="navlist" href="${about}">About</a>
         </li>
         <li>
-            <a class="navlist" href="${search}">Search</a>
+            <a class="navlist" href="${identify}">Search</a>
         </li>
         <li>
             <a class="navlist" href="${explore}">Explore</a>
@@ -65,31 +58,25 @@ let after_login =
         <li>
             <a class="guidance" href="${guidance}">Guidance</a>
         </li>
-        <li> <span class="login-button" onclick = "logout()"> Log out</span></li>
     </ul>
     <a href="${profile}"><i class="fa-regular fa-user"></i>
+    </div>
+    <div class="second-head">
+    <button class="login-button"> <a href="${login}"><span>Log in</span></button></a>
+    </div>
+    <img class="index_image" src="https://wallpaperset.com/w/full/6/a/0/470225.jpg" />
+    <h3 class="webslog">Welcome to my Birds buddy<br> & Explore more</h3>
 </div>
+`;
 
-</div> 
+function headerPage() {
+    const userId = JSON.parse(localStorage.getItem('unique'));
+    const userlogin = document.getElementById('userlogin');
 
-`
-
-function header() {
-    let userId = JSON.parse(localStorage.getItem("unique"));
-    let userlogin = document.getElementById("userlogin");
-
-    if (!userId){
+    if (!userId) {
         userlogin.innerHTML = before_login;
-    }
-    else{
+    } else {
         userlogin.innerHTML = after_login;
-    }
-}
 
-
-function logout(){
-    if(confirm("Are you sure to log out?")){
-        localStorage.removeItem("unique");
-        window.location.href = "/index.html"
     }
 }

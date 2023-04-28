@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "lint": "eslint .",
     "dev": "http-server ./"
   },
   "repository": {
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/fssa-batch3/nandakumar.parthasarathi__web_project#readme",
   "dependencies": {
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb": "^19.0.4",
     "http-server": "^14.1.1"
   },
   "devDependencies": {

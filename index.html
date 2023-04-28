@@ -39,7 +39,7 @@
                     <a class="navlist" href="./pages/about.html">About</a>
                 </li>
                 <li>
-                    <a class="navlist" href="./pages/q1.html" id = "identify_bird">Identify Bird</a>
+                    <a class="navlist" id = "identify_bird">Identify Bird</a>
                 </li>
                 <li>
                     <a class="navlist" href="./pages/explore.html">Explore</a>
@@ -60,11 +60,6 @@
         <h3 class="webslog">Welcome to my Birds buddy<br> & Explore more</h3>
     </div>
 
-
-
-
-
-
     <nav class="toggle-button">
         <div class="navbar2">
             <div class="dropdown">
@@ -81,18 +76,10 @@
             </div>
         </div>
     </nav>
-
-
-   
-
-
-
-
-
-
-
-
-
+    <script src=./header.js> </script>
+    <script>
+        headerPage()
+    </script>
     <script>
         // const input = document.querySelector("input");
         // const body = document.querySelector("body");
@@ -104,13 +91,17 @@
         // input.onchange = toggleThemeMode;
 
         let identify_bird = document.getElementById("identify_bird");
-        identify_bird.addEventListener("click",(event) => {
-            let arr = JSON.parse(localStorage.getItem("identify_bird")) || [];
-        })
+        console.log(identify_bird)
+        // identify_bird.addEventListener("click",(event) => {
+        //     let arr = []
+        //     localStorage.setItem("identifyBirds",arr);
+        //     window.location.href = "./pages/q1.html"
+        // })
 
     </script>
-    <script src=pages/index/header.js> </script>
+
 
 
 </body>
 </html>
+

@@ -155,7 +155,7 @@
         });
 
         localStorage.setItem('user_list', JSON.stringify(user_list));
-        
+
         console.log(localStorage.getItem('user_list'));
 
         document.querySelector('form').reset();
@@ -172,34 +172,6 @@
         document.querySelector('form').reset();
       }
     }
-
-    //       function isStrongPassword(password) {
-    //   // Check if the password meets the minimum requirements
-    //   const minLength = 8;
-    //   const hasUppercase = /[A-Z]/.test(password);
-    //   const hasLowercase = /[a-z]/.test(password);
-    //   const hasNumber = /\d/.test(password);
-    //   const hasSpecialChar = /[\W_]/.test(password);
-
-    //   // Check if the password is strong enough
-    //   const isStrong =
-    //     password.length >= minLength &&
-    //     hasUppercase &&
-    //     hasLowercase &&
-    //     hasNumber &&
-    //     hasSpecialChar;
-
-    //   return isStrong;
-    // }
-
-    // const password = "MyStr0ngP@ssword";
-    // if (isStrongPassword(password)) {
-    //   console.log("Password is strong");
-    // } else {
-    //   console.log("Password is not strong");
-    // }
-
-
 
     document.getElementsByTagName("h1")[0].style.fontSize = "20px";
 

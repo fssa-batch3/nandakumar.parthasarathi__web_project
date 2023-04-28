@@ -36,7 +36,8 @@
 
 
     <section class="question_section">
-        <!-- <div class="container">
+        <div class = "option_container" id = "habitats"></div>
+        <div class="container">
             <div class="kelvi">
                 <h3 class="questions">Where did you see the bird?</h3>
             </div>
@@ -82,12 +83,12 @@
                     </div>
                 </div>
             </div>
- -->
+
 
 
 
         <div class="next">
-            <a href="../pages/q2.html"><button type="button" class="next" onclick="submit()">Next</button></a>
+            <a href="../pages/q3.html"><button type="button" class="next" onclick="submit()">Next</button></a>
         </div>
         <div class="back">
             <a href="../index.html"><button type="button" onclick="history.back()">Back</button></a>
@@ -131,90 +132,94 @@
         let habitat_options = JSON.parse(localStorage.getItem("habitats")) || [];
         
         
-        //div_container
-        div_container = document.createElement("div");
-        div_container.setAttribute("class", "container");
-        console.log(div_container);
 
-        //div_kelvi
-        div_kelvi = document.createElement("div");
-        div_kelvi.setAttribute("class", "kelvi");
-        div_container.append(div_kelvi);
+       
+    //     //div_container
+    //     div_container = document.createElement("div");
+    //     div_container.setAttribute("class", "container");
+    //     console.log(div_container);
 
-        //h3_questions
-        h3_questions = document.createElement("h3");
-        h3_questions.setAttribute("class", "questions");
-        h3_questions.innerText = "Where did you see the bird";
-        div_kelvi.append(h3_questions);
+    //     //div_kelvi
+    //     div_kelvi = document.createElement("div");
+    //     div_kelvi.setAttribute("class", "kelvi");
+    //     div_container.append(div_kelvi);
 
-        //div_bathil
-        div_bathil = document.createElement("div");
-        div_bathil.setAttribute("class", "bathil");
-        div_container.append(div_bathil);
+    //     //h3_questions
+    //     h3_questions = document.createElement("h3");
+    //     h3_questions.setAttribute("class", "questions");
+    //     h3_questions.innerText = "Where did you see the bird";
+    //     div_kelvi.append(h3_questions);
 
-        //div_option_container
-        div_option_container = document.createElement("div");
-        div_option_container.setAttribute("class", "option_container");
-        div_option_container.setAttribute("id", "option_habitats");
-        div_container.append(div_option_container);
+    //     //div_bathil
+    //     div_bathil = document.createElement("div");
+    //     div_bathil.setAttribute("class", "bathil");
+    //     div_container.append(div_bathil);
 
-        //div_card
-        div_card = document.createElement("div");
-        div_card.setAttribute("class", "card");
-        div_option_container.append(div_card);
+    //     for(let i = 0; i<5; i++){
+            
+    //     div_option_container
+    //     div_option_container = document.createElement("div");
+    //     div_option_container.setAttribute("class", "option_container");
+    //     div_option_container.setAttribute("id", "option_habitats");
+    //     div_container.append(div_option_container);
 
-        //img_cards
-        img_cards = document.createElement("img");
-        img_cards.setAttribute("class", "cards");
-        img_cards.setAttribute("id", "forest");
-        img_cards.setAttribute("src", "../assets/Images/big forest.png");
-        img_cards.setAttribute("width", "100%px");
-        div_card.append(img_cards);
+    //     //div_card
+    //     div_card = document.createElement("div");
+    //     div_card.setAttribute("class", "card");
 
-        //div_containers
-        div_containers = document.createElement("div");
-        div_containers.setAttribute("class", "containers");
-        div_card.append(div_containers);
+    //     //img_cards
+    //     img_cards = document.createElement("img");
+    //     img_cards.setAttribute("class", "cards");
+    //     img_cards.setAttribute("id", "forest");
+    //     img_cards.setAttribute("src", "../assets/Images/big forest.png");
+    //     img_cards.setAttribute("width", "100%px");
+    //     div_card.append(img_cards);
 
-        //h4_noclass
-        h4_noclass = document.createElement("h3");
-        h4_noclass.setAttribute("id","forest");
-        h4_noclass.innerText = "Forest";
-        div_containers.append(h4_noclass);
+    //     //div_containers
+    //     div_containers = document.createElement("div");
+    //     div_containers.setAttribute("class", "containers");
+    //     div_card.append(div_containers);
 
-        //div_next
-        div_next = document.createElement("div");
-        div_next.setAttribute("class", "next");
-        div_container.append(div_next);
+    //     //h4_noclass
+    //     h4_noclass = document.createElement("h3");
+    //     h4_noclass.setAttribute("id","forest");
+    //     h4_noclass.innerText = "Forest";
+    //     div_containers.append(h4_noclass);
+    // }
 
-        // div_anchor
-        div_anchor = document.createElement("a");
-        // div_anchor.setAttribute("href", "../pages/q2.html");
-        div_anchor.innerText = "Next";
-        div_anchor.setAttribute("onclick", "Identify_bird()")
-        div_next.append(div_anchor);
-        //div_back
-        div_back = document.createElement("div");
-        div_back.setAttribute("class", "back");
-        div_container.append(div_back);
+    //     //div_next
+    //     div_next = document.createElement("div");
+    //     div_next.setAttribute("class", "next");
+    //     div_container.append(div_next);
 
-        // div_anchor
-        div_anchor = document.createElement("a")
-        div_anchor.setAttribute("href", "../index.html")
-        div_anchor.innerText = "Back";
-        div_back.append(div_anchor);
+    //     // div_anchor
+    //     div_anchor = document.createElement("a");
+    //     // div_anchor.setAttribute("href", "../pages/q2.html");
+    //     div_anchor.innerText = "Next";
+    //     div_anchor.setAttribute("onclick", "Identify_bird()")
+    //     div_next.append(div_anchor);
+    //     //div_back
+    //     div_back = document.createElement("div");
+    //     div_back.setAttribute("class", "back");
+    //     div_container.append(div_back);
+
+    //     // div_anchor
+    //     div_anchor = document.createElement("a")
+    //     div_anchor.setAttribute("href", "../index.html")
+    //     div_anchor.innerText = "Back";
+    //     div_back.append(div_anchor);
     
 
-        document.querySelector("section.question_section").prepend(div_container);
+    //     document.querySelector("div.option_container").append(div_card);
 
 
 
-        function Identify_bird(e){
-         let forest= document.getElementById("forest").value
+//         function Identify_bird(e){
+//          let forest= document.getElementById("forest").value
          
-         let data = JSON.parse(localStorage.getItem('data')) || [];
-
-         conso.log(forest)
+//          let data = JSON.parse(localStorage.getItem('data')) || [];
+// 
+//          conso.log(forest)
 
         //  if(!exit){
         //     data.push({
@@ -227,7 +232,7 @@
         //     window.href="../pages/q2.html";
         //  }
 
-    }
+    
     // let selectbtn = document.querySelectorAll(".button")
     // selectbtn.forEach(each => {
     //                         each.addEventListener("click", (event) => {
