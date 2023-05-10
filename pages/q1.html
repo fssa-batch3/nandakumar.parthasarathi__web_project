@@ -36,14 +36,13 @@
 
 
     <section class="question_section">
-        <div class = "option_container" id = "habitats"></div>
         <div class="container">
             <div class="kelvi">
                 <h3 class="questions">Where did you see the bird?</h3>
             </div>
             <div class="bathil"></div>
             <div class="option_container" id="habitats">
-                <div class="card">
+                <!-- <div class="card">
                     <img src="../assets/Images/big forest.png" id="forest" class="cards" alt="Avatar"
                         style="width:100px">
                     <div class="container">
@@ -81,7 +80,7 @@
                     <div class="container">
                         <h4><b>Urban area</b></h4>
                     </div>
-                </div>
+                </div> -->
             </div>
 
 
@@ -116,6 +115,45 @@
         //     history.back();
         // });
 
+        let habitat_options = [
+            
+                {"name": "Forest",
+                "image": {
+                    "source": "../assets/Images/big forest.png",
+                    "alt": "Forest"
+                }},
+
+                
+                {"name": "Scrublands",
+                "image": {
+                    "source": "../assets/Images/shrublandpng.png",
+                    "alt": "Scrublands"
+                }},
+
+                 
+                {"name": "Croplands",
+                "image": {
+                    "source": "../assets/Images/cropgreen-removebg-preview.png",
+                    "alt": "Croplands"
+                }},
+
+                   
+                {"name": "River",
+                "image": {
+                    "source": "../assets/Images/river-removebg-preview.png",
+                    "alt": "River"
+                }},
+
+                       
+                {"name": "Urban area",
+                "image": {
+                    "source": "../assets/Images/urban.png",
+                    "alt": "Urban area"
+                }},
+
+            ]
+
+                    
 
 
         let div_container;
@@ -129,88 +167,87 @@
         let h4_noclass;
         let div_next;
 
-        let habitat_options = JSON.parse(localStorage.getItem("habitats")) || [];
+        // let habitat_options = JSON.parse(localStorage.getItem("habitats")) || [];
         
         
 
        
-    //     //div_container
-    //     div_container = document.createElement("div");
-    //     div_container.setAttribute("class", "container");
-    //     console.log(div_container);
+        //div_container
+        // div_container = document.createElement("div");
+        // div_container.setAttribute("class", "container");
+        // console.log(div_container);
 
-    //     //div_kelvi
-    //     div_kelvi = document.createElement("div");
-    //     div_kelvi.setAttribute("class", "kelvi");
-    //     div_container.append(div_kelvi);
+        // //div_kelvi
+        // div_kelvi = document.createElement("div");
+        // div_kelvi.setAttribute("class", "kelvi");
+        // div_container.append(div_kelvi);
 
-    //     //h3_questions
-    //     h3_questions = document.createElement("h3");
-    //     h3_questions.setAttribute("class", "questions");
-    //     h3_questions.innerText = "Where did you see the bird";
-    //     div_kelvi.append(h3_questions);
+        // //h3_questions
+        // h3_questions = document.createElement("h3");
+        // h3_questions.setAttribute("class", "questions");
+        // h3_questions.innerText = "Where did you see the bird";
+        // div_kelvi.append(h3_questions);
 
-    //     //div_bathil
-    //     div_bathil = document.createElement("div");
-    //     div_bathil.setAttribute("class", "bathil");
-    //     div_container.append(div_bathil);
+        // //div_bathil
+        // div_bathil = document.createElement("div");
+        // div_bathil.setAttribute("class", "bathil");
+        // div_container.append(div_bathil);
 
-    //     for(let i = 0; i<5; i++){
-            
-    //     div_option_container
-    //     div_option_container = document.createElement("div");
-    //     div_option_container.setAttribute("class", "option_container");
-    //     div_option_container.setAttribute("id", "option_habitats");
-    //     div_container.append(div_option_container);
+        for(let i = 0; i<habitat_options.length; i++){
 
-    //     //div_card
-    //     div_card = document.createElement("div");
-    //     div_card.setAttribute("class", "card");
+        //div_card
+        div_card = document.createElement("div");
+        div_card.setAttribute("class", "card");
 
-    //     //img_cards
-    //     img_cards = document.createElement("img");
-    //     img_cards.setAttribute("class", "cards");
-    //     img_cards.setAttribute("id", "forest");
-    //     img_cards.setAttribute("src", "../assets/Images/big forest.png");
-    //     img_cards.setAttribute("width", "100%px");
-    //     div_card.append(img_cards);
+        a = document.createElement("a");
+        a.setAttribute("href","./q3.html");
+        div_card.append(a)
 
-    //     //div_containers
-    //     div_containers = document.createElement("div");
-    //     div_containers.setAttribute("class", "containers");
-    //     div_card.append(div_containers);
+        //img_cards
+        img_cards = document.createElement("img");
+        img_cards.setAttribute("class", "cards");
+        img_cards.setAttribute("id",habitat_options[i]["name"]);
+        img_cards.setAttribute("src", habitat_options[i]["image"]["source"]);
+        img_cards.setAttribute("width", "100%px");
+        a.append(img_cards);
 
-    //     //h4_noclass
-    //     h4_noclass = document.createElement("h3");
-    //     h4_noclass.setAttribute("id","forest");
-    //     h4_noclass.innerText = "Forest";
-    //     div_containers.append(h4_noclass);
-    // }
+        //div_containers
+        div_containers = document.createElement("div");
+        div_containers.setAttribute("class", "containers");
+        div_card.append(div_containers);
 
-    //     //div_next
-    //     div_next = document.createElement("div");
-    //     div_next.setAttribute("class", "next");
-    //     div_container.append(div_next);
+        //h4_noclass
+        h4_noclass = document.createElement("h3");
+        h4_noclass.innerText = habitat_options[i]["name"];
+        div_containers.append(h4_noclass);
 
-    //     // div_anchor
-    //     div_anchor = document.createElement("a");
-    //     // div_anchor.setAttribute("href", "../pages/q2.html");
-    //     div_anchor.innerText = "Next";
-    //     div_anchor.setAttribute("onclick", "Identify_bird()")
-    //     div_next.append(div_anchor);
-    //     //div_back
-    //     div_back = document.createElement("div");
-    //     div_back.setAttribute("class", "back");
-    //     div_container.append(div_back);
+        document.querySelector("div#habitats").append(div_card);
+    }
 
-    //     // div_anchor
-    //     div_anchor = document.createElement("a")
-    //     div_anchor.setAttribute("href", "../index.html")
-    //     div_anchor.innerText = "Back";
-    //     div_back.append(div_anchor);
+        //div_next
+        // div_next = document.createElement("div");
+        // div_next.setAttribute("class", "next");
+        // div_container.append(div_next);
+
+        // // div_anchor
+        // div_anchor = document.createElement("a");
+        // // div_anchor.setAttribute("href", "../pages/q2.html");
+        // div_anchor.innerText = "Next";
+        // div_anchor.setAttribute("onclick", "Identify_bird()")
+        // div_next.append(div_anchor);
+        // //div_back
+        // div_back = document.createElement("div");
+        // div_back.setAttribute("class", "back");
+        // div_container.append(div_back);
+
+        // // div_anchor
+        // div_anchor = document.createElement("a")
+        // div_anchor.setAttribute("href", "../index.html")
+        // div_anchor.innerText = "Back";
+        // div_back.append(div_anchor);
     
 
-    //     document.querySelector("div.option_container").append(div_card);
+        
 
 
 

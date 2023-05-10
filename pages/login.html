@@ -103,7 +103,7 @@
         user_password = document.getElementById('user_password').value;
         user_number = document.getElementById('user_number').value;
 
-      let user_list = JSON.parse(localStorage.getItem('user_list'));
+      let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
 
       let exist = user_list.length &&
         JSON.parse(localStorage.getItem('user_list')).some(data =>

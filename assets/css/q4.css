@@ -39,12 +39,10 @@
   font-weight: lighter;
 }
 
-
 .frow {
   display: flex;
   flex-direction: row;
   margin-left: 300px;
-
 }
 
 .srow {
@@ -64,13 +62,27 @@
   background-color: black;
 }
 
+#black{
+  background-color: black;
+  color: white;
+}
+
 .gray button {
   background-color: lightgray;
 }
 
-.white button {
+#grey{
+  background-color: gray;
+  color: black;
+}
 
+.white button {
   background-color: white;
+}
+
+#white{
+  background-color: whitesmoke;
+  color: black;
 }
 
 .brown button {
@@ -78,13 +90,28 @@
   background-color: rgba(49, 3, 3, 0.762);
 }
 
+#brown{
+  background-color: brown;
+  color: white;
+}
+
 .red button {
   color: white;
   background-color: rgba(244, 31, 31, 0.817);
 }
 
+#red{
+  background-color: red;
+  color:white;
+}
+
 .yellow button {
   background-color: rgba(233, 233, 19, 0.783);
+}
+
+#yellow{
+  background-color:yellow;
+  color:black;
 }
 
 .green button {
@@ -92,13 +119,28 @@
   background-color: rgba(4, 68, 4, 0.812);
 }
 
+#green{
+  background-color:green;
+  color:black;
+}
+
 .blue button {
   color: white;
   background-color: rgb(47, 47, 229);
 }
 
+#blue{
+  background-color:blue;
+  color:white;
+}
+
 .orange button {
   background-color: rgb(255, 166, 0);
+}
+
+#orange{
+  background-color:orange;
+  color:black;
 }
 
 .main-colors {
@@ -114,18 +156,18 @@
 }
 
 .next {
-    width: 100px;
-    padding: 13px 30px;
-    margin-top: 10px;
-    margin-right: 50px;
-   }
-  
-  .back {
-      width: 10px;
-      padding-left: 10px ;
-      margin-top: -210px;
-      margin-left: 10px;
-  }
+  width: 100px;
+  padding: 13px 30px;
+  margin-top: 10px;
+  margin-right: 50px;
+}
+
+.back {
+  width: 10px;
+  padding-left: 10px;
+  margin-top: -210px;
+  margin-left: 10px;
+}
 
 @media only screen and (max-width:400px) {
 
@@ -151,20 +193,20 @@
 
   .color-btn {
     font-size: 13px;
-  display: flex;
-  flex-direction: row;
-  color: black;
-  border-radius: 12px;
-  border: 5px ridge grey;
-  border-color: white;
-  justify-content: center;
-  align-items: center;
-  width: 90px;
-  height: 50px;
-  margin: 30px;
-  margin-right: 10px;
-  cursor: pointer;
-  box-shadow: 5px 5px 8px rgb(250 250 253), 10px 10px 8px rgb(18 2 2), 15px 15px 8px;
+    display: flex;
+    flex-direction: row;
+    color: black;
+    border-radius: 12px;
+    border: 5px ridge grey;
+    border-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 50px;
+    margin: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    box-shadow: 5px 5px 8px rgb(250 250 253), 10px 10px 8px rgb(18 2 2), 15px 15px 8px;
   }
 
   .color-btn:hover {
@@ -179,22 +221,22 @@
     flex-direction: row;
     margin-left: -130px;
   }
-  
+
   .srow {
     display: flex;
     flex-direction: row;
     margin-left: -130px;
   }
-  
+
   .trow {
     display: flex;
     flex-direction: row;
-    margin-left: -130px; 
+    margin-left: -130px;
   }
 
   .question-section {
     text-align: center;
-    margin-top: 8%; 
+    margin-top: 8%;
   }
 
   .next {
@@ -202,17 +244,17 @@
     width: 70px;
     height: 30px;
     margin-top: 20px;
-   }
+  }
 
-   .back {
+  .back {
     margin-top: -150px;
     margin-left: 20px;
   }
-  
-  
 
-  
-  
+
+
+
+
 
 
 }

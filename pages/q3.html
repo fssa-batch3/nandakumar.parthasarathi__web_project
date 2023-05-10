@@ -47,15 +47,50 @@
         <div class="kelvi">
             <h3>What size was the bird?</h3>
         </div>
-            <div class="bimg">
+        <div class="bathil"></div>
+            <div class="option_container" id="habitats">
+                <div class="card">
+                    <img src="../assets/Images/sparrow.png" id="forest" class="cards" alt="Avatar"
+                        style="width:50px">
+                    <div class="container">
+                        <h4><b>Sparrow size</b></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../assets/Images/crow2nd.png" id="shrubland" class="cards" alt="Avatar"
+                        style="width:75px">
+                    <div class="container">
+                        <h4><b>Crow size</b></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../assets/Images/crow-removebg-preview.png" id="river" class="cards" alt="Avatar"
+                        style="width:80px">
+                    <div class="containers">
+                        <h4><b>Myna size</b></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../assets/Images/goose_image-removebg-preview.png" id="urban_area" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="container">
+                        <h4><b>Goose size</b></h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="bimg">
                 <img class="size-of-bird" src="../assets/Images/sparrow.png" alt="sparrow" height="50px">
                 <img class="size-of-bird" src="../assets/Images/crow2nd.png" alt="crow" height="80px" width="100px">
                 <img class="size-of-bird" src="../assets/Images/crow-removebg-preview.png" alt="crow" height="90px">
                 <img class="size-of-bird" src="../assets/Images/eagelsizejpg-removebg-preview.png" alt="eagel" height="180px">
-            </div>
-            <div>
-                <input  id="range" height="20px" width="100px" type="range"/>
-            </div>
+            </div> -->
+
+           
+            
             <div>
                 <button type="button" class="next" onclick="submit()">Next</button> 
             </div>
@@ -67,10 +102,7 @@
 
 <script>
                 function submit(){
-               const range = document.getElementById("range").value
-
-               console.log(range)
-
+              
                window.location.href="../pages/q4.html"
                 }
  </script>
