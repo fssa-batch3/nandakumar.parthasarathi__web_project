@@ -13,14 +13,7 @@ input {
     width: 29cm;
 }
 
-.bimg {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: space-evenly;
-}
+
 
 
 .card {
@@ -30,7 +23,26 @@ input {
     transition: 0.3s;
     width: 10%;
     border-radius: 4%;
-    
+  }
+
+  .card:nth-child(1) {
+    width:150px;
+    height: 140px;
+  }
+
+  .card:nth-child(2) {
+    width:150px;
+    height: 140px;
+  }
+
+  .card:nth-child(3) {
+    width:150px;
+    height: 140px;
+  }
+
+  .card:nth-child(4) {
+    width:150px;
+    height: 140px;
   }
   
   .card:hover {
@@ -41,6 +53,8 @@ input {
     display: flex;
     flex-direction: row;
     justify-content:space-evenly;
+    align-content: center;
+    align-items: center;
     margin-top: 80px;
   }
   
@@ -66,7 +80,7 @@ input {
 .next {
     width: 100px;
     padding: 13px 30px;
-    margin-top: 40px;
+    margin-top: 70px;
    }
   
   .back {

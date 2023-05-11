@@ -20,6 +20,10 @@
 }
 
 
+.project{
+  background-image: url(https://images.pexels.com/photos/2317904/pexels-photo-2317904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+}
+
 /* If you don't want the footer to be responsive, remove these media queries */
 /* 
 @media (max-width: 880px) {
@@ -64,18 +68,12 @@
   background-repeat: repeat;
 }
 
-
-
-
-
 .identify{
   position: relative;
   left: 50px;
   font-family: Arial, Helvetica, sans-serif;
   text-transform:none;
 }
-
-
 
 .aboutDesp {
   width: 30%;
@@ -89,7 +87,6 @@
   border-radius: 4px;
   border-bottom: 5px solid orange;
   border-top: 5px solid orange;
-
 }
 
 img {

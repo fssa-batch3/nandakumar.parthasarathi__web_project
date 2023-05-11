@@ -3,101 +3,190 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Question number 1</title>
+  <title>Question number 1</title>
 
-    <link rel="stylesheet" href="..//assets/css/q4.css">
-    <link rel="stylesheet" href="..//assets/css/style.css">
+  <link rel="stylesheet" href="..//assets/css/q4.css">
+  <link rel="stylesheet" href="..//assets/css/style.css">
 </head>
 
 <body>
 
-    <div class="header">
-        <h1 class="birds"><b>BIRDS BUDDY</b></h1>
-        <ul>
-            <li>
-                <a class="navlist" href="../index.html">Home</a>
-            </li>
-            <li>
-                <a class="navlist" href="../pages/about.html">About</a>
-            </li>
-            <li>
-                <a class="navlist" href="../pages/q1.html">Identify Bird</a>
-            </li>
-            <li>
-                <a class="navlist" href="../pages/explore.html">Explore</a>
-            </li>
-            <li>
-                <a class="guidance" href="../pages/guidance.html">Guidance</a>
-            </li>
-        </ul>
+  <div class="header">
+    <h1 class="birds"><b>BIRDS BUDDY</b></h1>
+    <ul>
+      <li>
+        <a class="navlist" href="../index.html">Home</a>
+      </li>
+      <li>
+        <a class="navlist" href="../pages/about.html">About</a>
+      </li>
+      <li>
+        <a class="navlist" href="../pages/q1.html">Identify Bird</a>
+      </li>
+      <li>
+        <a class="navlist" href="../pages/explore.html">Explore</a>
+      </li>
+      <li>
+        <a class="guidance" href="../pages/guidance.html">Guidance</a>
+      </li>
+    </ul>
 
 
+  </div>
+  <div class="headerendline"></div>
+  <section class="question-section">
+
+    <div class="kelvi">
+      <h3>What were the main colors?</h3>
     </div>
-    <div class="headerendline"></div>
-    <section class="question-section">
-        <div class="container">
-            <div class="kelvi">
-                <h3>What were the main colors?</h3>
-            </div>
-            <div class="select">
-                <h4>Select from 1 to 3</h4>
-            </div>
-            <div class="main-colors">
-                <div class="frow">
-                    <div class="black">
-                        <div class="color-btn" id="black">Black</div>
-                    </div>
-                    <div class="gray">
-                        <div class="color-btn" id="grey">Gray</div>
-                    </div>
-                    <div class="white">
-                        <div class="color-btn" id="white">White</div>
-                    </div>
-                </div>
-                <div class="srow">
-                    <div class="brown">
-                        <div class="color-btn" id="brown">Brown</div>
-                    </div>
-                    <div class="red">
-                        <div class="color-btn" id="red">Red</div>
-                    </div>
-                    <div class="yellow">
-                        <div class="color-btn" id="yellow">Yellow</div>
-                    </div>
-                </div>
-                <div class="trow">
-                    <div class="green">
-                        <div class="color-btn"  id="green">Green</div>
-                    </div>
-                    <div class="blue">
-                        <div class="color-btn" id="blue"> Blue</div>
-                    </div>
-                    <div class="orange">
-                        <div class="color-btn"  id="orange">Orange</div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <button type="button" id="colour" class="next" onclick="submit()">Next</button></a>
-            </div>
-            <div class="back">
-                <a href="..//pages/q3.html"><button>Back</button></a>
-            </div>
-        </div>
-    </section>
+    <div class="select">
+      <h4>Select from 1 to 3</h4>
+    </div>
+    <div class="container">
 
-    <script>
-        function submit() {
-            let colour = document.getElementById("colour").value
+      <div class="main_colors">
+        <!-- <div class="black">
+                  <div class="color-btn" id="black">Black</div>
+                </div>
+                <div class="gray">
+                  <div class="color-btn" id="grey">Gray</div>
+                </div>
+                <div class="white">
+                  <div class="color-btn" id="white">White</div>
+                </div>
+                <div class="brown">
+                  <div class="color-btn" id="brown">Brown</div>
+                </div>
+                <div class="red">
+                  <div class="color-btn" id="red">Red</div>
+                </div>
+                <div class="yellow">
+                  <div class="color-btn" id="yellow">Yellow</div>
+                </div>
+                <div class="green">
+                  <div class="color-btn" id="green">Green</div>
+                </div>
+                <div class="blue">
+                  <div class="color-btn" id="blue"> Blue</div>
+                </div>
+                <div class="orange">
+                  <div class="color-btn" id="orange">Orange</div>
+                </div>
+              </div> -->
+      </div>
+      <div>
+        <button type="button" id="colour" class="next" onclick="submit()">Next</button></a>
+      </div>
+      <div class="back">
+        <a href="..//pages/q3.html"><button>Back</button></a>
+      </div>
 
-            console.log(colour)
+  </section>
 
-            window.location.href = "../pages/q5.html"
+
+
+
+
+  <script>
+    function submit() {
+      let colour = document.getElementById("colour").value
+
+      console.log(colour)
+
+      window.location.href = "../pages/q5.html"
+    }
+
+
+
+
+    let color_options = [
+      { "name": "Black" },
+      { "name": "Gray" },
+      { "name": "White" },
+      { "name": "Brown" },
+      { "name": "Red" },
+      { "name": "Yellow" },
+      { "name": "Green" },
+      { "name": "Blue" },
+      { "name": "Orange" }
+    ];
+
+    // Create the main_colors div and append it to the document body
+    let main_colors = document.querySelector("div.main_colors")
+
+    let selectedColors = [];
+
+    // Store the color options array in localStorage
+    localStorage.setItem("color_options", JSON.stringify(color_options));
+
+    for (let i = 0; i < color_options.length; i++) {
+      // Create the divs for each color and append them to main_colors
+      div_black = document.createElement("div");
+      div_black.setAttribute("class", color_options[i]['name']);
+      main_colors.append(div_black);
+
+      div_color_btn = document.createElement("div");
+      div_color_btn.setAttribute("class", "color-btn");
+      div_color_btn.setAttribute("id", (color_options[i]['name']).toLowerCase());
+      div_color_btn.textContent = color_options[i]['name'];
+      div_black.append(div_color_btn);
+
+      // Add click event listener to each color button
+      div_color_btn.addEventListener("click", function () {
+        // Check if the maximum number of colors has already been selected
+        if (selectedColors.length >= 3) {
+          alert("You can select a maximum of three colors.");
+          return;
         }
-    </script>
+
+        // Check if the color has already been selected
+        if (selectedColors.indexOf(color_options[i]['name']) !== -1) {
+          alert("You have already selected this color.");
+          return;
+        }
+
+        // Add the selected color to the array
+        selectedColors.push(color_options[i]['name']);
+
+        // Store the updated color options array in localStorage
+        localStorage.setItem("color_options", JSON.stringify(color_options));
+
+        console.log(selectedColors);
+      });
+    }
+
+    // Add event listener to the submit button
+    let submitBtn = document.getElementById("submitBtn");
+    submitBtn.addEventListener("click", function () {
+      // Check if the minimum number of colors has been selected
+      if (selectedColors.length < 1) {
+        alert("You must select at least one color.");
+        return;
+      }
+
+      // Add the selected colors to the color options array
+      color_options.forEach(function (color) {
+        if (selectedColors.indexOf(color['name']) !== -1) {
+          color['selected'] = true;
+        }
+      });
+
+      // Store the updated color options array in localStorage
+      localStorage.setItem("color_options", JSON.stringify(color_options));
+
+      // Redirect to the next page
+      window.location.href = "./nextPage.html";
+    });
+
+
+
+
+
+  </script>
 </body>
+
 </html>

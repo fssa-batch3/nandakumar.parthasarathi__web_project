@@ -5,57 +5,18 @@
 .kelvi {
   color: orange;
   font-size: 2rem;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .select {
   position: relative;
   left: -200px;
+  bottom: -10px;
   color: grey;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
 }
 
-.color-btn {
-  display: flex;
-  flex-direction: row;
-  color: black;
-  border-radius: 12px;
-  border: 5px ridge grey;
-  border-color: white;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 80px;
-  margin: 30px;
-  cursor: pointer;
-  box-shadow: 5px 5px 8px rgb(250 250 253), 10px 10px 8px rgb(18 2 2), 15px 15px 8px;
-}
-
-.color-btn:hover {
-  box-shadow: 0 5px white;
-  transform: translateY(15px);
-  transform: scale(1.1);
-  font-weight: lighter;
-}
-
-.frow {
-  display: flex;
-  flex-direction: row;
-  margin-left: 300px;
-}
-
-.srow {
-  display: flex;
-  flex-direction: row;
-  margin-left: 300px;
-}
-
-.trow {
-  display: flex;
-  flex-direction: row;
-  margin-left: 300px;
-}
 
 .black button {
   color: white;
@@ -143,11 +104,45 @@
   color:black;
 }
 
-.main-colors {
-  position: relative;
-  left: 100px;
-  opacity: 1;
+.main_colors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1px;
+  grid-row: 1px;
+  margin-left: 400px;
 }
+
+.color-btn {
+  padding: 25px;
+  background-color: #fff;
+  border: 1px solid #000;
+  color: black;
+  border-radius: 12px;
+  border: 5px ridge grey;
+  border-color: white;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 80px;
+  margin: 30px;
+  cursor: pointer;
+  box-shadow: 5px 5px 8px rgb(250 250 253), 10px 10px 8px rgb(18 2 2), 15px 15px 8px;
+}
+
+.color-btn:hover {
+  box-shadow: 0 5px white;
+  transform: translateY(15px);
+  transform: scale(1.1);
+  font-weight: lighter;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1px;
+  grid-row: 1px; ;
+}
+
 
 .question-section {
   text-align: center;
@@ -155,14 +150,14 @@
   margin-left: 20px;
 }
 
-.next {
+div.next {
   width: 100px;
   padding: 13px 30px;
-  margin-top: 10px;
+  margin-top: 500px;
   margin-right: 50px;
 }
 
-.back {
+div.back {
   width: 10px;
   padding-left: 10px;
   margin-top: -210px;
@@ -191,7 +186,7 @@
     font-size: 16px;
   }
 
-  .color-btn {
+  .color_btn {
     font-size: 13px;
     display: flex;
     flex-direction: row;

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Question number 1</title>
 
     <link rel="stylesheet" href="..//assets/css/q5.css">
@@ -41,63 +41,112 @@
     <div class="headerendline"></div>
     <section class="question-section">
         <div class="container">
-        <div class="kelvi">
-            <h3>Was the bird doing?</h3>
-        </div>
-    <div class="options">
-        <div>
+            <div class="kelvi">
+                <h3>Was the bird doing?</h3>
+            </div>
+            <div class="options">
+                <!-- <div class="option_container">
             <lable>Eating at a feader</lable>
         </div>
         <input  id="checkbox" type="checkbox" />
-        <div>
+        <div class="option_container">
             <lable>Swimming or wading</lable>
         </div>
         <input id="checkbox" type="checkbox" />
-        <div>
+        <div class="option_container">
             <lable>On the ground</lable>
         </div>
         <input id="checkbox" type="checkbox" />
-        <div>
+        <div class="option_container">
             <lable>In trees or bushes</lable>
         </div>
         <input id="checkbox" type="checkbox" />
-        <div>
+        <div class="option_container">
             <lable>On a fence wire</lable>
         </div>
         <input id="checkbox" type="checkbox" />
-        <div>
+        <div class="option_container">
             <lable>Soring or flying</lable>
         </div>
-        <input id="checkbox" type="checkbox" />
-    </div>
+        <input id="checkbox" type="checkbox" /> -->
+            </div>
 
-    <div>
-        <button type="button" class="next" onclick="submit()">Next</button>
-    </div>
-    <div class="back">
-        <a href="..//pages/q4.html"><button>Back</button></a>
-    </div>
+            <div>
+                <button type="button" class="next" onclick="submit()">Next</button>
+            </div>
+            <div class="back">
+                <a href="..//pages/q4.html"><button>Back</button></a>
+            </div>
         </div>
-        </section>
+    </section>
     <script>
-        function submit(){
-        const checkbox = document.getElementById("checkbox").value
+        function submit() {
 
-        console.log("checkbox")
+            window.location.href = "../pages/q2.html"
+        }
 
-        window.location.href="../pages/q2.html"
-    }  
+
+
+     // define an array of options
+const options = [
+  'Eating at a feeder',
+  'Swimming or wading',
+  'On the ground',
+  'In trees or bushes',
+  'On a fence wire',
+  'Soaring or flying'
+];
+
+// get the container element where the options will be added
+const container = document.querySelector('.options');
+
+// create a container to hold the option containers
+const columnContainer = document.createElement('div');
+
+// add CSS to align the checkbox properly
+columnContainer.style.display = 'flex';
+columnContainer.style.flexDirection = 'column';
+columnContainer.style.alignItems = 'flex-start';
+
+// loop through the options array and create an HTML element for each one
+options.forEach(option => {
+  const optionContainer = document.createElement('div');
+  optionContainer.classList.add('option_container');
+  optionContainer.style.marginBottom = '10px';
+  optionContainer.style.display = 'block';
+
+  const label = document.createElement('label');
+  label.innerText = option;
+
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+
+  // set the id of the checkbox to the option name
+  checkbox.id = option.toLowerCase().replace(' ', '_');
+
+  // set the "for" attribute of the label to the id of the checkbox
+  label.setAttribute('for', checkbox.id);
+
+  // add some CSS to align the checkbox properly
+  checkbox.style.verticalAlign = 'middle';
+  checkbox.style.marginLeft = '600px';
+
+  // append the label and checkbox to the option container
+  optionContainer.appendChild(checkbox);
+  optionContainer.appendChild(label);
+
+  // append the option container to the column container
+  columnContainer.appendChild(optionContainer);
+});
+
+// append the column container to the main container
+container.appendChild(columnContainer);
+
+
+
+
     </script>
 
 </body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+
 </html>

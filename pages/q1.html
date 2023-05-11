@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question number 1</title>
-  <link rel="stylesheet" href="..//assets/css/style.css">
+    <link rel="stylesheet" href="..//assets/css/style.css">
     <link rel="stylesheet" href="..//assets/css/q1.css">
     <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 </head>
@@ -86,13 +86,13 @@
 
 
 
-        <div class="next">
-            <a href="../pages/q3.html"><button type="button" class="next" onclick="submit()">Next</button></a>
-        </div>
-        <div class="back">
-            <a href="../index.html"><button type="button" onclick="history.back()">Back</button></a>
-        </div>
-        
+            <div class="next">
+                <a href="../pages/q3.html"><button type="button" class="next" onclick="submit()">Next</button></a>
+            </div>
+            <div class="back">
+                <a href="../index.html"><button type="button" onclick="history.back()">Back</button></a>
+            </div>
+
     </section>
 
     <script>
@@ -116,168 +116,96 @@
         // });
 
         let habitat_options = [
-            
-                {"name": "Forest",
+            {
+                "name": "Forest",
                 "image": {
                     "source": "../assets/Images/big forest.png",
                     "alt": "Forest"
-                }},
-
-                
-                {"name": "Scrublands",
+                }
+            },
+            {
+                "name": "Scrublands",
                 "image": {
                     "source": "../assets/Images/shrublandpng.png",
                     "alt": "Scrublands"
-                }},
-
-                 
-                {"name": "Croplands",
+                }
+            },
+            {
+                "name": "Croplands",
                 "image": {
                     "source": "../assets/Images/cropgreen-removebg-preview.png",
                     "alt": "Croplands"
-                }},
-
-                   
-                {"name": "River",
+                }
+            },
+            {
+                "name": "River",
                 "image": {
                     "source": "../assets/Images/river-removebg-preview.png",
                     "alt": "River"
-                }},
-
-                       
-                {"name": "Urban area",
+                }
+            },
+            {
+                "name": "Urban area",
                 "image": {
                     "source": "../assets/Images/urban.png",
                     "alt": "Urban area"
-                }},
+                }
+            }
+        ];
 
-            ]
+        let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) || [];
 
-                    
+        const handleOptionClick = (option) => {
+            // check if the option has already been selected
+            if (identify_birds.includes(option)) {
+                return;
+            }
+            // add the selected option to the array
+            identify_birds.push(option);
+            // update the local storage
+            localStorage.setItem("identifyBirds", JSON.stringify(identify_birds));
+        }
 
+        let habitatsDiv = document.querySelector("#habitats");
 
-        let div_container;
-        let div_kelvi;
-        let h3_questions;
-        let div_bathil;
-        let div_option_container;
-        let div_card;
-        let img_cards;
-        let div_containers;
-        let h4_noclass;
-        let div_next;
+        habitat_options.forEach((option) => {
+            let div_card = document.createElement("div");
+            div_card.setAttribute("class", "card");
 
-        // let habitat_options = JSON.parse(localStorage.getItem("habitats")) || [];
-        
-        
+            let a = document.createElement("a");
+            a.setAttribute("href", "./q3.html");
+            div_card.append(a);
 
-       
-        //div_container
-        // div_container = document.createElement("div");
-        // div_container.setAttribute("class", "container");
-        // console.log(div_container);
+            let img_cards = document.createElement("img");
+            img_cards.setAttribute("class", "cards");
+            img_cards.setAttribute("id", option.name);
+            img_cards.setAttribute("src", option.image.source);
+            img_cards.setAttribute("width", "100%px");
+            a.append(img_cards);
 
-        // //div_kelvi
-        // div_kelvi = document.createElement("div");
-        // div_kelvi.setAttribute("class", "kelvi");
-        // div_container.append(div_kelvi);
+            let div_containers = document.createElement("div");
+            div_containers.setAttribute("class", "containers");
+            div_card.append(div_containers);
 
-        // //h3_questions
-        // h3_questions = document.createElement("h3");
-        // h3_questions.setAttribute("class", "questions");
-        // h3_questions.innerText = "Where did you see the bird";
-        // div_kelvi.append(h3_questions);
+            let h4_noclass = document.createElement("h3");
+            h4_noclass.innerText = option.name;
+            div_containers.append(h4_noclass);
 
-        // //div_bathil
-        // div_bathil = document.createElement("div");
-        // div_bathil.setAttribute("class", "bathil");
-        // div_container.append(div_bathil);
+            div_card.addEventListener("click", () => {
+                handleOptionClick(option.name);
+            });
 
-        for(let i = 0; i<habitat_options.length; i++){
-
-        //div_card
-        div_card = document.createElement("div");
-        div_card.setAttribute("class", "card");
-
-        a = document.createElement("a");
-        a.setAttribute("href","./q3.html");
-        div_card.append(a)
-
-        //img_cards
-        img_cards = document.createElement("img");
-        img_cards.setAttribute("class", "cards");
-        img_cards.setAttribute("id",habitat_options[i]["name"]);
-        img_cards.setAttribute("src", habitat_options[i]["image"]["source"]);
-        img_cards.setAttribute("width", "100%px");
-        a.append(img_cards);
-
-        //div_containers
-        div_containers = document.createElement("div");
-        div_containers.setAttribute("class", "containers");
-        div_card.append(div_containers);
-
-        //h4_noclass
-        h4_noclass = document.createElement("h3");
-        h4_noclass.innerText = habitat_options[i]["name"];
-        div_containers.append(h4_noclass);
-
-        document.querySelector("div#habitats").append(div_card);
-    }
-
-        //div_next
-        // div_next = document.createElement("div");
-        // div_next.setAttribute("class", "next");
-        // div_container.append(div_next);
-
-        // // div_anchor
-        // div_anchor = document.createElement("a");
-        // // div_anchor.setAttribute("href", "../pages/q2.html");
-        // div_anchor.innerText = "Next";
-        // div_anchor.setAttribute("onclick", "Identify_bird()")
-        // div_next.append(div_anchor);
-        // //div_back
-        // div_back = document.createElement("div");
-        // div_back.setAttribute("class", "back");
-        // div_container.append(div_back);
-
-        // // div_anchor
-        // div_anchor = document.createElement("a")
-        // div_anchor.setAttribute("href", "../index.html")
-        // div_anchor.innerText = "Back";
-        // div_back.append(div_anchor);
-    
-
-        
+            habitatsDiv.append(div_card);
+        });
 
 
 
-//         function Identify_bird(e){
-//          let forest= document.getElementById("forest").value
-         
-//          let data = JSON.parse(localStorage.getItem('data')) || [];
-// 
-//          conso.log(forest)
 
-        //  if(!exit){
-        //     data.push({
-        //         forest,
-        //     });
-        //     localStorage.setItem("data",JSON.stringify(data));
-        //     console.log(localStorage.getItem('data'));
-        //     document.querySelector('form').reset();
-            
-        //     window.href="../pages/q2.html";
-        //  }
 
-    
-    // let selectbtn = document.querySelectorAll(".button")
-    // selectbtn.forEach(each => {
-    //                         each.addEventListener("click", (event) => {
-    //                             const person_data = each.dataset.id;
-    //                             console.log(person_data)
-    //                             window.location.href = `../products/Addedpg_details.html?my_uuid=${person_data}`;
-    //                         })
-    //                     })
+
+
+
+
 
 
 
@@ -285,4 +213,3 @@
 </body>
 
 </html>
-

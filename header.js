@@ -19,7 +19,7 @@ const before_login = `
                     <a class="navlist" href="${about}">About</a>
                 </li>
                 <li>
-                    <a class="navlist" href="${identify}">Search</a>
+                    <a class="navlist" href="${identify}">Identify Bird</a>
                 </li>
                 <li>
                     <a class="navlist" href="${explore}">Explore</a>
@@ -50,7 +50,7 @@ const after_login = `
             <a class="navlist" href="${about}">About</a>
         </li>
         <li>
-            <a class="navlist" href="${identify}">Search</a>
+            <a class="navlist" href="${identify}">Identify Bird</a>
         </li>
         <li>
             <a class="navlist" href="${explore}">Explore</a>
@@ -64,8 +64,6 @@ const after_login = `
     <div class="second-head">
     <button class="login-button"> <a href="${login}"><span>Log in</span></button></a>
     </div>
-    <img class="index_image" src="https://wallpaperset.com/w/full/6/a/0/470225.jpg" />
-    <h3 class="webslog">Welcome to my Birds buddy<br> & Explore more</h3>
 </div>
 `;
 
