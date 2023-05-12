@@ -102,85 +102,94 @@
 
 
 
-
     let color_options = [
-      { "name": "Black" },
-      { "name": "Gray" },
-      { "name": "White" },
-      { "name": "Brown" },
-      { "name": "Red" },
-      { "name": "Yellow" },
-      { "name": "Green" },
-      { "name": "Blue" },
-      { "name": "Orange" }
-    ];
+  { "name": "Black" },
+  { "name": "Gray" },
+  { "name": "White" },
+  { "name": "Brown" },
+  { "name": "Red" },
+  { "name": "Yellow" },
+  { "name": "Green" },
+  { "name": "Blue" },
+  { "name": "Orange" }
+];
 
-    // Create the main_colors div and append it to the document body
-    let main_colors = document.querySelector("div.main_colors")
+// Create the main_colors div and append it to the document body
+let main_colors = document.querySelector("div.main_colors")
 
-    let selectedColors = [];
+let selectedColors = [];
 
-    // Store the color options array in localStorage
-    localStorage.setItem("color_options", JSON.stringify(color_options));
+// Store the color options array in localStorage
+localStorage.setItem("color_options", JSON.stringify(color_options));
 
-    for (let i = 0; i < color_options.length; i++) {
-      // Create the divs for each color and append them to main_colors
-      div_black = document.createElement("div");
-      div_black.setAttribute("class", color_options[i]['name']);
-      main_colors.append(div_black);
+for (let i = 0; i < color_options.length; i++) {
+  // Create the divs for each color and append them to main_colors
+  let colorDiv = document.createElement("div");
+  colorDiv.setAttribute("class", color_options[i]['name']);
+  main_colors.append(colorDiv);
 
-      div_color_btn = document.createElement("div");
-      div_color_btn.setAttribute("class", "color-btn");
-      div_color_btn.setAttribute("id", (color_options[i]['name']).toLowerCase());
-      div_color_btn.textContent = color_options[i]['name'];
-      div_black.append(div_color_btn);
+  let colorBtn = document.createElement("div");
+  colorBtn.setAttribute("class", "color-btn");
+  colorBtn.setAttribute("id", (color_options[i]['name']).toLowerCase());
+  colorBtn.textContent = color_options[i]['name'];
+  colorDiv.append(colorBtn);
 
-      // Add click event listener to each color button
-      div_color_btn.addEventListener("click", function () {
-        // Check if the maximum number of colors has already been selected
-        if (selectedColors.length >= 3) {
-          alert("You can select a maximum of three colors.");
-          return;
-        }
-
-        // Check if the color has already been selected
-        if (selectedColors.indexOf(color_options[i]['name']) !== -1) {
-          alert("You have already selected this color.");
-          return;
-        }
-
-        // Add the selected color to the array
-        selectedColors.push(color_options[i]['name']);
-
-        // Store the updated color options array in localStorage
-        localStorage.setItem("color_options", JSON.stringify(color_options));
-
-        console.log(selectedColors);
-      });
+  // Add click event listener to each color button
+  colorBtn.addEventListener("click", function () {
+    // Check if the maximum number of colors has already been selected
+    if (selectedColors.length >= 3) {
+      alert("You can select a maximum of three colors.");
+      return;
     }
 
-    // Add event listener to the submit button
-    let submitBtn = document.getElementById("submitBtn");
-    submitBtn.addEventListener("click", function () {
-      // Check if the minimum number of colors has been selected
-      if (selectedColors.length < 1) {
-        alert("You must select at least one color.");
-        return;
-      }
+    // Check if the color has already been selected
+    if (selectedColors.indexOf(color_options[i]['name']) !== -1) {
+      alert("You have already selected this color.");
+      return;
+    }
 
-      // Add the selected colors to the color options array
-      color_options.forEach(function (color) {
-        if (selectedColors.indexOf(color['name']) !== -1) {
-          color['selected'] = true;
-        }
-      });
+    // Add the selected color to the array
+    selectedColors.push(color_options[i]['name']);
 
-      // Store the updated color options array in localStorage
-      localStorage.setItem("color_options", JSON.stringify(color_options));
+    // Add a class to the color div to indicate that it has been selected
+    colorDiv.classList.add("selected");
 
-      // Redirect to the next page
-      window.location.href = "./nextPage.html";
-    });
+    console.log(selectedColors);
+  });
+}
+
+// Add event listener to the submit button
+let submitBtn = document.getElementById("submitBtn");
+submitBtn.addEventListener("click", function () {
+  // Check if the minimum number of colors has been selected
+  if (selectedColors.length < 1) {
+    alert("You must select at least one color.");
+    return;
+  }
+
+  // Add the selected colors to the color options array
+  color_options.forEach(function (color) {
+    if (selectedColors.indexOf(color['name']) !== -1) {
+      color['selected'] = true;
+    }
+  });
+
+  // Store the updated color options array in localStorage
+  localStorage.setItem("color_options", JSON.stringify(color_options));
+
+  // Redirect to the next page
+  window.location.href = "./nextPage.html";
+});
+
+// Highlight the selected color divs
+let selectedDivs = document.querySelectorAll(".selected");
+selectedDivs.forEach(function(div) {
+  div.style.border = "2px solid #000000";
+});
+
+
+
+
 
 
 

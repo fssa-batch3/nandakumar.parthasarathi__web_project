@@ -254,36 +254,36 @@
 
 
     <script>
-        // const indian_birds_list = [{
-        //         species: "Peacock",
-        //         habitat: "forest",
-        //         date: "07-02-2023",
-        //         size: "large",
-        //         color: "Blue",
-        //         action: "on the ground",
-        //         image: "https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU="
-        //     },
-        //     {
-        //         species: "Cattle Egret",
-        //         habitat: "River",
-        //         date: "07-02-2023",
-        //         size: "large",
-        //         color: "white",
-        //         action: "on the water",
-        //         image: "../assets/Images/cattle egret main img.jpg"
-        //     },
-        //     // Add more bird objects here
-        // ];
-        // // Function to find a bird species based on user answers
-        // function findBird(habitat, date, size, color, action) {
-        //     let matches = [];
-        //     for (let i = 0; i < birds.length; i++) {
-        //         if (birds[i].habitat === habitat && birds[i].date === date && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
-        //             matches.push(birds[i]);
-        //         }
-        //     }
-        //     return matches;
-        // }
+        const indian_birds_list = [{
+            species: "Peacock",
+            habitat: "forest",
+            date: "07-02-2023",
+            size: "large",
+            color: "Blue",
+            action: "on the ground",
+            image: "https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU="
+        },
+        {
+            species: "Cattle Egret",
+            habitat: "River",
+            date: "07-02-2023",
+            size: "large",
+            color: "white",
+            action: "on the water",
+            image: "../assets/Images/cattle egret main img.jpg"
+        },
+            // Add more bird objects here
+        ];
+        // Function to find a bird species based on user answers
+        function findBird(habitat, date, size, color, action) {
+            let matches = [];
+            for (let i = 0; i < birds.length; i++) {
+                if (birds[i].habitat === habitat && birds[i].date === date && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
+                    matches.push(birds[i]);
+                }
+            }
+            return matches;
+        }
         // // Example usage
         // const habitat = DayPilot.Modal.prompt("Where did you see the bird?");
         // const date = DayPilot.Modal.prompt("when did you see the bird")
@@ -292,21 +292,21 @@
         // const action = DayPilot.Modal.prompt("Was the bird doing?");
 
 
-        // const birdMatches = findBird(habitat, date, size, color);
-        // if (birdMatches.length > 0) {
-        //     console.log(`We found ${birdMatches.length} bird species that match your description:`);
-        //     for (let i = 0; i < birdMatches.length; i++) {
-        //         console.log(`${birdMatches[i].species}:`);
-        //         console.log(`Habitat: ${birdMatches[i].habitat}`);
-        //         console.log(`Date: ${birdMatches[i].date}`);
-        //         console.log(`Size: ${birdMatches[i].size}`);
-        //         console.log(`color: ${birdMatches[i].color}`);
-        //         console.log(`action: ${birdMatches[i].action}`);
-        //         console.log(`Image URL: ${birdMatches[i].image}`);
-        //     }
-        // } else {
-        //     console.log("Sorry, we could not find a bird species matching that description.");
-        //     // }
+        const birdMatches = findBird(habitat, date, size, color);
+        if (birdMatches.length > 0) {
+            console.log(`We found ${birdMatches.length} bird species that match your description:`);
+            for (let i = 0; i < birdMatches.length; i++) {
+                console.log(`${birdMatches[i].species}:`);
+                console.log(`Habitat: ${birdMatches[i].habitat}`);
+                console.log(`Date: ${birdMatches[i].date}`);
+                console.log(`Size: ${birdMatches[i].size}`);
+                console.log(`color: ${birdMatches[i].color}`);
+                console.log(`action: ${birdMatches[i].action}`);
+                console.log(`Image URL: ${birdMatches[i].image}`);
+            }
+        } else {
+            console.log("Sorry, we could not find a bird species matching that description.");
+        }
 
         // let div_scrollsnap;
         // let div_imagescontainer;
@@ -399,7 +399,7 @@
         let details = bird_info_details.find(e => e.bird_info_details_uuid === bird_info_details_uuid);
         console.log(details);
 
-        
+
 
 
 
@@ -434,29 +434,10 @@
 
                 img_scrollbird = document.createElement("img");
                 img_scrollbird.setAttribute("class", "scrollbird");
-                img_scrollbird.setAttribute("src",details["birds_stages"]["birdStage1"]);
+                img_scrollbird.setAttribute("src", details["birds_stages"]["birdStage1"]);
                 img_scrollbird.setAttribute("height", "300px"); // Fix: "heigth" should be "height"
                 img_scrollbird.setAttribute("width", "400px");
                 div_birditems.append(img_scrollbird);
-
-
-
-
-
-
-
-
-                // let_videoElement = document.createElement("video");
-                // videoElement.classList.add("bird_vedio");
-                // videoElement.width = 1485;
-                // videoElement.height = 600;
-                // videoElement.controls = true;
-                // let videoSource = document.createElement("source");
-                // videoSource.src = "../assets/videos/Woodpecker.mp4";
-                // videoSource.type = "video/mp4";
-                // videoElement.append(bird_vedio);
-                // videoDiv.appendChild(videoElement);
-
 
                 //div_birditems 2
                 div_birditems = document.createElement("div");
@@ -481,7 +462,6 @@
                 img_scrollbird.setAttribute("heigth", "300px");
                 img_scrollbird.setAttribute("width", "400px");
                 div_birditems.append(img_scrollbird);
-
 
                 //div_birditems 4
                 div_birditems = document.createElement("div");
@@ -532,71 +512,6 @@
             div_content.setAttribute("class", "content");
             console.log(div_content);
 
-            // //div_birdvedio
-            // div_birdvedio = document.createElement("div");
-            // div_birdvedio.setAttribute("class", "birdvedio");
-            // div_content.append(div_birdvedio);
-
-            // //h3_topic 
-            // h3_topic = document.createElement("h3");
-            // h3_topic.setAttribute("class", "topic");
-            // h3_topic.innerText = "See the beauty of Woodpeaker"
-            // div_birdvedio.append(h3_topic);
-
-            // // vedio_bird_vedio
-            // vedio_bird_vedio = document.createElement("video");
-            // vedio_bird_vedio.setAttribute("class", "bird_vedio");
-            // vedio_bird_vedio.setAttribute("controls", "true");
-            // div_birdvedio.append(vedio_bird_vedio);
-
-            // //sourceElement 
-            // source = document.createElement('source');
-            // // source.setAttribute('src', "../assets/videos/Woodpecker.mp4");
-            // source.setAttribute('type', 'video/mp4');
-            // div_birdvedio.append(source);
-
-
-            // button_edit = document.createElement("button");
-            // button_edit.setAttribute("class", "btn");
-            // button_edit.innerHTML = "Edit";
-            // div_scrollsnap.append(button_edit);
-
-            // a_link = document.createElement("a");
-            // a_link.setAttribute("href", "./form/update.html");
-            // button_edit.append(a_link);
-
-
-
-
-
-
-
-
-
-            // for (let k = 0; k < 1; k++){
-
-
-
-            // //h3_topic 2
-            // h3_topic = document.createElement("h3");
-            // h3_topic.setAttribute("class", "topic");
-            // h3_topic.innerText = "General Characteristics"
-            // div_content.append(h3_topic);
-
-            // //h3_topic 3
-            // h3_topic = document.createElement("h3");
-            // h3_topic.setAttribute("class", "topic");
-            // h3_topic.innerText = "Lifestyle of Woodpeckers"
-            // div_content.append(h3_topic);
-
-            // //h3_topic 4
-            // h3_topic = document.createElement("h3");
-            // h3_topic.setAttribute("class", "topic");
-            // h3_topic.innerText = "The Breeding Pattern of Woodpeckers"
-            // div_content.append(h3_topic);
-
-            // }
-
             //h3_topic 1
             h3_topic = document.createElement("h3");
             h3_topic.setAttribute("class", "topic");
@@ -627,7 +542,7 @@
             h3_topic.innerText = "Lifestyle of Woodpeckers"
             div_content.append(h3_topic);
 
-            p_description
+            //p_description
             p_description = document.createElement("p");
             p_description.setAttribute("class", "description");
             p_description.innerText = details["description3"];
@@ -639,19 +554,15 @@
             h3_topic.innerText = "the breeding patterns of woodpeakers"
             div_content.append(h3_topic);
 
-            p_description
+            //p_description
             p_description = document.createElement("p");
             p_description.setAttribute("class", "description");
-            p_description.innerText =  details["description4"];
+            p_description.innerText = details["description4"];
             div_content.append(p_description);
 
 
 
             document.querySelector("section.info_container").append(div_content);
-
-
-
-
 
 
             // const habitat = indian_birds_list[i]["habitat"];
