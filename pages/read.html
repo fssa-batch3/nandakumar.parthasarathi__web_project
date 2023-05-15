@@ -275,10 +275,10 @@
             // Add more bird objects here
         ];
         // Function to find a bird species based on user answers
-        function findBird(habitat, date, size, color, action) {
+        function findBird(habitat, size, color, action) {
             let matches = [];
             for (let i = 0; i < birds.length; i++) {
-                if (birds[i].habitat === habitat && birds[i].date === date && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
+                if (birds[i].habitat === habitat && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
                     matches.push(birds[i]);
                 }
             }

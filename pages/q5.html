@@ -36,7 +36,7 @@
             </li>
         </ul>
 
-<a href="../pages/q2.html"></a>
+        <a href="../pages/q2.html"></a>
     </div>
     <div class="headerendline"></div>
     <section class="question-section">
@@ -72,7 +72,7 @@
             </div>
 
             <div>
-                <button type="button" class="next"  id="submitBtn" onclick="submit()">Next</button>
+                <button type="button" class="next" id="submitBtn" onclick="submit()">Next</button>
             </div>
             <div class="back">
                 <a href="..//pages/q4.html"><button>Back</button></a>
@@ -88,69 +88,76 @@
 
 
         const options = [
-  'Eating at a feeder',
-  'Swimming or wading',
-  'On the ground',
-  'In trees or bushes',
-  'On a fence wire',
-  'Soaring or flying'
-];
+            'Eating at a feeder',
+            'Swimming or wading',
+            'On the ground',
+            'In trees or bushes',
+            'On a fence wire',
+            'Soaring or flying'
+        ];
 
-const container = document.querySelector('.options');
+        const container = document.querySelector('.options');
 
-options.forEach(option => {
-  const optionContainer = document.createElement('div');
-  optionContainer.classList.add('option_container');
-  optionContainer.style.marginBottom = '10px';
+        // retrieve the existing value of "identifyBirds" from local storage, or initialize it to an empty object if it doesn't exist
+        let identifyBirds = JSON.parse(localStorage.getItem('identifyBirds')) || {};
 
-  const label = document.createElement('label');
-  label.innerText = option;
+        // assign the "actions" property of "identifyBirds" to the array of options
+        identifyBirds.actions = options;
 
-  const checkbox = document.createElement('input');
-  checkbox.type = 'checkbox';
+        // store the updated value of "identifyBirds" back in local storage
+        localStorage.setItem('identifyBirds', JSON.stringify(identifyBirds));
 
-  // set the id of the checkbox to the option name
-  checkbox.id = option.toLowerCase().replace(' ', '_');
+        // loop through the options array and create a checkbox and label element for each option
+        options.forEach(option => {
+            const optionContainer = document.createElement('div');
+            optionContainer.classList.add('option_container');
+            optionContainer.style.marginBottom = '10px';
 
-  // set the "for" attribute of the label to the id of the checkbox
-  label.setAttribute('for', checkbox.id);
+            const label = document.createElement('label');
+            label.innerText = option;
 
-  // append the label and checkbox to the option container
-  optionContainer.appendChild(checkbox);
-  optionContainer.appendChild(label);
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
 
-  // append the option container to the main container
-  container.appendChild(optionContainer);
-});
+            // set the id of the checkbox to the option name, converted to lowercase and with spaces replaced by underscores
+            checkbox.id = option.toLowerCase().replace(' ', '_');
 
-// add event listener to the submit button
-const submitBtn = document.getElementById('submitBtn');
-submitBtn.addEventListener('click', function () {
-  const selectedOptions = [];
+            // set the "for" attribute of the label to the id of the checkbox
+            label.setAttribute('for', checkbox.id);
 
-  // loop through all the checkboxes and add the selected ones to the array
-  options.forEach(option => {
-    const checkbox = document.getElementById(option.toLowerCase().replace(' ', '_'));
-    if (checkbox.checked) {
-      selectedOptions.push(option);
-    }
-  });
+            // append the label and checkbox to the option container
+            optionContainer.appendChild(checkbox);
+            optionContainer.appendChild(label);
 
-  // validate the number of selected options
-  if (selectedOptions.length < 1 || selectedOptions.length > 3) {
-    alert('Please select between 1 and 3 options.');
-    return;
-  }
+            // append the option container to the main container
+            container.appendChild(optionContainer);
+        });
 
-  // store the selected options in the local storage
-  localStorage.setItem('selected_options', JSON.stringify(selectedOptions));
+        // add event listener to the submit button
+        const submitBtn = document.getElementById('submitBtn');
+        submitBtn.addEventListener('click', function () {
+            const selectedOptions = [];
 
-  // redirect to the next page
-  window.location.href = '../pages/read.html';
-});
+            // loop through all the checkboxes and add the selected ones to the array
+            options.forEach(option => {
+                const checkbox = document.getElementById(option.toLowerCase().replace(' ', '_'));
+                if (checkbox.checked) {
+                    selectedOptions.push(option);
+                }
+            });
 
+            // validate the number of selected options
+            if (selectedOptions.length < 1 || selectedOptions.length > 3) {
+                alert('Please select between 1 and 3 options.');
+                return;
+            }
 
+            // store the selected options in the local storage
+            localStorage.setItem('selected_options', JSON.stringify(selectedOptions));
 
+            // redirect to the next page
+            window.location.href = '../pages/read.html';
+        });
 
 
 
@@ -161,5 +168,3 @@ submitBtn.addEventListener('click', function () {
 </body>
 
 </html>
-
-

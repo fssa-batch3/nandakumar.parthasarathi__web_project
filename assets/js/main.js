@@ -582,6 +582,32 @@ if (!bird_info_details) {
             main_image: "https://iili.io/HvIF2pV.jpg",
             scientific_name: "Picinea",
             size: "23cm"
+        },
+        {
+            bird_info_details_uuid: "3a100265-0b55-4f35-aa5c-3d9eda1bf59e",
+            bird_name: "Baya Weaver"            ,
+
+            birds_stages: {
+                birdStage1: "https://freeimage.host/i/HUw6eCG",                
+                birdStage2: "https://freeimage.host/i/HUwP3MJ",
+                birdStage3: "https://freeimage.host/i/HUwPMMb",                
+                birdStage4: "https://freeimage.host/i/HUwidRS"
+            },
+            description1: "About bird : The Baya weaver (Ploceus philippinus) is a weaverbird best known for the elaborately woven nests constructed by the males. These birds spend their time in flocks and build their nest near water or place them hanging over water where predators cannot reach easily.\n",
+            description2:"General Characteristics : Majority of weaver birds (plumages commonly) are yellow, but there are some in red, black or brown varieties while females are often dull brown colours. They are often known for their construction of embellished nests. A weaverbird is a small bird from the family Ploceidae.\n",
+            description3: "Life styes : Baya weavers are social and gregarious birds. They forage during the day in flocks, both on the plants and on the ground. Flocks fly in close formations, often performing complicated maneuvers. They roost in reedbeds bordering waterbodies. Baya weavers may also sometimes descend to the ground and indulge in dust bathing. Their calls are a continuous ‘chit-chit-...’ sometimes ending in a wheezy ‘cheee-eee-ee’ that is produced by males in a chorus. A lower-intensity call is produced in the non-breeding season.\n",
+            description4: "Breeding pattern :  Baya weavers are polygynous and don’t form pairs; males build many partial nests and begin courting females. The breeding season takes place during the monsoons. Baya weavers nest in colonies typically of up to 20-30 individuals, close to the source of food, nesting material, and water. Males build pendulous nests that are retort-shaped, with a central nesting chamber and a long vertical tube that leads to a side entrance to the chamber. The nests are woven with long strips of paddy leaves, rough grasses, and long strips torn from palm fronds. Each strip can be between 20 and 60 cm (7.9 and 23.6 in) in length. To complete a nest a male takes about 18 days and makes up to 500 trips. The birds use their strong beaks to strip and collect the strands and to weave and knot them while building their nests. The nests are often built hanging over water from palm trees and often suspended from thorny Acacias and in some cases from telephone wires. The females inspect the nest and signal their acceptance of a male; after that, the male goes on to complete the nest by adding the entrance tunnel. Females may modify the interiors or add blobs of mud. The female lays about 2-4 white eggs and incubates them for about 14 to 17 days. Males may sometimes assist in feeding the chicks. The chicks leave the nest after about 17 days. After mating with a female the male typically court other females at other partially constructed nests. Young birds leave the nest in juvenile plumage which is replaced in their first molt after about 4-6 months. The young usually disperse to new locations not far from their nest. Females start to breed after a year while males take half a year longer.\n",
+
+            food_types: {
+                foodimage1: "https://freeimage.host/i/HUwiv72",                
+                foodimage2: "",
+                foodimage3: "",
+                foodimage4: ""
+            },
+            habitat: "https://freeimage.host/i/HUwiE5N",            
+            main_image: "https://freeimage.host/i/HUw4Mbe",            
+            scientific_name: "Ploceus philippinus",
+            size: "15cm"
         }
     ])
 

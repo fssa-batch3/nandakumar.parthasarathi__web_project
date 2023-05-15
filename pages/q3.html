@@ -169,7 +169,14 @@
 
             // Add an event listener to the card to store the selected habitat option in localStorage
             card.addEventListener("click", () => {
-                localStorage.setItem("habitat_option", JSON.stringify(habitat));
+                let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) // get
+
+                console.log(habitat)
+
+                identify_birds["size"] = habitat["name"] //asign
+
+                localStorage.setItem("identifyBirds", JSON.stringify(identify_birds)); //push
+
             });
 
             // Add the card to the habitat container

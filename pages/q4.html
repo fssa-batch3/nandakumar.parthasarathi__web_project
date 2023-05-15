@@ -122,6 +122,7 @@ let selectedColors = [];
 // Store the color options array in localStorage
 localStorage.setItem("color_options", JSON.stringify(color_options));
 
+
 for (let i = 0; i < color_options.length; i++) {
   // Create the divs for each color and append them to main_colors
   let colorDiv = document.createElement("div");
@@ -155,6 +156,14 @@ for (let i = 0; i < color_options.length; i++) {
     colorDiv.classList.add("selected");
 
     console.log(selectedColors);
+
+    
+  let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) // get
+
+identify_birds["color"] = selectedColors //asign
+
+localStorage.setItem("identifyBirds", JSON.stringify(identify_birds)); //push
+
   });
 }
 

@@ -153,15 +153,18 @@
             }
         ];
 
-        let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) || [];
+        // let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) || [];
 
         const handleOptionClick = (option) => {
             // check if the option has already been selected
-            if (identify_birds.includes(option)) {
-                return;
+            // if (identify_birds.includes(option)) {
+            //     return;
+            // }
+            let identify_birds = {
+                "habitats" : option
             }
             // add the selected option to the array
-            identify_birds.push(option);
+            // identify_birds.push(option);
             // update the local storage
             localStorage.setItem("identifyBirds", JSON.stringify(identify_birds));
         }
