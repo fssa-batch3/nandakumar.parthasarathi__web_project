@@ -50,6 +50,8 @@
   .icons {
     display: none;
   }
+
+  
   
   .icon {
     display: inline-block;
@@ -58,6 +60,7 @@
     height: 1em;
     vertical-align: middle;
     width: 1em;
+    fill:white
   }
   
   :root {
@@ -143,6 +146,10 @@
   .form__field {
     display: flex;
     margin: var(--formFieldMargin);
+  }
+
+  .align{
+    background-color: black;
   }
   
   .form__input {

@@ -153,12 +153,7 @@
         div_readmore.append(div_anchor);
 
 
-        //  // div_anchor2
-        //  div_anchor2 = document.createElement("a")
-        // div_anchor2.setAttribute("href", "?bird_info_details_uuid=" +
-        //     indian_birds_list[i]["bird_info_details_uuid"])
-        // div_eedit.append(div_anchor2);
-
+        
 
         //read_button
         read_button = document.createElement("button");
@@ -176,19 +171,11 @@
         div_readmore.append(edit_button);
 
 
-        // const habitat = indian_birds_list[i]["habitat"];
-        // const noOfHabitats = habitat.length;
-
-        // for (let j = 0; j < noOfHabitats; j++) {
+     
 
         div_tooltip = document.createElement("div");
         div_tooltip.setAttribute("id", "tooltip");
         div_tooltipsss.append(div_tooltip);
-
-        // span_tooltiptext = document.createElement("span");
-        // span_tooltiptext.setAttribute("id", "tooltiptext");
-        // span_tooltiptext.innerText = habitat[j]["tooltip"];
-        // div_tooltip.append(span_tooltiptext);
 
         img_card_1 = document.createElement("img");
         img_card_1.setAttribute("src", indian_birds_list[i]["habitat"]);
@@ -205,28 +192,6 @@
     }
 
 
-    // const edit_btn = document.querySelectorAll(".edit");
-    // edit_btn.forEach(function (edit_details) {
-    //     edit_details.addEventListener("click", function () {
-    //         const getId = this.dataset.id
-    //         console.log(getId)
-    //         localStorage.setItem("birds_unique_id", JSON.stringify(getId))
-    //         window.location.href = `../form/update.html?birds_unique_id=${getId}`
-    //     })
 
-    // })
-
-
-    // let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
-    // let birds_unique_id = JSON.parse(localStorage.getItem('birds_unique_id'));
-
-    // function birds_details_data(e) {
-    //     return e.birds_unique_id == bird_info_details_uuid;
-    // }
-
-    // let birds_all_data = user_list.find(birds_details_data);
-
-    // document.getElementById("user_name").value = user_data["user_name"];
-    // document.getElementById("user_number").value = user_data["user_number"];
 </script>
 

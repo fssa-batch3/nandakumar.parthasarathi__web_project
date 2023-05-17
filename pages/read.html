@@ -254,36 +254,45 @@
 
 
     <script>
-        const indian_birds_list = [{
-            species: "Peacock",
-            habitat: "forest",
-            date: "07-02-2023",
-            size: "large",
-            color: "Blue",
-            action: "on the ground",
-            image: "https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU="
-        },
-        {
-            species: "Cattle Egret",
-            habitat: "River",
-            date: "07-02-2023",
-            size: "large",
-            color: "white",
-            action: "on the water",
-            image: "../assets/Images/cattle egret main img.jpg"
-        },
-            // Add more bird objects here
-        ];
+        // const indian_birds_list = [{
+        //     species: "Peacock",
+        //     habitat: "forest",
+        //     date: "07-02-2023",
+        //     size: "large",
+        //     color: "Blue",
+        //     action: "on the ground",
+        //     image: "https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU="
+        // },
+        // {
+        //     species: "Cattle Egret",
+        //     habitat: "River",
+        //     date: "07-02-2023",
+        //     size: "large",
+        //     color: "white",
+        //     action: "on the water",
+        //     image: "../assets/Images/cattle egret main img.jpg"
+        // },
+        // {
+        //     species: "Baya Weaver",
+        //     habitat: "River",
+        //     date: "07-02-2023",
+        //     size: "large",
+        //     color: "white",
+        //     action: "on the water",
+        //     image: "../assets/Images/cattle egret main img.jpg"
+        // },  
+        //     // Add more bird objects here
+        // ];
         // Function to find a bird species based on user answers
-        function findBird(habitat, size, color, action) {
-            let matches = [];
-            for (let i = 0; i < birds.length; i++) {
-                if (birds[i].habitat === habitat && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
-                    matches.push(birds[i]);
-                }
-            }
-            return matches;
-        }
+        // function findBird(habitat, size, color, action) {
+        //     let matches = [];
+        //     for (let i = 0; i < birds.length; i++) {
+        //         if (birds[i].habitat === habitat && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
+        //             matches.push(birds[i]);
+        //         }
+        //     }
+        //     return matches;
+        // }
         // // Example usage
         // const habitat = DayPilot.Modal.prompt("Where did you see the bird?");
         // const date = DayPilot.Modal.prompt("when did you see the bird")
@@ -292,21 +301,21 @@
         // const action = DayPilot.Modal.prompt("Was the bird doing?");
 
 
-        const birdMatches = findBird(habitat, date, size, color);
-        if (birdMatches.length > 0) {
-            console.log(`We found ${birdMatches.length} bird species that match your description:`);
-            for (let i = 0; i < birdMatches.length; i++) {
-                console.log(`${birdMatches[i].species}:`);
-                console.log(`Habitat: ${birdMatches[i].habitat}`);
-                console.log(`Date: ${birdMatches[i].date}`);
-                console.log(`Size: ${birdMatches[i].size}`);
-                console.log(`color: ${birdMatches[i].color}`);
-                console.log(`action: ${birdMatches[i].action}`);
-                console.log(`Image URL: ${birdMatches[i].image}`);
-            }
-        } else {
-            console.log("Sorry, we could not find a bird species matching that description.");
-        }
+        // const birdMatches = findBird(habitat, date, size, color);
+        // if (birdMatches.length > 0) {
+        //     console.log(`We found ${birdMatches.length} bird species that match your description:`);
+        //     for (let i = 0; i < birdMatches.length; i++) {
+        //         console.log(`${birdMatches[i].species}:`);
+        //         console.log(`Habitat: ${birdMatches[i].habitat}`);
+        //         console.log(`Date: ${birdMatches[i].date}`);
+        //         console.log(`Size: ${birdMatches[i].size}`);
+        //         console.log(`color: ${birdMatches[i].color}`);
+        //         console.log(`action: ${birdMatches[i].action}`);
+        //         console.log(`Image URL: ${birdMatches[i].image}`);
+        //     }
+        // } else {
+        //     console.log("Sorry, we could not find a bird species matching that description.");
+        // }
 
         // let div_scrollsnap;
         // let div_imagescontainer;
