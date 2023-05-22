@@ -20,9 +20,16 @@
     margin-top: 40px;
     margin-left: 580px;
     width: 30cm;
-  
-
   }
+.container{
+display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    padding: 1rem;
+    flex-direction: column;
+}
+  
   
   .bathil input {
     width: 20%;

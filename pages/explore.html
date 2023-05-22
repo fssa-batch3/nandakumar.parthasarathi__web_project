@@ -27,6 +27,11 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -1144,9 +1149,9 @@
             const searchbar = document.getElementById("searchbar").value.toLowerCase();
             const all_birds = document.getElementById("all_birds");
             const birdstructure = document.querySelectorAll(".birdstructure"); // Added dot before "birdstructure" to denote class name
-            const birds = document.getElementsByTagName("p#bird_des");
+            const birds = document.getElementsByTagName("p");
             for (var i = 0; i < bird_info_details.length; i++) {
-                let match = birdstructure[i].getElementsByTagName('p#bird_des')[0]; // Changed "box" to "birdstructure" to match the variable name
+                let match = birdstructure[i].getElementsByTagName('p')[0]; // Changed "box" to "birdstructure" to match the variable name
                 if (match) {
                     let textvalue = match.textContent || match.innerHTML;
                     if (textvalue.toLowerCase().indexOf(searchbar) > -1) { // Changed "searchbox" to "searchbar" to match the variable name

@@ -85,79 +85,83 @@
             window.location.href = "../pages/q2.html"
         }
 
-
-
         const options = [
-            'Eating at a feeder',
-            'Swimming or wading',
-            'On the ground',
-            'In trees or bushes',
-            'On a fence wire',
-            'Soaring or flying'
-        ];
+  'Eating at a feeder',
+  'Swimming or wading',
+  'On the ground',
+  'In trees or bushes',
+  'On a fence wire',
+  'Soaring or flying'
+];
 
-        const container = document.querySelector('.options');
+const container = document.querySelector('.options');
 
-        // retrieve the existing value of "identifyBirds" from local storage, or initialize it to an empty object if it doesn't exist
-        let identifyBirds = JSON.parse(localStorage.getItem('identifyBirds')) || {};
+// retrieve the existing value of "identifyBirds" from local storage, or initialize it to an empty object if it doesn't exist
+let identifyBirds = JSON.parse(localStorage.getItem('identifyBirds')) || {};
 
-        // assign the "actions" property of "identifyBirds" to the array of options
-        identifyBirds.actions = options;
+// assign the "actions" property of "identifyBirds" to the array of options
+identifyBirds.actions = options;
 
-        // store the updated value of "identifyBirds" back in local storage
-        localStorage.setItem('identifyBirds', JSON.stringify(identifyBirds));
+// store the updated value of "identifyBirds" back in local storage
+localStorage.setItem('identifyBirds', JSON.stringify(identifyBirds));
 
-        // loop through the options array and create a checkbox and label element for each option
-        options.forEach(option => {
-            const optionContainer = document.createElement('div');
-            optionContainer.classList.add('option_container');
-            optionContainer.style.marginBottom = '10px';
+// loop through the options array and create a checkbox and label element for each option
+options.forEach(option => {
+  const optionContainer = document.createElement('div');
+  optionContainer.classList.add('option_container');
+  optionContainer.style.marginBottom = '10px';
 
-            const label = document.createElement('label');
-            label.innerText = option;
+  const label = document.createElement('label');
+  label.innerText = option;
 
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
 
-            // set the id of the checkbox to the option name, converted to lowercase and with spaces replaced by underscores
-            checkbox.id = option.toLowerCase().replace(' ', '_');
+  // set the id of the checkbox to the option name, converted to lowercase and with spaces replaced by underscores
+  checkbox.id = option.toLowerCase().replace(' ', '_');
 
-            // set the "for" attribute of the label to the id of the checkbox
-            label.setAttribute('for', checkbox.id);
+  // set the "for" attribute of the label to the id of the checkbox
+  label.setAttribute('for', checkbox.id);
 
-            // append the label and checkbox to the option container
-            optionContainer.appendChild(checkbox);
-            optionContainer.appendChild(label);
+  // append the label and checkbox to the option container
+  optionContainer.appendChild(checkbox);
+  optionContainer.appendChild(label);
 
-            // append the option container to the main container
-            container.appendChild(optionContainer);
-        });
+  // append the option container to the main container
+  container.appendChild(optionContainer);
+});
 
-        // add event listener to the submit button
-        const submitBtn = document.getElementById('submitBtn');
-        submitBtn.addEventListener('click', function () {
-            const selectedOptions = [];
+// add event listener to the submit button
+const submitBtn = document.getElementById('submitBtn');
+submitBtn.addEventListener('click', function() {
+  const selectedOptions = [];
 
-            // loop through all the checkboxes and add the selected ones to the array
-            options.forEach(option => {
-                const checkbox = document.getElementById(option.toLowerCase().replace(' ', '_'));
-                if (checkbox.checked) {
-                    selectedOptions.push(option);
-                }
-            });
+  // loop through all the checkboxes and add the selected ones to the array
+  options.forEach(option => {
+    const checkbox = document.getElementById(option.toLowerCase().replace(' ', '_'));
+    if (checkbox.checked) {
+      selectedOptions.push(option);
+    }
+  });
 
-            // validate the number of selected options
-            if (selectedOptions.length < 1 || selectedOptions.length > 3) {
-                alert('Please select between 1 and 3 options.');
-                return;
-            }
+  // validate the number of selected options
+  if (selectedOptions.length === 0) {
+    alert('Please select at least 1 option.');
+    return;
+  }
 
-            // store the selected options in the local storage
-            localStorage.setItem('selected_options', JSON.stringify(selectedOptions));
+  if (selectedOptions.length > 3) {
+    alert('Please select a maximum of 3 options.');
+    return;
+  }
 
-            // redirect to the next page
-            window.location.href = '../pages/read.html';
-        });
+  // store the selected options in the local storage
+  localStorage.setItem('selected_options', JSON.stringify(selectedOptions));
+
+  // redirect to the next page
+  window.location.href = '../pages/read.html';
+});
+
 
 
 

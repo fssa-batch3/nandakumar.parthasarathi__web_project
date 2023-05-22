@@ -58,8 +58,8 @@
             </div>  
           </div>
         <div class="headerendline"></div>
-
-        <div>
+<section class="advices">
+         <div>
             <h1 class="title">How can we help birds</h1>
         </div>
         <div class="sub">
@@ -69,7 +69,7 @@
     <div class="goal">
         <h2>Helping birds in your garden</h2>
     </div>
-
+<!-- <section class="savebird">
     <div class="advice1">
         <div class="content1">
             <p class="howcanhelp">Birds and Water
@@ -130,10 +130,12 @@
             <img class="waterbird" src="../assets/Images/nestboxes.jpg" alt="bird image">
         </div>
     </div>
+</section>  -->
+</section> 
 
 
 
-    <footer>
+    <!-- <footer>
         <div>
             <h1 class="birds"><b>BIRDS BUDDY</b></h1>
         </div>
@@ -154,7 +156,7 @@
                 <a class="guidance" href="../pages/guidance.html">Guidance</a>
             </li>
         </ul>
-    </footer>
+    </footer> -->
 
     <script>
          // When the user scrolls the page, execute myFunction 
@@ -166,7 +168,81 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
-    </script>
+
+</script>
+
+<section class="savebird" id="saveBirdSection">
+</section>
+
+<script>
+    // Advice data
+    const adviceData = [
+      {
+        title: "Birds and Water",
+        description: "Many people put food out for birds,\nbut fewer provide a regular supply\nof clean water.",
+        imagePath: "../assets/Images/bird-water.jpg",
+        link: "../pages/bird and water.html"
+      },
+      {
+        title: "Make a Bird Bath",
+        description: "There are many ways of providing\nwater in the garden,\nbut the simplest way is a bird bath.",
+        imagePath: "../assets/Images/birds and water.jpg",
+        link: "../pages/make_birdbath.html"
+      },
+      {
+        title: "Feeding Birds",
+        description: "Find the answers to all your bird\nfeeding questions.",
+        imagePath: "../assets/Images/feeding.jpg",
+        link: "../pages/feeding_birds.html"
+      },
+      {
+        title: "Nest Boxes",
+        description: "Find out how to provide, or make,\nnest boxes for birds in your garden.",
+        imagePath: "../assets/Images/nestboxes.jpg",
+        link: "../pages/nestboxes.html"
+      }
+    ];
+  
+    // Get the save bird section container
+    const saveBirdSection = document.getElementById("saveBirdSection");
+  
+    // Generate advice sections dynamically
+    adviceData.forEach((advice, index) => {
+      const adviceSection = document.createElement("div");
+      adviceSection.classList.add("advice");
+  
+      const content = document.createElement("div");
+      content.classList.add("content1");
+  
+      const title = document.createElement("p");
+      title.classList.add("howcanhelp");
+      title.textContent = advice.title;
+  
+      const description = document.createElement("p");
+      description.classList.add("des-howcan");
+      description.innerHTML = advice.description.replace(/\n/g, "<br>");
+  
+      const link = document.createElement("a");
+      link.href = advice.link;
+  
+      const button = document.createElement("button");
+      button.classList.add("btnadvice");
+      button.textContent = "Learn more ...";
+  
+      const image = document.createElement("img");
+      image.classList.add("waterbird");
+      image.src = advice.imagePath;
+      image.alt = "bird image";
+  
+      link.appendChild(button);
+      content.appendChild(title);
+      content.appendChild(description);
+      content.appendChild(link);
+      adviceSection.appendChild(content);
+      adviceSection.appendChild(image);
+      saveBirdSection.appendChild(adviceSection);
+    });
+  </script>
 
 </body>
 </html>

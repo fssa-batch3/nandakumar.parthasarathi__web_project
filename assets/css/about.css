@@ -9,8 +9,13 @@ body {
   padding: 0px;
 }
 
+.logo{
+  height: 50px;
+  width: 150px;
+  }
+
 #navbar{
-  background: transparent;
+  background: black;
   backdrop-filter: blur(10px);
 }
 
