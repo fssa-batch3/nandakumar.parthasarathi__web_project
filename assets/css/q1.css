@@ -17,7 +17,7 @@
   color: grey;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
   transition: 0.3s;
-  width: 10%;
+  
   border-radius: 4%;
   
 }
@@ -29,7 +29,9 @@
 .option_container{
   display: flex;
   flex-direction: row;
-  justify-content:space-evenly;
+  justify-content:space-between;
+  align-items: center;
+
   margin-top: 80px;
 }
 
@@ -57,11 +59,11 @@
 }
 
 .back {
-  width: 10px;
-  padding-left: 10px;
-  margin-top: 10px;
-  margin-left: 20px;
+  position: relative;
+  right: 650px;
+  top: 100px;
 }
+
 
 @media only screen and (max-width:400px) {
 

@@ -116,90 +116,93 @@
         // });
 
         let habitat_options = [
-            {
-                "name": "Forest",
-                "image": {
-                    "source": "../assets/Images/big forest.png",
-                    "alt": "Forest"
-                }
-            },
-            {
-                "name": "Scrublands",
-                "image": {
-                    "source": "../assets/Images/shrublandpng.png",
-                    "alt": "Scrublands"
-                }
-            },
-            {
-                "name": "Croplands",
-                "image": {
-                    "source": "../assets/Images/cropgreen-removebg-preview.png",
-                    "alt": "Croplands"
-                }
-            },
-            {
-                "name": "River",
-                "image": {
-                    "source": "../assets/Images/river-removebg-preview.png",
-                    "alt": "River"
-                }
-            },
-            {
-                "name": "Urban area",
-                "image": {
-                    "source": "../assets/Images/urban.png",
-                    "alt": "Urban area"
-                }
-            }
-        ];
-
-        // let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) || [];
-
-        const handleOptionClick = (option) => {
-            // check if the option has already been selected
-            // if (identify_birds.includes(option)) {
-            //     return;
-            // }
-            let identify_birds = {
-                "habitats" : option
-            }
-            // add the selected option to the array
-            // identify_birds.push(option);
-            // update the local storage
-            localStorage.setItem("identifyBirds", JSON.stringify(identify_birds));
+      {
+        "name": "Forest",
+        "image": {
+          "source": "../assets/Images/big forest.png",
+          "alt": "Forest"
         }
+      },
+      {
+        "name": "Scrublands",
+        "image": {
+          "source": "../assets/Images/shrublandpng.png",
+          "alt": "Scrublands"
+        }
+      },
+      {
+        "name": "Croplands",
+        "image": {
+          "source": "../assets/Images/cropgreen-removebg-preview.png",
+          "alt": "Croplands"
+        }
+      },
+      {
+        "name": "River",
+        "image": {
+          "source": "../assets/Images/river-removebg-preview.png",
+          "alt": "River"
+        }
+      },
+      {
+        "name": "Urban area",
+        "image": {
+          "source": "../assets/Images/urban.png",
+          "alt": "Urban area"
+        }
+      }
+    ];
 
-        let habitatsDiv = document.querySelector("#habitats");
+    const handleOptionClick = (option) => {
+      // check if the option has already been selected
+      let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) || [];
 
-        habitat_options.forEach((option) => {
-            let div_card = document.createElement("div");
-            div_card.setAttribute("class", "card");
+      // check if the option is already selected
+      if (identify_birds.includes(option)) {
+        return;
+      }
 
-            let a = document.createElement("a");
-            a.setAttribute("href", "./q3.html");
-            div_card.append(a);
+      // add the selected option to the array
+      identify_birds.push(option);
 
-            let img_cards = document.createElement("img");
-            img_cards.setAttribute("class", "cards");
-            img_cards.setAttribute("id", option.name);
-            img_cards.setAttribute("src", option.image.source);
-            img_cards.setAttribute("width", "100%px");
-            a.append(img_cards);
+      // update the local storage
+      localStorage.setItem("identifyBirds", JSON.stringify(identify_birds));
 
-            let div_containers = document.createElement("div");
-            div_containers.setAttribute("class", "containers");
-            div_card.append(div_containers);
+      // proceed to the next page
+      window.location.href = "./q3.html";
+    };
 
-            let h4_noclass = document.createElement("h3");
-            h4_noclass.innerText = option.name;
-            div_containers.append(h4_noclass);
+    let habitatsDiv = document.querySelector("#habitats");
 
-            div_card.addEventListener("click", () => {
-                handleOptionClick(option.name);
-            });
+    habitat_options.forEach((option) => {
+      let div_card = document.createElement("div");
+      div_card.setAttribute("class", "card");
 
-            habitatsDiv.append(div_card);
-        });
+      let a = document.createElement("a");
+      a.setAttribute("href", "./q3.html");
+      div_card.append(a);
+
+      let img_cards = document.createElement("img");
+      img_cards.setAttribute("class", "cards");
+      img_cards.setAttribute("id", option.name);
+      img_cards.setAttribute("src", option.image.source);
+      img_cards.setAttribute("width", "100%");
+      a.append(img_cards);
+
+      let div_containers = document.createElement("div");
+      div_containers.setAttribute("class", "containers");
+      div_card.append(div_containers);
+
+      let h4_noclass = document.createElement("h3");
+      h4_noclass.innerText = option.name;
+      div_containers.append(h4_noclass);
+
+      div_card.addEventListener("click", () => {
+        handleOptionClick(option.name);
+      });
+
+      habitatsDiv.append(div_card);
+    });
 
 
 

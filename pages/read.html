@@ -254,120 +254,7 @@
 
 
     <script>
-        // const indian_birds_list = [{
-        //     species: "Peacock",
-        //     habitat: "forest",
-        //     date: "07-02-2023",
-        //     size: "large",
-        //     color: "Blue",
-        //     action: "on the ground",
-        //     image: "https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU="
-        // },
-        // {
-        //     species: "Cattle Egret",
-        //     habitat: "River",
-        //     date: "07-02-2023",
-        //     size: "large",
-        //     color: "white",
-        //     action: "on the water",
-        //     image: "../assets/Images/cattle egret main img.jpg"
-        // },
-        // {
-        //     species: "Baya Weaver",
-        //     habitat: "River",
-        //     date: "07-02-2023",
-        //     size: "large",
-        //     color: "white",
-        //     action: "on the water",
-        //     image: "../assets/Images/cattle egret main img.jpg"
-        // },  
-        //     // Add more bird objects here
-        // ];
-        // Function to find a bird species based on user answers
-        // function findBird(habitat, size, color, action) {
-        //     let matches = [];
-        //     for (let i = 0; i < birds.length; i++) {
-        //         if (birds[i].habitat === habitat && birds[i].size === size && birds[i].color === color && birds[i].action === action) {
-        //             matches.push(birds[i]);
-        //         }
-        //     }
-        //     return matches;
-        // }
-        // // Example usage
-        // const habitat = DayPilot.Modal.prompt("Where did you see the bird?");
-        // const date = DayPilot.Modal.prompt("when did you see the bird")
-        // const size = DayPilot.Modal.prompt("What size was the bird?");
-        // const color = DayPilot.Modal.prompt("What were the main colors?");
-        // const action = DayPilot.Modal.prompt("Was the bird doing?");
-
-
-        // const birdMatches = findBird(habitat, date, size, color);
-        // if (birdMatches.length > 0) {
-        //     console.log(`We found ${birdMatches.length} bird species that match your description:`);
-        //     for (let i = 0; i < birdMatches.length; i++) {
-        //         console.log(`${birdMatches[i].species}:`);
-        //         console.log(`Habitat: ${birdMatches[i].habitat}`);
-        //         console.log(`Date: ${birdMatches[i].date}`);
-        //         console.log(`Size: ${birdMatches[i].size}`);
-        //         console.log(`color: ${birdMatches[i].color}`);
-        //         console.log(`action: ${birdMatches[i].action}`);
-        //         console.log(`Image URL: ${birdMatches[i].image}`);
-        //     }
-        // } else {
-        //     console.log("Sorry, we could not find a bird species matching that description.");
-        // }
-
-        // let div_scrollsnap;
-        // let div_imagescontainer;
-        // let div_birditems;
-        // let img_scrollbird;
-        // let div_main_des_container;
-        // let p_bird_main_des;
-
-
-        // //div_scrollsnap
-        // div_scrollsnap = document.createElement("div");
-        // div_scrollsnap.setAttribute("class", "scrollsnap");
-        // console.log("div_scrollsnap");
-
-        // //div_imagescontainer
-        // div_imagescontainer = document.createElement("div");
-        // div_imagescontainer.setAttribute("class", "imagescontainer");
-        // div_scrollsnap.append("div_imagescontainer");
-
-        // //div_birditems
-        // div_birditems = document.createElement("div");
-        // div_birditems.setAttribute("class", "birditems");
-        // div_imagescontainer.append("div_birditems");
-
-        // //img_scrollbird
-        // img_scrollbird = document.createElement("img");
-        // img_scrollbird.setAttribute("class", "scrollbird");
-        // img_scrollbird.setAttribute("src", "../assets/Images/Baby woodpeacker 1.jpg");
-        // div_birditems.append("img_scrollbird");
-
-        // //div_main_des_container
-        // div_main_des_container = document.createElement("div");
-        // div_main_des_container.setAttribute("class", "main-des-container");
-        // div_scrollsnap.append("div_main_des_container");
-
-        // //p_bird_main_des
-        // p_bird_main_des = document.createElement("p");
-        // p_bird_main_des.setAttribute("class", "bird_main_des");
-        // p_bird_main_des.innerText = "Name : " + indian_birds_list[i]["size"];
-        // div_main-des-container.append(p_birdpara);
-
-        // //p_bird_main_des
-        // p_bird_main_des = document.createElement("p");
-        // p_bird_main_des.setAttribute("class", "bird_main_des");
-        // p_bird_main_des.innerText = "Scientific Name : " + indian_birds_list[i]["size"];
-        // div_main-des-container.append(p_birdpara);
-
-        //  //p_bird_main_des
-        //  p_bird_main_des = document.createElement("p");
-        // p_bird_main_des.setAttribute("class", "bird_main_des");
-        // p_bird_main_des.innerText = " Size  : " + indian_birds_list[i]["size"];
-        // div_main-des-container.append(p_birdpara);
+       
 
         let div_scrollsnap;
         let div_imagescontainer;
@@ -381,22 +268,7 @@
         let div_content;
         let h3_topic;
         let p_description;
-        // let div_birdvedio;
-        // let vedio_bird_vedio;
-        // let source;
-
-
-
-        // let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
-
-        // const url = window.location.search;
-        // const urlParams = new URLSearchParams(url)
-        // const bird_info_details_uuid = urlParams.get("bird_id")
-        // console.log(bird_info_details_uuid)
-
-
-        // let details = bird_info_details.find(e => e.bird_id === bird_info_details_uuid)
-        // console.log(details)
+        
 
         let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
@@ -574,8 +446,7 @@
             document.querySelector("section.info_container").append(div_content);
 
 
-            // const habitat = indian_birds_list[i]["habitat"];
-            // const noOfHabitats = habitat.length;
+            
 
             for (let l = 0; l < 1; l++) {
 
@@ -596,6 +467,11 @@
             }
             document.querySelector("section.info_container").prepend(div_scrollsnap);
         }
+
+
+
+
+        
 
 
 

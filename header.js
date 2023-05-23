@@ -7,6 +7,7 @@ const guidance = "/pages/guidance.html";
 const signup = "/pages/resister.html";
 const login = "/pages/login.html";
 const profile = "/pages/profilepage.html";
+const admin = "/pages/form/create_bird.html;"
 console.log("raj")
 const before_login = `
         <div class="header">
@@ -64,6 +65,7 @@ const after_login = `
     <div class="second-head">
     <button class="login-button"> <a href="${login}"><span>Log in</span></button></a>
     </div>
+    <button class="admin-button"> <a href="${admin}./pages/form/create_bird.html"><span>Admin</span></button></a>
 </div>
 `;
 

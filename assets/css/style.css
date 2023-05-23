@@ -172,6 +172,7 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 60%;
@@ -358,6 +359,13 @@ a:hover {
   /* background: linear-gradient(0deg, rgb(240, 163, 9) 0%, rgb(252, 126, 0) 100%); */
   border: none;
 }
+.admin-button{
+  float: right;
+  background: grey;
+  /* background: linear-gradient(0deg, rgb(240, 163, 9) 0%, rgb(252, 126, 0) 100%); */
+  border: none;
+}
+
 
 .login-button:before {
   height: 0%;
