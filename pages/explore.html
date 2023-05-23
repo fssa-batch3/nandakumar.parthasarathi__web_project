@@ -1228,6 +1228,28 @@
             p_birdpara.innerText = "Size : " + bird_info_details[i]["size"];
             div_contentright.append(p_birdpara);
 
+
+             //h3_birdpara
+             p_birdpara = document.createElement("p");
+             p_birdpara.setAttribute("class", "birdpara");
+             p_birdpara.innerText = "Color : " + bird_info_details[i]["colors"];
+            div_contentright.append(p_birdpara);
+
+
+             //p_birdpara
+             p_birdpara = document.createElement("p");
+             p_birdpara.setAttribute("class", "birdpara");
+
+             p_birdpara.innerText = "Action : " + bird_info_details[i]["actions"];
+            div_contentright.append(p_birdpara);
+
+
+            //  //p_birdpara
+            //  p_birdpara = document.createElement("p");
+            // p_birdpara.setAttribute("class", "birdpara");
+            // p_birdpara.innerText = "Size : " + bird_info_details[i]["size"];
+            // div_contentright.append(p_birdpara);
+
             //div_tooltipsss
             div_tooltipsss = document.createElement("div");
             div_tooltipsss.setAttribute("class", "tooltipsss");
@@ -1240,7 +1262,7 @@
             //read_button
             read_button = document.createElement("a");
             read_button.setAttribute("class", "click");
-            p_birdpara.innerText = "Read more..."
+            // p_birdpara.innerText = "Read more..."
             // read_button.setAttribute("type", "button");
             read_button.setAttribute("href", "../pages/read.html?bird_id=" + bird_info_details[i]["bird_info_details_uuid"]);
             // read_button.setAttribute("onclick", "click_readmore()");

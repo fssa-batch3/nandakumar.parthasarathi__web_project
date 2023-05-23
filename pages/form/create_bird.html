@@ -137,6 +137,19 @@
         p_birdpara_3.innerText = "Size: " + indian_birds_list[i]["size"];
         div_contentright.append(p_birdpara);
 
+        //h3_birdpara
+        h3_birdpara = document.createElement("h3");
+        h3_birdpara.setAttribute("class", "birdpara");
+        h3_birdpara.innerText = "Color : " + bird_info_details[i]["color"];
+        div_contentright.append(h3_birdpara);
+
+
+        //p_birdpara
+        h3_birdpara = document.createElement("p");
+        h3_birdpara.setAttribute("class", "birdpara");
+        h3_birdpara.innerText = "Size : " + bird_info_details[i]["actions"];
+        div_contentright.append(h3_birdpara);
+
         //div_tooltipsss
         div_tooltipsss = document.createElement("div");
         div_tooltipsss.setAttribute("class", "tooltipsss");
@@ -153,7 +166,7 @@
         div_readmore.append(div_anchor);
 
 
-        
+
 
         //read_button
         read_button = document.createElement("button");
@@ -166,12 +179,12 @@
         edit_button = document.createElement("a");
         edit_button.setAttribute("class", "edit");
         // edit_button.setAttribute("type", "submit");
-        edit_button.setAttribute("href", `../form/update.html?birds_unique_id=${ indian_birds_list[i].bird_info_details_uuid}` )
+        edit_button.setAttribute("href", `../form/update.html?birds_unique_id=${indian_birds_list[i].bird_info_details_uuid}`)
         edit_button.innerText = "Edit";
         div_readmore.append(edit_button);
 
 
-     
+
 
         div_tooltip = document.createElement("div");
         div_tooltip.setAttribute("id", "tooltip");
@@ -194,4 +207,3 @@
 
 
 </script>
-

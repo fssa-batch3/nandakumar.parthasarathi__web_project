@@ -60,14 +60,10 @@
         <input type="text" id="size" required><br>
         <label>Habitat Iamge:</label><br>
         <input type="url" id="habitat"><br>
-        <label>Food Image-1:</label><br>
-        <input type="url" id="food1"><br>
-        <label>Food Image-2:</label><br>
-        <input type="url" id="food2"><br>
-        <label>Food Image-3:</label><br>
-        <input type="url" id="food3"><br>
-        <label>Food Image-4:</label><br>
-        <input type="url" id="food4"><br>
+        <label>colors:</label><br>
+        <input type="text" id="color" required><br>
+        <label>actions:</label><br>
+        <input type="text" id="actions" required><br>
         <label>About Bird:</label><br>
         <textarea type="text" id="des1" required pattern="[a-z A-Z]*"></textarea><br>
         <label>General Characteristics:</label><br>
@@ -94,10 +90,8 @@
             let scientific_Name = document.getElementById("scientificname").value;
             let size = document.getElementById("size").value;
             let habitat = document.getElementById("habitat").value;
-            let foodimage1 = document.getElementById("food1").value;
-            let foodimage2 = document.getElementById("food2").value;
-            let foodimage3 = document.getElementById("food3").value;
-            let foodimage4 = document.getElementById("food4").value;
+            let colors = document.getElementById("color").value;
+            let actions = document.getElementById("actions").value;
             let des1 = document.getElementById("des1").value;
             let des2 = document.getElementById("des2").value;
             let des3 = document.getElementById("des3").value;
@@ -115,10 +109,8 @@
                 data.scientific_Name == data.scientific_Name &&
                 data.size == data.size &&
                 data.habitat == data.habitat &&
-                data.foodimage1 == data.foodimage1 &&
-                data.foodimage2 == data.foodimage2 &&
-                data.foodimage3 == data.foodimage3 &&
-                data.foodimage4 == data.foodimage4 &&
+                data.colors == data.colors &&
+                data.actions == data.actions &&
                 data.des1 == data.des1 &&
                 data.des2 == data.des2 &&
                 data.des3 == data.des3 &&
@@ -139,12 +131,9 @@
                     "scientific_name": scientific_Name,
                     "size": size,
                     "habitat": habitat,
-                    "food types": {
-                        "foodimage1": foodimage1,
-                        "foodimage2": foodimage2,
-                        "foodimage3": foodimage3,
-                        "foodimage4": foodimage4
-                    },
+                   "habitat" : habitat,
+                    "colors": colors,
+                    "actions":actions,
                     "description1": des1,
                     "description2": des2,
                     "description3": des3,

@@ -254,7 +254,7 @@
 
 
     <script>
-       
+
 
         let div_scrollsnap;
         let div_imagescontainer;
@@ -268,7 +268,7 @@
         let div_content;
         let h3_topic;
         let p_description;
-        
+
 
         let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
@@ -368,7 +368,6 @@
             p_bird_main_des.setAttribute("class", "bird_main_des");
             p_bird_main_des.innerText = "Name :" + details["bird_name"];
             // p_bird_main_des.setAttribute(bird_info_details[i]["name"]);
-
             div_main_des_container.append(p_bird_main_des);
 
             //p_bird_main_des
@@ -382,6 +381,20 @@
             p_bird_main_des.setAttribute("class", "bird_main_des");
             p_bird_main_des.innerText = "Size : " + details["size"];
             div_main_des_container.append(p_bird_main_des);
+
+            //p_bird_main_des
+            p_bird_main_des = document.createElement("p");
+            p_bird_main_des.setAttribute("class", "bird_main_des");
+            p_bird_main_des.innerText = "Colors : " + details["colors"];
+            div_main_des_container.append(p_bird_main_des);
+
+            //p_bird_main_des
+            p_bird_main_des = document.createElement("p");
+            p_bird_main_des.setAttribute("class", "bird_main_des");
+            p_bird_main_des.innerText = "Actions : " + details["actions"];
+            div_main_des_container.append(p_bird_main_des);
+
+
 
             //div_tooltipsss
             div_tooltipsss = document.createElement("div");
@@ -446,7 +459,7 @@
             document.querySelector("section.info_container").append(div_content);
 
 
-            
+
 
             for (let l = 0; l < 1; l++) {
 
@@ -471,7 +484,7 @@
 
 
 
-        
+
 
 
 
