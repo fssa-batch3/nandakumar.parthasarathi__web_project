@@ -93,112 +93,103 @@
 
 </body>
 <script>
-    const indian_birds_list = JSON.parse(localStorage.getItem("bird_info_details"))
-    // console.log(indian_birds_list);
+   const indian_birds_list = JSON.parse(localStorage.getItem("bird_info_details"));
 
-    for (let i = 0; i < indian_birds_list.length; i++) {
+for (let i = 0; i < indian_birds_list.length; i++) {
+  // Create the main div container
+  const div_birdstructure = document.createElement("div");
+  div_birdstructure.setAttribute("class", "birdstructure");
 
-        //div_birdstructure
-        div_birdstructure = document.createElement("div");
-        div_birdstructure.setAttribute("class", "birdstructure");
-        // console.log(div_birdstructure);
+  // Create the left content div
+  const div_contentleft = document.createElement("div");
+  div_contentleft.setAttribute("class", "contentleft");
+  div_birdstructure.append(div_contentleft);
 
-        //div_contentleft
-        div_contentleft = document.createElement("div");
-        div_contentleft.setAttribute("class", "contentleft");
-        div_birdstructure.append(div_contentleft);
+  // Create the image element
+  const img_card = document.createElement("img");
+  img_card.setAttribute("src", indian_birds_list[i]["main_image"]);
+  img_card.setAttribute("alt", indian_birds_list[i]["bird_name"]);
+  div_contentleft.append(img_card);
 
-        //img_card
-        img_card = document.createElement("img");
-        img_card.setAttribute("src", indian_birds_list[i]["main_image"]);
-        img_card.setAttribute("alt", indian_birds_list[i]["bird_name"]);
-        div_contentleft.append(img_card);
+  // Create the right content div
+  const div_contentright = document.createElement("div");
+  div_contentright.setAttribute("class", "contentright");
+  div_birdstructure.append(div_contentright);
 
-        //div_contentright
-        div_contentright = document.createElement("div");
-        div_contentright.setAttribute("class", "contentright");
-        div_birdstructure.append(div_contentright);
+  // Create and append the Name paragraph
+  const p_birdpara_name = document.createElement("p");
+  p_birdpara_name.setAttribute("class", "birdpara");
+  p_birdpara_name.innerText = "Name: " + indian_birds_list[i]["bird_name"];
+  div_contentright.append(p_birdpara_name);
 
-        //p_birdpara
-        p_birdpara = document.createElement("p");
-        p_birdpara.setAttribute("class", "birdpara");
-        p_birdpara.innerText = "Name: " + indian_birds_list[i]["bird_name"];
-        div_contentright.append(p_birdpara);
+  // Create and append the Scientific Name paragraph
+  const p_birdpara_scientific_name = document.createElement("p");
+  p_birdpara_scientific_name.setAttribute("class", "birdpara");
+  p_birdpara_scientific_name.innerText = "Scientific Name: " + indian_birds_list[i]["scientific_name"];
+  div_contentright.append(p_birdpara_scientific_name);
 
-        //p_birdpara
-        p_birdpara = document.createElement("p");
-        p_birdpara.setAttribute("class", "birdpara");
-        p_birdpara.innerText = " Scientific Name: " + indian_birds_list[i]["scientific_name"];
-        div_contentright.append(p_birdpara);
+  // Create and append the Size paragraph
+  const p_birdpara_size = document.createElement("p");
+  p_birdpara_size.setAttribute("class", "birdpara");
+  p_birdpara_size.innerText = "Size: " + indian_birds_list[i]["size"];
+  div_contentright.append(p_birdpara_size);
 
-        //p_birdpara
-        p_birdpara_3 = document.createElement("p");
-        p_birdpara_3.setAttribute("class", "birdpara");
-        p_birdpara_3.innerText = "Size: " + indian_birds_list[i]["size"];
-        div_contentright.append(p_birdpara);
+  // Create and append the Color heading
+  const p_birdpara_color = document.createElement("p");
+  p_birdpara_color.setAttribute("class", "birdpara");
+  p_birdpara_color.innerText = "Color: " + indian_birds_list[i]["colors"];
+  div_contentright.append(p_birdpara_color);
 
-        //h3_birdpara
-        h3_birdpara = document.createElement("h3");
-        h3_birdpara.setAttribute("class", "birdpara");
-        h3_birdpara.innerText = "Color : " + bird_info_details[i]["color"];
-        div_contentright.append(h3_birdpara);
+  // Create and append the Actions heading
+  const p_birdpara_actions = document.createElement("p");
+  p_birdpara_actions.setAttribute("class", "birdpara");
+  p_birdpara_actions.innerText = "Actions: " + indian_birds_list[i]["actions"];
+  div_contentright.append(p_birdpara_actions);
 
+  // Create the tooltip div
+  const div_tooltipsss = document.createElement("div");
+  div_tooltipsss.setAttribute("class", "tooltipsss");
+  div_contentright.append(div_tooltipsss);
 
-        //p_birdpara
-        h3_birdpara = document.createElement("p");
-        h3_birdpara.setAttribute("class", "birdpara");
-        h3_birdpara.innerText = "Size : " + bird_info_details[i]["actions"];
-        div_contentright.append(h3_birdpara);
+  // Create the read more div
+  const div_readmore = document.createElement("div");
+  div_contentright.append(div_readmore);
 
-        //div_tooltipsss
-        div_tooltipsss = document.createElement("div");
-        div_tooltipsss.setAttribute("class", "tooltipsss");
-        div_contentright.append(div_tooltipsss);
+  // Create the anchor tag within the read more div
+  const div_anchor = document.createElement("a");
+  div_anchor.setAttribute("href", `../../pages/form/birds.detailpage.html?bird_info_details_uuid=${indian_birds_list[i]["bird_info_details_uuid"]}`);
+  div_readmore.append(div_anchor);
 
-        // div_readmore
-        div_readmore = document.createElement("div");
-        div_contentright.append(div_readmore);
+  // Create the read button within the anchor tag
+  const read_button = document.createElement("button");
+  read_button.setAttribute("class", "click");
+  read_button.setAttribute("type", "button");
+  read_button.innerText = "Read more...";
+  div_anchor.append(read_button);
 
-        // div_anchor
-        div_anchor = document.createElement("a")
-        div_anchor.setAttribute("href", "../../pages/form/birds.detailpage.html?bird_info_details_uuid=" +
-            indian_birds_list[i]["bird_info_details_uuid"])
-        div_readmore.append(div_anchor);
+  // Create the edit button
+  const edit_button = document.createElement("a");
+  edit_button.setAttribute("class", "edit");
+  edit_button.setAttribute("href", `../form/update.html?birds_unique_id=${indian_birds_list[i].bird_info_details_uuid}`);
+  edit_button.innerText = "Edit";
+  div_readmore.append(edit_button);
 
+  // Create the tooltip image
+  const div_tooltip = document.createElement("div");
+  div_tooltip.setAttribute("id", "tooltip");
+  div_tooltipsss.append(div_tooltip);
 
+  const img_card_1 = document.createElement("img");
+  img_card_1.setAttribute("src", indian_birds_list[i]["habitat"]);
+  img_card_1.setAttribute("alt", "forest");
+  img_card_1.setAttribute("height", "80px");
+  div_tooltip.append(img_card_1);
 
+  // Append the bird structure div to the detail_about_bird section
+  document.querySelector("section.detail_about_bird").append(div_birdstructure);
+}
 
-        //read_button
-        read_button = document.createElement("button");
-        read_button.setAttribute("class", "click");
-        read_button.setAttribute("type", "button");
-        read_button.innerText = "Read more...";
-        div_anchor.append(read_button);
-
-        //edit_button
-        edit_button = document.createElement("a");
-        edit_button.setAttribute("class", "edit");
-        // edit_button.setAttribute("type", "submit");
-        edit_button.setAttribute("href", `../form/update.html?birds_unique_id=${indian_birds_list[i].bird_info_details_uuid}`)
-        edit_button.innerText = "Edit";
-        div_readmore.append(edit_button);
-
-
-
-
-        div_tooltip = document.createElement("div");
-        div_tooltip.setAttribute("id", "tooltip");
-        div_tooltipsss.append(div_tooltip);
-
-        img_card_1 = document.createElement("img");
-        img_card_1.setAttribute("src", indian_birds_list[i]["habitat"]);
-        img_card_1.setAttribute("alt", "forest");
-        img_card_1.setAttribute("height", "80px");
-        div_tooltip.append(img_card_1);
-        // }
-
-        document.querySelector("section.detail_about_bird").append(div_birdstructure);
-    }
+    
 
     function readmore() {
         window.location.href = "../../pages/form/birds.detailpage.html"

@@ -42,41 +42,35 @@
     <form role="form" onsubmit="createBirds(event)" class="form-for-admin">
 
         <label>Main Image:</label><br>
-        <input type="text" id="mainimage" required> <br>
+        <input type="url" id="mainimage"><br>
         <label>Bird Stage-1 Image:</label><br>
-        <input type="text" id="b_stage-1" required> <br>
+        <input type="url" id="b_stage-1"> <br>
         <label>Bird Stage-2 Image:</label><br>
-        <input type="text" id="b_stage-2" required><br>
+        <input type="url" id="b_stage-2"><br>
         <label>Bird Stage-3 Image:</label><br>
-        <input type="text" id="b_stage-3" required><br>
+        <input type="url" id="b_stage-3"><br>
         <label>Bird Stage-4 Image:</label><br>
-        <input type="text" id="b_stage-4" required><br>
+        <input type="url" id="b_stage-4"><br>
         <label>Name:</label><br>
-        <input type="text" id="birdname" required><br>
+        <input type="text" id="birdname" required ><br>
         <label>Scientific Name:</label><br>
-        <input type="text" id="scientificname" required><br>
+        <input type="text" id="scientificname" required ><br>
         <label>Size:</label><br>
-        <input type="text" id="size"><br required>
+        <input type="text" id="size" required><br>
         <label>Habitat Iamge:</label><br>
-        <input type="text" id="habitat" required><br>
-        <label>Food Image-1:</label><br>
-        <input type="text" id="food1" required><br>
-        <label>Food Image-2:</label><br>
-        <input type="text" id="food2" required><br>
-        <label>Food Image-3:</label><br>
-        <input type="text" id="food3" required><br>
-        <label>Food Image-4:</label><br>
-        <input type="text" id="food4" required><br>
-        <label>Bird Video:</label><br>
-        <input type="text" id="food3" required><br>
+        <input type="url" id="habitat"><br>
+        <label>colors:</label><br>
+        <input type="text" id="color" required><br>
+        <label>actions:</label><br>
+        <input type="text" id="actions" required><br>
         <label>About Bird:</label><br>
-        <textarea type="text" id="des1" required></textarea><br>
+        <textarea type="text" id="des1" required pattern="[a-z A-Z]*"></textarea><br>
         <label>General Characteristics:</label><br>
-        <textarea type="text" id="des2" required></textarea><br>
+        <textarea type="text" id="des2" required pattern="[a-z A-Z]*"></textarea><br>
         <label>Life styes:</label><br>
-        <textarea type="text" id="des3" required></textarea><br>
+        <textarea type="text" id="des3" required pattern="[a-z A-Z]*"></textarea><br>
         <label>Breeding patterns:</label><br>
-        <textarea type="text" id="des4" required></textarea><br>
+        <textarea type="text" id="des4" required pattern="[a-z A-Z]*"></textarea><br>
 
 
 
@@ -149,73 +143,71 @@
         // )
 
 
-        // Get the query string from the current URL
-        const queryString = window.location.search;
+       // Get the query string from the current URL
+const queryString = window.location.search;
 
-        // Create a new URL object with the query string
-        const url = new URL(`https://example.com${queryString}`); // Replace 'https://example.com' with your actual domain name
+// Create a new URL object with the query string
+const url = new URL(`https://example.com${queryString}`); // Replace 'https://example.com' with your actual domain name
 
-        // Retrieve the value of the 'birds_unique_id' query parameter
-        const birdsUniqueId = url.searchParams.get('birds_unique_id');
+// Retrieve the value of the 'birds_unique_id' query parameter
+const birdsUniqueId = url.searchParams.get('birds_unique_id');
 
-        let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
+let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
-        let all_birds_data = bird_info_details.find(e => e.bird_info_details_uuid === birdsUniqueId);
-        let all_birds_data_index = bird_info_details.indexOf(all_birds_data);
+let all_birds_data = bird_info_details.find(e => e.bird_info_details_uuid === birdsUniqueId);
+let all_birds_data_index = bird_info_details.indexOf(all_birds_data);
 
-        document.getElementById("mainimage").value = all_birds_data["main_image"];
-        document.getElementById("b_stage-1").value = all_birds_data["birds_stages"]["birdStage1"];
-        document.getElementById("b_stage-2").value = all_birds_data["birds_stages"]["birdStage2"];
-        document.getElementById("b_stage-3").value = all_birds_data["birds_stages"]["birdStage3"];
-        document.getElementById("b_stage-4").value = all_birds_data["birds_stages"]["birdStage4"];
-        document.getElementById("birdname").value = all_birds_data["bird_name"];
-        document.getElementById("scientificname").value = all_birds_data["scientific_name"];
-        document.getElementById("size").value = all_birds_data["size"];
-        document.getElementById("habitat").value = all_birds_data["habitat"];
-        document.getElementById("food1").value = all_birds_data["food types"]["foodimage1"];
-        document.getElementById("food2").value = all_birds_data["food types"]["foodimage2"];
-        document.getElementById("food3").value = all_birds_data["food types"]["foodimage3"];
-        document.getElementById("food4").value = all_birds_data["food types"]["foodimage4"];
-        document.getElementById("des1").value = all_birds_data["description1"];
-        document.getElementById("des2").value = all_birds_data["description2"];
-        document.getElementById("des3").value = all_birds_data["description3"];
-        document.getElementById("des4").value = all_birds_data["description4"];
+document.getElementById("mainimage").value = all_birds_data["main_image"];
+document.getElementById("b_stage-1").value = all_birds_data["birds_stages"]["birdStage1"];
+document.getElementById("b_stage-2").value = all_birds_data["birds_stages"]["birdStage2"];
+document.getElementById("b_stage-3").value = all_birds_data["birds_stages"]["birdStage3"];
+document.getElementById("b_stage-4").value = all_birds_data["birds_stages"]["birdStage4"];
+document.getElementById("birdname").value = all_birds_data["bird_name"];
+document.getElementById("scientificname").value = all_birds_data["scientific_name"];
+document.getElementById("size").value = all_birds_data["size"];
+document.getElementById("habitat").value = all_birds_data["habitat"];
+document.getElementById("color").value = all_birds_data["colors"];
+document.getElementById("actions").value = all_birds_data["actions"];
+document.getElementById("des1").value = all_birds_data["description1"];
+document.getElementById("des2").value = all_birds_data["description2"];
+document.getElementById("des3").value = all_birds_data["description3"];
+document.getElementById("des4").value = all_birds_data["description4"];
 
 
-        function update() {
-            all_birds_data["mainimage"] = document.getElementById("mainimage").value;
-            all_birds_data["birds_stages"]["birdStage1"] = document.getElementById("b_stage-1").value;
-            all_birds_data["birds_stages"]["birdStage2"] = document.getElementById("b_stage-2").value;
-            all_birds_data["birds_stages"]["birdStage3"] = document.getElementById("b_stage-3").value;
-            all_birds_data["birds_stages"]["birdStage4"] = document.getElementById("b_stage-4").value;
-            all_birds_data["bird_name"] = document.getElementById("birdname").value;
-            all_birds_data["scientific_name"] = document.getElementById("scientificname").value;
-            all_birds_data["size"] = document.getElementById("size").value;
-            all_birds_data["habitat"] = document.getElementById("habitat").value;
-            all_birds_data["food types"]["foodimage1"] = document.getElementById("food1").value;
-            all_birds_data["food types"]["foodimage2"] = document.getElementById("food2").value;
-            all_birds_data["food types"]["foodimage3"] = document.getElementById("food3").value;
-            all_birds_data["food types"]["foodimage4"] = document.getElementById("food4").value;
-            all_birds_data["description1"] = document.getElementById("des1").value;
-            all_birds_data["description2"] = document.getElementById("des2").value;
-            all_birds_data["description3"] = document.getElementById("des3").value;
-            all_birds_data["description4"] = document.getElementById("des4").value;
+function update() {
+    all_birds_data["main_image"] = document.getElementById("mainimage").value;
+    all_birds_data["birds_stages"]["birdStage1"] = document.getElementById("b_stage-1").value;
+    all_birds_data["birds_stages"]["birdStage2"] = document.getElementById("b_stage-2").value;
+    all_birds_data["birds_stages"]["birdStage3"] = document.getElementById("b_stage-3").value;
+    all_birds_data["birds_stages"]["birdStage4"] = document.getElementById("b_stage-4").value;
+    all_birds_data["bird_name"] = document.getElementById("birdname").value;
+    all_birds_data["scientific_name"] = document.getElementById("scientificname").value;
+    all_birds_data["size"] = document.getElementById("size").value;
+    all_birds_data["habitat"] = document.getElementById("habitat").value;
+    all_birds_data["colors"] = document.getElementById("color").value;
+    all_birds_data["actions"] = document.getElementById("actions").value;
+    all_birds_data["description1"] = document.getElementById("des1").value;
+    all_birds_data["description2"] = document.getElementById("des2").value;
+    all_birds_data["description3"] = document.getElementById("des3").value;
+    all_birds_data["description4"] = document.getElementById("des4").value;
 
+    localStorage.setItem("bird_info_details", JSON.stringify(bird_info_details));
+    alert("Your Birds Data is Successfully Updated");
+}
+
+document.getElementById("save_details_of_birds").addEventListener("click", update);
+
+function deleteBird() {
+    if (confirm("Are you want to delete bird details")) {
+        if (bird_info_details) {
+            bird_info_details.splice(all_birds_data_index, 1);
             localStorage.setItem("bird_info_details", JSON.stringify(bird_info_details));
-            alert("Your Birds Data is Successfully Updated");
         }
+        window.location.href = "../form/create_bird.html";
+    }
+}
 
-        document.getElementById("save_details_of_birds").addEventListener("click", update)
-
-        function deleteBird() {
-            if (confirm("Are you want to delete bird details")) {
-                bird_info_details.splice(all_birds_data_index,1);
-                localStorage.setItem("bird_info_details",JSON.stringify(bird_info_details));
-                window.location.href = "../form/create_bird.html";
-            }
-        }
-
-        document.getElementById("cancel").addEventListener("click",deleteBird);
+document.getElementById("cancel").addEventListener("click", deleteBird);
 
 
 
