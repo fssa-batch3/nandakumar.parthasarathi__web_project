@@ -34,8 +34,8 @@
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
 </head>
 
@@ -87,30 +87,32 @@
                 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
                 <div class="wrapper">
-                  <!-- <div class="label">Submit your search</div> -->
-                  <div class="searchBar">
-                    <input list="birdsname" name="birdsname" id="searchbar" class="textbox" type="text"
-                        placeholder="Enter bird name ..." onkeyup="search()" height="30px" width="400px">
-                    <button class="searchbtn" id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
-                      <svg style="width:24px;height:18px" viewBox="0 0 24 24"><path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
-                      </svg>
-                    </button>
-                  </div>
-                </div>  
-                    <!-- <form action="/action_page.php" method="get"> -->
-                    
+                    <!-- <div class="label">Submit your search</div> -->
+                    <div class="searchBar">
+                        <input list="birdsname" name="birdsname" id="searchbar" class="textbox" type="text"
+                            placeholder="Enter bird name ..." onkeyup="search()" height="30px" width="400px">
+                        <button class="searchbtn" id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
+                            <svg style="width:24px;height:18px" viewBox="0 0 24 24">
+                                <path fill="#666666"
+                                    d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- <form action="/action_page.php" method="get"> -->
 
 
 
-                    <!-- <datalist id="birdsname">
+
+                <!-- <datalist id="birdsname">
                             <option value="Peacock"></option>
                             <option value="Cattle Egret"></option>
                             <option value="Eagle"></option>
                             <option value="White-breasted Waterhen"></option>
                             <option value="Rufous Treepie"></option>
                         </datalist> -->
-                    <!-- </form> -->
-                </div>
+                <!-- </form> -->
+            </div>
             </div>
 
             <section class="detail_about_bird" id="all_birds">
@@ -1238,30 +1240,36 @@
             //p_birdpara
             p_birdpara = document.createElement("p");
             p_birdpara.setAttribute("class", "birdpara");
-            p_birdpara.innerText = "Size : " + bird_info_details[i]["size"];
+            p_birdpara.innerText = "Size : " + bird_info_details[i]["size"]["size_in_cm"];
             div_contentright.append(p_birdpara);
 
 
-             //h3_birdpara
-             p_birdpara = document.createElement("p");
-             p_birdpara.setAttribute("class", "birdpara");
-             p_birdpara.innerText = "Color : " + bird_info_details[i]["colors"];
+            //p_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "Tentative Size : " + bird_info_details[i]["size"]["tentative_size"];
             div_contentright.append(p_birdpara);
 
 
-             //p_birdpara
-             p_birdpara = document.createElement("p");
-             p_birdpara.setAttribute("class", "birdpara");
-
-             p_birdpara.innerText = "Action : " + bird_info_details[i]["actions"];
+            // Create and append the Scientific Name paragraph
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "habitat: " + bird_info_details[i]["habitat"];
             div_contentright.append(p_birdpara);
 
 
-            //  //p_birdpara
-            //  p_birdpara = document.createElement("p");
-            // p_birdpara.setAttribute("class", "birdpara");
-            // p_birdpara.innerText = "Size : " + bird_info_details[i]["size"];
-            // div_contentright.append(p_birdpara);
+            //h3_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "Color : " + bird_info_details[i]["colors_name"];
+            div_contentright.append(p_birdpara);
+
+
+            //p_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "Action : " + bird_info_details[i]["actions_name"];
+            div_contentright.append(p_birdpara);
 
             //div_tooltipsss
             div_tooltipsss = document.createElement("div");
@@ -1275,32 +1283,23 @@
             //read_button
             read_button = document.createElement("a");
             read_button.setAttribute("class", "click");
-            // p_birdpara.innerText = "Read more..."
-            // read_button.setAttribute("type", "button");
             read_button.setAttribute("href", "../pages/read.html?bird_id=" + bird_info_details[i]["bird_info_details_uuid"]);
-            // read_button.setAttribute("onclick", "click_readmore()");
             read_button.innerText = "Read more...";
             div_readmore.append(read_button);
-
-
-            // const habitat = birds_data[i]["habitat"];
-            // const noOfHabitats = habitat.length;
-
-
 
             div_tooltip = document.createElement("div");
             div_tooltip.setAttribute("id", "tooltip");
             div_tooltipsss.append(div_tooltip);
 
-            span_tooltiptext = document.createElement("span");
-            span_tooltiptext.setAttribute("id", "tooltiptext");
-            span_tooltiptext.innerText = "Forest";
-            div_tooltip.append(span_tooltiptext);
+            // span_tooltiptext = document.createElement("span");
+            // span_tooltiptext.setAttribute("id", "tooltiptext");
+            // span_tooltiptext.innerText = "Forest";
+            // div_tooltip.append(span_tooltiptext);
 
-            img_card_1 = document.createElement("img");
-            img_card_1.setAttribute("src", bird_info_details[i]["habitat"]);
-            img_card_1.setAttribute("height", "80px");
-            div_tooltip.append(img_card_1);
+            // img_card_1 = document.createElement("img");
+            // img_card_1.setAttribute("src", bird_info_details[i]["habitat"]);
+            // img_card_1.setAttribute("height", "80px");
+            // div_tooltip.append(img_card_1);
 
             document.querySelector("section.detail_about_bird").append(div_birdstructure);
 
@@ -1313,21 +1312,24 @@
         }
     </script>
 
-<div class="footer-basic">
-    <footer>
-        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-        <ul class="list-inline">
-            <li class="list-inline-item"><a href="../index.html">Home</a></li>
-            <li class="list-inline-item"><a href="../pages/about.html">About</a></li>
-            <li class="list-inline-item"><a href="../pages/q1.html">Identify bird</a></li>
-            <li class="list-inline-item"><a href="../pages/explore.html">Explore</a></li>
-            <li class="list-inline-item"><a href="../pages/guidance.html">Guidance</a></li>
-        </ul>
-        <p class="copyright">Birds buddy © 2022</p>
-    </footer>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
+                        class="icon ion-social-snapchat"></i></a><a href="#"><i
+                        class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                <li class="list-inline-item"><a href="../pages/about.html">About</a></li>
+                <li class="list-inline-item"><a href="../pages/q1.html">Identify bird</a></li>
+                <li class="list-inline-item"><a href="../pages/explore.html">Explore</a></li>
+                <li class="list-inline-item"><a href="../pages/guidance.html">Guidance</a></li>
+            </ul>
+            <p class="copyright">Birds buddy © 2022</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 
 </body>

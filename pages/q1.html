@@ -88,7 +88,7 @@
 
 
             <div class="next">
-                <a href="../pages/q3.html"><button type="button" class="next" onclick="submit()">Next</button></a>
+                <!-- <a href="../pages/q3.html"><button type="button" class="next" onclick="submit()">Next</button></a> -->
             </div>
             <div class="back">
                 <a href="../index.html"><button type="button" onclick="history.back()">Back</button></a>
@@ -155,38 +155,41 @@
       }
     ];
 
-    const handleOptionClick = (option) => {
-      // check if the option has already been selected
-      let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) || [];
+    // const handleOptionClick = (option) => {
+    //   // check if the option has already been selected
+    //   let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) || [];
 
-      // check if the option is already selected
-      if (identify_birds.includes(option)) {
-        return;
-      }
 
-      // add the selected option to the array
-      identify_birds.push(option);
+    //   // check if the option is already selected
+    //   if (identify_birds.includes(option)) {
+    //     return;
+    //   }
 
-      // update the local storage
-      localStorage.setItem("identifyBirds", JSON.stringify(identify_birds));
+    //   // add the selected option to the array
+    //   identify_birds.push(option);
 
-      // proceed to the next page
-      window.location.href = "./q3.html";
-    };
+    //   // update the local storage
+    //   localStorage.setItem("identifyBirds", JSON.stringify(identify_birds));
+
+    //   // proceed to the next page
+    //   window.location.href = "./q3.html";
+    // };
+
+
 
     let habitatsDiv = document.querySelector("#habitats");
 
     habitat_options.forEach((option) => {
       let div_card = document.createElement("div");
       div_card.setAttribute("class", "card");
+      div_card.setAttribute("id", option.name);
 
       let a = document.createElement("a");
-      a.setAttribute("href", "./q3.html");
+      // a.setAttribute("href", "./q3.html");
       div_card.append(a);
 
       let img_cards = document.createElement("img");
       img_cards.setAttribute("class", "cards");
-      img_cards.setAttribute("id", option.name);
       img_cards.setAttribute("src", option.image.source);
       img_cards.setAttribute("width", "100%");
       a.append(img_cards);
@@ -199,19 +202,25 @@
       h4_noclass.innerText = option.name;
       div_containers.append(h4_noclass);
 
-      div_card.addEventListener("click", () => {
-        handleOptionClick(option.name);
-      });
+      // div_card.addEventListener("click", () => {
+      //   handleOptionClick(option.name);
+      // });
 
       habitatsDiv.append(div_card);
     });
 
 
+    const parentDiv = document.querySelector(".option_container")
+    const childDiv = parentDiv.children;
 
-
-
-
-
+    for (let i = 0; i < childDiv.length; i++){
+      const element = childDiv[i];
+      element.addEventListener("click",() => {
+        const place = event.currentTarget.getAttribute("id");
+        console.log(place)
+        window.location.href = `./q3.html?place=${place}`
+      })
+    }
 
 
 

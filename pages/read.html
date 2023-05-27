@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="../assets/css/read.css">
     <link rel="stylesheet" href="..//assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 
 </head>
 
@@ -269,23 +271,20 @@
         let h3_topic;
         let p_description;
 
-
         let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
 
         const url = window.location.search;
-        const urlParams = new URLSearchParams(url)
+        const urlParams = new URLSearchParams(url);
         const bird_info_details_uuid = urlParams.get("bird_id");
         console.log(bird_info_details_uuid);
 
         let details = bird_info_details.find(e => e.bird_info_details_uuid === bird_info_details_uuid);
         console.log(details);
 
-
-
-
+        let colors = []; // Array to store colors
+        let actions = []; // Array to store actions
 
         for (let i = 0; i < 1; i++) {
-
             //div_scrollsnap
             div_scrollsnap = document.createElement("div");
             div_scrollsnap.setAttribute("class", "scrollsnap");
@@ -296,27 +295,17 @@
             div_imagescontainer.setAttribute("class", "imagescontainer");
             div_scrollsnap.append(div_imagescontainer);
 
-
-
             //img_scrollbird
             for (let j = 0; j < 1; j++) {
-
                 //div_birditems 1
                 div_birditems = document.createElement("div");
                 div_birditems.setAttribute("class", "birditems");
                 div_imagescontainer.append(div_birditems);
 
-                // img_scrollbird = document.createElement("img");
-                // img_scrollbird.setAttribute("class", "scrollbird");
-                // img_scrollbird.setAttribute("src", details["birds_stages"]["birdStage1"]);
-                // img_scrollbird.setAttribute("heigth", "300px");
-                // img_scrollbird.setAttribute("width", "400px");
-                // div_birditems.append(img_scrollbird);
-
                 img_scrollbird = document.createElement("img");
                 img_scrollbird.setAttribute("class", "scrollbird");
                 img_scrollbird.setAttribute("src", details["birds_stages"]["birdStage1"]);
-                img_scrollbird.setAttribute("height", "300px"); // Fix: "heigth" should be "height"
+                img_scrollbird.setAttribute("height", "300px");
                 img_scrollbird.setAttribute("width", "400px");
                 div_birditems.append(img_scrollbird);
 
@@ -328,7 +317,7 @@
                 img_scrollbird = document.createElement("img");
                 img_scrollbird.setAttribute("class", "scrollbird");
                 img_scrollbird.setAttribute("src", details["birds_stages"]["birdStage2"]);
-                img_scrollbird.setAttribute("heigth", "300px");
+                img_scrollbird.setAttribute("height", "300px");
                 img_scrollbird.setAttribute("width", "400px");
                 div_birditems.append(img_scrollbird);
 
@@ -340,7 +329,7 @@
                 img_scrollbird = document.createElement("img");
                 img_scrollbird.setAttribute("class", "scrollbird");
                 img_scrollbird.setAttribute("src", details["birds_stages"]["birdStage3"]);
-                img_scrollbird.setAttribute("heigth", "300px");
+                img_scrollbird.setAttribute("height", "300px");
                 img_scrollbird.setAttribute("width", "400px");
                 div_birditems.append(img_scrollbird);
 
@@ -352,10 +341,9 @@
                 img_scrollbird = document.createElement("img");
                 img_scrollbird.setAttribute("class", "scrollbird");
                 img_scrollbird.setAttribute("src", details["birds_stages"]["birdStage4"]);
-                img_scrollbird.setAttribute("heigth", "300px");
+                img_scrollbird.setAttribute("height", "300px");
                 img_scrollbird.setAttribute("width", "400px");
                 div_birditems.append(img_scrollbird);
-
             }
 
             //div_main_des_container
@@ -366,35 +354,51 @@
             //p_bird_main_des
             p_bird_main_des = document.createElement("p");
             p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Name :" + details["bird_name"];
-            // p_bird_main_des.setAttribute(bird_info_details[i]["name"]);
+            p_bird_main_des.innerText = "Name: " + details["bird_name"];
             div_main_des_container.append(p_bird_main_des);
 
             //p_bird_main_des
             p_bird_main_des = document.createElement("p");
             p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Scientific Name :" + details["scientific_name"];
+            p_bird_main_des.innerText = "Scientific Name: " + details["scientific_name"];
             div_main_des_container.append(p_bird_main_des);
 
             //p_bird_main_des
             p_bird_main_des = document.createElement("p");
             p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Size : " + details["size"];
+            p_bird_main_des.innerText = "Size: " + details["size"]["size_in_cm"];
             div_main_des_container.append(p_bird_main_des);
+
+             //p_bird_main_des
+             p_bird_main_des = document.createElement("p");
+            p_bird_main_des.setAttribute("class", "bird_main_des");
+            p_bird_main_des.innerText = "Size: " + details["size"]["tentative_size"];
+            div_main_des_container.append(p_bird_main_des);
+
+              // Create and append the Scientific Name paragraph
+              p_bird_main_des = document.createElement("p");
+              p_bird_main_des.setAttribute("class", "bird_main_des");
+              p_bird_main_des.innerText = "habitat: " + details["habitat"];
+              div_main_des_container.append(p_bird_main_des);
+
 
             //p_bird_main_des
             p_bird_main_des = document.createElement("p");
             p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Colors : " + details["colors"];
+            p_bird_main_des.innerText = "Colors: " + details["colors_name"];
             div_main_des_container.append(p_bird_main_des);
+
+            // Store colors in the array
+            colors.push(details["colors"]);
 
             //p_bird_main_des
             p_bird_main_des = document.createElement("p");
             p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Actions : " + details["actions"];
+            p_bird_main_des.innerText = "Actions: " + details["actions_name"];
             div_main_des_container.append(p_bird_main_des);
 
-
+            // Store actions in the array
+            actions.push(details["actions"]);
 
             //div_tooltipsss
             div_tooltipsss = document.createElement("div");
@@ -409,7 +413,7 @@
             //h3_topic 1
             h3_topic = document.createElement("h3");
             h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "About the Bird"
+            h3_topic.innerText = "About the Bird";
             div_content.append(h3_topic);
 
             //p_description
@@ -421,10 +425,9 @@
             //h3_topic 2
             h3_topic = document.createElement("h3");
             h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "General Characteristics"
+            h3_topic.innerText = "General Characteristics";
             div_content.append(h3_topic);
 
-            p_description
             p_description = document.createElement("p");
             p_description.setAttribute("class", "description");
             p_description.innerText = details["description2"];
@@ -433,7 +436,7 @@
             //h3_topic 3
             h3_topic = document.createElement("h3");
             h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "Lifestyle of Woodpeckers"
+            h3_topic.innerText = "Lifestyle of Woodpeckers";
             div_content.append(h3_topic);
 
             //p_description
@@ -445,7 +448,7 @@
             //h3_topic 4
             h3_topic = document.createElement("h3");
             h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "the breeding patterns of woodpeakers"
+            h3_topic.innerText = "Feeding Behavior";
             div_content.append(h3_topic);
 
             //p_description
@@ -454,31 +457,60 @@
             p_description.innerText = details["description4"];
             div_content.append(p_description);
 
+            //h3_topic 5
+            h3_topic = document.createElement("h3");
+            h3_topic.setAttribute("class", "topic");
+            h3_topic.innerText = "Habitat and Distribution";
+            div_content.append(h3_topic);
 
+            //p_description
+            p_description = document.createElement("p");
+            p_description.setAttribute("class", "description");
+            p_description.innerText = details["description5"];
+            div_content.append(p_description);
 
-            document.querySelector("section.info_container").append(div_content);
+            //h3_topic 6
+            h3_topic = document.createElement("h3");
+            h3_topic.setAttribute("class", "topic");
+            h3_topic.innerText = "Conservation Status";
+            div_content.append(h3_topic);
 
+            //p_description
+            p_description = document.createElement("p");
+            p_description.setAttribute("class", "description");
+            p_description.innerText = details["description6"];
+            div_content.append(p_description);
 
+            div_tooltipsss.append(div_content);
 
+            //div_tooltip
+            div_tooltip = document.createElement("div");
+            div_tooltip.setAttribute("class", "tooltip");
+            console.log(div_tooltip);
 
-            for (let l = 0; l < 1; l++) {
+            //span_tooltiptext
+            span_tooltiptext = document.createElement("span");
+            span_tooltiptext.setAttribute("class", "tooltiptext");
+            console.log(span_tooltiptext);
 
-                div_tooltip = document.createElement("div");
-                div_tooltip.setAttribute("id", "tooltip");
-                div_tooltipsss.append(div_tooltip);
+            // Add colors to the tooltip
+            colors.forEach(color => {
+                let span_color = document.createElement("span");
+                span_color.style.backgroundColor = color;
+                span_tooltiptext.append(span_color);
+            });
 
-                span_tooltiptext = document.createElement("span");
-                span_tooltiptext.setAttribute("id", "tooltiptext");
-                span_tooltiptext.innerText = "Forest";
-                div_tooltip.append(span_tooltiptext);
+            div_tooltip.append(span_tooltiptext);
+            div_tooltipsss.append(div_tooltip);
 
-                img_card_1 = document.createElement("img");
-                img_card_1.setAttribute("src", "../assets/Images/big forest.png");
-                img_card_1.setAttribute("alt", "habitat");
-                img_card_1.setAttribute("height", "80px");
-                div_tooltip.append(img_card_1);
-            }
-            document.querySelector("section.info_container").prepend(div_scrollsnap);
+            // Add actions to the tooltip
+            actions.forEach(action => {
+                let span_action = document.createElement("span");
+                span_action.innerText = action;
+                span_tooltiptext.append(span_action);
+            });
+
+            document.querySelector(".info_container").append(div_scrollsnap);
         }
 
 
@@ -488,9 +520,25 @@
 
 
 
-
-
     </script>
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
+                        class="icon ion-social-snapchat"></i></a><a href="#"><i
+                        class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                <li class="list-inline-item"><a href="../pages/about.html">About</a></li>
+                <li class="list-inline-item"><a href="../pages/q1.html">Identify bird</a></li>
+                <li class="list-inline-item"><a href="../pages/explore.html">Explore</a></li>
+                <li class="list-inline-item"><a href="../pages/guidance.html">Guidance</a></li>
+            </ul>
+            <p class="copyright">Birds buddy © 2022</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 
 

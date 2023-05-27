@@ -78,8 +78,13 @@
                 </div>
               </div> -->
       </div>
+      <div class="checkbox-container">
+        <div class="checkbox" id="checkbox1"></div>
+        <div class="checkbox" id="checkbox2"></div>
+        <div class="checkbox" id="checkbox3"></div>
+      </div>
       <div>
-        <button type="button" id="colour" class="next" onclick="submit()">Next</button></a>
+        <button type="button" id="nextButton" class="next" onclick="submit()">Next</button></a>
       </div>
       <div class="back">
         <a href="..//pages/q3.html"><button>Back</button></a>
@@ -92,6 +97,10 @@
 
 
   <script>
+
+    const place = new URLSearchParams(window.location.search).get("place");
+    const size = new URLSearchParams(window.location.search).get("size");
+
     function submit() {
       let colour = document.getElementById("colour").value
 
@@ -101,105 +110,128 @@
     }
 
 
-
+    // Color options
     let color_options = [
-  { "name": "Black" },
-  { "name": "Gray" },
-  { "name": "White" },
-  { "name": "Brown" },
-  { "name": "Red" },
-  { "name": "Yellow" },
-  { "name": "Green" },
-  { "name": "Blue" },
-  { "name": "Orange" }
-];
+      { "name": "Black" },
+      { "name": "Gray" },
+      { "name": "White" },
+      { "name": "Brown" },
+      { "name": "Red" },
+      { "name": "Yellow" },
+      { "name": "Green" },
+      { "name": "Blue" },
+      { "name": "Orange" }
+    ];
 
-// Create the main_colors div and append it to the document body
-let main_colors = document.querySelector("div.main_colors")
+    // Create the main_colors div and append it to the document body
+    let main_colors = document.querySelector(".main_colors");
+    let selectedColors = [];
 
-let selectedColors = [];
+    // Store the checkbox elements in variables
+    const checkbox1 = document.getElementById("checkbox1");
+    const checkbox2 = document.getElementById("checkbox2");
+    const checkbox3 = document.getElementById("checkbox3");
 
-// Store the color options array in localStorage
-localStorage.setItem("color_options", JSON.stringify(color_options));
+    // Add click event listeners to the checkboxes
+    checkbox1.addEventListener("click", function () {
+      handleCheckboxSelection(checkbox1, 0);
+    });
 
+    checkbox2.addEventListener("click", function () {
+      handleCheckboxSelection(checkbox2, 1);
+    });
 
-for (let i = 0; i < color_options.length; i++) {
-  // Create the divs for each color and append them to main_colors
-  let colorDiv = document.createElement("div");
-  colorDiv.setAttribute("class", color_options[i]['name']);
-  main_colors.append(colorDiv);
+    checkbox3.addEventListener("click", function () {
+      handleCheckboxSelection(checkbox3, 2);
+    });
 
-  let colorBtn = document.createElement("div");
-  colorBtn.setAttribute("class", "color-btn");
-  colorBtn.setAttribute("id", (color_options[i]['name']).toLowerCase());
-  colorBtn.textContent = color_options[i]['name'];
-  colorDiv.append(colorBtn);
+    // Iterate over the color options array and create color buttons
+    for (let i = 0; i < color_options.length; i++) {
+      let colorDiv = document.createElement("div");
+      colorDiv.setAttribute("class", color_options[i].name.toLowerCase());
+      main_colors.appendChild(colorDiv);
 
-  // Add click event listener to each color button
-  colorBtn.addEventListener("click", function () {
-    // Check if the maximum number of colors has already been selected
-    if (selectedColors.length >= 3) {
-      alert("You can select a maximum of three colors.");
-      return;
+      let colorBtn = document.createElement("div");
+      colorBtn.setAttribute("class", "color-btn");
+      colorBtn.setAttribute("id", color_options[i].name.toLowerCase());
+      colorBtn.textContent = color_options[i].name;
+      colorDiv.appendChild(colorBtn);
+
+      colorBtn.addEventListener("click", function () {
+        if (selectedColors.length >= 3) {
+          alert("You can select a maximum of three colors.");
+          return;
+        }
+
+        if (selectedColors.indexOf(color_options[i].name) !== -1) {
+          alert("You have already selected this color.");
+          return;
+        }
+
+        selectedColors.push(color_options[i].name);
+        colorDiv.classList.add("selected");
+
+        updateCheckboxes();
+      });
     }
 
-    // Check if the color has already been selected
-    if (selectedColors.indexOf(color_options[i]['name']) !== -1) {
-      alert("You have already selected this color.");
-      return;
+    // Function to handle checkbox selection/unselection
+    function handleCheckboxSelection(checkbox, index) {
+      if (selectedColors[index]) {
+        const color = selectedColors[index];
+        selectedColors.splice(index, 1);
+
+        let colorDivs = document.querySelectorAll("." + color.toLowerCase());
+        colorDivs.forEach(function (colorDiv) {
+          colorDiv.classList.remove("selected");
+        });
+
+        checkbox.classList.remove("selected");
+        checkbox.style.backgroundColor = "";
+
+        updateCheckboxes();
+      }
     }
 
-    // Add the selected color to the array
-    selectedColors.push(color_options[i]['name']);
+    // Function to update checkboxes based on the selected colors
+    function updateCheckboxes() {
+      checkbox1.classList.remove("selected");
+      checkbox2.classList.remove("selected");
+      checkbox3.classList.remove("selected");
+      checkbox1.style.backgroundColor = "";
+      checkbox2.style.backgroundColor = "";
+      checkbox3.style.backgroundColor = "";
 
-    // Add a class to the color div to indicate that it has been selected
-    colorDiv.classList.add("selected");
+      if (selectedColors.length >= 1) {
+        checkbox1.classList.add("selected");
+        checkbox1.style.backgroundColor = selectedColors[0].toLowerCase();
+      }
 
-    console.log(selectedColors);
+      if (selectedColors.length >= 2) {
+        checkbox2.classList.add("selected");
+        checkbox2.style.backgroundColor = selectedColors[1].toLowerCase();
+      }
 
-    
-  let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) // get
-
-identify_birds["color"] = selectedColors //asign
-
-localStorage.setItem("identifyBirds", JSON.stringify(identify_birds)); //push
-
-  });
-}
-
-// Add event listener to the submit button
-let submitBtn = document.getElementById("submitBtn");
-submitBtn.addEventListener("click", function () {
-  // Check if the minimum number of colors has been selected
-  if (selectedColors.length < 1) {
-    alert("You must select at least one color.");
-    return;
-  }
-
-  // Add the selected colors to the color options array
-  color_options.forEach(function (color) {
-    if (selectedColors.indexOf(color['name']) !== -1) {
-      color['selected'] = true;
+      if (selectedColors.length >= 3) {
+        checkbox3.classList.add("selected");
+        checkbox3.style.backgroundColor = selectedColors[2].toLowerCase();
+      }
     }
-  });
 
-  // Store the updated color options array in localStorage
-  localStorage.setItem("color_options", JSON.stringify(color_options));
+    // Event listener for the next button
+    const nextButton = document.getElementById("nextButton");
+    nextButton.addEventListener("click", () => {
+      if (selectedColors.length < 3) {
+        alert("Please select at least 3 colors.");
+        return;
+      }
 
-  // Redirect to the next page
-  window.location.href = "./nextPage.html";
-});
-
-// Highlight the selected color divs
-let selectedDivs = document.querySelectorAll(".selected");
-selectedDivs.forEach(function(div) {
-  div.style.border = "2px solid #000000";
-});
-
-
-
-
-
+      const selectedColor = selectedColors.join(",");
+      const urlParams = new URLSearchParams(window.location.search);
+      urlParams.set("colors", selectedColor);
+      
+      window.location.href = `./q5.html?${urlParams.toString()}`;
+    });
 
 
 

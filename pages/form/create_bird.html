@@ -128,22 +128,35 @@ for (let i = 0; i < indian_birds_list.length; i++) {
   p_birdpara_scientific_name.innerText = "Scientific Name: " + indian_birds_list[i]["scientific_name"];
   div_contentright.append(p_birdpara_scientific_name);
 
+  // Create and append the Scientific Name paragraph
+  const p_birdpara_habitat = document.createElement("p");
+  p_birdpara_habitat.setAttribute("class", "birdpara");
+  p_birdpara_habitat.innerText = "habitat: " + indian_birds_list[i]["habitat"];
+  div_contentright.append(p_birdpara_habitat);
+
   // Create and append the Size paragraph
   const p_birdpara_size = document.createElement("p");
   p_birdpara_size.setAttribute("class", "birdpara");
-  p_birdpara_size.innerText = "Size: " + indian_birds_list[i]["size"];
+  p_birdpara_size.innerText = "Size: " + indian_birds_list[i]["size_name"];
   div_contentright.append(p_birdpara_size);
+
+// Create and append the Size paragraph
+const p_tentative_size = document.createElement("p");
+  p_birdpara_size.setAttribute("class", "birdpara");
+  p_birdpara_size.innerText = "Size: " + indian_birds_list[i]["tentative_size"];
+  div_contentright.append(p_birdpara_size);
+
 
   // Create and append the Color heading
   const p_birdpara_color = document.createElement("p");
   p_birdpara_color.setAttribute("class", "birdpara");
-  p_birdpara_color.innerText = "Color: " + indian_birds_list[i]["colors"];
+  p_birdpara_color.innerText = "Color: " + indian_birds_list[i]["colors_name"];
   div_contentright.append(p_birdpara_color);
 
   // Create and append the Actions heading
   const p_birdpara_actions = document.createElement("p");
   p_birdpara_actions.setAttribute("class", "birdpara");
-  p_birdpara_actions.innerText = "Actions: " + indian_birds_list[i]["actions"];
+  p_birdpara_actions.innerText = "Actions: " + indian_birds_list[i]["actions_name"];
   div_contentright.append(p_birdpara_actions);
 
   // Create the tooltip div
@@ -180,7 +193,7 @@ for (let i = 0; i < indian_birds_list.length; i++) {
   div_tooltipsss.append(div_tooltip);
 
   const img_card_1 = document.createElement("img");
-  img_card_1.setAttribute("src", indian_birds_list[i]["habitat"]);
+  img_card_1.setAttribute("src", indian_birds_list[i]["habitat_img"]);
   img_card_1.setAttribute("alt", "forest");
   img_card_1.setAttribute("height", "80px");
   div_tooltip.append(img_card_1);

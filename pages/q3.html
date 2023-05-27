@@ -97,92 +97,99 @@
     </section>
 
     <script>
-        function submit() {
 
-            window.location.href = "../pages/q4.html"
+        const place = new URLSearchParams(window.location.search).get("place");
+
+
+  function submit() {
+            // window.location.href = "../pages/q4.html";
         }
 
+     // Define the habitat options
+let habitat_options = [
+  {
+    "name": "Sparrow size",
+    "image": {
+      "source": "../assets/Images/sparrow.png",
+      "alt": "Sparrow size"
+    }
+  },
+  {
+    "name": "Crow size",
+    "image": {
+      "source": "../assets/Images/crow2nd.png",
+      "alt": "Crow size"
+    }
+  },
+  {
+    "name": "Myna size",
+    "image": {
+      "source": "../assets/Images/crow-removebg-preview.png",
+      "alt": "Myna size"
+    }
+  },
+  {
+    "name": "Goose size",
+    "image": {
+      "source": "../assets/Images/goose_image-removebg-preview.png",
+      "alt": "Goose size"
+    }
+  }
+];
 
-        // Define the habitat options
-        let habitat_options = [
-            {
-                "name": "Sparrow size",
-                "image": {
-                    "source": "../assets/Images/sparrow.png",
-                    "alt": "Sparrow size"
-                }
-            },
-            {
-                "name": "Crow size",
-                "image": {
-                    "source": "../assets/Images/crow2nd.png",
-                    "alt": "Crow size"
-                }
-            },
-            {
-                "name": "Myna size",
-                "image": {
-                    "source": "../assets/Images/crow-removebg-preview.png",
-                    "alt": "Myna size"
-                }
-            },
-            {
-                "name": "Goose size",
-                "image": {
-                    "source": "../assets/Images/goose_image-removebg-preview.png",
-                    "alt": "Goose size"
-                }
-            }
-        ];
+// Get the container for the habitat options
+let habitat_container = document.querySelector("#habitats");
 
-        // Get the container for the habitat options
-        let habitat_container = document.querySelector("#habitats");
+// Loop through each habitat option and create a card for it
+habitat_options.forEach((habitat, index) => {
+  // Create the card element
+  let card = document.createElement("div");
+  card.setAttribute("class", "card");
 
-        // Loop through each habitat option and create a card for it
-        habitat_options.forEach((habitat, index) => {
+  // Create the link to the next question
+  let link = document.createElement("a");
+//   link.setAttribute("href", "./q4.html");
+  card.appendChild(link);
 
-            // Create the card element
-            let card = document.createElement("div");
-            card.setAttribute("class", "card");
+  // Create the image element for the habitat
+  let image = document.createElement("img");
+  image.setAttribute("class", "cards");
+  image.setAttribute("id", habitat.name);
+  image.setAttribute("src", habitat.image.source);
+  image.setAttribute("alt", habitat.image.alt);
+  link.appendChild(image);
 
-            // Create the link to the next question
-            let link = document.createElement("a");
-            link.setAttribute("href", "./q4.html");
-            card.appendChild(link);
+  // Create the container for the habitat name
+  let container = document.createElement("div");
+  container.setAttribute("class", "containers");
+  card.appendChild(container);
 
-            // Create the image element for the habitat
-            let image = document.createElement("img");
-            image.setAttribute("class", "cards");
-            image.setAttribute("id", habitat.name);
-            image.setAttribute("src", habitat.image.source);
-            link.appendChild(image);
+  // Create the habitat name element
+  let habitat_name = document.createElement("h3");
+  habitat_name.innerText = habitat.name;
+  container.appendChild(habitat_name);
 
-            // Create the container for the habitat name
-            let container = document.createElement("div");
-            container.setAttribute("class", "containers");
-            card.appendChild(container);
+  // Add an event listener to the card to store the selected habitat option in localStorage
+  card.addEventListener("click", () => {
+    let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) || {};
+    identify_birds["size"] = habitat.name;
+    localStorage.setItem("identifyBirds", JSON.stringify(identify_birds));
+  });
 
-            // Create the habitat name element
-            let habitat_name = document.createElement("h3");
-            habitat_name.innerText = habitat.name;
-            container.appendChild(habitat_name);
+  // Add the card to the habitat container
+  habitat_container.appendChild(card);
+});
 
-            // Add an event listener to the card to store the selected habitat option in localStorage
-            card.addEventListener("click", () => {
-                let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) // get
-
-                console.log(habitat)
-
-                identify_birds["size"] = habitat["name"] //asign
-
-                localStorage.setItem("identifyBirds", JSON.stringify(identify_birds)); //push
-
-            });
-
-            // Add the card to the habitat container
-            habitat_container.appendChild(card);
-
-        });
+// Event listener for the habitat options
+let cards = document.querySelectorAll(".card");
+cards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const size = card.querySelector("img").getAttribute("id");
+    console.log(size);
+    
+    window.location.href = `./q4.html?place=${place}&size=${size}`;
+  });
+});
 
 
 

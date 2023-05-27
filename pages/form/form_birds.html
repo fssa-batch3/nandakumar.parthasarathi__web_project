@@ -53,17 +53,29 @@
         <label>Bird Stage-4 Image:</label><br>
         <input type="url" id="b_stage-4"><br>
         <label>Name:</label><br>
-        <input type="text" id="birdname" required ><br>
+        <input type="text" id="birdname" required><br>
         <label>Scientific Name:</label><br>
-        <input type="text" id="scientificname" required ><br>
-        <label>Size:</label><br>
+        <input type="text" id="scientificname" required><br>
+        <label>Size in Cm:</label><br>
         <input type="text" id="size" required><br>
-        <label>Habitat Iamge:</label><br>
-        <input type="url" id="habitat"><br>
-        <label>colors:</label><br>
-        <input type="text" id="color" required><br>
-        <label>actions:</label><br>
-        <input type="text" id="actions" required><br>
+        <label>Tentative Size</label><br>
+        <input type="text" id="tentative" required><br>
+        <label>Habitat:</label><br>
+        <input type="text" id="habitat"><br>
+        <label>colors1:</label><br>
+        <input type="text" id="color1" required><br>
+        <label>colors2:</label><br>
+        <input type="text" id="color2" required><br>
+        <label>colors3:</label><br>
+        <input type="text" id="color3" required><br>
+        <label>actions1:</label><br>
+        <input type="text" id="actions1" required><br>
+        <label>actions2:</label><br>
+        <input type="text" id="actions2"><br>
+        <label>actions3:</label><br>
+        <input type="text" id="actions3" required><br>
+        <label>Habitat img:</label><br>
+        <input type="url" id="habitat_img"><br>
         <label>About Bird:</label><br>
         <textarea type="text" id="des1" required pattern="[a-z A-Z]*"></textarea><br>
         <label>General Characteristics:</label><br>
@@ -88,10 +100,16 @@
             let birdStage4 = document.getElementById("b_stage-4").value;
             let name = document.getElementById("birdname").value;
             let scientific_Name = document.getElementById("scientificname").value;
-            let size = document.getElementById("size").value;
+            let size_in_cm = document.getElementById("size").value;
+            let tentative_size= document.getElementById("tentative").value;
             let habitat = document.getElementById("habitat").value;
-            let colors = document.getElementById("color").value;
-            let actions = document.getElementById("actions").value;
+            let colors1 = document.getElementById("color1").value;
+            let colors2 = document.getElementById("color2").value;
+            let colors3 = document.getElementById("color3").value;
+            let actions1 = document.getElementById("actions1").value;
+            let actions2 = document.getElementById("actions2").value;
+            let actions3 = document.getElementById("actions3").value;
+            let habitat_img = document.getElementById("habitat_img").value;
             let des1 = document.getElementById("des1").value;
             let des2 = document.getElementById("des2").value;
             let des3 = document.getElementById("des3").value;
@@ -107,10 +125,16 @@
                 data.birdStage4 == birdStage4 &&
                 data.name == data.name &&
                 data.scientific_Name == data.scientific_Name &&
-                data.size == data.size &&
+                data.size_in_cm == data.size_in_cm &&
+                data.tentative_size == data.tentative_size &&
                 data.habitat == data.habitat &&
-                data.colors == data.colors &&
-                data.actions == data.actions &&
+                data.colors1 == data.colors1 &&
+                data.colors2 == data.colors2 &&
+                data.colors3 == data.colors3 &&
+                data.actions1 == data.actions1 &&
+                data.actions2 == data.actions2 &&
+                data.actions3 == data.actions3 &&
+                data.habitat_img == data.habitat_img &&
                 data.des1 == data.des1 &&
                 data.des2 == data.des2 &&
                 data.des3 == data.des3 &&
@@ -129,11 +153,14 @@
                     },
                     "bird_name": name,
                     "scientific_name": scientific_Name,
-                    "size": size,
+                    "size": {
+                        "size_in_cm": size_in_cm,
+                        "tentative_size": tentative_size,
+                    },
                     "habitat": habitat,
-                   "habitat" : habitat,
-                    "colors": colors,
-                    "actions":actions,
+                    "colors_name": [colors1, colors2, colors3],
+                    "actions_name": [actions1, actions2, actions3],
+                    "habitat_img": habitat_img,
                     "description1": des1,
                     "description2": des2,
                     "description3": des3,
@@ -150,7 +177,7 @@
         }
         )
 
-        
+
 
 
 

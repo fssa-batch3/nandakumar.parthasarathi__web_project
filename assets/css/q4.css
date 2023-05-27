@@ -17,6 +17,38 @@
   font-size: 20px;
 }
 
+.color-div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: yellow;
+}
+
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  border: 2px solid #000;
+  height: 30px;
+  width: 30px;
+}
+
+.checkbox.selected {
+  background-color: #000;
+}
 
 .black button {
   color: white;
