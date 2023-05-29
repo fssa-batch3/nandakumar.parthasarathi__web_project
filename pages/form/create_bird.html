@@ -128,24 +128,26 @@ for (let i = 0; i < indian_birds_list.length; i++) {
   p_birdpara_scientific_name.innerText = "Scientific Name: " + indian_birds_list[i]["scientific_name"];
   div_contentright.append(p_birdpara_scientific_name);
 
+  // Create and append the Size paragraph
+  const p_birdpara_size = document.createElement("p");
+  p_birdpara_size.setAttribute("class", "birdpara");
+  p_birdpara_size.innerText = "Size: " + indian_birds_list[i]["size_in_cm"];
+  div_contentright.append(p_birdpara_size);
+
+// Create and append the Size paragraph
+const p_birdpara_tentative_size = document.createElement("p");
+  p_birdpara_tentative_size.setAttribute("class", "birdpara");
+  p_birdpara_tentative_size.innerText = "Tentative Size: " + indian_birds_list[i]["tentative_size"];
+  div_contentright.append(p_birdpara_tentative_size);
+
+
   // Create and append the Scientific Name paragraph
   const p_birdpara_habitat = document.createElement("p");
   p_birdpara_habitat.setAttribute("class", "birdpara");
   p_birdpara_habitat.innerText = "habitat: " + indian_birds_list[i]["habitat"];
   div_contentright.append(p_birdpara_habitat);
 
-  // Create and append the Size paragraph
-  const p_birdpara_size = document.createElement("p");
-  p_birdpara_size.setAttribute("class", "birdpara");
-  p_birdpara_size.innerText = "Size: " + indian_birds_list[i]["size_name"];
-  div_contentright.append(p_birdpara_size);
-
-// Create and append the Size paragraph
-const p_tentative_size = document.createElement("p");
-  p_birdpara_size.setAttribute("class", "birdpara");
-  p_birdpara_size.innerText = "Size: " + indian_birds_list[i]["tentative_size"];
-  div_contentright.append(p_birdpara_size);
-
+  
 
   // Create and append the Color heading
   const p_birdpara_color = document.createElement("p");

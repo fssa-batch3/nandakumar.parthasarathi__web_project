@@ -1160,24 +1160,97 @@
         //     }
         // }
 
-        const search = () => {
-            const searchbar = document.getElementById("searchbar").value.toLowerCase();
-            const all_birds = document.getElementById("all_birds");
-            const birdstructure = document.querySelectorAll(".birdstructure"); // Added dot before "birdstructure" to denote class name
-            const birds = document.getElementsByTagName("p");
-            for (var i = 0; i < bird_info_details.length; i++) {
-                let match = birdstructure[i].getElementsByTagName('p')[0]; // Changed "box" to "birdstructure" to match the variable name
-                if (match) {
-                    let textvalue = match.textContent || match.innerHTML;
-                    if (textvalue.toLowerCase().indexOf(searchbar) > -1) { // Changed "searchbox" to "searchbar" to match the variable name
-                        birdstructure[i].style.display = ""; // Changed "box" to "birdstructure" to match the variable name
-                    } else {
-                        birdstructure[i].style.display = "none"; // Changed "box" to "birdstructure" to match the variable name
-                    }
-                }
-            }
-        }
+        // const search = () => {
+        //     const searchbar = document.getElementById("searchbar").value.toLowerCase();
+        //     const all_birds = document.getElementById("all_birds");
 
+
+
+        //     const birdstructure = document.querySelectorAll(".birdstructure"); // Added dot before "birdstructure" to denote class name
+        //     const birds = document.getElementsByTagName("p");
+        //     for (var i = 0; i < bird_info_details.length; i++) {
+        //         let match = birdstructure[i].getElementsByTagName('p')[0]; // Changed "box" to "birdstructure" to match the variable name
+        //         if (match) {
+        //             let textvalue = match.textContent || match.innerHTML;
+        //             if (textvalue.toLowerCase().indexOf(searchbar) > -1) { // Changed "searchbox" to "searchbar" to match the variable name
+        //                 birdstructure[i].style.display = ""; // Changed "box" to "birdstructure" to match the variable name
+        //             } else {
+        //                 birdstructure[i].style.display = "none"; // Changed "box" to "birdstructure" to match the variable name
+        //             }
+        //         }
+        //     }
+        // }
+
+
+        // const search = () => {
+        //     const searchbar = document.getElementById("searchbar").value.toLowerCase();
+        //     const birdstructures = document.getElementsByClassName("birdstructure");
+
+        //     for (var i = 0; i < birdstructures.length; i++) {
+        //         let bird = birdstructures[i].getElementsByTagName("p")[0];
+        //         if (bird) {
+        //             let textValue = bird.textContent || bird.innerHTML;
+        //             if (textValue.toLowerCase().indexOf(searchbar) > -1) {
+        //                 birdstructures[i].style.display = "";
+        //             } else {
+        //                 birdstructures[i].style.display = "none";
+        //             }
+        //         } 
+        //     }
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        const searchBar = document.getElementById("searchbar").value.toLowerCase
+        for(let i = 0; i < bird_info_details.length; i++){
+   
+            const bird = bird_info_details[i].bird_name
+
+
+        }
 
 
 
@@ -1187,6 +1260,23 @@
 
         let bird_info_details = JSON.parse(localStorage.getItem("bird_info_details")) || [];
         //   console.log(bird_info_details);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1287,9 +1377,9 @@
             read_button.innerText = "Read more...";
             div_readmore.append(read_button);
 
-            div_tooltip = document.createElement("div");
-            div_tooltip.setAttribute("id", "tooltip");
-            div_tooltipsss.append(div_tooltip);
+            // div_tooltip = document.createElement("div");
+            // div_tooltip.setAttribute("id", "tooltip");
+            // div_tooltipsss.append(div_tooltip);
 
             // span_tooltiptext = document.createElement("span");
             // span_tooltiptext.setAttribute("id", "tooltiptext");
