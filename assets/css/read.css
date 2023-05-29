@@ -221,3 +221,14 @@ right: 50px;
     font-size: 40px;
     font-weight: bolder;
 }
+
+
+
+.aboutimage {
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/680/751/662/sunset-birds-lake-pack-wallpaper-preview.jpg);
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  opacity: 1;
+}
+

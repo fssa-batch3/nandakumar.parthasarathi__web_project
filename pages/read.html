@@ -1,526 +1,1404 @@
+
+
+
+<!-- *********************************************************************************************************************** -->
+
+
+
 <!DOCTYPE html>
-<html>
+<html lang="eg">
 
 <head>
+    <title>Explore Birds</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
 
-    <title>read</title>
-
-    <link rel="stylesheet" href="../assets/css/read.css">
     <link rel="stylesheet" href="..//assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/explore.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <div class="header">
-        <h1 class="birds"><b>BIRDS BUDDY</b></h1>
-        <ul>
-            <li>
-                <a class="navlist" href="../index.html">Home</a>
-            </li>
-            <li>
-                <a class="navlist" href="../pages/about.html">About</a>
-            </li>
-            <li>
-                <a class="navlist" href="../pages/q1.html">Identify Bird</a>
-            </li>
-            <li>
-                <a class="navlist" href="../pages/explore.html">Explore</a>
-            </li>
-            <li>
-                <a class="guidance" href="../pages/guidance.html">Guidance</a>
-            </li>
-        </ul>
-    </div>
-    <div class="headerendline"></div>
 
-    <section class="info_container">
-        <!-- <div class="scrollsnap">
-            <div class="imagescontainer">
-                <div class="birditems">
-                    <img class="scrollbird" src=" " alt="bird1" height="300px"
-                        width="400px">
-                </div>
-                <div class="birditems">
-                    <img class="scrollbird" src="../assets/Images/second stage woodpeacker2.jfif" alt="bird2"
-                        height="300px" width="400px">
-                </div>
-                <div class="birditems">
-                    <img class="scrollbird" src="../assets/Images/thirdstage.jpg" alt="bird3" height="300px"
-                        width="400px">
-                </div>
-                <div class="birditems">
-                    <img class="scrollbird" src="../assets/Images/stage 4 woodpeacker.jpg" alt="bird4" height="300px"
-                        width="400px">
-                </div>
+    <div class="aboutimage">
+        <div class="header" id="navbar">
+            <h1 class="birds"><b>BIRDS BUDDY</b></h1>
+            <ul>
+                <li>
+                    <a class="navlist" href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a class="navlist" href="../pages/about.html">About</a>
+                </li>
+                <li>
+                    <a class="navlist" href="../pages/q1.html">Identify Bird</a>
+                </li>
+                <li>
+                    <a class="navlist" href="../pages/explore.html">Explore</a>
+                </li>
+                <li>
+                    <a class="guidance" href="../pages/guidance.html">Guidance</a>
+                </li>
+            </ul>
+        </div>
+        <div class="headerindicator">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
             </div>
-            <div class="main_des_container">
-                <p class=bird_main_des>
-                    Name: Woodpeacker<br>
-                    Scientific Name: Picidae<br>
-                    Size : 23cm
-                </p>
+        </div>
+        <div class="headerendline"></div>
+        <div>
+            <h1 class="title">Explore</h1>
+        </div>
+        <div>
+            <h3 class="sub-title"><span class="spanhome">Home</span> - <span class="spanabout">Explore</span></h3>
+        </div>
+    </div>
+
+<!-- 
+    <div class="headerendline"></div>
+    <section class="overall">
+        <main>
+            <div class="searchhead">
+                <div class="explorediv">
+                    <h2> Explore Birds</h2>
+                </div>
+                <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> -->
+
+                <!-- <div class="wrapper"> -->
+                    <!-- <div class="label">Submit your search</div> -->
+                    <!-- <div class="searchBar">
+                        <input list="birdsname" name="birdsname" id="searchbar" class="textbox" type="text"
+                            placeholder="Enter bird name ..." onkeyup="search()" height="30px" width="400px">
+                        <button class="searchbtn" id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
+                            <svg style="width:24px;height:18px" viewBox="0 0 24 24">
+                                <path fill="#666666"
+                                    d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div> -->
+                <!-- <form action="/action_page.php" method="get"> -->
+
+
+
+
+                <!-- <datalist id="birdsname">
+                            <option value="Peacock"></option>
+                            <option value="Cattle Egret"></option>
+                            <option value="Eagle"></option>
+                            <option value="White-breasted Waterhen"></option>
+                            <option value="Rufous Treepie"></option>
+                        </datalist> -->
+                <!-- </form> -->
+            </div>
+            </div>
+
+            <section class="detail_about_bird" id="all_birds">
+                <!-- <div class="birdstructure"> 
+                 <div class="contentleft">
+                     <a href="../pages/peacock.html">
+                        <img src="https://media.istockphoto.com/id/1296527895/photo/various-dance-poses-of-an-indian-male-peacock.jpg?b=1&s=170667a&w=0&k=20&c=YTVAukYU4YGaXxNkyu4YLr_oyjRRtVYUMgOFThuyPUU=" alt="peacoak">
+                     </a> 
+                </div>
+                <div class="contentright">
+                    <p class=birdpara>
+                        Name: Peacock<br>
+                        Scientific Name: Pavo cristatus<br>
+                        Size : 85cm - 110cm
+                    </p>
                 <div class="tooltipsss">
                     <div id="tooltip">
                         <span id="tooltiptext">Forest</span>
                         <span><img src="../assets/Images/big forest.png" alt="forest" height="80px"></Span>
                     </div>
                     <div id="tooltip">
-                        <span id="tooltiptext">Insects</span>
-                        <span>
-                            <img src="../assets/Images/beetlepng-removebg-preview (1).png" alt="Insects" height="80px">
-                        </span>
+                    <span id="tooltiptext">Insects</span>
+                    <span>
+                        <img src="../assets/Images/beetlepng-removebg-preview (1).png" alt="Insects" height="80px">
+                    </span>
                     </div>
                     <div id="tooltip">
-                        <span id="tooltiptext">Fruits</span>
-                        <img src="../assets/Images/cherryss-removebg-preview.png" alt="forest" height="80px">
-                    </div>
+                        <span id="tooltiptext">Fruits</span> 
+                        <img src="../assets/Images/cherryss-removebg-preview.png" alt="forest" height="80px"> 
+                    </div>      
                     <div id="tooltip">
-                        <span id="tooltiptext">Plants</span>
+                        <span id="tooltiptext">Plants</span> 
                         <span><img src="../assets/Images/plant-removebg-preview.png" alt="forest" height="80px"></span>
                     </div>
                     <div id="tooltip">
-                        <span id="tooltiptext">Seeds</span>
+                        <span id="tooltiptext">Seeds</span> 
                         <img src="../assets/Images/seesd-removebg-preview.png" alt="forest" height="80px">
                     </div>
-                </div>
-            </div>
-        </div>
-        
-        <br>
-        <div class="content">
-                <h3 class="topic">About the Bird</h3>
-                <p class="description">
-                    Woodpeckers scientific name is Picinea which is a part of the family Picidae. The subfamily Picinea
-                    has
-                    a
-                    variety of 180 birds including Woodpeckers. As the name suggests, it is famous for pecking into the
-                    woods.
-                    Most of the time they are found on the trunk of a tree, striking into the woods to find insects.
-                    They
-                    also
-                    peck dead woods to make nest holes where they can live.
-                    Woodpeckers are commonly found worldwide except in a few places. These excluded areas are New
-                    Zealand,
-                    New
-                    Guinea, Australia, and polar regions. These stunning birds are amply found in Southeast Asian and
-                    South
-                    American countries. They mostly like to live in forests and woodland areas where they can get enough
-                    trees.
-                    However, only some species like the Gila Woodpecker survive in rocky or desert areas.
-                    Some Woodpeckers don't peck wood at all. They survive in the ground by making holes through the
-                    grounds
-                    to
-                    form their nests. Also, they pick up insects from the ground for a living. These Woodpeckers are
-                    found
-                    in
-                    rocky and grassy mountains located in South Africa.
-                </p>
-          
-            <div class="birdvedio">
-                <h3 class="topic">See the beauty of Woodpeacker</h3>
-                <video class=bird_vedio controls="true">
-                    <source src="../assets/videos/Woodpecker.mp4" type="video/mp4">
-                </video>
+                </div> 
 
-            </div>
-            <div>
-                <h3 class="topic">General Characteristics</h3>
-                <p class="description">
-                    Woodpecker information may vary as there are multiple types. The size of Woodpeckers starts from 7cm
-                    in
-                    length. Also, some Woodpeckers are 50cm long! This means some Woodpeckers may weigh around 0.25 oz
-                    while
-                    other types may have a weight of around 20 oz.
-                    The colors of Woodpeckers are diverse. Some are multicolored while some have black bodies tinted
-                    with
-                    olive
-                    and brown. The common Woodpeckers in Southern Asia have black bodies with white spots and yellow
-                    shades
-                    along with red feathers on the head. These color combinations are important for camouflage.
-                    Except for some, most Woodpeckers have short legs with zygodactyl feet. While two toes face forward,
-                    the
-                    other two are bent backward. This toe arrangement helps them to get a good grip of the trunk and
-                    move
-                    vertically up to the tree.
-                    Woodpeckers have sharp and strong beaks for effective drilling into the trunk. The long sticky
-                    tongue
-                    helps
-                    them grasp insects. To prevent brain damage due to repeated drilling and pecking, Woodpeckers have
-                    certain
-                    features.
-                    Woodpeckers have a flexible and small brain. Its subdural cavity is narrow with minimal CSF which
-                    controls
-                    and restricts the movement of the brain inside the skull preventing severe brain damage. The CSF
-                    also
-                    monitors brain orientation with the skull allowing short contact.
-                    The skull has soft and flexible bones covering the forehead and the backside of the skull. Another
-                    special
-                    feature is the hyoid bone. This bone supports the skull as well as the spinal cord. It goes around
-                    the
-                    braincase going through both sides of the spinal cord and ends at the right nostril cavity. This
-                    bone
-                    safeguards the brain.
-                </p>
-
-                <div>
-                    <h3 class="topic">Lifestyle of Woodpeckers</h3>
-
-                    <p class="description">
-
-                        Lifestyles are different for different species. Some Woodpeckers live solitary lives while some
-                        prefer
-                        to live in a group. Their common behaviors include head shaking and sharp vocalization. They are
-                        also
-                        known for heavily drilling and pecking through the woods. Woodpeckers roam in the daylight and
-                        rest
-                        in
-                        their nest at night.
-                        Drumming is a common characteristic of the Woodpecker bird. They peck into the wood vigorously
-                        and
-                        repeatedly. They take breaks and start drumming again. Male Woodpeckers do this more often than
-                        female
-                        Woodpeckers. This works like a territorial call. This is a sign to other Woodpecker mates and
-                        various
-                        drumming patterns have different meanings that the species understand.
-                        Their voice is high-pitched and different Woodpeckers have diverse ways of calling. Some
-                        Woodpeckers
-                        make rattling sounds while the other species whistle. Some species wail and scream. Some other
-                        Woodpeckers make nasal churrs. However, each type of calling pattern carries a message to the
-                        fellow
-                        Woodpeckers. Some calls denote danger while some calls indicate a call for food.
-                        Woodcutter birds often make low-pitched sounds as well. Woodpecker couples usually make
-                        low-pitched
-                        sounds when they are in the nest. The interval between each call also carries a message to the
-                        other
-                        Woodpeckers.
-
-                    </p>
-                    <div>
-                        <h3 class="topic">The Breeding Pattern of Woodpeckers</h3>
-
-                        <p class="description">
-                            The main features of Woodpecker include making holes in the barks and making nests inside
-                            the
-                            holes.
-                            They mostly choose rotten or dead woods to make such nests. In places where there are
-                            inadequate
-                            trees, they make nests in large cacti. Some Woodpeckers fully rely on the ground making
-                            holes
-                            under
-                            the earth and live there.
-                            Some Woodpeckers also make nests in the bamboo forests. Some occupy the nests of termites
-                            and
-                            ants.
-                            In urban areas, they choose wooden utility poles to make their nests. However, wrynecks are
-                            unable
-                            to make their own nests. They need to find a premade nest to settle. Woodpeckers usually
-                            collect
-                            wood pieces to make the nest. They make flooring with these wood pieces inside the hole.
-                            Premade holes are often occupied by other Woodpeckers and thus there remains a constant
-                            competition
-                            to make a nest. Even other birds like sparrows may start breeding the holes and in such
-                            situations,
-                            Woodpeckers need to fight violently to take over the place.
-                            Most Woodpeckers are monogamous while only a few species are polygamous. In rare cases, a
-                            group
-                            of
-                            Woodpeckers may take care of the young. Researchers say that group breeding is more
-                            successful
-                            than
-                            individual breeding. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-                            reprehenderit qui voluptates voluptatum cumque voluptate est doloribus velit, quod obcaecati
-                            sed dolorem vel iste recusandae atque quae porro nobis nemo.
-                        </p>
+                        <div>
+                            <a href="..//pages/peacock.html">
+                                <button type="submit" id="readmore" class="click" onclick="submit()">Read more ...</button>
+                            </a>
+                        </div>
                     </div>
-             </div> -->
+                </div>  -->
 
-    </section>
-    <br>
-    <br>
-    <!-- <div class="fullbird">
-        <div class="fullbird">
-            <h1 class="name">Woodpecker</h1>
-            <img src="../assets/Images/woodpeacker bigjpg.jpg" alt="full peacock">
-        </div>
-    </div> -->
-    </section>
+                <!-- <div class="birdstructure">
+                    <div class="contentleft">
+                        <a href="../pages/cattle egret.html"><img src="../assets/Images/cattle egret main img.jpg"
+                                alt="cattle egret"></a>
+                    </div>
+                    <div class="contentright">
+                        <p>
+                            Name: Cattle Egret<br>
+                            Scientific Name: Bubulcus ibis <br>
+                            Size: 50cm
+                        </p>
+                        <div class="habit">
+                            <img src="../assets/Images/river-removebg-preview.png" alt="forest" height="80px">
+                            <img src="../assets/Images/beetlepng-removebg-preview (1).png" alt="forest" height="60px">
+                        </div>
+                        <div>
+                            <a href="..//pages/cattle egret.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="birdstructure">
+                    <div class="contentleft">
+                        <a href="../pages/eagle.html">
+                        <img
+                                src="https://c4.wallpaperflare.com/wallpaper/252/767/677/eagle-images-wallpaper-preview.jpg"
+                                alt="eagle"></a>
+                    </div>
+                    <div class="contentright">
+                        <p>
+                            Name: Eagle<br>
+                            Scientific Name: Aquila <br>
+                            Size: 85cm - 90cm
+                        </p>
+                        <div class="habit">
+                            <img src="../assets/Images/urban.png" alt="forest" height="100px">
+                            <img src="../assets/Images/mouse-animal-vector-rat-removebg-preview (1).png" alt="forest"
+                                height="140px">
+
+                        </div>
+                        <div class="habit">
+                            <a href="..//pages/eagle.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/main watrehen jfif.jfif" alt="White-breasted Waterhen">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: White-breasted Waterhen
+                            Scientific Name: Amaurornis Phoenicurs <br>
+                            Size: 32cm
+                        </p>
+                        <div class="habit">
+                            <img src="../assets/Images/river-removebg-preview.png" alt="forest" height="80px">
+                            <img src="../assets/Images/plant-removebg-preview.png" alt="forest" height="60px">
+                        </div>
+                        <div>
+                            <a href="..//pages/waterhen.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/rufous main_b.jpg" alt="Rufous Treepie">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Rufous Treepie<br>
+                            Scientific Name: Dendrocitta vagabunda <br>
+                            Size: 50cm
+                        </p>
+                        <div class="habit">
+                            <img src="../assets/Images/big forest.png" alt="forest" height="80px">
+                            <img src="../assets/Images/beetlepng-removebg-preview (1).png" alt="forest" height="80px">
+                            <img src="../assets/Images/cherryss-removebg-preview.png" alt="forest" height="80px">
+                            <img src="../assets/Images/plant-removebg-preview.png" alt="forest" height="80px">
+                            <img src="../assets/Images/seesd-removebg-preview.png" alt="forest" height="80px">
+                        </div>
+                        <div>
+                            <a href="..//pages/rufous.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/White throated .jfif" alt="White-throated Kingfisher">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: White-throated Kingfisher<br>
+                            Scientific Name: Halcyon smyrnensis <br>
+                            Size: 27cm
+                        </p>
+                        <div class="habit">
+                            <img src="../assets/Images/mouse-animal-vector-rat-removebg-preview (1).png" alt="forest"
+                                height="140px">
+                            <img src="../assets/Images/globe-removebg-preview.png" alt="forest" height="100px">
+                        </div>
+                        <div>
+                            <a href="..//pages/white kingfisher.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/yellow-billed babber.jfif" alt="yellow-billed babber">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Yellow-billed Babber<br>
+                            Scientific Name: Turdoides <br>
+                            Size: 25cm
+                        </p>
+                        <div class="habit">
+                            <img src="../assets/Images/shrublandpng.png" alt="shrubland" height="100px">
+                            <img src="../assets/Images/beetlepng-removebg-preview (1).png" alt="forest" height="80px">
+                            <img src="../assets/Images/cherryss-removebg-preview.png" alt="forest" height="80px">
+                            <img src="../assets/Images/plant-removebg-preview.png" alt="forest" height="80px">
+                            <img src="../assets/Images/seesd-removebg-preview.png" alt="forest" height="80px">
+                        </div>
+                        <div>
+                            <a href="..//pages/yellow-billed babber.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/Asian koel .jpg" alt="Asian_koel">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Asian Koel<br>
+                            Scientific Name: Eudynamys scolopaceus <br>
+                            Size: 43cm
+                        </p>
+                        <div class="habit">
+                            <img src="../assets/Images/urban.png" alt="forest" height="100px">
+                            <img src="../assets/Images/cherryss-removebg-preview.png" alt="forest" height="100px">
+                        </div>
+                        <div>
+                            <a href="..//pages/Asian koel.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/Ashy Prinia.jfif" alt="Ashy prinia">
+
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Ashy Prinia<br>
+                            Scientific Name: Prinia socials <br>
+                            Size: 13cm
+                        </p>
+                        <div class="habit">
+                            <img src="../assets/Images/shrublandpng.png" alt="shrubland" height="100px">
+                            <img src="../assets/Images/beetlepng-removebg-preview (1).png" alt="forest" height="55px">
+                        </div>
+                        <div>
+                            <a href="..//pages/ashy prinia.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/Spotbilled_Duck.jpg" alt="Indian spot-billed duck">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Indian spot-billed Duck<br>
+                            Scientific Name: Anas poecilorhyncha <br>
+                            Size: 60cm
+                        </p>
+                        <div class="habit">
+                            <img src="../assets/Images/river-removebg-preview.png" alt="forest" height="100px">
+                            <img src="../assets/Images/plant-removebg-preview.png" alt="forest" height="80px">
+                        </div>
+                        <div>
+                            <a href="..//pages/Indian spot-billed Duck.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/eurasian hoopoe.jpg" alt="Eurasian hoopoe">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Eurasian Hoopoe<br>
+                            Scientific Name: Upupa epops <br>
+                            Size: 31cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/sparrow.jpg" alt="House Sparrow">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: House Sparrow<br>
+                            Scientific Name: Passer domesticus<br>
+                            Size: 15cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/indian robin.jfif" alt="Indian Robin">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Indian Robin<br>
+                            Scientific Name: Copsychus fulicatus<br>
+                            Size: 16cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/Indian pond heron.jfif" alt="Indian Pond-Heron">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Indian Pond-Heron<br>
+                            Scientific Name: Ardeola graylii<br>
+                            Size: 42cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/indian roller.jpg" alt="Coracias benghalensis">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Indian Roller<br>
+                            Scientific Name: Coracias benghalensis<br>
+                            Size: 31cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/green bee eater.jfif" alt="Green Bee-eater">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Green Bee-eater<br>
+                            Scientific Name: Merops orientalis<br>
+                            Size: 17cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/Common lora.jpg" alt="Common Lora">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Common Lora<br>
+                            Scientific Name: Aegitha tiphia<br>
+                            Size: 14cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/spotted owlet.jpg" alt="Spotted Owlet">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Spotted Owlet<br>
+                            Scientific Name: Athene brama<br>
+                            Size: 21cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/oriental magpie robin.jpg" alt="Oriental Magpie-Robin">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Oriental Magpie-Robin<br>
+                            Scientific Name: Copsychus saularis<br>
+                            Size: 20cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/little cormorant.jpg" alt=" Little Cormorant">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Little Cormorant<br>
+                            Scientific Name: Phalacrocorax niger<br>
+                            Size: 50cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/red-whiskered bulbul.jpg" alt=" Red-whiskered Bulbul">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Red-whiskered Bulbul<br>
+                            Scientific Name: Phynonotus jocosus<br>
+                            Size: 20cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/grey-heron big.jpg" alt=" Grey Heron">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Grey Heron<br>
+                            Scientific Name: Ardea cinerea<br>
+                            Size: 90cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/Red-wattle Lapwing.jpg" alt="Red-wattle Lapwing">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Red-wattle Lapwing<br>
+                            Scientific Name: Vanellus indicus<br>
+                            Size: 35cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/White-cheeked Barbet.jfif" alt=" White-cheeked Barbet">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: White-cheeked Barbet<br>
+                            Scientific Name: Psilopogon viridis<br>
+                            Size: 23cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="birdstructure">
+                    <div class="contentleft">
+                        <img src="../assets/Images/barn swallow.jpg" alt=" Barn Swallow">
+                    </div>
+
+                    <div class="contentright">
+                        <p>
+                            Name: Barn Swallow<br>
+                            Scientific Name: Hirundo rustica<br>
+                            Size: 18cm
+                        </p>
+                        <div>
+                            <a href="..//pages/read.html">
+                                <button  type="button" class="click">Read more ...</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>  -->
+            </section>
+
+
+
+
+            </div>
+        <!-- </main>
+        <aside>
+            <section class="asidecontent">
+                <div class="asidehead">
+                    <h1 class="details">Details</h1> <button>+</button>
+                </div>
+                <div class="detailsone">
+                    <table>
+                        <caption class="caption">Habitat</caption>
+                        <thead>
+
+                            <tr>
+                                <th>Symbols</th>
+                                <th>Definition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="../assets/Images/big forest.png" alt="forest" height="70px"></td>
+                                <td> Forest: A densely wooden area</td>
+                            </tr><br>
+                            <tr>
+                                <td><img src="../assets/Images/shrublandpng.png" alt="shrubland" height="70px"></td>
+                                <td> Scrubland: shrubs, sparsely populated areas with small trees </td>
+                            </tr><br>
+                            <tr>
+                                <td><img src="../assets/Images/cropgreen-removebg-preview.png" alt="forest"
+                                        height="70px"></td>
+                                <td> Croplands/Grasslands: Grasslands</td>
+                            </tr><br>
+                            <tr>
+                                <td><img src="../assets/Images/river-removebg-preview.png" alt="forest" height="100px">
+                                </td>
+                                <td> Water bodies: Water bodies like river, pond, lake etc</td>
+                            </tr><br>
+                            <tr>
+                                <td><img src="../assets/Images/urban.png" alt="forest" height="100px"></td>
+                                <td> Urban area: Area where most people live</td>
+                            </tr><br>
+                            <tr>
+                                <td><img src="../assets/Images/globe-removebg-preview.png" alt="forest" height="100px">
+                                </td>
+                                <td> Common: Many types of habitats</td>
+                            </tr><br>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="detailstwo">
+                    <table>
+                        <caption class="caption">food</caption>
+                        <thead>
+                            <tr>
+                                <th>Symbols</th>
+                                <th>Definition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="../assets/Images/mouse-animal-vector-rat-removebg-preview (1).png"
+                                        alt="forest" height="100px"></td>
+                                <td class="points"> Animals small mammals, birds, reptiles</td>
+                            </tr><br>
+                            <tr>
+                                <td><img src="../assets/Images/fishvector-removebg-preview.png" alt="forest"
+                                        height="100px"></td>
+                                <td class="points"> Fishes/aquatic life: fish, snails, frogs</td>
+                            </tr><br>
+                            <tr>
+                                <td> <img src="../assets/Images/beetlepng-removebg-preview (1).png" alt="forest"
+                                        height="70px"></td>
+                                <td class="points"> Insects: mosquitoes, flies, small creatures like spiders</td>
+                            </tr><br>
+                            <tr>
+                                <td><img src="../assets/Images/cherryss-removebg-preview.png" alt="forest"
+                                        height="100px"></td>
+                                <td> Fruit: Fruits, berries, nuts</td>
+                            </tr><br>
+                            <tr>
+                                <td><img src="../assets/Images/seesd-removebg-preview.png" alt="forest" height="80px">
+                                </td>
+                                <td> Seeds: Many types of grains</td>
+                            </tr><br>
+                            <tr>
+                                <td><img src="../assets/Images/plant-removebg-preview.png" alt="forest" height="80px">
+                                </td>
+                                <td> Plants: Leaf, foliage, stems, roots</td>
+                            </tr><br>
+                            <tr>
+                                <td><img src="../assets/Images/honey--removebg-preview.png" alt="forest" height="80px">
+                                </td>
+                                <td> Nectar: Nectar in flowers</td>
+                            </tr><br>
+                            <tr>
+                                <td><i class="fa-sharp fa-solid fa-trees"></i></td>
+                                <td> Food: Dead animals, grains, fruits.</td>
+                            </tr><br>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="detailsthree">
+                    <table>
+                        <caption class="caption">Size</caption>
+                        <thead>
+                            <tr>
+                                <th>Symbols</th>
+                                <th>Definition</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="../assets/Images/sparrow.png" alt="sparrow" height="40px"></td>
+                                <td>Sparrow</td>
+                            </tr>
+                            <tr>
+                                <td><img src="../assets/Images/crow2nd.png" alt="crow" height="60px" width="100px"></td>
+                                <td>Myna</td>
+                            </tr>
+                            <tr>
+                                <td><img src="../assets/Images/crow-removebg-preview.png" alt="crow" height="70px"></td>
+                                <td>Crow</td>
+                            </tr>
+                            <tr>
+                                <td><img src="../assets/Images/eagelsizejpg-removebg-preview.png" alt="eagel"
+                                        height="80px"></td>
+                                <td>Eagel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </aside>
+    </section> -->
+
+
+
+
+    <!-- <script src="../assets/js/explore_birds_list.js"></script> -->
+
+
+    <!-- <script>
+        function submit() {
+            const readmore = document.getElementById("readmore").value
+            console.log(readmore)
+
+            location.href = "../pages/explore.html"
+        }
+
+        
+
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+
+
+        let div_birdstructure;
+        let div_contentleft;
+        let img_card;
+        let div_contentright;
+        let p_birdpara;
+        let div_tooltipsss;
+        let div_tooltip;
+        let span_tooltiptext;
+        let img_card_1;
+        let read_button;
+        let div_readmore
+
+        const indian_birds_list = [{
+            "information": {
+                        "text" : "read more",
+                         "source": "../pages/read.html"
+                    },
+                "name": "Wood Peacker",
+                "scientific_Name": "Picade",
+                "size": "23cm",
+                
+                "image": {
+                    "source": "../assets/Images/stage 4 woodpeacker.jpg",
+                    "alt": "peacoak",
+                },
+                "habitat": [{
+                        "source": "../assets/Images/big forest.png",
+                        "alt": "Forest",
+                        "tooltip": "Forest"
+
+                    },
+                    {
+                        "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+                        "alt": "Insects",
+                        "tooltip": "Insects"
+                    },
+                    {
+                        "source": "../assets/Images/cherryss-removebg-preview.png",
+                        "alt": "Fruits",
+                        "tooltip": "Fruits"
+                    },
+                    {
+                        "source": "../assets/Images/plant-removebg-preview.png",
+                        "alt": "Plants",
+                        "tooltip": "Plants"
+                    },
+                    {
+                        "source": "../assets/Images/seesd-removebg-preview.png",
+                        "alt": "Seeds",
+                        "tooltip": "seeds"
+                    },
+                    
+                        
+                ]
+            }, -->
+    <!-- // {
+            //     "information": {
+            //             "text" : "read more",
+            //              "source": "../pages/read.html"
+            //         },
+            //     "name": "Cattle Egret",
+            //     "scientific_Name": "Bubulcus ibis",
+            //     "size": "50cm",
+            //     "image": {
+            //         "source": "../assets/Images/cattle egret main img.jpg",
+            //         "alt": "cattle_egret",
+            //     },
+            //     "habitat": [{
+            //             "source": "../assets/Images/river-removebg-preview.png",
+            //             "alt": "Water bodies",
+            //             "tooltip": "Water"
+            //         },
+            //         {
+            //             "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+            //             "alt": "Insects",
+            //             "tooltip": "Insects"
+            //         }
+
+            //     ]
+            // },
+            // { -->
+    <!-- //     "information": {
+            //             "text" : "read more",
+            //              "source": "../pages/read.html"
+            //         },
+            //     "name": "Eagle",
+            //     "scientific_Name": "Aquila",
+            //     "size": "85cm - 90cm",
+            //     "image": {
+            //         "source": "https://c4.wallpaperflare.com/wallpaper/252/767/677/eagle-images-wallpaper-preview.jpg",
+            //         "alt": "eagle",
+            //     },
+            //     "habitat": [{
+            //             "source": "../assets/Images/urban.png",
+            //             "alt": "Urban area",
+            //             "tooltip": "Urban area"
+
+            //         },
+            //         {
+            //             "source": "../assets/Images/mouse-animal-vector-rat-removebg-preview (1).png",
+            //             "alt": "Animals",
+            //             "tooltip": "Animals"
+            //         }
+
+            //     ]
+            // },
+            // {
+            //     "name": "White-breasted Waterhen",
+            //     "scientific_Name": "Amaurornis Phoenicurs",
+            //     "size": "32cm",
+            //     "image": {
+            //         "source": "../assets/Images/main watrehen jfif.jfif",
+            //         "alt": "White-breasted",
+            //     },
+            //     "habitat": [{
+            //             "source": "../assets/Images/river-removebg-preview.png",
+            //             "alt": "River",
+            //             "tooltip": "River"
+
+            //         },
+            //         {
+            //             "source": "../assets/Images/plant-removebg-preview.png",
+            //             "alt": "plant",
+            //             "tooltip": "Plant"
+            //         }
+
+            //     ]
+            // },
+            // {
+            //     "name": "Rufous Treepie",
+            //     "scientific_Name": "Dendrocitta vagabunda",
+            //     "size": "50cm",
+            //     "image": {
+            //         "source": "../assets/Images/rufous main_b.jpg",
+            //         "alt": "Rufous Treepie",
+            //     },
+            //     "habitat": [{
+            //             "source": "../assets/Images/big forest.png",
+            //             "alt": "Forest",
+            //             "tooltip": "Forest"
+
+            //         },
+            //         {
+            //             "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+            //             "alt": "Insects",
+            //             "tooltip": "Insects"
+            //         },
+            //         {
+            //             "source": "../assets/Images/cherryss-removebg-preview.png",
+            //             "alt": "Fruits",
+            //             "tooltip": "Fruits"
+            //         },
+            //         {
+            //             "source": "../assets/Images/plant-removebg-preview.png",
+            //             "alt": "Plants",
+            //             "tooltip": "Plants"
+            //         },
+            //         {
+            //             "source": "../assets/Images/seesd-removebg-preview.png",
+            //             "alt": "Seeds",
+            //             "tooltip": "seeds"
+            //         }
+            //     ]
+            // },
+            // {
+            //     "name": "White-throated Kingfisher",
+            //     "scientific_Name": " Halcyon smyrnensis",
+            //     "size": "27cm",
+            //     "image": {
+            //         "source": "../assets/Images/White throated .jfif",
+            //         "alt": "White-throated Kingfisher",
+            //     },
+            //     "habitat": [{
+            //             "source": "../assets/Images/mouse-animal-vector-rat-removebg-preview (1).png",
+            //             "alt": "animals",
+            //             "tooltip": "Animals"
+
+            //         },
+            //         {
+            //             "source": "../assets/Images/globe-removebg-preview.png",
+            //             "alt": "Common",
+            //             "tooltip": "Common"
+            //         }
+
+            //     ]
+            // },
+            // {
+            //     "name": "Yellow-billed Babber",
+            //     "scientific_Name": "Turdoides",
+            //     "size": "25cm",
+            //     "image": {
+            //         "source": "../assets/Images/yellow-billed babber.jfif",
+            //         "alt": "yellow-billed babber",
+            //     },
+            //     "habitat": [{
+            //             "source": "../assets/Images/big forest.png",
+            //             "alt": "Forest",
+            //             "tooltip": "Forest"
+
+            //         },
+            //         {
+            //             "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+            //             "alt": "Insects",
+            //             "tooltip": "Insects"
+            //         },
+            //         {
+            //             "source": "../assets/Images/cherryss-removebg-preview.png",
+            //             "alt": "Fruits",
+            //             "tooltip": "Fruits"
+            //         },
+            //         {
+            //             "source": "../assets/Images/plant-removebg-preview.png",
+            //             "alt": "Plants",
+            //             "tooltip": "Plants"
+            //         },
+            //         {
+            //             "source": "../assets/Images/seesd-removebg-preview.png",
+            //             "alt": "Seeds",
+            //             "tooltip": "seeds"
+            //         }
+            //     ]
+            // },
+            // {
+            //     "name": "Asian Koel",
+            //     "scientific_Name": "Eudynamys scolopaceus",
+            //     "size": "43cm",
+            //     "image": {
+            //         "source": "../assets/Images/Asian koel .jpg",
+            //         "alt": "Asian Koel",
+            //     },
+            //     "habitat": [{
+            //             "source": "../assets/Images/urban.png",
+            //             "alt": "Urban area",
+            //             "tooltip": "Urban area"
+
+            //         },
+            //         {
+            //             "source": "../assets/Images/cherryss-removebg-preview.png",
+            //             "alt": "Fruits",
+            //             "tooltip": "Fruits"
+            //         }
+
+            //     ]
+            // },
+            // {
+            //     "name": "Ashy Prinia",
+            //     "scientific_Name": "Prinia socials",
+            //     "size": "13cm",
+            //     "image": {
+            //         "source": "../assets/Images/Ashy Prinia.jfif",
+            //         "alt": "Asian Koel",
+            //     },
+            //     "habitat": [{
+            //             "source": "../assets/Images/shrublandpng.png",
+            //             "alt": "Scrubland",
+            //             "tooltip": "Scrubland"
+
+            //         },
+            //         {
+            //             "source": "../assets/Images/beetlepng-removebg-preview (1).png",
+            //             "alt": "Insects",
+            //             "tooltip": "Insects"
+            //         }
+
+            //     ]
+            // },
+            // {
+            //     "name": "Indian spot-billed Duck",
+            //     "scientific_Name": "Anas poecilorhyncha",
+            //     "size": "60cm",
+            //     "image": {
+            //         "source": "../assets/Images/Spotbilled_Duck.jpg",
+            //         "alt": "Indian spot-billed duck",
+            //     },
+            //     "habitat": [{
+            //             "source": "../assets/Images/river-removebg-preview.png",
+            //             "alt": "River",
+            //             "tooltip": "River",
+            //         },
+            //         {
+            //             "source": "../assets/Images/plant-removebg-preview.png",
+            //             "alt": "Plants",
+            //             "tooltip": "Plants"
+            //         }
+
+            //     ]
+            // },
+
+
+
+        ]
+
+
+
+
+        // function submit() {
+        //     const click_readmore = document.getElementById("click_readmore").value
+
+        //     console.log(click_readmore)
+
+        //     window.location.href = "../pages/read.html"
+        // } -->
+
 
 
 
     <script>
 
 
-        let div_scrollsnap;
-        let div_imagescontainer;
-        let div_birditems;
-        let img_scrollbird;
-        let div_main_des_container;
-        let p_bird_main_des;
-        let div_tooltipsss;
-        let div_tooltip;
-        let span_tooltiptext;
-        let div_content;
-        let h3_topic;
-        let p_description;
+        // const search = () => {
+        //     const searchbar = document.getElementById("searchbar").value.toLowerCase();
+        //     const all_birds = document.getElementById("all_birds");
+        //     const birdstructure = document.querySelectorAll("birdstructure");
+        //     const doctors = document.getElementsByTagName("h3");
+        //     for (var i = 0; i < doctors.length; i++) {
+        //         let match = box[i].getElementsByTagName('h3')[0];
+        //         if (match) {
+        //             let textvalue = match.textContent || match.innerHTML
+        //             if (textvalue.toLowerCase().indexOf(searchbox) > -1) {
+        //                 box[i].style.display = "";
+        //             } else {
+        //                 box[i].style.display = "none";
+        //             }
+        //         }
+        //     }
+        // }
 
-        let bird_info_details = JSON.parse(localStorage.getItem('bird_info_details'));
-
-        const url = window.location.search;
-        const urlParams = new URLSearchParams(url);
-        const bird_info_details_uuid = urlParams.get("bird_id");
-        console.log(bird_info_details_uuid);
-
-        let details = bird_info_details.find(e => e.bird_info_details_uuid === bird_info_details_uuid);
-        console.log(details);
-
-        let colors = []; // Array to store colors
-        let actions = []; // Array to store actions
-
-        for (let i = 0; i < 1; i++) {
-            //div_scrollsnap
-            div_scrollsnap = document.createElement("div");
-            div_scrollsnap.setAttribute("class", "scrollsnap");
-            console.log(div_scrollsnap);
-
-            //div_imagescontainer
-            div_imagescontainer = document.createElement("div");
-            div_imagescontainer.setAttribute("class", "imagescontainer");
-            div_scrollsnap.append(div_imagescontainer);
-
-            //img_scrollbird
-            for (let j = 0; j < 1; j++) {
-                //div_birditems 1
-                div_birditems = document.createElement("div");
-                div_birditems.setAttribute("class", "birditems");
-                div_imagescontainer.append(div_birditems);
-
-                img_scrollbird = document.createElement("img");
-                img_scrollbird.setAttribute("class", "scrollbird");
-                img_scrollbird.setAttribute("src", details["birds_stages"]["birdStage1"]);
-                img_scrollbird.setAttribute("height", "300px");
-                img_scrollbird.setAttribute("width", "400px");
-                div_birditems.append(img_scrollbird);
-
-                //div_birditems 2
-                div_birditems = document.createElement("div");
-                div_birditems.setAttribute("class", "birditems");
-                div_imagescontainer.append(div_birditems);
-
-                img_scrollbird = document.createElement("img");
-                img_scrollbird.setAttribute("class", "scrollbird");
-                img_scrollbird.setAttribute("src", details["birds_stages"]["birdStage2"]);
-                img_scrollbird.setAttribute("height", "300px");
-                img_scrollbird.setAttribute("width", "400px");
-                div_birditems.append(img_scrollbird);
-
-                //div_birditems 3
-                div_birditems = document.createElement("div");
-                div_birditems.setAttribute("class", "birditems");
-                div_imagescontainer.append(div_birditems);
-
-                img_scrollbird = document.createElement("img");
-                img_scrollbird.setAttribute("class", "scrollbird");
-                img_scrollbird.setAttribute("src", details["birds_stages"]["birdStage3"]);
-                img_scrollbird.setAttribute("height", "300px");
-                img_scrollbird.setAttribute("width", "400px");
-                div_birditems.append(img_scrollbird);
-
-                //div_birditems 4
-                div_birditems = document.createElement("div");
-                div_birditems.setAttribute("class", "birditems");
-                div_imagescontainer.append(div_birditems);
-
-                img_scrollbird = document.createElement("img");
-                img_scrollbird.setAttribute("class", "scrollbird");
-                img_scrollbird.setAttribute("src", details["birds_stages"]["birdStage4"]);
-                img_scrollbird.setAttribute("height", "300px");
-                img_scrollbird.setAttribute("width", "400px");
-                div_birditems.append(img_scrollbird);
-            }
-
-            //div_main_des_container
-            div_main_des_container = document.createElement("div");
-            div_main_des_container.setAttribute("class", "main-des-container");
-            div_scrollsnap.append(div_main_des_container);
-
-            //p_bird_main_des
-            p_bird_main_des = document.createElement("p");
-            p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Name: " + details["bird_name"];
-            div_main_des_container.append(p_bird_main_des);
-
-            //p_bird_main_des
-            p_bird_main_des = document.createElement("p");
-            p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Scientific Name: " + details["scientific_name"];
-            div_main_des_container.append(p_bird_main_des);
-
-            //p_bird_main_des
-            p_bird_main_des = document.createElement("p");
-            p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Size: " + details["size"]["size_in_cm"];
-            div_main_des_container.append(p_bird_main_des);
-
-             //p_bird_main_des
-             p_bird_main_des = document.createElement("p");
-            p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Size: " + details["size"]["tentative_size"];
-            div_main_des_container.append(p_bird_main_des);
-
-              // Create and append the Scientific Name paragraph
-              p_bird_main_des = document.createElement("p");
-              p_bird_main_des.setAttribute("class", "bird_main_des");
-              p_bird_main_des.innerText = "habitat: " + details["habitat"];
-              div_main_des_container.append(p_bird_main_des);
+        // const search = () => {
+        //     const searchbar = document.getElementById("searchbar").value.toLowerCase();
+        //     const all_birds = document.getElementById("all_birds");
 
 
-            //p_bird_main_des
-            p_bird_main_des = document.createElement("p");
-            p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Colors: " + details["colors_name"];
-            div_main_des_container.append(p_bird_main_des);
 
-            // Store colors in the array
-            colors.push(details["colors"]);
+        //     const birdstructure = document.querySelectorAll(".birdstructure"); // Added dot before "birdstructure" to denote class name
+        //     const birds = document.getElementsByTagName("p");
+        //     for (var i = 0; i < bird_info_details.length; i++) {
+        //         let match = birdstructure[i].getElementsByTagName('p')[0]; // Changed "box" to "birdstructure" to match the variable name
+        //         if (match) {
+        //             let textvalue = match.textContent || match.innerHTML;
+        //             if (textvalue.toLowerCase().indexOf(searchbar) > -1) { // Changed "searchbox" to "searchbar" to match the variable name
+        //                 birdstructure[i].style.display = ""; // Changed "box" to "birdstructure" to match the variable name
+        //             } else {
+        //                 birdstructure[i].style.display = "none"; // Changed "box" to "birdstructure" to match the variable name
+        //             }
+        //         }
+        //     }
+        // }
 
-            //p_bird_main_des
-            p_bird_main_des = document.createElement("p");
-            p_bird_main_des.setAttribute("class", "bird_main_des");
-            p_bird_main_des.innerText = "Actions: " + details["actions_name"];
-            div_main_des_container.append(p_bird_main_des);
 
-            // Store actions in the array
-            actions.push(details["actions"]);
+        // const search = () => {
+        //     const searchbar = document.getElementById("searchbar").value.toLowerCase();
+        //     const birdstructures = document.getElementsByClassName("birdstructure");
+
+        //     for (var i = 0; i < birdstructures.length; i++) {
+        //         let bird = birdstructures[i].getElementsByTagName("p")[0];
+        //         if (bird) {
+        //             let textValue = bird.textContent || bird.innerHTML;
+        //             if (textValue.toLowerCase().indexOf(searchbar) > -1) {
+        //                 birdstructures[i].style.display = "";
+        //             } else {
+        //                 birdstructures[i].style.display = "none";
+        //             }
+        //         } 
+        //     }
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let bird_info_details = JSON.parse(localStorage.getItem("bird_info_details")) || [];
+        //   console.log(bird_info_details);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //  const url = window.location.search;
+        // const urlParams = new URLSearchParams(url)
+        // const bird_info_details_uuid = urlParams.get("bird_info_details_uuid")
+        // // console.log(bird_info_details_uuid)
+
+        // let details = bird_info_details.find(e => e.bird_info_details_uuid === bird_info_details_uuid)
+        // console.log(details)
+
+        for (let i = 0; i < bird_info_details.length; i++) {
+
+            //div_birdstructure
+            div_birdstructure = document.createElement("div");
+            div_birdstructure.setAttribute("class", "birdstructure");
+            // console.log(div_birdstructure);
+
+            //div_contentleft
+            div_contentleft = document.createElement("div");
+            div_contentleft.setAttribute("class", "contentleft");
+            div_birdstructure.append(div_contentleft);
+
+            //img_card
+            img_card = document.createElement("img");
+            img_card.setAttribute("src", bird_info_details[i]["main_image"]);
+            // img_card.setAttribute("alt", bird_info_details[i]["image"]);
+            div_contentleft.append(img_card);
+
+            //div_contentright
+            div_contentright = document.createElement("div");
+            div_contentright.setAttribute("class", "contentright");
+            div_birdstructure.append(div_contentright);
+
+            //p_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.setAttribute("id", "bird_des");
+            p_birdpara.innerText = "Name: " + bird_info_details[i]["bird_name"];
+            div_contentright.append(p_birdpara);
+
+            //p_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = " Scientific Name: " + bird_info_details[i]["scientific_name"];
+            div_contentright.append(p_birdpara);
+
+            //p_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "Size : " + bird_info_details[i]["size"]["size_in_cm"];
+            div_contentright.append(p_birdpara);
+
+
+            //p_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "Tentative Size : " + bird_info_details[i]["size"]["tentative_size"];
+            div_contentright.append(p_birdpara);
+
+
+            // Create and append the Scientific Name paragraph
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "habitat: " + bird_info_details[i]["habitat"];
+            div_contentright.append(p_birdpara);
+
+
+            //h3_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "Color : " + bird_info_details[i]["colors_name"];
+            div_contentright.append(p_birdpara);
+
+
+            //p_birdpara
+            p_birdpara = document.createElement("p");
+            p_birdpara.setAttribute("class", "birdpara");
+            p_birdpara.innerText = "Action : " + bird_info_details[i]["actions_name"];
+            div_contentright.append(p_birdpara);
 
             //div_tooltipsss
             div_tooltipsss = document.createElement("div");
             div_tooltipsss.setAttribute("class", "tooltipsss");
-            div_main_des_container.append(div_tooltipsss);
+            div_contentright.append(div_tooltipsss);
 
-            //div_content
-            div_content = document.createElement("div");
-            div_content.setAttribute("class", "content");
-            console.log(div_content);
+            // div_readmore
+            div_readmore = document.createElement("div");
+            div_contentright.append(div_readmore);
 
-            //h3_topic 1
-            h3_topic = document.createElement("h3");
-            h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "About the Bird";
-            div_content.append(h3_topic);
+            //read_button
+            read_button = document.createElement("a");
+            read_button.setAttribute("class", "click");
+            read_button.setAttribute("href", "../pages/read.html?bird_id=" + bird_info_details[i]["bird_info_details_uuid"]);
+            read_button.innerText = "Read more...";
+            div_readmore.append(read_button);
 
-            //p_description
-            p_description = document.createElement("p");
-            p_description.setAttribute("class", "description");
-            p_description.innerText = details["description1"];
-            div_content.append(p_description);
+            // div_tooltip = document.createElement("div");
+            // div_tooltip.setAttribute("id", "tooltip");
+            // div_tooltipsss.append(div_tooltip);
 
-            //h3_topic 2
-            h3_topic = document.createElement("h3");
-            h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "General Characteristics";
-            div_content.append(h3_topic);
+            // span_tooltiptext = document.createElement("span");
+            // span_tooltiptext.setAttribute("id", "tooltiptext");
+            // span_tooltiptext.innerText = "Forest";
+            // div_tooltip.append(span_tooltiptext);
 
-            p_description = document.createElement("p");
-            p_description.setAttribute("class", "description");
-            p_description.innerText = details["description2"];
-            div_content.append(p_description);
+            // img_card_1 = document.createElement("img");
+            // img_card_1.setAttribute("src", bird_info_details[i]["habitat"]);
+            // img_card_1.setAttribute("height", "80px");
+            // div_tooltip.append(img_card_1);
 
-            //h3_topic 3
-            h3_topic = document.createElement("h3");
-            h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "Lifestyle of Woodpeckers";
-            div_content.append(h3_topic);
+            document.querySelector("section.detail_about_bird").append(div_birdstructure);
 
-            //p_description
-            p_description = document.createElement("p");
-            p_description.setAttribute("class", "description");
-            p_description.innerText = details["description3"];
-            div_content.append(p_description);
-
-            //h3_topic 4
-            h3_topic = document.createElement("h3");
-            h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "Feeding Behavior";
-            div_content.append(h3_topic);
-
-            //p_description
-            p_description = document.createElement("p");
-            p_description.setAttribute("class", "description");
-            p_description.innerText = details["description4"];
-            div_content.append(p_description);
-
-            //h3_topic 5
-            h3_topic = document.createElement("h3");
-            h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "Habitat and Distribution";
-            div_content.append(h3_topic);
-
-            //p_description
-            p_description = document.createElement("p");
-            p_description.setAttribute("class", "description");
-            p_description.innerText = details["description5"];
-            div_content.append(p_description);
-
-            //h3_topic 6
-            h3_topic = document.createElement("h3");
-            h3_topic.setAttribute("class", "topic");
-            h3_topic.innerText = "Conservation Status";
-            div_content.append(h3_topic);
-
-            //p_description
-            p_description = document.createElement("p");
-            p_description.setAttribute("class", "description");
-            p_description.innerText = details["description6"];
-            div_content.append(p_description);
-
-            div_tooltipsss.append(div_content);
-
-            //div_tooltip
-            div_tooltip = document.createElement("div");
-            div_tooltip.setAttribute("class", "tooltip");
-            console.log(div_tooltip);
-
-            //span_tooltiptext
-            span_tooltiptext = document.createElement("span");
-            span_tooltiptext.setAttribute("class", "tooltiptext");
-            console.log(span_tooltiptext);
-
-            // Add colors to the tooltip
-            colors.forEach(color => {
-                let span_color = document.createElement("span");
-                span_color.style.backgroundColor = color;
-                span_tooltiptext.append(span_color);
-            });
-
-            div_tooltip.append(span_tooltiptext);
-            div_tooltipsss.append(div_tooltip);
-
-            // Add actions to the tooltip
-            actions.forEach(action => {
-                let span_action = document.createElement("span");
-                span_action.innerText = action;
-                span_tooltiptext.append(span_action);
-            });
-
-            document.querySelector(".info_container").append(div_scrollsnap);
         }
 
 
 
-
-
-
-
-
+        function click_readmore() {
+            location.href = "../pages/form/birds.detailpage.html"
+        }
     </script>
+
     <div class="footer-basic">
         <footer>
             <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
@@ -541,9 +1419,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 
-
-
-
 </body>
 
 </html>
+
+
+
+<!-- // div_habit = document.createElement("div");
+        // div_habit.setAttribute("class", "habit");
+        // p_birds.append(div_habit);
+
+        // img_card_1 = document.createElement("img");
+        // img_card_1.setAttribute("src", "../assets/Images/river-removebg-preview.png");
+        // img_card_1.setAttribute("alt", "forest");
+        // div_habit.append(img_card_1);
+
+        // img_card_2 = document.createElement("img");
+        // img_card_2.setAttribute("src", "../assets/Images/beetlepng-removebg-preview (1).png");
+        // img_card_2.setAttribute("alt", "forest");
+        // div_habit.append(img_card_2); -->

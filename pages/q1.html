@@ -98,129 +98,86 @@
     
 
     <script>
-        // function submit() {
-        //     const bird = document.getElementById("bird").value
-
-        //     console.log(bird)
-
-        //     window.location.href = "../pages/q2.html"
-        // }
-
-
-        // Add event listener to the "Next" button
-        // document.querySelector('.next button').addEventListener('click', function () {
-        //     submit();
-        // });
-
-        // // Add event listener to the "Back" button
-        // document.querySelector('.back button').addEventListener('click', function () {
-        //     history.back();
-        // });
-
-        let habitat_options = [
-      {
-        "name": "Forest",
-        "image": {
-          "source": "../assets/Images/big forest.png",
-          "alt": "Forest"
-        }
-      },
-      {
-        "name": "Scrublands",
-        "image": {
-          "source": "../assets/Images/shrublandpng.png",
-          "alt": "Scrublands"
-        }
-      },
-      {
-        "name": "Croplands",
-        "image": {
-          "source": "../assets/Images/cropgreen-removebg-preview.png",
-          "alt": "Croplands"
-        }
-      },
-      {
-        "name": "River",
-        "image": {
-          "source": "../assets/Images/river-removebg-preview.png",
-          "alt": "River"
-        }
-      },
-      {
-        "name": "Urban area",
-        "image": {
-          "source": "../assets/Images/urban.png",
-          "alt": "Urban area"
-        }
-      }
-    ];
-
-    // const handleOptionClick = (option) => {
-    //   // check if the option has already been selected
-    //   let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) || [];
-
-
-    //   // check if the option is already selected
-    //   if (identify_birds.includes(option)) {
-    //     return;
-    //   }
-
-    //   // add the selected option to the array
-    //   identify_birds.push(option);
-
-    //   // update the local storage
-    //   localStorage.setItem("identifyBirds", JSON.stringify(identify_birds));
-
-    //   // proceed to the next page
-    //   window.location.href = "./q3.html";
-    // };
-
-
-
-    let habitatsDiv = document.querySelector("#habitats");
-
-    habitat_options.forEach((option) => {
-      let div_card = document.createElement("div");
-      div_card.setAttribute("class", "card");
-      div_card.setAttribute("id", option.name);
-
-      let a = document.createElement("a");
-      // a.setAttribute("href", "./q3.html");
-      div_card.append(a);
-
-      let img_cards = document.createElement("img");
-      img_cards.setAttribute("class", "cards");
-      img_cards.setAttribute("src", option.image.source);
-      img_cards.setAttribute("width", "100%");
-      a.append(img_cards);
-
-      let div_containers = document.createElement("div");
-      div_containers.setAttribute("class", "containers");
-      div_card.append(div_containers);
-
-      let h4_noclass = document.createElement("h3");
-      h4_noclass.innerText = option.name;
-      div_containers.append(h4_noclass);
-
-      // div_card.addEventListener("click", () => {
-      //   handleOptionClick(option.name);
-      // });
-
-      habitatsDiv.append(div_card);
-    });
-
-
-    const parentDiv = document.querySelector(".option_container")
-    const childDiv = parentDiv.children;
-
-    for (let i = 0; i < childDiv.length; i++){
-      const element = childDiv[i];
-      element.addEventListener("click",() => {
-        const place = event.currentTarget.getAttribute("id");
-        console.log(place)
-        window.location.href = `./q3.html?place=${place}`
-      })
+    
+    let habitat_options = [
+  {
+    "name": "Forest",
+    "image": {
+      "source": "../assets/Images/big forest.png",
+      "alt": "Forest"
     }
+  },
+  {
+    "name": "Scrublands",
+    "image": {
+      "source": "../assets/Images/shrublandpng.png",
+      "alt": "Scrublands"
+    }
+  },
+  {
+    "name": "Croplands",
+    "image": {
+      "source": "../assets/Images/cropgreen-removebg-preview.png",
+      "alt": "Croplands"
+    }
+  },
+  {
+    "name": "River",
+    "image": {
+      "source": "../assets/Images/river-removebg-preview.png",
+      "alt": "River"
+    }
+  },
+  {
+    "name": "Urban area",
+    "image": {
+      "source": "../assets/Images/urban.png",
+      "alt": "Urban area"
+    }
+  }
+];
+
+let habitatsDiv = document.querySelector("#habitats");
+const identifyBirds = [];
+
+habitat_options.forEach((option) => {
+  let div_card = document.createElement("div");
+  div_card.setAttribute("class", "card");
+  div_card.setAttribute("id", option.name);
+
+  let a = document.createElement("a");
+  div_card.append(a);
+
+  let img_cards = document.createElement("img");
+  img_cards.setAttribute("class", "cards");
+  img_cards.setAttribute("src", option.image.source);
+  img_cards.setAttribute("width", "100%");
+  a.append(img_cards);
+
+  let div_containers = document.createElement("div");
+  div_containers.setAttribute("class", "containers");
+  div_card.append(div_containers);
+
+  let h4_noclass = document.createElement("h3");
+  h4_noclass.innerText = option.name;
+  div_containers.append(h4_noclass);
+
+  habitatsDiv.append(div_card);
+});
+
+const parentDiv = document.querySelector(".option_container");
+const childDiv = parentDiv.children;
+
+for (let i = 0; i < childDiv.length; i++) {
+  const element = childDiv[i];
+  element.addEventListener("click", () => {
+    const place = event.currentTarget.getAttribute("id");
+    identifyBirds.push(place);
+    console.log(identifyBirds);
+    window.location.href = `./q3.html?place=${place}`;
+  });
+}
+
 
 
 

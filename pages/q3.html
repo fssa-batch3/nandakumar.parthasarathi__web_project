@@ -98,14 +98,13 @@
 
     <script>
 
-        const place = new URLSearchParams(window.location.search).get("place");
+const place = new URLSearchParams(window.location.search).get("place");
 
+function submit() {
+  // window.location.href = "../pages/q4.html";
+}
 
-  function submit() {
-            // window.location.href = "../pages/q4.html";
-        }
-
-     // Define the habitat options
+// Define the habitat options
 let habitat_options = [
   {
     "name": "Sparrow size",
@@ -148,7 +147,7 @@ habitat_options.forEach((habitat, index) => {
 
   // Create the link to the next question
   let link = document.createElement("a");
-//   link.setAttribute("href", "./q4.html");
+  //   link.setAttribute("href", "./q4.html");
   card.appendChild(link);
 
   // Create the image element for the habitat
@@ -169,11 +168,11 @@ habitat_options.forEach((habitat, index) => {
   habitat_name.innerText = habitat.name;
   container.appendChild(habitat_name);
 
-  // Add an event listener to the card to store the selected habitat option in localStorage
+  // Add an event listener to the card to navigate to the next question with the selected habitat option
   card.addEventListener("click", () => {
-    let identify_birds = JSON.parse(localStorage.getItem("identifyBirds")) || {};
-    identify_birds["size"] = habitat.name;
-    localStorage.setItem("identifyBirds", JSON.stringify(identify_birds));
+    const size = card.querySelector("img").getAttribute("id");
+    console.log(size);
+    window.location.href = `./q4.html?place=${place}&size=${size}`;
   });
 
   // Add the card to the habitat container
@@ -184,13 +183,12 @@ habitat_options.forEach((habitat, index) => {
 let cards = document.querySelectorAll(".card");
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    const size = card.querySelector("img").getAttribute("id");
-    console.log(size);
-    
-    window.location.href = `./q4.html?place=${place}&size=${size}`;
+    // Modify this code according to your needs
+    // For example, you can perform additional actions based on the selected habitat option
+    // const size = card.querySelector("img").getAttribute("id");
+    // console.log(size);
   });
 });
-
 
 
 

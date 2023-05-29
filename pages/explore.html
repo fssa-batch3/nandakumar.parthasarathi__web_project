@@ -1182,75 +1182,65 @@
         // }
 
 
-        // const search = () => {
-        //     const searchbar = document.getElementById("searchbar").value.toLowerCase();
-        //     const birdstructures = document.getElementsByClassName("birdstructure");
+        const search = () => {
+            const searchbar = document.getElementById("searchbar").value.toLowerCase();
+            const birdstructures = document.getElementsByClassName("birdstructure");
 
-        //     for (var i = 0; i < birdstructures.length; i++) {
-        //         let bird = birdstructures[i].getElementsByTagName("p")[0];
-        //         if (bird) {
-        //             let textValue = bird.textContent || bird.innerHTML;
-        //             if (textValue.toLowerCase().indexOf(searchbar) > -1) {
-        //                 birdstructures[i].style.display = "";
-        //             } else {
-        //                 birdstructures[i].style.display = "none";
-        //             }
-        //         } 
-        //     }
-        // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        const searchBar = document.getElementById("searchbar").value.toLowerCase
-        for(let i = 0; i < bird_info_details.length; i++){
-   
-            const bird = bird_info_details[i].bird_name
-
-
+            for (var i = 0; i < birdstructures.length; i++) {
+                let bird = birdstructures[i].getElementsByTagName("p")[0];
+                if (bird) {
+                    let textValue = bird.textContent || bird.innerHTML;
+                    if (textValue.toLowerCase().indexOf(searchbar) > -1) {
+                        birdstructures[i].style.display = "";
+                    } else {
+                        birdstructures[i].style.display = "none";
+                    }
+                } 
+            }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
