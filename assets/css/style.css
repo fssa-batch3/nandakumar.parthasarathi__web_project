@@ -20,135 +20,147 @@
 }
 
 
-.project{
-background-image: url(https://images.pexels.com/photos/6398824/pexels-photo-6398824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+.project {
+  background-image: url(https://images.pexels.com/photos/6398824/pexels-photo-6398824.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
   opacity: 1;
 }
- 
-.webname{
-  color:white;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  margin-left: 280px;
-text-transform: uppercase;
-  font-size:40px ;
-  margin-top: -400px;
+
+.webname {
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 250px;
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-top: -200px;
 }
 
-.wrapper{
+
+.wrapper {
   position: absolute;
-  top:40%;
-  left:50%;
+  top: 56.5%;
+  left: 58%;
   transform: translate(-50%, -50%);
   width: fit-content;
-  height:auto;
+  height: auto;
 }
- .explore{
-  width:200px;
-  height:70px;
-  background: linear-gradient(to left top, #000000 50%, #8d8b8b 50%);
+
+.explore {
+  width: 200px;
+  height: 70px;
+  background: linear-gradient(to left top, #000000 50%, orange 50%);
   border-style: none;
-  color:#fff;
-  font-size: 23px;
-  letter-spacing: 3px;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: 600;
-  outline: none;
   cursor: pointer;
   position: relative;
   padding: 0px;
   overflow: hidden;
   transition: all .5s;
-  box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
 }
- .explore span{
+
+.explore span {
   position: absolute;
   display: block;
 }
- .explore span:nth-child(1){
+
+.explore span:nth-child(1) {
   height: 3px;
-  width:200px;
-  top:0px;
-  left:-200px;
-  background: linear-gradient(to right, rgba(255, 43, 1, 0.749), #fa8500);
+  width: 200px;
+  top: 0px;
+  left: -200px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.749), #ffffff);
   border-top-right-radius: 1px;
   border-bottom-right-radius: 1px;
   animation: span1 2s linear infinite;
   animation-delay: 1s;
 }
 
-@keyframes span1{
-  0%{
-      left:-200px
+@keyframes span1 {
+  0% {
+    left: -200px
   }
-  100%{
-      left:200px;
+
+  100% {
+    left: 200px;
   }
 }
- .explore span:nth-child(2){
+
+.explore span:nth-child(2) {
   height: 70px;
   width: 3px;
-  top:-70px;
-  right:0px;
-  background: linear-gradient(to bottom, rgb(252, 143, 2), #ff0000);
+  top: -70px;
+  right: 0px;
+  background: linear-gradient(to bottom, rgb(255, 255, 255), #000000);
   border-bottom-left-radius: 1px;
   border-bottom-right-radius: 1px;
   animation: span2 2s linear infinite;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
-@keyframes span2{
-  0%{
-      top:-70px;
+
+@keyframes span2 {
+  0% {
+    top: -70px;
   }
-  100%{
-      top:70px;
+
+  100% {
+    top: 70px;
   }
 }
- .explore span:nth-child(3){
-  height:3px;
-  width:200px;
-  right:-200px;
+
+.explore span:nth-child(3) {
+  height: 3px;
+  width: 200px;
+  right: -200px;
   bottom: 0px;
-  background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), #f6e58d);
   border-top-left-radius: 1px;
   border-bottom-left-radius: 1px;
   animation: span3 2s linear infinite;
   animation-delay: 3s;
 }
-@keyframes span3{
-  0%{
-      right:-200px;
+
+@keyframes span3 {
+  0% {
+    right: -200px;
   }
-  100%{
-      right: 200px;
+
+  100% {
+    right: 200px;
   }
 }
 
-.explore span:nth-child(4){
-  height:70px;
-  width:3px;
-  bottom:-70px;
-  left:0px;
-  background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
+.explore span:nth-child(4) {
+  height: 70px;
+  width: 3px;
+  bottom: -70px;
+  left: 0px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), #f6e58d);
   border-top-right-radius: 1px;
   border-top-left-radius: 1px;
   animation: span4 2s linear infinite;
   animation-delay: 4s;
 }
-@keyframes span4{
-  0%{
-      bottom: -70px;
+
+@keyframes span4 {
+  0% {
+    bottom: -70px;
   }
-  100%{
-      bottom:70px;
+
+  100% {
+    bottom: 70px;
   }
 }
 
- .explore:hover{
+.explore:hover {
   transition: all .5s;
   transform: rotate(-3deg) scale(1.1);
-  box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, .4);
 }
- .explore:hover span{
+
+.explore:hover span {
   animation-play-state: paused;
 }
 
@@ -167,7 +179,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Unica One', sans-serif;
-  
+
 }
 
 .container {
@@ -180,73 +192,73 @@ body {
 }
 
 .heading {
-  color:orange;
+  color: orange;
   font-size: 3rem;
   font-weight: 200;
   text-transform: uppercase;
-  margin-top: 300px;
+  margin-top: 50px;
 }
 
 /****************footer**************/
 .footer-basic {
-  padding:40px 0;
-  background-color:#000000;
-  color:white;
+  padding: 40px 0;
+  background-color: #000000;
+  color: white;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .footer-basic ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 .footer-basic li {
-  padding:0 10px;
+  padding: 0 10px;
 }
 
 .footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 .footer-basic ul a:hover {
-  opacity:1;
+  opacity: 1;
 }
 
 .footer-basic .social {
-  text-align:center;
-  padding-bottom:25px;
+  text-align: center;
+  padding-bottom: 25px;
 }
 
-.footer-basic .social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
-  opacity:0.75;
+.footer-basic .social>a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
 }
 
-.footer-basic .social > a:hover {
-  opacity:0.9;
+.footer-basic .social>a:hover {
+  opacity: 0.9;
 }
 
 .footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
 }
 
 
@@ -300,6 +312,7 @@ body {
 #searchQuerySubmit:hover {
   cursor: pointer;
 }
+
 /* Credit to https://epicbootstrap.com/snippets/footer-basic */
 
 /* If you don't want the footer to be responsive, remove these media queries */
@@ -327,7 +340,7 @@ body {
 
 
 
-.index_image{
+.index_image {
   height: 100%;
   width: 100%;
   /* background-color: #ffffff10;
@@ -335,22 +348,22 @@ body {
   -webkit-backdrop-filter: blur(12px); */
 }
 
-.webslog{
+.webslog {
   position: relative;
   bottom: 390px;
   left: 50px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size:50px;
-  color:transparent;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 50px;
+  color: transparent;
   text-transform: uppercase;
   background-repeat: repeat;
 }
 
-.identify{
+.identify {
   position: relative;
   left: 50px;
   font-family: Arial, Helvetica, sans-serif;
-  text-transform:none;
+  text-transform: none;
 }
 
 .aboutDesp {
@@ -400,8 +413,8 @@ a:hover {
 }
 
 
-.second-head{
-  background-color:black;
+.second-head {
+  background-color: black;
 }
 
 .login-button {
@@ -410,7 +423,8 @@ a:hover {
   /* background: linear-gradient(0deg, rgb(240, 163, 9) 0%, rgb(252, 126, 0) 100%); */
   border: none;
 }
-.admin-button{
+
+.admin-button {
   float: right;
   background: grey;
   /* background: linear-gradient(0deg, rgb(240, 163, 9) 0%, rgb(252, 126, 0) 100%); */
@@ -422,14 +436,15 @@ a:hover {
   height: 0%;
   width: 2px;
 }
+
 .login-button:hover {
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+    -4px -4px 6px 0 rgba(116, 125, 136, .5),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }
 
-span{
+span {
   color: white;
 }
 
@@ -444,18 +459,18 @@ span{
   height: 0%;
   width: 2px;
 }
+
 .signup-button:hover {
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-              -4px -4px 6px 0 rgba(116, 125, 136, .5), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+    -4px -4px 6px 0 rgba(116, 125, 136, .5),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }
 
 
 
-.fa-regular fa-user {
- float: right;
-}
+
+
 
 
 
@@ -881,4 +896,3 @@ td {
   position: relative;
   top: 200px;
 }
-
