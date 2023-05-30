@@ -1160,42 +1160,24 @@
         //     }
         // }
 
-        // const search = () => {
-        //     const searchbar = document.getElementById("searchbar").value.toLowerCase();
-        //     const all_birds = document.getElementById("all_birds");
-
-
-
-        //     const birdstructure = document.querySelectorAll(".birdstructure"); // Added dot before "birdstructure" to denote class name
-        //     const birds = document.getElementsByTagName("p");
-        //     for (var i = 0; i < bird_info_details.length; i++) {
-        //         let match = birdstructure[i].getElementsByTagName('p')[0]; // Changed "box" to "birdstructure" to match the variable name
-        //         if (match) {
-        //             let textvalue = match.textContent || match.innerHTML;
-        //             if (textvalue.toLowerCase().indexOf(searchbar) > -1) { // Changed "searchbox" to "searchbar" to match the variable name
-        //                 birdstructure[i].style.display = ""; // Changed "box" to "birdstructure" to match the variable name
-        //             } else {
-        //                 birdstructure[i].style.display = "none"; // Changed "box" to "birdstructure" to match the variable name
-        //             }
-        //         }
-        //     }
-        // }
-
-
         const search = () => {
             const searchbar = document.getElementById("searchbar").value.toLowerCase();
-            const birdstructures = document.getElementsByClassName("birdstructure");
+            const all_birds = document.getElementById("all_birds");
+            
 
-            for (var i = 0; i < birdstructures.length; i++) {
-                let bird = birdstructures[i].getElementsByTagName("p")[0];
-                if (bird) {
-                    let textValue = bird.textContent || bird.innerHTML;
-                    if (textValue.toLowerCase().indexOf(searchbar) > -1) {
-                        birdstructures[i].style.display = "";
+
+            const birdstructure = document.querySelectorAll(".birdstructure"); // Added dot before "birdstructure" to denote class name
+            const birds = document.getElementsByTagName("p");
+            for (var i = 0; i < bird_info_details.length; i++) {
+                let match = birdstructure[i].getElementsByTagName('p')[0]; // Changed "box" to "birdstructure" to match the variable name
+                if (match) {
+                    let textvalue = match.textContent || match.innerHTML;
+                    if (textvalue.toLowerCase().indexOf(searchbar) > -1) { // Changed "searchbox" to "searchbar" to match the variable name
+                        birdstructure[i].style.display = ""; // Changed "box" to "birdstructure" to match the variable name
                     } else {
-                        birdstructures[i].style.display = "none";
+                        birdstructure[i].style.display = "none"; // Changed "box" to "birdstructure" to match the variable name
                     }
-                } 
+                }
             }
         }
 
@@ -1206,67 +1188,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         let bird_info_details = JSON.parse(localStorage.getItem("bird_info_details")) || [];
         //   console.log(bird_info_details);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
