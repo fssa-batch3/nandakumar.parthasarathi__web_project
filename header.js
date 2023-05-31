@@ -61,20 +61,26 @@ const after_login = `
     </ul>
     <a href="${profile}"><i class="fa-regular fa-user"></i>
     </div>
-    <div class="second-head">
-    <button class="login-button"> <a href="${login}"><span>Log in</span></button></a>
-    </div>
+    
 </div>
 `;
 
-function headerPage() {
-    const userId = JSON.parse(localStorage.getItem('unique'));
-    const userlogin = document.getElementById('userlogin');
+// function headerPage() {
+//     const userId = JSON.parse(localStorage.getItem('unique'));
+//     const userlogin = document.getElementById('userlogin');
 
-    if (!userId) {
-        userlogin.innerHTML = before_login;
-    } else {
-        userlogin.innerHTML = after_login;
+//     if (!userId) {
+//         userlogin.innerHTML = before_login;
+//     } else {
+//         userlogin.innerHTML = after_login;
 
-    }
+//     }
+// }
+const userId = JSON.parse(localStorage.getItem('unique'));
+if(userId){
+    document.body.insertAdjacentHTML("afterbegin",after_login )
 }
+else{
+    document.body.insertAdjacentHTML("afterbegin",before_login)
+}
+
