@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird post</title>
+</head>
+<body>
+    <form>
+        <label><h3>Post Bird Module</h3></label>
+        <!-- <input type="text" id="birdhead1"  required><br><br> -->
+        <textarea  id="para1" cols="100" rows="100"></textarea><br><br>
+        
+       
+        <!-- <textarea  id="para5" cols="100" rows="10"></textarea>
+       
+        <textarea  id="para6" cols="100" rows="10"></textarea>
+        
+        <textarea  id="para7" cols="100" rows="10"></textarea>
+        
+        <textarea  id="para8" cols="100" rows="10"></textarea><br>
+         -->
+         <button type="submit" class="btn">Save</button>
+    </form>
+    <script>
+         let text_content = document.getElementById("para1").value;
+      document.querySelector(".btn").addEventListener("click", function publish() {
+          let birds_records =JSON.parse( localStorage.setItem("birds_records"))||[];
+          let  about =   birds_records.some(detail=>
+          details.text_content == text_content);
+          if(!about){
+            birds_records.push({
+              text_content
+            })
+          }  // birds_records.innerHTML = text_content;
+        localStorage.setItem("birds_records",JSON.stringify(birds_records))
+
+        })
+    </script>
+</body>
+</html>

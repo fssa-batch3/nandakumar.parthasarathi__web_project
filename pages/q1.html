@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question number 1</title>
-
-    
-
     <link rel="stylesheet" href="..//assets/css/style.css">
     <link rel="stylesheet" href="..//assets/css/q1.css">
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+   
 </head>
 
 <body>
@@ -24,7 +23,7 @@
                 <a class="navlist" href="../pages/about.html">About</a>
             </li>
             <li>
-                <a class="navlist" href="../pages/q1.html">Search</a>
+                <a class="navlist" href="../pages/q1.html">Identify Bird</a>
             </li>
             <li>
                 <a class="navlist" href="../pages/explore.html">Explore</a>
@@ -35,104 +34,157 @@
         </ul>
     </div>
     <div class="headerendline"></div>
-    
 
-    <section class="question-section">
+
+    <section class="question_section">
         <div class="container">
             <div class="kelvi">
-                <h3>Where did you see the bird?</h3>
+                <h3 class="questions">Where did you see the bird?</h3>
             </div>
             <div class="bathil"></div>
-                <!-- <input type="text" id="bird" placeholder="Type here"/> -->
-               <!-- <div class="option-container">
-                <i  class="fa-solid fa-tractor"></i>
-                <i  class="fa-solid fa-water"></i>
-                <i  class="fa-solid fa-mountain-sun"></i>
-                <i  class="fa-solid fa-city"></i>
-                <i  class="fa-solid fa-tree"></i>
+            <div class="option_container" id="habitats">
+                <!-- <div class="card">
+                    <img src="../assets/Images/big forest.png" id="forest" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="container">
+                        <h4><b>Forest</b></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../assets/Images/shrublandpng.png" id="shrubland" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="container">
+                        <h4><b>Shrubland</b></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../assets/Images/cropgreen-removebg-preview.png" id="croplands" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="container">
+                        <h4><b>Croplands</b></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../assets/Images/river-removebg-preview.png" id="river" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="containers">
+                        <h4><b>River</b></h4>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="../assets/Images/urban.png" id="urban_area" class="cards" alt="Avatar"
+                        style="width:100px">
+                    <div class="container">
+                        <h4><b>Urban area</b></h4>
+                    </div>
                 </div> -->
-                
-           <!-- <div class="img-card">
-                <img class="img-option" src="../assets/Images/big forest.png" alt="forest" height="70px">
-           </div> 
-            
-            
-           <div class="img-card">
-                <img class="img-option" src="../assets/Images/shrublandpng.png" alt="shrubland" height="70px"> 
-            </div>   
-            
-             
-            <div class="img-card">
-                <img class="img-option" src="../assets/Images/cropgreen-removebg-preview.png" alt="Croplands" height="70px">
-            </div>    
-          
-            
-            <div class="img-card">
-                <img class="img-option" src="../assets/Images/river-removebg-preview.png" alt="river" height="80px">
-            </div> 
-           
-            <div class="img-card">
-                <img class="img-option" src="../assets/Images/urban.png" alt="forest" height="70px">
-            </div>    
-            -->
-            
-        <div class="option-container">
-            <div class="card">
-                <img src="../assets/Images/big forest.png" class="cards" alt="Avatar" style="width:100px">
-                <div class="container">
-                  <h4><b>Forest</b></h4> 
-                </div>
-              </div>
+            </div>
 
-              <div class="card">
-                <img src="../assets/Images/shrublandpng.png"  class="cards" alt="Avatar" style="width:100px">
-                <div class="container">
-                  <h4><b>shrubland</b></h4> 
-                </div>
-              </div>
 
-              <div class="card">
-                <img src="../assets/Images/cropgreen-removebg-preview.png"  class="cards"  alt="Avatar" style="width:100px">
-                <div class="container">
-                  <h4><b>Croplands</b></h4> 
-                </div>
-              </div>
 
-              <div class="card">
-                <img src="../assets/Images/river-removebg-preview.png"   class="cards" alt="Avatar" style="width:100px">
-                <div class="container">
-                  <h4><b>river</b></h4> 
-                </div>
-              </div>
 
-              <div class="card">
-                <img src="../assets/Images/urban.png"  class="cards" alt="Avatar" style="width:100px">
-                <div class="container">
-                  <h4><b>Urban area</b></h4> 
-                </div>
-              </div>
-            </div>  
-        
-        
-             
-           
             <div class="next">
-                <a href="../pages/q2.html"><button type="button" class="next" onclick="submit()">Next</button></a> 
+                <!-- <a href="../pages/q3.html"><button type="button" class="next" onclick="submit()">Next</button></a> -->
             </div>
             <div class="back">
-                <a href="..//pages/hello.html"><button type="button" onclick="history.back()">Back</button></a>
+                <a href="../index.html"><button type="button" onclick="history.back()">Back</button></a>
             </div>
-        </div>  
+
     </section>
+    
 
     <script>
-        function submit(){
-        const bird = document.getElementById("bird").value
+    
+    let habitat_options = [
+  {
+    "name": "Forest",
+    "image": {
+      "source": "../assets/Images/big forest.png",
+      "alt": "Forest"
+    }
+  },
+  {
+    "name": "Scrublands",
+    "image": {
+      "source": "../assets/Images/shrublandpng.png",
+      "alt": "Scrublands"
+    }
+  },
+  {
+    "name": "Croplands",
+    "image": {
+      "source": "../assets/Images/cropgreen-removebg-preview.png",
+      "alt": "Croplands"
+    }
+  },
+  {
+    "name": "River",
+    "image": {
+      "source": "../assets/Images/river-removebg-preview.png",
+      "alt": "River"
+    }
+  },
+  {
+    "name": "Urban area",
+    "image": {
+      "source": "../assets/Images/urban.png",
+      "alt": "Urban area"
+    }
+  }
+];
 
-        console.log(bird)
+let habitatsDiv = document.querySelector("#habitats");
+const identifyBirds = [];
 
-        window.location.href="../pages/q2.html"
-    }  
+habitat_options.forEach((option) => {
+  let div_card = document.createElement("div");
+  div_card.setAttribute("class", "card");
+  div_card.setAttribute("id", option.name);
+
+  let a = document.createElement("a");
+  div_card.append(a);
+
+  let img_cards = document.createElement("img");
+  img_cards.setAttribute("class", "cards");
+  img_cards.setAttribute("src", option.image.source);
+  img_cards.setAttribute("width", "100%");
+  a.append(img_cards);
+
+  let div_containers = document.createElement("div");
+  div_containers.setAttribute("class", "containers");
+  div_card.append(div_containers);
+
+  let h4_noclass = document.createElement("h3");
+  h4_noclass.innerText = option.name;
+  div_containers.append(h4_noclass);
+
+  habitatsDiv.append(div_card);
+});
+
+const parentDiv = document.querySelector(".option_container");
+const childDiv = parentDiv.children;
+
+for (let i = 0; i < childDiv.length; i++) {
+  const element = childDiv[i];
+  element.addEventListener("click", () => {
+    const place = event.currentTarget.getAttribute("id");
+    identifyBirds.push(place);
+    console.log(identifyBirds);
+    window.location.href = `./q3.html?place=${place}`;
+  });
+}
+
+
+
+
+
+
     </script>
+     
 </body>
+
 </html>

@@ -16,7 +16,7 @@
 
 
 
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&family=Source+Sans+Pro:wght@900&display=swap"
@@ -24,8 +24,11 @@
 
 
     <title>Birds Universe</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- <link rel="stylesheet" href="../assets/css/style.css"> -->
     <link rel="stylesheet" href="../assets/css/guidance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
 
 
 </head>
@@ -42,7 +45,7 @@
                     <a class="navlist" href="../pages/about.html">About</a>
                 </li>
                 <li>
-                    <a class="navlist" href="../pages/q1.html">Search</a>
+                    <a class="navlist" href="../pages/q1.html">Identify Bird</a>
                 </li>
                 <li>
                     <a class="navlist" href="../pages/explore.html">Explore</a>
@@ -54,9 +57,9 @@
         </div>
         <div class="headerindicator">
             <div class="progress-container">
-              <div class="progress-bar" id="myBar"></div>
-            </div>  
-          </div>
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
         <div class="headerendline"></div>
         <div>
             <h1 class="title">Bird Guidance</h1>
@@ -70,19 +73,18 @@
         <h2>ADVICE</h2>
     </div>
 
-
     <div class="advice1">
         <div class="content1">
             <p class="howcanhelp">How we can help birds
-                <p>
-                    <p class="des-howcan">Would you like to do your <br>part in helping nature?<br> Find our more
-                        information
-                        about <br>how
-                        we can help birds here.<br></p>
+            <p>
+            <p class="deshowcan">Would you like to do your <br>part in helping nature?<br> Find our more
+                information
+                about <br>how
+                we can help birds here.<br></p>
 
-                    <a href="../pages/advice1.html">
-                        <button class="btnadvice">Learn more ...</button>
-                    </a>
+            <a href="../pages/advice1.html">
+                <button class="btnadvice">Learn more ...</button>
+            </a>
         </div>
         <div class="waterbird">
             <img class="waterbird" src="../assets/Images/helpimagejpg.jpg" alt="bird image">
@@ -93,59 +95,108 @@
     <div class="advice2">
         <div class="content1">
             <p class="howcanhelp">Gardening for wildlife
-                <p>
-                    <p class="des-howcan">Whether you're planting for wildlife,<br> creating a pond or need <br>
-                        we can help birds here.<br></p>
-                        <a href="../pages/advice2.html">
-                            <button class="btnadvice">Learn more ...</button>
-                        </a>
+            <p>
+            <p class="deshowcan">Whether you're planting for wildlife,<br> creating a pond or need <br>
+                we can help birds here.<br></p>
+            <a href="../pages/advice2.html">
+                <button class="btnadvice">Learn more ...</button>
+            </a>
         </div>
         <div class="waterbird">
             <img class="waterbird" src="../assets/Images/web-Garden.jpg" alt="bird image">
         </div>
     </div>
-    <br>
-    <br>
-    <br>
+  
+    <div class="footer-basic">
+        <footer>
+            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="../index.html">Home</a></li>
+                <li class="list-inline-item"><a href="../pages/about.html">About</a></li>
+                <li class="list-inline-item"><a href="../pages/q1.html">Identify bird</a></li>
+                <li class="list-inline-item"><a href="../pages/explore.html">Explore</a></li>
+                <li class="list-inline-item"><a href="../pages/guidance.html">Guidance</a></li>
+            </ul>
+            <p class="copyright">Birds buddy © 2022</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
-    <footer>
-        <div>
-            <h1 class="birds"><b>BIRDS BUDDY</b></h1>
-        </div>
-        <ul>
-            <li>
-                <a class="navlist" href="../index.html">Home</a>
-            </li>
-            <li>
-                <a class="navlist" href="../pages/about.html">About</a>
-            </li>
-            <li>
-                <a class="navlist" href="./pages/q1.html">Search</a>
-            </li>
-            <li>
-                <a class="navlist" href="../pages/explore.html">Explore</a>
-            </li>
-            <li>
-                <a class="guidance" href="../pages/guidance.html">Guidance</a>
-            </li>
-        </ul>
-
-    </footer>
 
     <script>
         // When the user scrolls the page, execute myFunction 
-window.onscroll = function() {myFunction()};
+        window.onscroll = function () { myFunction() };
 
-function myFunction() {
- var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
- var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
- var scrolled = (winScroll / height) * 100;
- document.getElementById("myBar").style.width = scrolled + "%";
-}
-   </script>
-    
-        
-    </body>
-    </html>
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+// // Create guidance
+// const guidance = document.createElement("div");
+// guidance.setAttribute("class", "guidance");
+// console.log(guidance);
 
-    
+// // Create div_advice1
+// const advice1 = document.createElement("div");
+// advice1.setAttribute("class", "advice1");
+// guidance.appendChild(advice1);
+
+// // Create div_content1
+// const content1 = document.createElement("div");
+// content1.setAttribute("class", "content1");
+// advice1.appendChild(content1);
+
+// // Create howcanhelp paragraph
+// const howcanhelp = document.createElement("p");
+// howcanhelp.setAttribute("class", "howcanhelp");
+// howcanhelp.textContent = "How we can help birds";
+// content1.appendChild(howcanhelp);
+
+// // Create deshowcan paragraph
+// const deshowcan = document.createElement("p");
+// deshowcan.setAttribute("class", "deshowcan");
+// deshowcan.innerHTML = "Would you like to do your <br>part in helping nature?<br> Find our more information about <br>how we can help birds here.<br>";
+// content1.appendChild(deshowcan);
+
+// // Create link
+// const a = document.createElement("a");
+// a.setAttribute("href", "../pages/advice1.html");
+// a.textContent = "Learn more ...";
+// content1.appendChild(a);
+
+// // Create waterbird div
+// const waterbird = document.createElement("div");
+// waterbird.setAttribute("class", "waterbird");
+// advice1.appendChild(waterbird);
+
+// // Create waterbird image
+// const waterbirdimg = document.createElement("img");
+// waterbirdimg.setAttribute("class", "waterbird");
+// waterbirdimg.setAttribute("src", "../assets/Images/helpimagejpg.jpg");
+// waterbirdimg.setAttribute("alt", "bird image");
+// waterbird.appendChild(waterbirdimg);
+
+// document.querySelector(".guidance").appendChild(advice1);
+
+
+// // Set CSS classes for the created elements
+// guidance.classList.add("default-alignment");
+// advice1.classList.add("default-alignment");
+// content1.classList.add("default-alignment");
+// waterbird.classList.add("default-alignment");
+
+// // Append the guidance element to the document body
+// document.body.appendChild(guidance);
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

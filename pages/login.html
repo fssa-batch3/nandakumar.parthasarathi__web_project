@@ -41,7 +41,7 @@
           <label for="login__username"><svg class="icon">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
             </svg><span class="hidden">Username</span></label>
-          <input id="user_name" type="text" name="username" class="form__input" placeholder="Username" required pattern="[a-z A-Z]*">
+          <input id="user_name" type="text" name="username" class="form__input" placeholder="Username" required pattern="[a-z A-Z]*" >
         </div>
 
         <div class="form__field">
@@ -49,7 +49,14 @@
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use>
             </svg><span class="hidden">Password</span></label>
           <input id="user_password" type="password" name="password" class="form__input" placeholder="Password"
-            required>
+             required>
+        </div>
+
+        <div class="form__field">
+          <label><svg class="icon">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use>
+            </svg><span class="hidden">Phone Number</span></label>
+          <input type="tel" name="usernumber" id="user_number" class="form__input" placeholder="Phone Number"  required>
         </div>
 
         <div class="u-form-group">
@@ -94,19 +101,23 @@
 
       let user_name = document.getElementById('user_name').value,
         user_password = document.getElementById('user_password').value;
+        user_number = document.getElementById('user_number').value;
 
-      let user_list = JSON.parse(localStorage.getItem('user_list'));
+      let user_list = JSON.parse(localStorage.getItem('user_list')) || [];
 
       let exist = user_list.length &&
         JSON.parse(localStorage.getItem('user_list')).some(data =>
           data.user_name.toLowerCase() == user_name.toLowerCase()&&
-          data.user_password.toLowerCase() == user_password.toLowerCase());
+          data.user_password.toLowerCase() == user_password.toLowerCase()&&
+          data.user_number == user_number);
+
 
       if (!exist) {
         alert("Incorrect login credentials");
       }
       else {
         alert("Your login in successful");
+        localStorage.setItem("unique", user_number);
         location.href = "../index.html";
       }
 

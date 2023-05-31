@@ -23,7 +23,7 @@
                 <a class="navlist" href="../pages/about.html">About</a>
             </li>
             <li>
-                <a class="navlist" href="../pages/q1.html">Search</a>
+                <a class="navlist" href="../pages/q1.html">Identify Bird</a>
             </li>
             <li>
                 <a class="navlist" href="../pages/explore.html">Explore</a>
@@ -34,52 +34,112 @@
         </ul>
     </div>
     <div class="headerendline"></div>
+
+
+<!--    
+
+    <div class="see">
+        <section class="question-section">
+            <div class="container">
+                <div class="kelvi">
+                    <h3>When did you see the bird?</h3>
+                </div>
+                <div class="bathil">
+                    <input type="date" id="date" onchange="storeDate()" min="" max="" >
+                </div>
+                <div>
+                    <button type="button" class="next" onclick="submit()">Identify</button>
+                </div>
+                <div class="back">
+                    <a href="q4.html"><button type="button">Back</button></a>
+                </div>
+            </div>
+        </section>
+    </div> -->
+    
     
 
-        <!-- <div class="location">
-            <small> chennai, Tamil nadu, IN</small>
-        </div> -->
-
-        <div class="see">
-            <section class="question-section">
-                <div class="container">
-                    <div class="kelvi">
-                        <h3>When did you see the bird?</h3>
-                    </div>
-                    <div class="bathil">
-                        <input type="date" id="date" value="4/1/2022">
-                    </div>
-                    <div>
-                        <button type="button" class="next" onclick="submit()">Next</button></a> 
-                    </div>
-                    <div class="back">
-                        <a href="q1.html"><button type="button">Back</button></a>
-                    </div>
-                </div>
-
-
-                
-
-               
-
-            
-            <script>
-                 function submit(){
-                const date= document.getElementById("date").value
-
-                console.log(date)
-
-                window.location.href="../pages/q3.html"
-                 }
-
-                 let urlParams = new URLSearchParams(window.location.search);
-let dateString = urlParams.get("date");
-
-let date = new Date(dateString);
 
 
 
-            </script>
+
+
+    <script>
+        
+     // create a container element
+const container = document.createElement('div');
+container.classList.add('container');
+
+// create a question heading element
+const question = document.createElement('div');
+question.classList.add('kelvi');
+const heading = document.createElement('h3');
+heading.innerText = 'When did you see the bird?';
+question.appendChild(heading);
+
+// create a date input element
+const dateInputContainer = document.createElement('div');
+dateInputContainer.classList.add('bathil');
+const dateInput = document.createElement('input');
+dateInput.type = 'date';
+dateInput.id = 'date';
+dateInputContainer.appendChild(dateInput);
+
+// create a submit button
+const submitButton = document.createElement('button');
+submitButton.type = 'button';
+submitButton.classList.add('next');
+submitButton.innerText = 'Identify';
+submitButton.addEventListener('click', submit);
+
+// create a back button
+const backButton = document.createElement('button');
+backButton.type = 'button';
+backButton.innerText = 'Back';
+const backLink = document.createElement('a');
+backLink.href = 'q4.html';
+backLink.appendChild(backButton);
+const backContainer = document.createElement('div');
+backContainer.classList.add('back');
+backContainer.appendChild(backLink);
+
+// append the elements to the container
+container.appendChild(question);
+container.appendChild(dateInputContainer);
+container.appendChild(submitButton);
+container.appendChild(backContainer);
+
+// append the container to the question section
+const questionSection = document.querySelector('.question-section');
+questionSection.appendChild(container);
+
+// function to store the selected date
+function storeDate() {
+  const selectedDate = dateInput.value;
+  console.log(selectedDate);
+}
+
+// function to submit the form
+function submit() {
+  const selectedDate = dateInput.value;
+  console.log(selectedDate);
+  // perform some actions when the user clicks on the submit button
+}
+
+// set the minimum and maximum date of the date input element
+const dateInputElem = document.getElementById('date');
+const today = new Date();
+const maxDate = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000); // today + 7 days
+const maxDateStr = maxDate.toISOString().substring(0, 10);
+dateInputElem.setAttribute('min', today.toISOString().substring(0, 10));
+dateInputElem.setAttribute('max', maxDateStr);
+
+
+
+
+
+
+    </script>
 
 </body>
 

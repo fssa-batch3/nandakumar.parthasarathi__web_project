@@ -1,0 +1,545 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .guidance {
+    border: 1px solid black;
+    padding: 20px 30px;
+    border-radius: 5px;
+    background-color: gray;
+    border: none;
+    box-shadow: inset 0 0 0 0 black;
+    transition: ease-out 0.5s;
+    outline: none;
+  }
+  
+  .guidance:hover {
+    box-shadow: inset 200px 0 0 0 orange;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .aboutimage {
+    background-image: url(https://www.shutterstock.com/image-photo/eastern-bluebirds-frolicking-bird-bath-260nw-1713958786.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    opacity: 1;
+  }
+  
+  div .headerendline {
+    border: 1px solid whitesmoke;
+  }
+  
+  h1,
+  h3 {
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 80px;
+    font-weight: bolder;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 3px;
+    margin-top: 100px;
+  }
+  
+  .sub-title {
+    font-family: 'Heebo', sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 10px;
+    letter-spacing: 4px;
+  }
+  
+  .spanhome {
+    color: white;
+  }
+  
+  .spanhome:hover {
+    color: orange;
+    cursor: pointer;
+  }
+
+  .span-guidance{
+    color:lightgrey;
+  }
+
+  .span-guidance:hover{
+    color: orange;
+    cursor: pointer;
+  }
+
+  .span-how-can-we-help-birds{
+    color: lightgrey;
+  }
+
+  .span-how-can-we-help-birds:hover{
+    color: orange;
+    cursor: pointer;
+  }
+
+  .span-bird-and-water{
+    color: lightgrey;
+  }
+  
+  .span-bird-and-water:hover{
+    color: orange;
+    cursor: pointer;
+  }
+  
+  .about-section {
+    background-color: whitesmoke;
+    padding-bottom: 150px;
+  }
+  
+  .ourmission {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  
+  .mission-discription {
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 35px;
+    color: grey;
+    position: relative;
+    left: 100px;
+    right: 50px;
+    top: 27px;
+    line-height: 1.2em;
+    word-spacing: 2px;
+    margin-right: 10%;
+  }
+  
+  .about-sparrow {
+    border-radius: 3px;
+    width: 32vw;
+    height: 17vw;
+    position: relative;
+    right: 30px;
+    top: 35px;
+  }
+  
+  .flip-card{
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition:transform 0.6s ;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner{
+    transform:rotateY(180deg);
+  }
+  
+  .flip-card-front,
+  .flip-card-back{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+  }
+  
+  .flip-card-front{
+    background-image: linear-gradient(45deg, white);
+  }
+  
+  .flip-card-front img {
+    width: 220px;
+    margin-top: 1rem;
+  }
+  
+  .flip-card-back{
+    background-image: linear-gradient(45deg, white);
+    color: aliceblue;
+    transform:rotateY(180deg);
+  }
+  
+  .flip-card-back img{
+    width: 220px;
+    margin-top: 1rem;
+  }
+  
+  .flip-card-back h1{
+    margin-bottom: 0.3rem;
+    color: black;
+    font-family: 'Heebo', sans-serif;
+  }
+  
+  
+  .needbirds {
+    font-size: 100px;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 3px;
+    margin-top: 0px;
+    position: relative;
+    top: 250px;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  
+  .needbirdsimage {
+    background-image: url(https://scx2.b-cdn.net/gfx/news/hires/flockofbirds.jpg);
+    background-size: cover;
+    height: 600px;
+    width: 100%;
+    opacity: 0.9s;
+  }
+  
+  .canyouimagine {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+    font-family: 'Heebo', sans-serif;
+    line-height: 1.8;
+  }
+  
+  .needq1 {
+    font-size: 1.8rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: orange;
+    padding-top: 80px;
+    margin-left: 8%;
+  }
+  
+  .aboutbirdvedio {
+    width: 600px;
+    height: 400px;
+  }
+  
+  span.number {
+    color: orange;
+    margin-left: -1rem;
+  }
+  
+  .oddtitle {
+    margin-bottom: 70px;
+  }
+  
+  .eventitle {
+    margin-bottom: 70px;
+  }
+  
+  .oddpara {
+    color: grey;
+    position: relative;
+    left: 10px;
+    bottom: 50px;
+  }
+  
+  .evenpara {
+    color: grey;
+    position: relative;
+    right: 50px;
+    bottom: 50px;
+  }
+  
+  .pointofneeds {
+    color: gray;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 27px;
+    text-transform: capitalize;
+    position: relative;
+    left: 20px;
+    padding: 60px;
+  }
+  
+  .benifitimg {
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+  
+  }
+  
+  .benifitimg:hover {
+    transform: scale(0.9);
+    transition: 3s;
+  }
+  
+  .double {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .double-2 {
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    align-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  
+  .needpara {
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.8;
+    word-spacing: 4px;
+    font-size: 20px;
+    text-transform: capitalize;
+    position: relative;
+    left: 30px;
+    padding: 30px;
+  }
+  
+  div.guidance_navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+  }
+  
+  div.guidance_navbar li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+  
+  div.guidance_navbar li:first-child {
+    border-right: none;
+    background-color: black;
+  }
+  
+  div.guidance_navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-transform: none;
+  }
+
+  .howcanhelp {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    color:gray;
+    margin-right: 50%;
+    margin-left: 8%;
+    
+  }
+
+  .des-howcan {
+    color: black;
+    font-size: 20px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    text-transform:none;
+    position: relative;
+     bottom: -15px; 
+     margin-right: 50%;
+     margin-left: 8%;
+     line-height: 1.8;
+  }
+
+  .howcanhelp_even{
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    color:gray;
+    margin-right: 8%;
+    margin-left: 50%;
+    
+  }
+
+  .des-howcan_even {
+    color: black;
+    font-size: 20px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    text-transform:none;
+    position: relative;
+     bottom: -15px; 
+     margin-right: 8%;
+     margin-left: 40%;
+     line-height: 1.8;
+  }
+
+  .waterbird {
+    width: 400px;
+    height: 250px;
+    border-radius: 5px;
+    position: relative;
+    left: 40px;
+  }
+
+  
+  
+  /* li a:hover:not(.active) {
+    background-color: lightgrey;
+  } */
+  
+  .active {
+    background-color:black;
+  }
+
+  .guidance_navbar{
+    margin-right: 8%;
+    margin-left: 8%;
+  }
+  
+  @media only screen and (max-width:600px) {
+  
+    
+    .ourmission {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+  
+    .about-sparrow {
+      border-radius: 3px;
+      width: 400px;
+      height: 200px;
+    }
+  
+    .goal {
+      font-size: 1.7rem;
+    }
+  
+    .mission-discription {
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 17px;
+      color: orange;
+      position: relative;
+      left: 22px;
+      line-height: 1.8em;
+      margin-top: 20px;
+    }
+  
+    .about-section {
+      background-color: white;
+      padding-bottom: 30px;
+    }
+  
+    .needbirds {
+      font-size: 30px;
+      position: relative;
+      top: 120px;
+  
+    }
+  
+    .needbirdsimage {
+      background-image: url(https://scx2.b-cdn.net/gfx/news/hires/flockofbirds.jpg);
+      background-size: cover;
+      height: 300px;
+    }
+  
+    .needq1 {
+      font-size: 1.2rem;
+      margin-bottom: 10%;
+      margin-top: -10%;
+    }
+  
+    .canyouimagine {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding-top: 30px;
+      font-size: 16px;
+      font-family: 'Heebo', sans-serif;
+      line-height: 1.5;
+    }
+  
+    .aboutbirdvedio {
+      width: 390px;
+      height: 300px;
+      margin-top: -100px;
+      margin-bottom: 40px;
+    }
+  
+    .double {
+      display: flex;
+      flex-direction: column-reverse;
+      flex-wrap: wrap;
+      position: relative;
+      left: -10px;
+    }
+  
+    .double-2 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      position: relative;
+      left: -10px;
+    }
+  
+    .oddpara {
+      font-size: 65%;
+    }
+  
+    .evenpara {
+      font-size: 65%;
+      left: 6%;
+    }
+  
+    .pointofneeds {
+      font-size: 27px;
+      position: relative;
+      left: -10px;
+      padding: 60px;
+    }
+  
+    .benifitimg {
+      width: 250px;
+      height: 60%;
+      margin-left: 6%;
+      margin-top: -40px;
+    }
+  
+    .needpara {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      word-spacing: 4px;
+      font-size: 60%;
+      margin-left: -17%;
+    }
+  
+    .aboutimage {
+     object-fit: cover;
+    }
+  }

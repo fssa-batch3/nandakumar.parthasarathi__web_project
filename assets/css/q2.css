@@ -9,14 +9,27 @@
 } */
 
 .kelvi {
-    color: orange;
-    font-size: 2rem;
+  color: orange;
+  font-size: 2rem;
+  margin-left: 480px;
+  margin-top: 200px;
   }
   
   .bathil {
     height: 45px;
     margin-top: 40px;
+    margin-left: 580px;
+    width: 30cm;
   }
+.container{
+display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+    padding: 1rem;
+    flex-direction: column;
+}
+  
   
   .bathil input {
     width: 20%;

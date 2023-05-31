@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>create bird</title>
+
+    <link rel="stylesheet" href="../../assets/css/read.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../pages/form/create_birds.css">
+
+
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="birds"><b>BIRDS BUDDY</b></h1>
+        <ul>
+            <li>
+                <a class="navlist" href="../../index.html">Home</a>
+            </li>
+            <li>
+                <a class="navlist" href="../../pages/about.html">About</a>
+            </li>
+            <li>
+                <a class="navlist" href="../pages/q1.html">Search</a>
+            </li>
+            <li>
+                <a class="navlist" href="../pages/explore.html">Explore</a>
+            </li>
+            <li>
+                <a class="guidance" href="../pages/guidance.html">Guidance</a>
+            </li>
+        </ul>
+    </div>
+    <!-- <div class="headerendline"></div> -->
+    <div class="headerendline"></div>
+    <a href="../form/form_birds.html"><button class="btn" type="submit" id="save_details_of_birds">Create</button></a>
+    
+    <section class="detail_about_bird"></section>
+
+
+
+
+
+    <!-- <form role="form" onsubmit="createBirds(event)" class="form-for-admin">
+
+        <label>Main Image:</label><br>
+        <input type="text" id="mainimage" required> <br>
+        <label>Bird Stage-1 Image:</label><br>
+        <input type="text" id="b_stage-1" required> <br>
+        <label>Bird Stage-2 Image:</label><br>
+        <input type="text" id="b_stage-2" required><br>
+        <label>Bird Stage-3 Image:</label><br>
+        <input type="text" id="b_stage-3" required><br>
+        <label>Bird Stage-4 Image:</label><br>
+        <input type="text" id="b_stage-4" required><br>
+        <label>Name:</label><br>
+        <input type="text" id="birdname" required><br>
+        <label>Scientific Name:</label><br>
+        <input type="text" id="scientificname" required><br>
+        <label>Size:</label><br>
+        <input type="text" id="size"><br required>
+        <label>Habitat Iamge:</label><br>
+        <input type="text" id="habitat" required><br>
+        <label>Food Image-1:</label><br>
+        <input type="text" id="food1" required><br>
+        <label>Food Image-2:</label><br>
+        <input type="text" id="food2" required><br>
+        <label>Food Image-3:</label><br>
+        <input type="text" id="food3" required><br>
+        <label>Food Image-4:</label><br>
+        <input type="text" id="food4" required><br>
+        <label>Bird Video:</label><br>
+        <input type="text" id="food3" required><br>
+        <label>About Bird:</label><br>
+        <textarea type="text" id="des1" required></textarea><br>
+        <label>General Characteristics:</label><br>
+        <textarea type="text" id="des2" required></textarea><br>
+        <label>Life styes:</label><br>
+        <textarea type="text" id="des3" required></textarea><br>
+        <label>Breeding patterns:</label><br>
+        <textarea type="text" id="des4" required></textarea><br>
+
+
+
+
+        <button class="btn" type="submit" id="save_details_of_birds">Save</button> -->
+
+
+</body>
+<script>
+   const indian_birds_list = JSON.parse(localStorage.getItem("bird_info_details"));
+
+for (let i = 0; i < indian_birds_list.length; i++) {
+  // Create the main div container
+  const div_birdstructure = document.createElement("div");
+  div_birdstructure.setAttribute("class", "birdstructure");
+
+  // Create the left content div
+  const div_contentleft = document.createElement("div");
+  div_contentleft.setAttribute("class", "contentleft");
+  div_birdstructure.append(div_contentleft);
+
+  // Create the image element
+  const img_card = document.createElement("img");
+  img_card.setAttribute("src", indian_birds_list[i]["main_image"]);
+  img_card.setAttribute("alt", indian_birds_list[i]["bird_name"]);
+  div_contentleft.append(img_card);
+
+  // Create the right content div
+  const div_contentright = document.createElement("div");
+  div_contentright.setAttribute("class", "contentright");
+  div_birdstructure.append(div_contentright);
+
+  // Create and append the Name paragraph
+  const p_birdpara_name = document.createElement("p");
+  p_birdpara_name.setAttribute("class", "birdpara");
+  p_birdpara_name.innerText = "Name: " + indian_birds_list[i]["bird_name"];
+  div_contentright.append(p_birdpara_name);
+
+  // Create and append the Scientific Name paragraph
+  const p_birdpara_scientific_name = document.createElement("p");
+  p_birdpara_scientific_name.setAttribute("class", "birdpara");
+  p_birdpara_scientific_name.innerText = "Scientific Name: " + indian_birds_list[i]["scientific_name"];
+  div_contentright.append(p_birdpara_scientific_name);
+
+  // Create and append the Size paragraph
+  const p_birdpara_size = document.createElement("p");
+  p_birdpara_size.setAttribute("class", "birdpara");
+  p_birdpara_size.innerText = "Size: " + indian_birds_list[i]["size_in_cm"];
+  div_contentright.append(p_birdpara_size);
+
+// Create and append the Size paragraph
+const p_birdpara_tentative_size = document.createElement("p");
+  p_birdpara_tentative_size.setAttribute("class", "birdpara");
+  p_birdpara_tentative_size.innerText = "Tentative Size: " + indian_birds_list[i]["tentative_size"];
+  div_contentright.append(p_birdpara_tentative_size);
+
+
+  // Create and append the Scientific Name paragraph
+  const p_birdpara_habitat = document.createElement("p");
+  p_birdpara_habitat.setAttribute("class", "birdpara");
+  p_birdpara_habitat.innerText = "habitat: " + indian_birds_list[i]["habitat"];
+  div_contentright.append(p_birdpara_habitat);
+
+  
+
+  // Create and append the Color heading
+  const p_birdpara_color = document.createElement("p");
+  p_birdpara_color.setAttribute("class", "birdpara");
+  p_birdpara_color.innerText = "Color: " + indian_birds_list[i]["colors_name"];
+  div_contentright.append(p_birdpara_color);
+
+  // Create and append the Actions heading
+  const p_birdpara_actions = document.createElement("p");
+  p_birdpara_actions.setAttribute("class", "birdpara");
+  p_birdpara_actions.innerText = "Actions: " + indian_birds_list[i]["actions_name"];
+  div_contentright.append(p_birdpara_actions);
+
+  // Create the tooltip div
+  const div_tooltipsss = document.createElement("div");
+  div_tooltipsss.setAttribute("class", "tooltipsss");
+  div_contentright.append(div_tooltipsss);
+
+  // Create the read more div
+  const div_readmore = document.createElement("div");
+  div_contentright.append(div_readmore);
+
+  // Create the anchor tag within the read more div
+  const div_anchor = document.createElement("a");
+  div_anchor.setAttribute("href", `../../pages/form/birds.detailpage.html?bird_info_details_uuid=${indian_birds_list[i]["bird_info_details_uuid"]}`);
+  div_readmore.append(div_anchor);
+
+  // Create the read button within the anchor tag
+  const read_button = document.createElement("button");
+  read_button.setAttribute("class", "click");
+  read_button.setAttribute("type", "button");
+  read_button.innerText = "Read more...";
+  div_anchor.append(read_button);
+
+  // Create the edit button
+  const edit_button = document.createElement("a");
+  edit_button.setAttribute("class", "edit");
+  edit_button.setAttribute("href", `../form/update.html?birds_unique_id=${indian_birds_list[i].bird_info_details_uuid}`);
+  edit_button.innerText = "Edit";
+  div_readmore.append(edit_button);
+
+  // Create the tooltip image
+  const div_tooltip = document.createElement("div");
+  div_tooltip.setAttribute("id", "tooltip");
+  div_tooltipsss.append(div_tooltip);
+
+  const img_card_1 = document.createElement("img");
+  img_card_1.setAttribute("src", indian_birds_list[i]["habitat_img"]);
+  img_card_1.setAttribute("alt", "forest");
+  img_card_1.setAttribute("height", "80px");
+  div_tooltip.append(img_card_1);
+
+  // Append the bird structure div to the detail_about_bird section
+  document.querySelector("section.detail_about_bird").append(div_birdstructure);
+}
+
+    
+
+    function readmore() {
+        window.location.href = "../../pages/form/birds.detailpage.html"
+    }
+
+
+
+</script>
